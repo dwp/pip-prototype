@@ -1,0 +1,209 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="page-container" role="main">
+
+{{>includes/phase_banner}}
+
+  <form action="consent" method="#" class="form">
+  
+  	<a href="s3" class="example-back-link">Back</a>
+  
+  	<div class="section-progress">
+  	    Section 4 of 17
+  	</div>
+
+    <h1 class="form-title heading-large">
+      <!--Hospital, hospice, residential or nursing care-->
+      Your medical details and care
+    </h1>
+    
+    <!-- terminal illness -->
+    <fieldset class="inline">
+    
+      <legend class="form-label-bold add-padding" for="terminal"><!--Do you have a progressive disease and-->Is your life expectancy <!--is--> less than 6 months?</legend>
+    
+      <div class="form-group"><!-- 'form-group-compound' -->	
+        <label class="block-label" data-target="terminal" for="terminal-yes">
+        <input id="terminal-yes" type="radio" name="terminal" value="Yes">
+        Yes
+      </label>
+      <label class="block-label" for="terminal-no">
+        <input id="terminal-no" type="radio" name="terminal" value="No">
+        No
+      </label>
+      
+     </fieldset>
+      
+      <!--js-hidden-->
+      <div class="panel-indent js-hidden" id="terminal">
+      
+          <fieldset class="inline">
+          
+            <div class="form-group">
+              <p class="form-label" for="terminal-dds1500">Do you have a DS1500 to support your claim?</p>
+              <label class="block-label" for="terminal-ds1500">
+              <input id="terminal-ds1500-yes" type="radio" name="terminal" value="Yes">
+              Yes
+              </label>
+              <label class="block-label" for="terminal-ds1500-no">
+              <input id="terminal-ds1500-no" type="radio" name="terminal-ds1500" value="No">
+              No
+              </label>           
+            </div>
+            
+		
+		  <div class="form-group">		  
+		    <p class="form-label" for="terminal-journey">Do you need anyone else to plan a journey for you that you wish to take?</p>
+		    <label class="block-label" for="terminal-journey">
+		    <input id="terminal-journey-yes" type="radio" name="terminal-journey" value="Yes">
+		    Yes
+		    </label>
+		    <label class="block-label" for="terminal-journey-no">
+		    <input id="terminal-journey-no" type="radio" name="terminal-journey" value="No">
+		    No
+		    </label>  
+		  
+		  </div>
+		     
+	
+	 	  <div class="form-group">	
+	 	    <p class="form-label" for="terminal-journey">Do you have any difficulty following a route of a familiar journey?</p>
+	 	    <label class="block-label" for="terminal-route">
+	 	    <input id="terminal-route-yes" type="radio" name="terminal-route" value="Yes">
+	 	    Yes
+	 	    </label>
+	 	    <label class="block-label" for="terminal-route-no">
+	 	    <input id="terminal-route-no" type="radio" name="terminal-route" value="No">
+	 	    No
+	 	    </label>	 	  
+	 	  </div>
+	 	
+	 	  <div class="form-group">
+	 	  	<p class="form-label" for="terminal-journey">Do you have difficulty walking 20 metres?</p>
+	 	    <label class="block-label" for="terminal-walking">
+	 	    <input id="terminal-walking-yes" type="radio" name="terminal-walking" value="Yes">
+	 	    Yes
+	 	    </label>
+	 	    <label class="block-label" for="terminal-walking-no">
+	 	    <input id="terminal-walking-no" type="radio" name="terminal-walking" value="No">
+	 	    No
+	 	    </label>    
+	 	  </div>
+	 	  
+	 	  <!--  [ Do you have difficulty walking 50 metres? ]  -->
+	 	     
+	 	 </fieldset> 	 	 
+           
+      </div>
+    
+    <!-- living/care arrangements  -->
+    <fieldset>
+   
+    <legend class="form-label-bold add-padding" for="living-situation">Where are you currently living or being cared for?</legend>
+    
+    <!--<p class="form-hint">Are you currently in hospital, hospice, residential or nursing care? - [Yes] [No]</p>-->
+    
+    <div class="form-group"><!-- 'form-group-compound' -->	
+          
+          <label class="block-label" for="living-situation-home">
+            <input id="living-situation-home" type="radio" name="living-situation" value="I am living at home">
+            I'm living at home
+          </label>
+          
+          <label class="block-label" for="living-situation-hospital" data-target="living-address">
+            <input id="living-situation-hospital" type="radio" name="living-situation" value="I am in hospital">
+            I'm in hospital
+          </label>
+          
+          <label class="block-label" for="living-situation-hospice" data-target="living-address">
+            <input id="living-situation-hospice" type="radio" name="living-situation" value="I am in a hospice">
+            I'm in a hospice
+          </label>   
+          
+          <label class="block-label" for="living-situation-residential" data-target="living-address">
+            <input id="living-situation-residential" type="radio" name="living-situation" value="I am in residential or nursing care">
+            I'm in residential or nursing care
+          </label>  
+                 
+     </div>
+     
+     <!--js-hidden-->
+     <div class="panel-indent js-hidden" id="living-address">
+         <label class="form-label" for="living-address-details">Address</label>
+         <input type="text" class="form-control" id="living-address-details">
+     </div>
+    
+    </fieldset>
+    
+
+    <!-- health care professional  -->
+    <fieldset>   
+	    
+	    <legend class="form-label-bold add-padding" for="living-situation">Your health care professional(s)</legend>
+	   
+	   <p>We need details of the professional(s) best placed to advise us on your circumstances. For example, a GP, hospital doctor, specialist nurse, community psychiatric nurse, occupational therapist, physiotherapist, social worker, counsellor, or support worker</p>
+	    
+	    <div class="form-group">
+	      <label class="form-label" for="healthcare-professional-name">Name</label>
+	      <input type="text" class="form-control" id="healthcare-professional-name">
+	    </div>
+	    
+	    <div class="form-group">
+	      <p class="form-label" for="healthcare-professional-address">Address</p>   
+	      <label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
+	      <label class="form-label"><input type="text" class="form-control" id="address-line2"></label>
+	      <label class="form-label"><input type="text" class="form-control" id="address-line3"></label>
+	   	</div>
+	    	
+	   	<div class="form-group">
+	    	<label class="form-label" for="address">Postcode</label>
+	    	<input type="text" class="form-control-1-4" id="postcode">
+	    </div>
+	    
+	    <div class="form-group">
+	      <label class="form-label" for="healthcare-professional-type">Profession</label>
+	      <p class="form-hint">For example, hospital doctor.</p>
+	      <input type="text" class="form-control" id="healthcare-professional-type">
+	    </div>
+	    
+	    <div class="form-group">
+	      <label class="form-label" for="healthcare-professional-phone">Phone number</label>
+	      <input type="text" class="form-control" id="healthcare-professional-phone">
+	    </div>
+	    
+	    <div class="form-group">
+	      <label class="form-label" for="healthcare-professional-date">When did you last see them? (approximate date)</label>
+	      <input type="text" class="form-control" id="healthcare-professional-date">
+	    </div>
+    
+    </fieldset>
+
+    <!-- Primary buttons, secondary links -->
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+      <!--<ul>
+        <li><a href="/">Back</a></li>
+      </ul>-->
+    </div>
+
+  </form>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
