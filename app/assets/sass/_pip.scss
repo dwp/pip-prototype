@@ -22,7 +22,7 @@
 .help-notice, article .help-notice
 {
   background-color: transparent;
-  background-image: url("https://assets.digital.cabinet-office.gov.uk/static/icon-important-0976ff4a275422b183be917d4b3ef444.png");
+  background-image: url("/public/images/icons/icon-important-0976ff4a275422b183be917d4b3ef444.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: 0px 3em;
@@ -117,7 +117,7 @@
 }
 
 .pagination li.next a:before {
-    background: transparent url(https://assets.digital.cabinet-office.gov.uk/static/arrow-sprite-8275c6a71c56adfe1ac2b06ae7d4b12e.png) no-repeat -102px -11px;
+    background: transparent url(/public/images/icons/arrow-sprite-8275c6a71c56adfe1ac2b06ae7d4b12e.png) no-repeat -102px -11px;
     margin: -4px -32px 0 0;
     display: block;
     float: right;
@@ -127,7 +127,7 @@
 }
 
 .pagination li.previous a:before {
-    background: transparent url(https://assets.digital.cabinet-office.gov.uk/static/arrow-sprite-8275c6a71c56adfe1ac2b06ae7d4b12e.png) no-repeat -20px -11px;
+    background: transparent url(/public/images/icons/arrow-sprite-8275c6a71c56adfe1ac2b06ae7d4b12e.png) no-repeat -20px -11px;
     margin: -4px 0 0 -32px;
     display: block;
     float: left;
@@ -179,3 +179,5 @@
   list-style-type: none;
   margin-left: 0;
 }
+
+a.button-get-started { background-image: url("/public/images/icons/icon-pointer.png"); }
