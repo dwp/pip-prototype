@@ -19,6 +19,9 @@ if (env === 'production') {
   app.use(express.basicAuth(username, password));
 }
 
+//add post body
+app.use(express.bodyParser());
+
 // Application settings
 app.engine('html', require(__dirname + '/lib/template-engine.js').__express);
 app.set('view engine', 'html');
