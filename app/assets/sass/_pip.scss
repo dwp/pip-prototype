@@ -183,16 +183,13 @@
 a.button-get-started { background-image: url("/public/images/icons/icon-pointer.png"); }
 
 
-.mvp-inline-question {
-  display:inline-block;
-  vertical-align:top;
-}
+.mvp-inline p {   line-height:2.5em; font-weight:bold;  }
 
-.mpv-inline p {   line-height:2.5em; font-weight:bold;  }
-
-.mpv-inline input { line-height:1em; }
-.mpv-inline textarea { line-height:1em; }
+.mvp-inline input { line-height:1em; }
+.mvp-inline textarea { line-height:1em; }
 
 
 label + input { margin-top:10px; }
 label + textarea { margin-top:10px; }
+
+.form-control-small { width:30px; }

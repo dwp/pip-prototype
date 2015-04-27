@@ -34,35 +34,42 @@
 				</div-->
                 
             {{#reminder-to-eat}}
-            <div class="form-group inline mpv-inline"> 
-                <p>I need prompting or reminding to eat <input type="text" name="prompting-value" class="form-control-1-4" /> days a week because <textarea class="mvp-inline-question form-control-3-4" name="prompting-area"></textarea>.</p>
-            </div> 
-            
             <div class="form-group inline"> 
-               
-               <label class="form-label-bold add-padding" for="details-box">I need prompting or reminding to eat</label>
-               <input type="text" class="promoting-value" /> Days a week
+                <label class="form-label-bold">I need prompting or reminding to eat <input type="text" name="prompting-value" class="form-control-small" /> days a week because...</label>
                 
-            </div>
-                
-                
-            <div class="form-group inline">       
-                <label class="form-label-bold add-padding" for="details-box">Because</label>
-                <textarea type="text" class="form-control-3-4" name="prompting-area"></textarea> 
-                
-            </div>
-            
-                
-                
+                <textarea class="form-control-3-4" name="prompting-area"></textarea>
+            </div> 
 			{{/reminder-to-eat}}
                 
 				
             {{#food-prep}}
             <div class="form-group inline mpv-inline"> 
-                <p>I need someone to cut my food up for me <input type="text" name="food-prep" /> days a week and I need someone to put food in my mouth <input type="text" name="food-prep2" /> days a week because <textarea class="mvp-inline-question form-control-2-4"></textarea>.</p>
+                <label class="form-label-bold">I need someone to cut my food up for me <input type="text" name="food-prep" class="form-control-small"  /> days a week and I need someone to put food in my mouth <input type="text" name="food-prep2" class="form-control-small" /> days a week because...</label>
+                <textarea class="form-control-3-4"></textarea>
             </div> 
 			{{/food-prep}}
 			    
+                
+            {{#supervising}}
+            <div class="form-group inline mpv-inline"> 
+                <label class="form-label-bold">I need supervising whilst eating because...</label>
+                <textarea class="form-control-3-4"></textarea>
+            </div>     
+            {{/supervising}}
+                
+                
+            {{#special-equipment}}
+            <div class="form-group inline" id="details">
+                <label class="form-label-bold add-padding" for="details-box">The aids or special equipment I use to eat are</label>
+                <textarea type="text" class="form-control-3-4" id="details-box"></textarea> 
+                
+                <label class="form-label-bold">I need to use them <input type="text" name="food-prep2" class="form-control-small" /> days a week.</label>
+                
+                
+                
+            </div>    
+            {{/special-equipment}}
+                
                 
             <div class="form-group inline" id="details">
                 <label class="form-label-bold add-padding" for="details-box">Please tell us more about the difficulties you have eating.</label>
