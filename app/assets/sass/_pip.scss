@@ -221,3 +221,16 @@ label + textarea { margin-top:10px; }
     margin-bottom: 0.5em;
     color: #fff
 }
+
+/* panel padding */
+
+.panel {
+  clear: both;
+  padding: 10px 0 10px 0;
+  margin: 30px 15px 45px 0;
+}
+
+
+ textarea {
+  min-height: 6em;
+}
