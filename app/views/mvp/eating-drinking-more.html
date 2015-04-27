@@ -1,0 +1,92 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+	
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+                        
+	    <h1 class="form-title heading-xlarge">
+	      Eating and Drinking - more
+	    </h1>
+	    
+            
+            
+			<form action="pip09" method="#" class="form">
+			
+				<a href="pip07" class="example-back-link">Back</a>
+				
+				<!--div class="section-progress">
+				Step 1 of 17
+				</div-->
+                
+            {{#reminder-to-eat}}
+            <div class="form-group inline mpv-inline"> 
+                <p>I need prompting or reminding to eat <input type="text" name="prompting-value" class="form-control-1-4" /> days a week because <textarea class="mvp-inline-question form-control-3-4" name="prompting-area"></textarea>.</p>
+            </div> 
+            
+            <div class="form-group inline"> 
+               
+               <label class="form-label-bold add-padding" for="details-box">I need prompting or reminding to eat</label>
+               <input type="text" class="promoting-value" /> Days a week
+                
+            </div>
+                
+                
+            <div class="form-group inline">       
+                <label class="form-label-bold add-padding" for="details-box">Because</label>
+                <textarea type="text" class="form-control-3-4" name="prompting-area"></textarea> 
+                
+            </div>
+            
+                
+                
+			{{/reminder-to-eat}}
+                
+				
+            {{#food-prep}}
+            <div class="form-group inline mpv-inline"> 
+                <p>I need someone to cut my food up for me <input type="text" name="food-prep" /> days a week and I need someone to put food in my mouth <input type="text" name="food-prep2" /> days a week because <textarea class="mvp-inline-question form-control-2-4"></textarea>.</p>
+            </div> 
+			{{/food-prep}}
+			    
+                
+            <div class="form-group inline" id="details">
+                <label class="form-label-bold add-padding" for="details-box">Please tell us more about the difficulties you have eating.</label>
+                <textarea type="text" class="form-control-3-4" id="details-box"></textarea> 
+            </div>
+                
+            <div class="form-group">
+                <input type="submit" class="button" value="Continue">
+            </div>
+                
+                
+			</form>
+		
+		</div>
+		<div class="column-third">
+			
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

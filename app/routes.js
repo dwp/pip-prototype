@@ -15,13 +15,15 @@ module.exports = {
 
     app.post('/test-post', function (req, res) {
 
-    	console.log(req.body)
 
       res.render('sandbox/pip07',req.body);
     });
 
 
+    app.post('/mvp/eating-drinking-more', function (req, res) {
 
+      res.render('mvp/eating-drinking-more',req.body);
+    });
 
   }
 };
