@@ -193,3 +193,31 @@ label + input { margin-top:10px; }
 label + textarea { margin-top:10px; }
 
 .form-control-small { width:30px; }
+
+
+/* big green box */
+
+
+.highlighted-event {
+    background-color: #28a197;
+    color: #fff;
+    text-align: center;
+    padding: 1em 2em 1em 2em;
+    margin: 0
+}
+
+.highlighted-event p {
+    margin-bottom: 0px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.highlighted-event em {
+    font-size: 2em;
+    font-style: normal;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5em;
+    color: #fff
+}
