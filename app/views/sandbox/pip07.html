@@ -1,0 +1,336 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+	
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="pip08" method="#" class="form">
+			
+				<a href="pip06" class="example-back-link">Back</a>
+				
+				<!--div class="section-progress">
+				Step 1 of 17
+				</div-->
+				
+				{{>includes/pages/sandbox/room-details}}
+			
+
+				
+				
+
+
+				
+
+
+				<div class="panel" id="details">
+			
+			{{#roomtypesFront}}
+				<label class="form-label-bold add-padding" for="adaptations">Front door</label>
+						<textarea type="text" class="form-control-3-4" id="details-box"></textarea> 
+				
+
+
+			
+
+				<fieldset class="inline">
+				
+					<legend class="form-label-bold" for="adaptations">Do you need adaptations to your front door in order to live without help from other people?</legend>
+				
+					
+					<div class="form-group">
+						<label class="block-label" data-target="adaptations" for="adaptations-yes">
+							<input id="adaptations-frontdoor-yes" type="radio" name="adaptations-frontdoor" value="Yes">
+							Yes
+						</label>
+						<label class="block-label" for="adaptations-frontdoor-no">
+							<input id="adaptations-frontdoor-no" type="radio" name="adaptations-frontdoor" value="No">
+							No
+						</label>  
+					</div>
+				
+				</fieldset>
+
+					</div>	
+
+			{{/roomtypesFront}}
+
+
+						{{#roomtypesHallway}}
+				<label class="form-label-bold add-padding" for="adaptations">Hallway</label>
+						<textarea type="text" class="form-control-3-4" id="details-box"></textarea> 
+				
+
+
+			
+
+				<fieldset class="inline">
+				
+					<legend class="form-label-bold" for="adaptations">Do you need special equipment in the hallway in order to live without help from other people?</legend>
+				
+					
+					<div class="form-group">
+						<label class="block-label" data-target="adaptations" for="adaptations-hallway-yes">
+							<input id="adaptations-hallway-yes" type="radio" name="adaptations-hallway" value="Yes">
+							Yes
+						</label>
+						<label class="block-label" for="adaptations-hallway-no">
+							<input id="adaptations-hallway-no" type="radio" name="adaptations-hallway" value="No">
+							No
+						</label>  
+					</div>
+				
+				</fieldset>
+
+					</div>	
+
+			{{/roomtypesHallway}}
+
+
+
+						{{#roomtypesKitchen}}
+				<label class="form-label-bold add-padding" for="adaptations">Kitchen</label>
+						<textarea type="text" class="form-control-3-4" id="details-box"></textarea> 
+				
+
+
+			
+
+				<fieldset class="inline">
+				
+					<legend class="form-label-bold" for="adaptations">Do you need special equipment in the kitchen in order to live without help from other people?</legend>
+				
+					
+					<div class="form-group">
+						<label class="block-label" data-target="adaptations" for="adaptations-kitchen-yes">
+							<input id="adaptations-kitchen-yes" type="radio" name="adaptations-kitchen" value="Yes">
+							Yes
+						</label>
+						<label class="block-label" for="adaptations-kitchen-no">
+							<input id="adaptations-kitchen-no" type="radio" name="adaptations-kitchen" value="No">
+							No
+						</label>  
+					</div>
+				
+				</fieldset>
+
+					</div>	
+
+			{{/roomtypesKitchen}}
+
+
+
+						{{#roomtypesLounge}}
+				<label class="form-label-bold add-padding" for="details-box">Lounge</label>
+						<textarea type="text" class="form-control-3-4" id="details-box"></textarea> 
+				
+
+
+			
+
+				<fieldset class="inline">
+				
+					<legend class="form-label-bold" for="adaptations-lounge">Do you need special equipment in the lounge in order to live without help from other people?</legend>
+				
+					
+					<div class="form-group">
+						<label class="block-label" data-target="adaptations" for="adaptations-lounge-yes">
+							<input id="adaptations-lounge-yes" type="radio" name="adaptations-lounge" value="Yes">
+							Yes
+						</label>
+						<label class="block-label" for="adaptations-lounge-no">
+							<input id="adaptations-lounge-no" type="radio" name="adaptations-lounge" value="No">
+							No
+						</label>  
+					</div>
+				
+				</fieldset>
+
+					</div>	
+
+			{{/roomtypesLounge}}
+
+
+			{{#roomtypesDining}}
+				<label class="form-label-bold add-padding" for="details-box">Dining room</label>
+						<textarea type="text" class="form-control-3-4" id="details-box"></textarea> 
+				
+
+
+			
+
+				<fieldset class="inline">
+				
+					<legend class="form-label-bold" for="adaptations-dining">Do you need special equipment in the dining room in order to live without help from other people?</legend>
+				
+					
+					<div class="form-group">
+						<label class="block-label" data-target="adaptations" for="adaptations-dining-yes">
+							<input id="adaptations-dining-yes" type="radio" name="adaptations-dining" value="Yes">
+							Yes
+						</label>
+						<label class="block-label" for="communicating-no">
+							<input id="adaptations-dining-yes" type="radio" name="adaptations-dining" value="No">
+							No
+						</label>  
+					</div>
+				
+				</fieldset>
+
+					</div>	
+
+			{{/roomtypesDining}}
+
+
+
+			
+						{{#roomtypesStairs}}
+				<label class="form-label-bold add-padding" for="details-box">Stairs</label>
+						<textarea type="text" class="form-control-3-4" id="details-box"></textarea> 
+				
+
+
+			
+
+				<fieldset class="inline">
+				
+					<legend class="form-label-bold" for="adaptations-stairs">Do you need adaptations to your stairs in order to live without help from other people?</legend>
+				
+					
+					<div class="form-group">
+						<label class="block-label" data-target="adaptations" for="adaptations-stairs-yes">
+							<input id="adaptations-stairs-yes" type="radio" name="adaptations-stairs" value="Yes">
+							Yes
+						</label>
+						<label class="block-label" for="adaptations-stairs-no">
+							<input id="adaptations-stairs-no" type="radio" name="communicating" value="No">
+							No
+						</label>  
+					</div>
+				
+				</fieldset>
+
+					</div>	
+
+			{{/roomtypesStairs}}
+
+			{{#roomtypesBedroom}}
+				<label class="form-label-bold add-padding" for="details-box">Bedroom</label>
+						<textarea type="text" class="form-control-3-4" id="details-box"></textarea> 
+				
+
+
+			
+
+				<fieldset class="inline">
+				
+					<legend class="form-label-bold" for="adaptations-bedroom">Do you need adaptations to your bedroom in order to live without help from other people?</legend>
+				
+					
+					<div class="form-group">
+						<label class="block-label" data-target="adaptations" for="adaptations-bedroom-yes">
+							<input id="adaptations-bedroom-yes" type="radio" name="communicating" value="Yes">
+							Yes
+						</label>
+						<label class="block-label" for="communicating-no">
+							<input id="communicating-no" type="radio" name="communicating" value="No">
+							No
+						</label>  
+					</div>
+				
+				</fieldset>
+
+					</div>	
+
+			{{/roomtypesBedroom}}
+
+			{{#roomtypesBathroom}}
+				<label class="form-label-bold add-padding" for="details-box">Bedroom</label>
+						<textarea type="text" class="form-control-3-4" id="details-box"></textarea> 
+				
+
+
+			
+
+				<fieldset class="inline">
+				
+					<legend class="form-label-bold" for="communicating">Do you need adaptations to your bathroom in order to live without help from other people?</legend>
+				
+					
+					<div class="form-group">
+						<label class="block-label" data-target="communicating-details" for="communicating-yes">
+							<input id="communicating-yes" type="radio" name="communicating" value="Yes">
+							Yes
+						</label>
+						<label class="block-label" for="communicating-no">
+							<input id="communicating-no" type="radio" name="communicating" value="No">
+							No
+						</label>  
+					</div>
+				
+				</fieldset>
+
+					</div>	
+
+			{{/roomtypesBathroom}}
+
+			{{#roomtypesOther}}
+				<label class="form-label-bold add-padding" for="details-box">Bedroom</label>
+						<textarea type="text" class="form-control-3-4" id="details-box"></textarea> 
+				
+
+
+			
+
+				<fieldset class="inline">
+				
+					<legend class="form-label-bold" for="communicating">Do you need adaptations to yany other room in order to live without help from other people?</legend>
+				
+					
+					<div class="form-group">
+						<label class="block-label" data-target="communicating-details" for="communicating-yes">
+							<input id="communicating-yes" type="radio" name="communicating" value="Yes">
+							Yes
+						</label>
+						<label class="block-label" for="communicating-no">
+							<input id="communicating-no" type="radio" name="communicating" value="No">
+							No
+						</label>  
+					</div>
+				
+				</fieldset>
+
+					</div>	
+
+			{{/roomtypesOther}}
+
+
+			</form>
+		
+		</div>
+		<div class="column-third">
+			
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

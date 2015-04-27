@@ -9,7 +9,19 @@ module.exports = {
       res.render('examples/template-data', { 'name' : 'Foo' });
     });
 
-    // add your routes here
+    // add your routes her
+
+    //Test journey for 'sandbox'
+
+    app.post('/test-post', function (req, res) {
+
+    	console.log(req.body)
+
+      res.render('sandbox/pip07',req.body);
+    });
+
+
+
 
   }
 };
