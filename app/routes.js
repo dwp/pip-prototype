@@ -26,5 +26,11 @@ module.exports = {
     });
       
       
+      
+    app.post('/error/personal-details', function (req, res) {
+      res.render('error/personal-details-error',req.body);
+    });
+      
+      
   }
 };

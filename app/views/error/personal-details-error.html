@@ -1,0 +1,161 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+	
+	<div class="grid-row">
+		<div class="column-two-thirds">
+            
+            
+            
+
+			<form action="personal-details" method="post" class="form">
+			
+				<a href="apply" class="example-back-link">Back</a>
+				
+			<h1 class="form-title heading-large">
+				Personal details
+				</h1>
+				
+                
+        <div class="error-summary" role="group" tabindex="-1" aria-labelledby="error-summary-heading">
+                <h3 class="heading-medium error-summary-heading" id="error-summary-heading">
+                  Message to alert the user to a problem goes here
+                </h3>
+                <p>
+                  Description of the errors and how to correct them
+                </p>
+                <ul class="error-summary-list">
+                    <li><a href="#error-jump-1">Name - Enter your name</a></li>
+                    <li><a href="#error-jump-2">Nino - Enter your National Insurance number.</a></li>
+                    <li><a href="#error-jump-3">Date of Birth - Enter your date of birth</a></li>
+                    <li><a href="#error-jump-4">Address - Please complete</a></li>
+                </ul>
+              </div>
+                
+				<ul>
+					<li>
+						<div class="form-group error" id="error-jump-1">
+                            
+                            
+                            
+							<label class="form-label-bold" for="full-number">
+							<span class="error-message" aria-hidden="true">Enter your date of birth.</span>
+                                Full name
+                                <span class="form-hint">For example, 'Mr. John Smith'</span>
+							</label>
+                            
+							<input type="text" class="form-control" id="full-name" name="full-name">
+						</div>
+					</li>
+					<li>
+						<div class="form-group error" id="error-jump-2">
+							<fieldset>
+                                  <span class="error-message" aria-hidden="true">Error message goes here</span>
+                                
+								<legend class="form-label-bold">Date of birth</legend>
+								
+								<div class="form-date">
+									<span class="form-hint">For example, 31 04 1970</span>
+									
+									<div class="form-group form-group-day">
+										<label for="dob-day">Day</label>
+										<input type="text" class="form-control" id="dob-day">
+									</div>
+									<div class="form-group form-group-month">
+										<label for="dob-month">Month</label>
+										<input type="text" class="form-control" id="dob-month">
+									</div>
+									<div class="form-group form-group-year">
+										<label for="dob-year">Year</label>
+										<input type="text" class="form-control" id="dob-year">
+									</div>
+								</div>
+							</fieldset>
+						</div>
+					</li>
+					<li>
+						<div class="form-group error" id="error-jump-3">
+                            
+                        
+                            
+							<label class="form-label-bold" for="ni-number">
+							 <span class="error-message" aria-hidden="true">Enter your National Insurance number.</span>
+                                
+                                National Insurance number
+                                
+                                <span class="form-hint">
+								For example, 'VO123456D'
+								</span>
+							</label>
+                            
+                            
+                            
+							<input type="text" class="form-control" id="ni-number">
+						</div>
+					</li>
+					<li>
+                        
+                    <div class="form-group error" id="error-jump-4">
+						<fieldset>
+				  
+							<legend class="form-label-bold">
+                                
+                                <span class="error-message" aria-hidden="true">Please complete your address.</span>
+                                
+                                Your address
+                            
+                                <span class="form-hint">If you have no fixed address, provide a contact address where we can write to you.</span>
+							
+                            </legend>
+							
+							
+							<div class="form-group">
+								<p class="form-label">Address</p>
+								<label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
+								<label class="form-label"><input type="text" class="form-control" id="address-line2"></label>
+								<label class="form-label"><input type="text" class="form-control" id="address-line3"></label>
+							</div>
+							
+							<div class="form-group no-after-padding">
+								<label class="form-label" for="address">Postcode</label>
+								<input type="text" class="form-control-1-4 form-control" id="postcode">
+							</div>
+							
+						</fieldset>
+                    </div>
+					</li>
+
+				</ul>
+			
+                <div class="form-group">
+					<input type="submit" class="button" value="Continue">
+				</div>
+			</form>
+		
+
+		<div class="column-third">
+			
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
