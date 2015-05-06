@@ -55,7 +55,13 @@
                     <label class="form-label" for="feeding-area">because... <input class="form-control-2-4" id="feeding-area" /> .</label>
                 </div> 
                 {{/feeding}}
-    			    
+
+                {{#feeding-tube}}
+                <div class="form-group inline mpv-inline"> 
+                    <label class="form-label" for="feeding-tube">I need to use a feeding tube <input type="text" name="feeding-tube" class="form-control-small" /> days a week</label>
+                    <label class="form-label" for="feeding-tube-area">because... <input class="form-control-2-4" id="feeding-tube-area" /> .</label>
+                </div> 
+                {{/feeding-tube}}
                     
                 {{#supervising}}
                 <div class="form-group inline mpv-inline"> 
