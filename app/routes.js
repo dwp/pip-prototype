@@ -20,9 +20,14 @@ module.exports = {
     });
 
 
-    app.post('/mvp/eating-drinking-more', function (req, res) {
+    app.post('/story-gen/preparing-food-more', function (req, res) {
 
-      res.render('mvp/eating-drinking-more',req.body);
+      res.render('story-gen/preparing-food-more',req.body);
+    });
+
+    app.post('/story-gen/eating-drinking-more', function (req, res) {
+
+      res.render('story-gen/eating-drinking-more',req.body);
     });
       
       
