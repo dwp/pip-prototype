@@ -69,6 +69,15 @@
                     <input class="form-control-2-4" id="supervising" />
                 </div>     
                 {{/supervising}}
+
+                {{#side-effects}}
+                <div class="form-group inline mpv-inline">
+                    <label class="form-label" for="side-effects">The side-effects I get from eating or drinking are...</label>
+                    <input class="form-control-2-4" id="side-effects" />
+                    
+                    <label class="form-label" for="side-effect2">and I get them <input type="text" id="side-effects2" class="form-control-small" /> days a week.</label>
+                </div>    
+                {{/side-effects}}
                     
                     
                 {{#special-equipment}}
@@ -79,16 +88,7 @@
                     <label class="form-label">and I need to use them <input type="text" name="food-prep2" class="form-control-small" /> days a week.</label>
                 </div>    
                 {{/special-equipment}}
-
-                {{#side-effects}}
-                <div class="form-group inline" id="details">
-                    <label class="form-label add-padding" for="details-box">The side-effects I get from eating or drinking are</label>
-                    <textarea type="text" class="form-control-3-4" id="details-box"></textarea> 
-                    
-                    <label class="form-label">and I get them <input type="text" name="food-prep2" class="form-control-small" /> days a week.</label>
-                </div>    
-                {{/side-effects}}
-                    
+    
                     
                 <div class="form-group inline" id="details">
                     <label class="form-label-bold add-padding" for="details-box">Please tell us more about the difficulties you have eating.</label>

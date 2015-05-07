@@ -1,0 +1,99 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+	
+	<div class="grid-row">
+		<div class="column-two-thirds">
+    
+			<form action="pip09" method="#" class="form">
+			
+				<a href="moving-around" class="example-back-link">Back</a>
+				
+				<!--div class="section-progress">
+				Step 1 of 17
+				</div-->
+                <h1 class="form-title heading-large">
+                Your day-to-day life - moving around
+                </h1>
+
+                
+                <h2 class="heading-small">Complete the following statements</h2>
+
+                
+                {{#wheelchair}}
+                <div class="form-group inline"> 
+                    <label class="form-label" for="wheelchair">I use a wheelchair or similar device to move around safely <input type="text" id="wheelchair" class="form-control-small" /> days a week</label>
+                    <label class="form-label" for="wheelchair3">because <input class="form-control-2-4" name="wheelchair" id="wheelchair3" /> .</label>
+                    
+                </div> 
+    			{{/wheelchair}}
+                    
+    				
+                {{#fall}}
+                <div class="form-group inline mpv-inline"> 
+                    <label class="form-label" for="fall">I recently had a fall. This happened to me <input type="text" name="fall" id="fall" class="form-control-small"  /> weeks ago.</label>
+                    <label class="form-label" for="fall2">I have fallen <input type="text" name="fall" id="fall2" class="form-control-small"  /> times in the past year.</label></label>
+                </div> 
+    			{{/fall}}
+
+                {{#walking-aid}}
+                <div class="form-group inline mpv-inline"> 
+                    <label class="form-label" for="walking-aid">I use a <input type="text" name="walking-aid" id="walking-aid" class="form-control-2-4" /> to help me walk...</label>
+                    <label class="form-label" for="walking-aid2"><input class="form-control-small" id="walking-aid2" /> days a week.</label>
+                </div> 
+                {{/walking-aid}}
+
+                {{#side-effects}}
+                <div class="form-group inline mpv-inline">
+                    <label class="form-label" for="side-effects">The side-effects I get from walking can include <input class="form-control-2-4" id="side-effects" /></label>
+                    <label class="form-label" for="side-effect2">and I get them <input type="text" id="side-effects2" class="form-control-small" /> days a week.</label>
+                </div>    
+                {{/side-effects}}
+                    
+                    
+                {{#distance}}
+                <div class="form-group inline" id="details">
+                    <label class="form-label add-padding" for="varies-box">Taking into account the aids I use the distance I can walk varies because <input class="form-control-2-4" id="varies-box" /></label>
+                </div>    
+                {{/distance}}
+    
+                    
+                <div class="form-group inline" id="details">
+                    <label class="form-label-bold add-padding" for="details-box">Please tell us more about the difficulties you have moving around.</label>
+                    <textarea type="text" class="form-control-3-4" id="details-box"></textarea> 
+                </div>
+                    
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                </div>
+                
+                
+			</form>
+		
+		</div>
+		<div class="column-third">
+			
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
