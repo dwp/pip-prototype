@@ -20,6 +20,43 @@ module.exports = {
     });
 
 
+
+    //Sprint 5 journey
+    
+    app.post('/pip5/preparing-food-more', function (req, res) {
+
+      res.render('pip5/preparing-food-more',req.body);
+    });
+
+    app.post('/pip5/eating-drinking-more', function (req, res) {
+
+      res.render('pip5/eating-drinking-more',req.body);
+    });
+
+    app.post('/pip5/moving-around-more', function (req, res) {
+
+      res.render('pip5/moving-around-more',req.body);
+    });
+
+    app.post('/pip5/mixing-with-people-more', function (req, res) {
+
+      res.render('pip5/mixing-with-people-more',req.body);
+    });
+
+    app.post('/pip5/comunicating-more', function (req, res) {
+
+      res.render('pip5/communicating-more',req.body);
+    });
+
+    app.post('/pip5/going-out-more', function (req, res) {
+
+      res.render('pip5/going-out-more',req.body);
+    });
+
+
+
+
+
     app.post('/story-gen/preparing-food-more', function (req, res) {
 
       res.render('story-gen/preparing-food-more',req.body);

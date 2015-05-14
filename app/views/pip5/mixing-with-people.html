@@ -1,0 +1,132 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+	
+	<div class="grid-row">
+		<div class="column-two-thirds">
+            
+			<form action="mixing-with-people-more" method="post" class="form">
+			
+				<a href="communicating-more" class="example-back-link">Back</a>
+
+				<h1 class="form-title heading-large">
+				Your day-to-day life - eating and drinking
+				</h1>
+				
+                <div class="form-group inline">
+				    <label class="form-label-bold" for="reminder-to-eat">Do you need prompting or reminding to eat?</label>
+				      <label class="block-label" for="reminder-to-eat-yes">
+				        <input id="reminder-to-eat-yes" type="radio" name="reminder-to-eat" value="true">
+                            Yes
+				    </label>
+				    <label class="block-label" for="reminder-to-eat-no">
+                        <input id="reminder-to-eat-no" type="radio" name="reminder-to-eat" value="">
+				            No
+				    </label>  
+                </div>
+                
+                <div class="form-group inline">
+				    <label class="form-label-bold" for="food-prep">Do you need someone to cut up your food for you?</label>
+				      <label class="block-label" for="food-prep-yes">
+				        <input id="food-prep-yes" type="radio" name="food-prep" value="true">
+                            Yes
+				    </label>
+				    <label class="block-label" for="food-prep-no">
+                        <input id="food-prep-no" type="radio" name="food-prep" value="">
+				            No
+				    </label>  
+                </div>
+
+                <div class="form-group inline">
+				    <label class="form-label-bold" for="feeding">Do you need someone to put food in your mouth?</label>
+				      <label class="block-label" for="feeding-yes">
+				        <input id="feeding-yes" type="radio" name="feeding" value="true">
+                            Yes
+				    </label>
+				    <label class="block-label" for="food-prep-no">
+                        <input id="feeding-no" type="radio" name="feeding" value="">
+				            No
+				    </label>  
+                </div>
+                
+                <div class="form-group inline">
+				    <label class="form-label-bold" for="supervising">Do you need supervising whilst eating for your own safety?</label>
+				      <label class="block-label" for="supervising-yes">
+				        <input id="supervising-yes" type="radio" name="supervising" value="true">
+                            Yes
+				    </label>
+				    <label class="block-label" for="supervising-no">
+                        <input id="supervising-no" type="radio" name="supervising" value="">
+				            No
+				    </label>  
+                </div>
+                
+                  <div class="form-group inline">
+				    <label class="form-label-bold" for="feeding-tube">Do you use a feeding tube or similar device to eat?</label>
+				      <label class="block-label" for="feeding-tube-yes">
+				        <input id="feeding-tube-yes" type="radio" name="feeding-tube" value="true">
+                            Yes
+				    </label>
+				    <label class="block-label" for="feeding-tube-no">
+                        <input id="feeding-tube-no" type="radio" name="feeding-tube" value="">
+				            No
+				    </label>  
+                </div>  
+
+                <div class="form-group inline">
+				    <label class="form-label-bold" for="side-effects">Do you suffer from any side-effects during or after eating?</label>
+				    <p class="form-hint">This includes pain, breathlessness or tiredness.</p>
+				      <label class="block-label" for="side-effects-yes">
+				        <input id="side-effects-yes" type="radio" name="side-effects" value="true">
+                            Yes
+				    </label>
+				    <label class="block-label" for="side-effects-no">
+                        <input id="side-effects-no" type="radio" name="side-effects" value="">
+				            No
+				    </label>  
+                </div>            
+                
+                <div class="form-group inline">
+				    <label class="form-label-bold" for="special-equipment">Do you use an aid or special equipment to eat?</label>
+				      <label class="block-label" for="special-equipment-yes">
+				        <input id="special-equipment-yes" type="radio" name="special-equipment" value="true">
+                            Yes
+				    </label>
+				    <label class="block-label" for="special-equipment-no">
+                        <input id="special-equipment-no" type="radio" name="special-equipment" value="">
+				            No
+				    </label>  
+                </div>
+
+                <div class="form-group">
+					<input type="submit" class="button" value="Continue">
+				</div>
+			</form>
+		
+		</div>
+		<div class="column-third">
+			
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
