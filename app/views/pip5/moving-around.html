@@ -23,11 +23,24 @@
 				<a href="mixing-with-people" class="example-back-link">Back</a>
 
 				<h1 class="form-title heading-large">
-				Your day-to-day life - moving around
+				Your day-to-day life - getting around
 				</h1>
 				
+				<div class="form-group inline">
+				    <label class="form-label-bold" for="walking-aid">Do you use a special aid, other than a wheelchair, to help you walk?</label>
+				    <p class="form-hint">This includes if you use a walking stick, crutches or other similar aid.</p>
+				      <label class="block-label" for="walking-aid-yes">
+				        <input id="walking-aid-yes" type="radio" name="walking-aid" value="true">
+                            Yes
+				    </label>
+				    <label class="block-label" for="walking-aid-no">
+                        <input id="walking-aid-no" type="radio" name="walking-aid" value="">
+				            No
+				    </label>  
+                </div> 
+
                 <div class="form-group inline">
-				    <label class="form-label-bold" for="wheelchair">Do you use a wheelchair or similar device to move around safely?</label>
+				    <label class="form-label-bold" for="wheelchair">Do you use a wheelchair or similar device to get around?</label>
 				      <label class="block-label" for="wheelchair-yes">
 				        <input id="wheelchair-yes" type="radio" name="wheelchair" value="true">
                             Yes
@@ -50,17 +63,7 @@
 				    </label>  
                 </div>
                 
-                <div class="form-group inline">
-				    <label class="form-label-bold" for="walking-aid">Do you use an aid, other than a wheelchair, to help you walk?</label>
-				      <label class="block-label" for="walking-aid-yes">
-				        <input id="walking-aid-yes" type="radio" name="walking-aid" value="true">
-                            Yes
-				    </label>
-				    <label class="block-label" for="walking-aid-no">
-                        <input id="walking-aid-no" type="radio" name="walking-aid" value="">
-				            No
-				    </label>  
-                </div> 
+                
 
                 <div class="form-group inline">
 				    <label class="form-label-bold" for="side-effects">Do you have any side effects from walking?</label>
@@ -79,7 +82,7 @@
 							
 					<div class="form-group">
 						<p class="form-label-bold" for="distance">How far can you walk taking into account any aids you use?</p>
-						<p class="form-hint">A bus is approx 10 metres long for instance</p>
+						<p class="form-hint">A double decker bus is approx 10 metres long for instance</p>
 						
 						<label class="block-label" for="distance-20">
 							<input id="distance-20" type="radio" name="distance" value="">

@@ -43,7 +43,7 @@ module.exports = {
       res.render('pip5/mixing-with-people-more',req.body);
     });
 
-    app.post('/pip5/comunicating-more', function (req, res) {
+    app.post('/pip5/communicating-more', function (req, res) {
 
       res.render('pip5/communicating-more',req.body);
     });
