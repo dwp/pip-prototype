@@ -35,8 +35,8 @@
                 
                 {{#reminder-to-eat}}
                 <div class="form-group inline"> 
-                    <label class="form-label">I need prompting or reminding to eat <input type="text" name="prompting-value" class="form-control-small" /> days a week </label>
-                    <label class="form-label" for="prompting-area">because... <input class="form-control-2-4" name="prompting-area" id="prompting-area" /> .</label>
+                    <label class="form-label">I need to be reminded or encouraged to eat <input type="text" name="prompting-value" class="form-control-small" /> days a week </label>
+                    <label class="form-label" for="prompting-area">because... <input class="form-control-3-4" name="prompting-area" id="prompting-area" /> .</label>
                     
                 </div> 
     			{{/reminder-to-eat}}
@@ -45,24 +45,17 @@
                 {{#food-prep}}
                 <div class="form-group inline mpv-inline"> 
                     <label class="form-label">I need someone to cut my food up for me <input type="text" name="food-prep" class="form-control-small"  /> days a week</label>
-                    <label class="form-label" for="food-prep-area">because... <input class="form-control-2-4" id="food-prep-area" /> .</label>
+                    <label class="form-label" for="food-prep-area">because... <input class="form-control-3-4" id="food-prep-area" /> .</label>
                 </div> 
     			{{/food-prep}}
 
                 {{#feeding}}
                 <div class="form-group inline mpv-inline"> 
-                    <label class="form-label">I need someone to put food in my mouth <input type="text" name="feeding" class="form-control-small" /> days a week</label>
-                    <label class="form-label" for="feeding-area">because... <input class="form-control-2-4" id="feeding-area" /> .</label>
+                    <label class="form-label">I need someone to put food or drink in my mouth <input type="text" name="feeding" class="form-control-small" /> days a week</label>
+                    <label class="form-label" for="feeding-area">because... <input class="form-control-3-4" id="feeding-area" /> .</label>
                 </div> 
                 {{/feeding}}
 
-                {{#feeding-tube}}
-                <div class="form-group inline mpv-inline"> 
-                    <label class="form-label" for="feeding-tube">I need to use a feeding tube <input type="text" name="feeding-tube" class="form-control-small" /> days a week</label>
-                    <label class="form-label" for="feeding-tube-area">because... <input class="form-control-2-4" id="feeding-tube-area" /> .</label>
-                </div> 
-                {{/feeding-tube}}
-                    
                 {{#supervising}}
                 <div class="form-group inline mpv-inline"> 
                     <label class="form-label" for="supervising">I need supervising whilst eating because...</label>
@@ -70,10 +63,17 @@
                 </div>     
                 {{/supervising}}
 
+                {{#feeding-tube}}
+                <div class="form-group inline mpv-inline"> 
+                    <label class="form-label" for="feeding-tube">I use a feeding tube or similar device <input type="text" name="feeding-tube" class="form-control-small" /> days a week</label>
+                    <label class="form-label" for="feeding-tube-area">because... <input class="form-control-3-4" id="feeding-tube-area" /> .</label>
+                </div> 
+                {{/feeding-tube}}
+                    
                 {{#side-effects}}
                 <div class="form-group inline mpv-inline">
                     <label class="form-label" for="side-effects">The side-effects I get from eating or drinking are...</label>
-                    <input class="form-control-2-4" id="side-effects" />
+                    <input class="form-control-3-4" id="side-effects" />
                     
                     <label class="form-label" for="side-effect2">and I get them <input type="text" id="side-effects2" class="form-control-small" /> days a week.</label>
                 </div>    
