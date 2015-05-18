@@ -26,54 +26,50 @@
 				Step 1 of 17
 				</div-->
                 <h1 class="form-title heading-large">
-                Your day-to-day life - getting around
+                Your day-to-day life: getting around
                 </h1>
 
                 
                 <h2 class="heading-small">Complete the following statements</h2>
 
                 
-                {{#walking-aid}}
-                <div class="form-group inline mpv-inline"> 
-                    <label class="form-label" for="walking-aid">I use a <input type="text" name="walking-aid" id="walking-aid" class="form-control-2-4" /> to help me walk...</label>
-                    <label class="form-label" for="walking-aid2"><input class="form-control-small" id="walking-aid2" /> days a week.</label>
-                </div> 
-                {{/walking-aid}}
-
-
                 {{#wheelchair}}
                 <div class="form-group inline"> 
                     <label class="form-label" for="wheelchair">I use a wheelchair or similar device to get around <input type="text" id="wheelchair" class="form-control-small" /> days a week</label>
                     <label class="form-label" for="wheelchair3">because... <input class="form-control-3-4" name="wheelchair" id="wheelchair3" /> .</label>
                     
                 </div> 
-    			{{/wheelchair}}
+                {{/wheelchair}}
                     
-    				
+                {{#walking-aid}}
+                <div class="form-group inline mpv-inline"> 
+                    <label class="form-label" for="walking-aid">The special aid I use to help me walk is... <input type="text" name="walking-aid" id="walking-aid" class="form-control-3-4" /></label>
+                    <label class="form-label" for="walking-aid2">and I use it <input class="form-control-small" id="walking-aid2" /> days a week.</label>
+                </div> 
+                {{/walking-aid}}
+
+                {{#distance}}
+                <div class="form-group inline" id="details">
+                    <label class="form-label add-padding" for="varies-box">Taking into account the aids I use, the distance I can walk varies because... <input class="form-control-3-4" id="varies-box" /></label>
+                </div>    
+                {{/distance}}
+
+                {{#side-effects}}
+                <div class="form-group inline mpv-inline">
+                    <label class="form-label" for="side-effects">The side-effects I get from walking include... <input class="form-control-3-4" id="side-effects" /></label>
+                    <label class="form-label" for="side-effect2">and I get them <input type="text" id="side-effects2" class="form-control-small" /> days a week.</label>
+                </div>    
+                {{/side-effects}}
+	
                 {{#fall}}
                 <div class="form-group inline mpv-inline"> 
                     <label class="form-label" for="fall">I recently had a fall. This happened to me <input type="text" name="fall" id="fall" class="form-control-small"  /> weeks ago.</label>
                     <label class="form-label" for="fall2">I have fallen <input type="text" name="fall" id="fall2" class="form-control-small"  /> times in the past year.</label></label>
                 </div> 
     			{{/fall}}
-
-                {{#side-effects}}
-                <div class="form-group inline mpv-inline">
-                    <label class="form-label" for="side-effects">The side-effects I get from walking can include... <input class="form-control-3-4" id="side-effects" /></label>
-                    <label class="form-label" for="side-effect2">and I get them <input type="text" id="side-effects2" class="form-control-small" /> days a week.</label>
-                </div>    
-                {{/side-effects}}
-                    
-                    
-                {{#distance}}
+ 
                 <div class="form-group inline" id="details">
-                    <label class="form-label add-padding" for="varies-box">Taking into account the aids I use the distance I can walk varies because <input class="form-control-2-4" id="varies-box" /></label>
-                </div>    
-                {{/distance}}
-    
-                    
-                <div class="form-group inline" id="details">
-                    <label class="form-label-bold add-padding" for="details-box">Please tell us more about the difficulties you have getting around.</label>
+                    <label class="form-label-bold add-padding" for="details-box">Tell us more about the difficulties you have getting around.</label>
                     <textarea type="text" class="form-control-3-4" id="details-box"></textarea> 
                 </div>
                     

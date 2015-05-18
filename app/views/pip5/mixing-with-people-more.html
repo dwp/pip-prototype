@@ -26,18 +26,23 @@
 				Step 1 of 17
 				</div-->
                 <h1 class="form-title heading-large">
-                Your day-to-day life - mixing with people
+                Your day-to-day life: mixing with people
                 </h1>
 
                 
                 <h2 class="heading-small">Complete the following statements</h2>
 
                 
+                {{#feeding-tube}}
+                <div class="form-group inline mpv-inline"> 
+                    <label class="form-label" for="supervising">I avoid mixing with people because... <input class="form-control-3-4" id="supervising" /> .</label>
+                </div>     
+                {{/feeding-tube}}
+
                 {{#reminder-to-eat}}
                 <div class="form-group inline"> 
                     <label class="form-label">I need to be prompted or encouraged to mix with others <input type="text" name="prompting-value" class="form-control-small" /> % (percent) of the time </label>
                     <label class="form-label" for="prompting-area">because... <input class="form-control-3-4" name="prompting-area" id="prompting-area" /> .</label>
-                    
                 </div> 
     			{{/reminder-to-eat}}
                     
@@ -55,17 +60,11 @@
                 </div> 
                 {{/feeding}}
 
-                {{#feeding-tube}}
+                {{#supervising}}
                 <div class="form-group inline mpv-inline"> 
                     <label class="form-label" for="feeding-tube">I don't know how to behave around people <input type="text" name="feeding-tube" class="form-control-small" /> % (percent) of the time</label>
                     <label class="form-label" for="feeding-tube-area">because... <input class="form-control-3-4" id="feeding-tube-area" /> .</label>
                 </div> 
-                {{/feeding-tube}}
-                    
-                {{#supervising}}
-                <div class="form-group inline mpv-inline"> 
-                    <label class="form-label" for="supervising">I avoid mixing with people because... <input class="form-control-3-4" id="supervising" /> .</label>
-                </div>     
                 {{/supervising}}
 
                 {{#side-effects}}
@@ -78,13 +77,13 @@
                     
                 {{#special-equipment}}
                 <div class="form-group inline" id="details">
-                    <label class="form-label add-padding" for="details-box">I get anxious or stressed before, during or after mixing with people and this affects by <input class="form-control-3-4" id="details-box" /> .</label>
+                    <label class="form-label add-padding" for="details-box">I get anxious or stressed before, during or after mixing with people and this affects me by... <input class="form-control-3-4" id="details-box" /> .</label>
                 </div>    
                 {{/special-equipment}}
     
                     
                 <div class="form-group inline" id="details">
-                    <label class="form-label-bold add-padding" for="details-box">Please tell us more about the difficulties you have mixing with people.</label>
+                    <label class="form-label-bold add-padding" for="details-box">Tell us more about the difficulties you have mixing with people.</label>
                     <textarea type="text" class="form-control-3-4" id="details-box"></textarea> 
                 </div>
                     
