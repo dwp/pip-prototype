@@ -19,8 +19,14 @@ if (env === 'production') {
   app.use(express.basicAuth(username, password));
 }
 
+//add session session
+var session = require('express-session');
+
 //add post body
 app.use(express.bodyParser());
+
+//app session
+app.use(session({ secret: 'wr34954j54kr', cookie: { maxAge: 60000000 }}))
 
 // Application settings
 app.engine('html', require(__dirname + '/lib/template-engine.js').__express);
