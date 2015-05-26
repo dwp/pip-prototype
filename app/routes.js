@@ -117,7 +117,9 @@ module.exports = {
       res.render('story-gen/managing-money-more',req.body);
     });
 
-
+      /* route for review */
+      
+      require('./routes_review')(app);
       
   }
 };

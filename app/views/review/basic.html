@@ -1,0 +1,74 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+	
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="basic" method="post" class="form">
+			
+				<!--div class="section-progress">
+				Step 1 of 17
+				</div-->
+				
+				<h1 class="form-title heading-large">
+				Personal details
+				</h1>
+				
+				<ul>
+					<li>
+						<div class="form-group">
+							<label class="form-label-bold" for="full-number">
+							Full name
+								<span class="form-hint">
+								For example, 'Mr. John Smith'
+								</span>
+							</label>
+							<input type="text" class="form-control" name="name" id="full-number">
+						</div>
+					</li>
+					<li>
+						<div class="form-group">
+							<label class="form-label-bold" for="ni-number">
+							National Insurance number
+								<span class="form-hint">
+								For example, 'VO123456D'
+								</span>
+							</label>
+							<input type="text" class="form-control" name="ni-number" id="ni-number">
+						</div>
+					</li>
+				</ul>
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+					<input type="submit" class="button" value="Save and continue">
+				</div>
+			</form>
+		
+		</div>
+		<div class="column-third">
+			
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
