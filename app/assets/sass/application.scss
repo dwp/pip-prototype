@@ -35,3 +35,18 @@
 	background: transparent url("/public/images/blue-tick.png") no-repeat 0 0;
 	padding-left: 25px;
 }
+
+table.condition {
+	.form-control{
+		width: 100%;
+	}
+	.numeric, th.numeric {
+		width: 25%;
+		text-align: left;
+	}
+	th, td {
+		border: none;
+		padding: 0.5em 1em 0.5em 0;
+	}
+}
+

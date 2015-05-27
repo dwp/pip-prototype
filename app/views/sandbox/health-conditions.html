@@ -1,0 +1,266 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+	
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="#" method="#" class="form">
+			
+				<a href="#" class="example-back-link">Back</a>
+				
+				<!--div class="section-progress">
+				Step 1 of 17
+				</div-->
+								<h1 class="form-title heading-large">
+				<!--Hospital, hospice, residential or nursing care-->
+				Your health conditions and disabilities
+				</h1>
+				
+				<!-- health conditions or disabilities -->
+				<div class="form-group">  
+					<label class="form-label-bold" for="health-conditions">List your health conditions and disabilities and when they started</label> 
+
+
+
+					<table class="condition">
+					    <thead>
+							<tr>
+								<th scope="col">Health condition or disability</th>
+								<th class="numeric" scope="col">Date it started</th>
+							</tr>
+					    </thead>
+					    <tbody>
+							<tr>
+								<td><input type="text" class="form-control"></td>
+								<td class="numeric"><input type="text" class="form-control"></td>
+							</tr>
+							<tr>
+								<td><input type="text" class="form-control"></td>
+								<td class="numeric"><input type="text" class="form-control"></td>
+							</tr>
+							<tr>
+								<td><input type="text" class="form-control"></td>
+								<td class="numeric"><input type="text" class="form-control"></td>
+							</tr>
+					    </tbody>
+					</table>
+
+					<a href="#" id="show-condition4">Add another health condition</a>
+
+					<div class="js-hidden" id="condition4">
+						<table class="condition">
+						    <tbody>
+								<tr>
+									<td><input type="text" class="form-control"></td>
+									<td class="numeric"><input type="text" class="form-control"></td>
+								</tr>
+						    </tbody>
+						</table>
+
+						<a href="#" id="show-condition5">Add another health condition</a>
+					</div>
+
+					<table class="condition js-hidden" id="condition5">
+					    <tbody>
+							<tr>
+								<td><input type="text" class="form-control"></td>
+								<td class="numeric"><input type="text" class="form-control"></td>
+							</tr>
+					    </tbody>
+					</table>
+
+				</div>
+
+
+
+				<!-- medication -->
+				<div class="form-group">  
+					<label class="form-label-bold" for="health-conditions">List any medication that you are currently on</label> 
+
+					<table class="condition">
+					    <thead>
+							<tr>
+								<th scope="col">Medication</th>
+								<th class="numeric" scope="col">Dosage</th>
+								<th class="numeric" scope="col">How often do you take it</th>
+							</tr>
+					    </thead>
+					    <tbody>
+							<tr>
+								<td><input type="text" class="form-control"></td>
+								<td class="numeric"><input type="text" class="form-control"></td>
+								<td class="numeric"><input type="text" class="form-control"></td>
+							</tr>
+							<tr>
+								<td><input type="text" class="form-control"></td>
+								<td class="numeric"><input type="text" class="form-control"></td>
+								<td class="numeric"><input type="text" class="form-control"></td>
+							</tr>
+							<tr>
+								<td><input type="text" class="form-control"></td>
+								<td class="numeric"><input type="text" class="form-control"></td>
+								<td class="numeric"><input type="text" class="form-control"></td>
+							</tr>
+					    </tbody>
+					</table>
+
+					<a href="#" id="show-condition6">Add another medication</a>
+
+					<div class="js-hidden" id="condition6">
+						<table class="condition">
+						    <tbody>
+								<tr>
+									<td><input type="text" class="form-control"></td>
+									<td class="numeric"><input type="text" class="form-control"></td>
+									<td class="numeric"><input type="text" class="form-control"></td>
+								</tr>
+						    </tbody>
+						</table>
+
+						<a href="#" id="show-condition7">Add another medication</a>
+					</div>
+
+					<table class="condition js-hidden" id="condition7">
+					    <tbody>
+							<tr>
+								<td><input type="text" class="form-control"></td>
+								<td class="numeric"><input type="text" class="form-control"></td>
+								<td class="numeric"><input type="text" class="form-control"></td>
+								<td class="numeric"><input type="text" class="form-control"></td>
+							</tr>
+					    </tbody>
+					</table>
+
+				</div> 
+
+
+				<!-- treatments -->
+				<div class="form-group">  
+					<label class="form-label-bold" for="health-conditions">List any treatments you've had or have planned</label> 
+
+
+
+					<table class="condition">
+					    <thead>
+							<tr>
+								<th scope="col">Treatment name</th>
+								<th class="numeric" scope="col">When/how often</th>
+							</tr>
+					    </thead>
+					    <tbody>
+							<tr>
+								<td><input type="text" class="form-control"></td>
+								<td class="numeric"><input type="text" class="form-control"></td>
+							</tr>
+							<tr>
+								<td><input type="text" class="form-control"></td>
+								<td class="numeric"><input type="text" class="form-control"></td>
+							</tr>
+							<tr>
+								<td><input type="text" class="form-control"></td>
+								<td class="numeric"><input type="text" class="form-control"></td>
+							</tr>
+					    </tbody>
+					</table>
+
+					<a href="#" id="show-condition8">Add another treatment</a>
+
+					<div class="js-hidden" id="condition8">
+						<table class="condition">
+						    <tbody>
+								<tr>
+									<td><input type="text" class="form-control"></td>
+									<td class="numeric"><input type="text" class="form-control"></td>
+								</tr>
+						    </tbody>
+						</table>
+
+						<a href="#" id="show-condition9">Add another treatment</a>
+					</div>
+
+					<table class="condition js-hidden" id="condition9">
+					    <tbody>
+							<tr>
+								<td><input type="text" class="form-control"></td>
+								<td class="numeric"><input type="text" class="form-control"></td>
+							</tr>
+					    </tbody>
+					</table>
+
+				</div>
+
+				
+
+				  
+				
+				
+				
+				
+				
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+					<input type="submit" class="button" value="Save and continue">
+				</div>
+
+			</form>
+		</div>
+	</div>
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+
+				<script>
+				  $(document).ready(function() {
+				  
+				  	$("#show-condition4").click(function() {
+				  	  $("#condition4").show();
+				  	  $("#show-condition4").hide();
+				  	   return false;
+				  	});
+				  	$("#show-condition5").click(function() {
+				  	  $("#condition5").show();
+				  	  $("#show-condition5").hide();
+				  	   return false;
+				  	});
+				  	$("#show-condition6").click(function() {
+				  	  $("#condition6").show();
+				  	  $("#show-condition6").hide();
+				  	   return false;
+				  	});
+				  	$("#show-condition7").click(function() {
+				  	  $("#condition7").show();
+				  	  $("#show-condition7").hide();
+				  	   return false;
+				  	});
+				  	$("#show-condition8").click(function() {
+				  	  $("#condition8").show();
+				  	  $("#show-condition8").hide();
+				  	   return false;
+				  	});
+				  	$("#show-condition9").click(function() {
+				  	  $("#condition9").show();
+				  	  $("#show-condition9").hide();
+				  	   return false;
+				  	});
+				  	
+				  });
+				</script>
+{{/bodyEnd}}
+
+{{/govuk_template}}
