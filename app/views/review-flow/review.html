@@ -35,14 +35,14 @@
                         
                             {{^sectionName}}  <span class="status-label incomplete">INCOMPLETE</span> {{/sectionName}}
                         </td>
-                        <td class="text-right"><a href="personal">Edit</a></td>
+                        <td class="text-right"><a href="personal?edit=true">Edit</a></td>
                     </tr>
-                    <tr class="js-hidden section-pannel" id="personArea">
+                    <tr class="js-hidden section-panel" id="personArea">
                         <td colspan="3">
                         
                         <table>
                             <tr class="no-border">
-                                <td>Full name</td>
+                                <th>Full name</th>
                                 <td>{{name}}</td>
                             </tr>
                         </table>
@@ -54,14 +54,14 @@
                         <td>{{#sectionContact}} <span class="status-label complete">COMPLETE</span>  {{/sectionContact}}
                         
                             {{^sectionContact}} <span class="status-label incomplete">INCOMPLETE</span>  {{/sectionContact}}</td>
-                        <td class="text-right"><a href="contact">Edit</a></td>    
+                        <td class="text-right"><a href="contact?edit=true">Edit</a></td>    
                     </tr>
-                    <tr class="js-hidden section-pannel" id="contactArea">
+                    <tr class="js-hidden section-panel" id="contactArea">
                         <td colspan="3">
                         
                         <table>
                             <tr class="no-border">
-                                <td>Phone Number</td>
+                                <th>Phone Number</th>
                                 <td>{{phone}}</td>
                             </tr>
                         </table>
@@ -76,15 +76,15 @@
                         <td>{{#sectionFoodComplete}} <span class="status-label complete">COMPLETE</span> {{/sectionFoodComplete}}
                         
                             {{^sectionFoodComplete}} <span class="status-label incomplete">INCOMPLETE</span> {{/sectionFoodComplete}}</td>
-                        <td class="text-right"><a href="food">Edit</a></td>    
+                        <td class="text-right"><a href="food?edit=true">Edit</a></td>    
                     </tr>
-                    <tr class="js-hidden section-pannel" id="foodArea">
+                    <tr class="js-hidden section-panel" id="foodArea">
                         <td colspan="3">
                         
                         <table>
                             
                             <tr>
-                                <td>Do you use any aids or appliances when making a meal?</td>
+                                <th>Do you use any aids or appliances when making a meal?</th>
                                 <td>
                             {{#sectionFood.aids-appliances}} Yes {{/sectionFood.aids-appliances}}
                         
@@ -95,15 +95,13 @@
                             
                             {{#sectionFood.aids-appliances}}
                             <tr>
-                                <td colspan="2">Describe what they are and how often you use them.</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">{{sectionFood.aids-appliances-details}}</td>
+                                <td>Describe what they are and how often you use them.</td>
+                                <td>{{sectionFood.aids-appliances-details}}</td>
                             </tr> 
                             {{/sectionFood.aids-appliances}}
                             
                             <tr>
-                                <td>Do you need help from another person to make yourself a meal?</td>
+                                <th>Do you need help from another person to make yourself a meal?</th>
                                 <td>
                                     {{#sectionFood.another-person}} Yes {{/sectionFood.another-person}}
                         
@@ -113,18 +111,14 @@
                             </tr>  
                             {{#sectionFood.another-person}}
                             <tr>
-                                <td colspan="2">Describe the help you need and how often you need it.</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">{{sectionFood.help-and-how-often}}</td>
+                                <th>Describe the help you need and how often you need it.</th>
+                                <td>{{sectionFood.help-and-how-often}}</td>
                             </tr>  
                             {{/sectionFood.another-person}}
                             
-                            <tr>
-                                <td colspan="2">Describe the difficulties you have when making yourself a meal, including any side effects, eg pain or tiredness.</td>
-                            </tr>
                             <tr  class="no-border">
-                                <td colspan="2">{{sectionFood.cook-other}}</td>
+                                <th>Describe the difficulties you have when making yourself a meal, including any side effects, eg pain or tiredness.</th>
+                                <td>{{sectionFood.cook-other}}</td>
                             </tr>       
                             
                         </table>
@@ -139,15 +133,15 @@
                         <td>{{#sectionMovingComplete}} <span class="status-label complete">COMPLETE</span> {{/sectionMovingComplete}}
                         
                             {{^sectionMovingComplete}} <span class="status-label incomplete">INCOMPLETE</span> {{/sectionMovingComplete}}</td>
-                        <td class="text-right"><a href="moving">Edit</a></td>    
+                        <td class="text-right"><a href="moving?edit=true">Edit</a></td>    
                     </tr>
-                    <tr class="js-hidden section-pannel" id="movingArea">
+                    <tr class="js-hidden section-panel" id="movingArea">
                         <td colspan="3">
                         
   <table>
                             
                             <tr>
-                                <td>Do you use an aid or appliance to walk?</td>
+                                <th>Do you use an aid or appliance to walk?</th>
                                 <td>
                                 
                                     {{#sectionMoving.distance-20}} 
@@ -175,7 +169,7 @@
                             </tr>
       
                             <tr>
-                                <td>How far can you walk taking into account any aids or appliances that you use?</td>
+                                <th>How far can you walk taking into account any aids or appliances that you use?</th>
                                 <td>
                                     {{#sectionMoving.aids-appliances}} Yes {{/sectionMoving.aids-appliances}}
                         
@@ -187,15 +181,13 @@
                             
                             {{#sectionMoving.aids-appliances}}
                             <tr>
-                                <td colspan="2">Tell us about the aids and appliances that you use to walk and how often you use them.</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">{{sectionMoving.aids-appliances-details}}</td>
+                                <th>Tell us about the aids and appliances that you use to walk and how often you use them.</th>
+                                <td>{{sectionMoving.aids-appliances-details}}</td>
                             </tr> 
                             {{/sectionMoving.aids-appliances}}
                             
                             <tr>
-                                <td>Do you use a wheelchair or similar device to move around safely?</td>
+                                <th>Do you use a wheelchair or similar device to move around safely?</th>
                                 <td>
                                     {{#sectionMoving.wheelchair}} Yes {{/sectionMoving.wheelchair}}
                         
@@ -205,18 +197,14 @@
                             </tr>  
                             {{#sectionMoving.wheelchair}}
                             <tr>
-                                <td colspan="2">Tell us about the device you use and how often you use it.</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">{{sectionMoving.wheel-chair}}</td>
+                                <th>Tell us about the device you use and how often you use it.</th>
+                                <td>{{sectionMoving.wheel-chair}}</td>
                             </tr>  
                             {{/sectionMoving.wheelchair}}
                             
-                            <tr>
-                                <td colspan="2">Tell us more about the difficulties you have physically moving around.</td>
-                            </tr>
                             <tr class="no-border">
-                                <td colspan="2">{{sectionMoving.moving-around}}</td>
+                                <th>Tell us more about the difficulties you have physically moving around.</th>
+                                <td>{{sectionMoving.moving-around}}</td>
                             </tr>       
                             
                         </table>
@@ -247,7 +235,7 @@
 $(document).ready(function() {
         $(".section-link").click(function() {
             //hide and reset link
-            $(".section-pannel").hide();
+            $(".section-panel").hide();
             $(".section-link").removeClass("section-link-before");
             $(".row-highlight").removeClass("row-highlight");
             

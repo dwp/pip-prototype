@@ -14,10 +14,12 @@
 .row-highlight { background:#F6F4F4; }
 
 
-.section-pannel table { margin-left:10px; padding-right:10px; }
+.section-panel table { margin-left:10px; padding-right:10px; }
+
+.section-panel table tr th { width:60%; padding-right:50px; vertical-align: top; }
 
 .no-border td { border-bottom:0px; }
-
+.no-border th { border-bottom:0px; }
 
 .status-label { border:2px solid black; padding:3px; font-size:12px; font-weight:bold;} 
 
