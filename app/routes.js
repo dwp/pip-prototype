@@ -120,6 +120,9 @@ module.exports = {
       /* route for review */
       
       require('./routes_review')(app);
+   
+      
+      require('./review_flow')(app);
       
   }
 };
