@@ -9,7 +9,12 @@ module.exports = function(app){
         
         if(req.session['food']['aids-appliances'] == 'Yes'){ formData['aids-appliances'] = true; }else{ formData['aids-appliances'] = false; }
         if(req.session['food']['another-person'] == 'Yes'){ formData['another-person'] = true; }else{ formData['another-person'] = false; }
-            
+          
+        if(req.session['food']['aids-appliances']  !="" && req.session['food']['another-person'] !="")
+        {
+            formData['session'] = false;
+        }
+        
         formData['aids-appliances-details'] =req.session['food']['aids-appliances-details'];
         formData['help-and-how-often'] = req.session['food']['help-and-how-often'];
         formData['communicate-other'] =req.session['food']['communicate-other'];  
@@ -21,7 +26,7 @@ module.exports = function(app){
     {
         var formData = new Array;
         
-        formData['session'] = true;
+        
         
         console.log(req.session);
         
@@ -34,6 +39,8 @@ module.exports = function(app){
         if(req.session['moving']['aids-appliances'] == 'Yes'){ formData['aids-appliances'] = true; }else{ formData['aids-appliances'] = false; }
         if(req.session['moving']['wheelchair'] == 'Yes'){ formData['wheelchair'] = true; }else{ formData['wheelchair'] = false; }
       
+        
+        if(req.session['moving']['wheelchair'] != '' && req.session['moving']['aids-appliances'] != ''){ formData['session'] = false; }
         
         formData['good-distance'] = req.session['moving']['good-distance']
         formData['bad-distance'] = req.session['moving']['bad-distance'];
