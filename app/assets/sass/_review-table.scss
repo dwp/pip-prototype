@@ -1,0 +1,26 @@
+
+
+.text-right { text-align:right; }
+
+
+.section-link { font-size:19px; font-weight:bold; text-decoration:none; color:black; }
+.section-link:link { color:black; }
+.section-link:visited { color:black; }
+
+.section-link::before { content: "\25B6"; padding-right:10px; font-size:16px; padding-left:10px; }
+
+.section-link-before:before { content: "\25BC"; }
+
+.row-highlight { background:#F6F4F4; }
+
+
+.section-pannel table { margin-left:10px; padding-right:10px; }
+
+.no-border td { border-bottom:0px; }
+
+
+.status-label { border:2px solid black; padding:3px; font-size:12px; font-weight:bold;} 
+
+.complete { border-color: $green; color: $green;}
+
+.incomplete { border-color: $orange; color: $orange;}

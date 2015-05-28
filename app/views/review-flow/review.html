@@ -1,0 +1,269 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+	
+        <div class="grid-row">
+		  <div class="column-two-thirds">
+                
+                
+                
+                <h1 class="form-title heading-large">
+				    Application Review
+				</h1>
+                
+                
+                
+                <table class="review-table">
+                    <tr>
+                        <td><a href="#personal" class="section-link" id="person">Personal Details</a></td>
+                        <td>
+                            
+                            {{#sectionName}}  <span class="status-label complete">COMPLETE</span> {{/sectionName}}
+                        
+                            {{^sectionName}}  <span class="status-label incomplete">INCOMPLETE</span> {{/sectionName}}
+                        </td>
+                        <td class="text-right"><a href="personal">Edit</a></td>
+                    </tr>
+                    <tr class="js-hidden section-pannel" id="personArea">
+                        <td colspan="3">
+                        
+                        <table>
+                            <tr class="no-border">
+                                <td>Full name</td>
+                                <td>{{name}}</td>
+                            </tr>
+                        </table>
+                        
+                        
+                        </td>
+                    </tr>
+                        <td><a href="#contact" class="section-link"  id="contact">Contact Details</a></td>
+                        <td>{{#sectionContact}} <span class="status-label complete">COMPLETE</span>  {{/sectionContact}}
+                        
+                            {{^sectionContact}} <span class="status-label incomplete">INCOMPLETE</span>  {{/sectionContact}}</td>
+                        <td class="text-right"><a href="contact">Edit</a></td>    
+                    </tr>
+                    <tr class="js-hidden section-pannel" id="contactArea">
+                        <td colspan="3">
+                        
+                        <table>
+                            <tr class="no-border">
+                                <td>Phone Number</td>
+                                <td>{{phone}}</td>
+                            </tr>
+                        </table>
+                        
+                        
+                        </td>
+                    </tr>
+              
+              <!-- food -->
+                    </tr>
+                        <td><a href="#food" class="section-link"  id="food">Preparing food details</a></td>
+                        <td>{{#sectionFoodComplete}} <span class="status-label complete">COMPLETE</span> {{/sectionFoodComplete}}
+                        
+                            {{^sectionFoodComplete}} <span class="status-label incomplete">INCOMPLETE</span> {{/sectionFoodComplete}}</td>
+                        <td class="text-right"><a href="food">Edit</a></td>    
+                    </tr>
+                    <tr class="js-hidden section-pannel" id="foodArea">
+                        <td colspan="3">
+                        
+                        <table>
+                            
+                            <tr>
+                                <td>Do you use any aids or appliances when making a meal?</td>
+                                <td>
+                            {{#sectionFood.aids-appliances}} Yes {{/sectionFood.aids-appliances}}
+                        
+                            {{^sectionFood.aids-appliances}} No {{/sectionFood.aids-appliances}}
+                                
+                                </td>
+                            </tr>
+                            
+                            {{#sectionFood.aids-appliances}}
+                            <tr>
+                                <td colspan="2">Describe what they are and how often you use them.</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">{{sectionFood.aids-appliances-details}}</td>
+                            </tr> 
+                            {{/sectionFood.aids-appliances}}
+                            
+                            <tr>
+                                <td>Do you need help from another person to make yourself a meal?</td>
+                                <td>
+                                    {{#sectionFood.another-person}} Yes {{/sectionFood.another-person}}
+                        
+                                    {{^sectionFood.another-person}} No {{/sectionFood.another-person}}
+                                
+                                </td>
+                            </tr>  
+                            {{#sectionFood.another-person}}
+                            <tr>
+                                <td colspan="2">Describe the help you need and how often you need it.</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">{{sectionFood.help-and-how-often}}</td>
+                            </tr>  
+                            {{/sectionFood.another-person}}
+                            
+                            <tr>
+                                <td colspan="2">Describe the difficulties you have when making yourself a meal, including any side effects, eg pain or tiredness.</td>
+                            </tr>
+                            <tr  class="no-border">
+                                <td colspan="2">{{sectionFood.cook-other}}</td>
+                            </tr>       
+                            
+                        </table>
+                        
+                        
+                        </td>
+                    </tr>
+              <!-- Moving -->
+    
+                        </tr>
+                        <td><a href="#moving" class="section-link"  id="moving">Moving around details</a></td>
+                        <td>{{#sectionMovingComplete}} <span class="status-label complete">COMPLETE</span> {{/sectionMovingComplete}}
+                        
+                            {{^sectionMovingComplete}} <span class="status-label incomplete">INCOMPLETE</span> {{/sectionMovingComplete}}</td>
+                        <td class="text-right"><a href="moving">Edit</a></td>    
+                    </tr>
+                    <tr class="js-hidden section-pannel" id="movingArea">
+                        <td colspan="3">
+                        
+  <table>
+                            
+                            <tr>
+                                <td>Do you use an aid or appliance to walk?</td>
+                                <td>
+                                
+                                    {{#sectionMoving.distance-20}} 
+										Less than 20 metres
+								    {{/sectionMoving.distance-20}}
+                                
+                                    {{#sectionMoving.distance-50}} 
+										Between 20 and 50 metres
+								    {{/sectionMoving.distance-50}}                                
+
+                                    {{#sectionMoving.distance-50-200}} 
+										Between 50 and 200 metres
+								    {{/sectionMoving.distance-50-200}}
+
+                                     {{#sectionMoving.distance-200}} 
+										200 metres or more
+								    {{/sectionMoving.distance-200}}
+                                    
+                                     {{#sectionMoving.it-varies}} 
+										On a good day {{sectionMoving.good-distance}} metres<br />
+                                        On a bad day {{sectionMoving.bad-distance}} metres
+								    {{/sectionMoving.it-varies}}
+                                    
+                                </td>
+                            </tr>
+      
+                            <tr>
+                                <td>How far can you walk taking into account any aids or appliances that you use?</td>
+                                <td>
+                                    {{#sectionMoving.aids-appliances}} Yes {{/sectionMoving.aids-appliances}}
+                        
+                                    {{^sectionMoving.aids-appliances}} No {{/sectionMoving.aids-appliances}}
+                                
+                                </td>
+                            </tr>
+      
+                            
+                            {{#sectionMoving.aids-appliances}}
+                            <tr>
+                                <td colspan="2">Tell us about the aids and appliances that you use to walk and how often you use them.</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">{{sectionMoving.aids-appliances-details}}</td>
+                            </tr> 
+                            {{/sectionMoving.aids-appliances}}
+                            
+                            <tr>
+                                <td>Do you use a wheelchair or similar device to move around safely?</td>
+                                <td>
+                                    {{#sectionMoving.wheelchair}} Yes {{/sectionMoving.wheelchair}}
+                        
+                                    {{^sectionMoving.wheelchair}} No {{/sectionMoving.wheelchair}}
+                                
+                                </td>
+                            </tr>  
+                            {{#sectionMoving.wheelchair}}
+                            <tr>
+                                <td colspan="2">Tell us about the device you use and how often you use it.</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">{{sectionMoving.wheel-chair}}</td>
+                            </tr>  
+                            {{/sectionMoving.wheelchair}}
+                            
+                            <tr>
+                                <td colspan="2">Tell us more about the difficulties you have physically moving around.</td>
+                            </tr>
+                            <tr class="no-border">
+                                <td colspan="2">{{sectionMoving.moving-around}}</td>
+                            </tr>       
+                            
+                        </table>
+                        
+                        
+                        
+                        </td>
+                    </tr>
+              
+              
+              
+                </table>
+                
+                
+                
+                
+                
+            </div>
+        </div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+
+<script>
+$(document).ready(function() {
+        $(".section-link").click(function() {
+            //hide and reset link
+            $(".section-pannel").hide();
+            $(".section-link").removeClass("section-link-before");
+            $(".row-highlight").removeClass("row-highlight");
+            
+            //display new and change font arrow
+            $(this).addClass("section-link-before");
+            
+            $(this).parent().parent().addClass("row-highlight");
+            $("#"+this.id+"Area").addClass("row-highlight");
+            
+          $("#"+this.id+"Area").toggle();
+            return false;
+        });
+});
+</script>
+
+
+{{/bodyEnd}}
+
+{{/govuk_template}}
