@@ -133,6 +133,11 @@ module.exports = function(app){
       if(req.session['phone']){ reviewSection['phone'] = req.session['phone']; }else { reviewSection['phone'] = "N/a" }
     
         
+    if(req.session['phoneSet'] && reviewSection['sectionName'] &&  reviewSection['sectionMovingComplete'] &&  reviewSection['sectionFoodComplete'])
+    {
+        reviewSection['link'] = true;
+    }
+        
       res.render('review-flow/review',reviewSection);
     });    
     
@@ -141,6 +146,11 @@ module.exports = function(app){
             req.session.destroy();
             res.redirect('/review-flow/personal');
     });   
+    
+    app.get('/review-flow/end', function (req, res) {
+        res.render('review-flow/confirm');
+    });
+
     
     
 }
