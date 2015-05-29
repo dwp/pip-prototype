@@ -247,6 +247,7 @@
 <script>
 $(document).ready(function() {
         $(".section-link").click(function() {
+             
             //hide and reset link
             $(".section-panel").hide();
             $(".section-link").removeClass("section-link-before");
@@ -254,12 +255,14 @@ $(document).ready(function() {
             
             //display new and change font arrow
             $(this).addClass("section-link-before");
+           
             
             $(this).parent().parent().addClass("row-highlight");
             $("#"+this.id+"Area").addClass("row-highlight");
             
           $("#"+this.id+"Area").toggle();
             return false;
+             $(this).focus();
         });
 });
 </script>
