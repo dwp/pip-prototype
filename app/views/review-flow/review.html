@@ -221,9 +221,22 @@
                 
                 
                 
-                
             </div>
         </div>
+
+
+    <p>
+        <br />
+        {{#link}} <a class="button" href="confirm">Submit</a> {{/link}}
+
+        {{^link}} 
+        
+        <a class="button disabled">Submit</a>
+        
+        
+        {{/link}}
+
+</p>
 
 </main><!-- / #page-container -->
 {{/content}}
