@@ -23,7 +23,7 @@
 				<a href="scenario04" class="example-back-link">Back</a>
 
 				<h1 class="form-title heading-large">
-				Going to the shops
+				Going out
 				</h1>
 				
                 
@@ -38,12 +38,20 @@
 							<input id="leave-home-sometimes" type="radio" name="leave-home" value="Sometimes">
 							Sometimes
 						</label> 
-						<label class="block-label" for="leave-home-no">
+						<label class="block-label" data-target="home-details-no" for="leave-home-no">
 							<input id="leave-home-no" type="radio" name="leave-home" value="No">
 							No
 						</label>   
 					</div>
 				</fieldset>
+
+                <div class="js-hidden panel-indent" id="home-details-no">
+                        <div class="form-group">
+                            <label class="form-label-bold" for="aids-appliances-details-box">Tell us why you can't leave your home</label>
+                             <textarea type="text" class="form-control-3-4" id="how-they-help"></textarea>  
+                        </div>
+                        <br />
+                    </div>
                 
                 
                 <div class="panel-indent js-hidden" id="home-details">
@@ -76,7 +84,7 @@
                     
                     
                     <fieldset class="form-group">
-                        <legend class="form-label-bold add-padding" for="shop">Think about a local shop you go to. Does your health condition or disability affect how you’d get there? </legend>			
+                        <legend class="form-label-bold add-padding" for="shop">Think about a local shop you go to. Does your condition affect how you’d get there? </legend>			
                         <div class="form-group">
                             <label class="block-label" data-target="shop-details" for="shop-yes">
                                 <input id="shop-yes" type="radio" name="shop" value="Yes">
@@ -122,7 +130,7 @@
                         
                     
                     <fieldset class="form-group">
-                        <legend class="form-label-bold add-padding" for="condition">You’ve got to the local shop.  Does your health condition or disability affect how you  get around it?  
+                        <legend class="form-label-bold add-padding" for="condition">You’ve got to the local shop.  Does your condition affect how you  get around it?  
                      </legend>			
                         <div class="form-group">
                             <label class="block-label" data-target="condition-details" for="local-shop-yes">
