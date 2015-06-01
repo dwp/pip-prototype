@@ -26,6 +26,53 @@
 				Getting dressed
 				</h1>
 				
+				<div class="form-group">
+				    <label class="form-label-bold" for="reminder-to-eat">Does your disability or heath condition affect how you decide what you should wear each day?</label>
+				      <label class="block-label" data-target="bed-more" for="reminder-to-eat-yes">
+				        <input id="reminder-to-eat-yes" type="radio" name="reminder-to-eat" value="true">
+                            Yes
+				    </label>
+				    <label class="block-label" data-target="bed-more" for="reminder-to-eat-sometimes">
+                        <input id="reminder-to-eat-sometimes" type="radio" name="reminder-to-eat" value="">
+				            Sometimes
+				    </label> 
+				    <label class="block-label" for="reminder-to-eat-no">
+                        <input id="reminder-to-eat-no" type="radio" name="reminder-to-eat" value="">
+				            No
+				    </label>  
+                </div>
+
+                <div class="js-hidden panel-indent" id="bed-more">
+                	<label class="form-label-bold" for="reminder-to-eat-more">How do you decide what to wear? </label>
+                	<textarea type="text" class="form-control-3-4" id="reminder-to-eat-more"></textarea>
+                </div>
+
+                <div class="form-group">
+				    <label class="form-label-bold" for="toilet">Does your disability or health condition affect how you get dressed?</label>
+				      <label class="block-label" data-target="toilet-more" for="toilet-yes">
+				        <input id="toilet-yes" type="radio" name="toilet" value="true">
+                            Yes
+				    </label>
+				    <label class="block-label" data-target="toilet-more" for="toilet-sometimes">
+                        <input id="toilet-sometimes" type="radio" name="toilet" value="">
+				            Sometimes
+				    </label> 
+				    <label class="block-label" for="toilet-no">
+                        <input id="toilet-no" type="radio" name="toilet" value="">
+				            No
+				    </label>  
+                </div>
+
+                <div class="js-hidden panel-indent" id="toilet-more">
+                	<label class="form-label-bold" for="toilet-more-too">How do you get dressed?</label>
+                	<p class="form-hint">Tell us:</p>
+                	<ul class="form-hint list-bullet">
+                		<li>about any aids you use to help you get dressed</li>
+                		<li>if there are any clothes you find too difficult to put on</li>
+                		<li>if you need someone to help</li>
+                	</ul>
+                	<textarea type="text" class="form-control-3-4" id="toilet-more-too"></textarea>
+                </div>
 
 				
 
