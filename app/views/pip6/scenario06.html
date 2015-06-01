@@ -18,7 +18,7 @@
 	<div class="grid-row">
 		<div class="column-two-thirds">
             
-			<form action="scenario07" method="post" class="form">
+			<form action="scenario07" method="get" class="form">
 			
 				<a href="scenario05" class="example-back-link">Back</a>
 
@@ -27,7 +27,55 @@
 				</h1>
 				
 				
+                <fieldset>
+					<legend class="form-label-bold add-padding" for="shop">You can’t find what you need in the shop. Would you be able to ask someone for help? </legend>			
+					<div class="form-group">
+						<label class="block-label" data-target="shop-details" for="shop-yes">
+							<input id="shop-yes" type="radio" name="shop" value="Yes">
+							Yes
+						</label>
+                        <label class="block-label" data-target="shop-details" for="shop-sometimes">
+							<input id="shop-sometimes" type="radio" name="shop" value="Sometimes">
+							Sometimes
+						</label> 
+						<label class="block-label" data-target="shop-details-no" for="shop-no">
+							<input id="shop-no" type="radio" name="shop" value="No">
+							No
+						</label>   
+					</div>
+				</fieldset>
+                
+                    <div class="js-hidden panel-indent" id="shop-details">
 
+                        <div class="form-group-related">
+                            <label class="form-label-bold" for="aids-appliances-details-box">How you would ask for help?    </label>
+
+                            <p class="form-hint">Tell us:</p>
+                            <ul class="form-hint list-bullet">
+                                <li>can explain what you’re looking for</li>
+                                <li>use any aids to speak or hear </li>
+                                <li>can understand what they say </li>
+                                <li>need someone to help</li>
+                                <li>get any side-effects </li>
+                            </ul>
+
+                             <textarea type="text" class="form-control-3-4" id="how-they-help"></textarea>  
+                        </div>
+
+                    </div>
+                    
+                    <div class="js-hidden panel-indent" id="shop-details-no">
+
+                        <div class="form-group-related">
+                            <label class="form-label-bold" for="aids-appliances-details-box">What difficulty would you have asking for help? </label>
+
+                             <textarea type="text" class="form-control-3-4" id="how-they-help"></textarea>  
+                        </div>
+
+                    </div>
+                    
+                
+                
                 <div class="form-group">
 					<input type="submit" class="button" value="Save and continue">
 				</div>
