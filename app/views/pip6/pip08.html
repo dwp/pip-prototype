@@ -59,7 +59,7 @@
 			    <a href="#" onclick="openFileOption();return;">Select files to upload</a>
 
 
-			    <table>
+			    <table id="uploadtable">
 				    <thead>
 				      <tr>
 				        <th scope="col">Filename</th>
@@ -67,18 +67,6 @@
 				      </tr>
 				    </thead>
 				    <tbody>
-				      <tr>
-				        <td>Occupational-Therapist-Report.pdf</td>
-				        <td class="numeric"><a href="#">Remove</a></td>
-				      </tr>
-				      <tr>
-				        <td>Care-plan.pdf</td>
-				        <td class="numeric"><a href="#">Remove</a></td>
-				      </tr>
-				      <tr>
-				       <td>Outpatient-letter.doc</td>
-				        <td class="numeric"><a href="#">Remove</a></td>
-				      </tr>
 				    </tbody>
 				</table>
 
@@ -104,10 +92,27 @@
 		</div>
 	</div>
 </main><!-- / #page-container -->
+
 {{/content}}
 
 {{$bodyEnd}}
 {{>includes/elements_scripts}}
+
+<script>
+
+     $('#file1').change(function() {
+    var filename = $(this).val();
+    var lastIndex = filename.lastIndexOf("\\");
+    if (lastIndex >= 0) {
+        filename = filename.substring(lastIndex + 1);
+    }
+         $('#uploadtable > tbody:last-child').append('<tr><td>'+filename+'</td><td class="numeric"><a href="#" class="remove-link">Remove</a></td></tr>').focus();
+        $(".remove-link").focus();
+        $(".remove-link").blur();
+});
+    
+</script>
+
 {{/bodyEnd}}
 
 {{/govuk_template}}
