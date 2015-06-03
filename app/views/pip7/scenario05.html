@@ -1,0 +1,186 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+	
+	<div class="grid-row">
+		<div class="column-two-thirds">
+            
+			<form action="scenario06" method="get" class="form">
+			
+				<a href="scenario04" class="example-back-link">Back</a>
+
+				<h1 class="form-title heading-large">
+				Going out
+				</h1>
+				
+                
+                <fieldset>
+					<legend class="form-label-bold add-padding" for="leave-home">Can you leave your home, either on your own or with someone else?</legend>			
+					<div class="form-group">
+						<label class="block-label" data-target="home-details" for="leave-home-yes">
+							<input id="leave-home-yes" type="radio" name="leave-home" value="Yes">
+							Yes
+						</label>
+                        <label class="block-label" data-target="home-details" for="leave-home-sometimes">
+							<input id="leave-home-sometimes" type="radio" name="leave-home" value="Sometimes">
+							Sometimes
+						</label> 
+						<label class="block-label" data-target="home-details-no" for="leave-home-no">
+							<input id="leave-home-no" type="radio" name="leave-home" value="No">
+							No
+						</label>   
+					</div>
+				</fieldset>
+
+                <div class="js-hidden panel-indent" id="home-details-no">
+                        <div class="form-group">
+                            <label class="form-label-bold" for="aids-appliances-details-box">Tell us why you can't leave your home</label>
+                             <textarea type="text" class="form-control-3-4" id="how-they-help"></textarea>  
+                        </div>
+                        <br />
+                    </div>
+                
+                
+                <div class="panel-indent js-hidden" id="home-details">
+                    
+                    <fieldset class="form-group">
+                        <legend class="form-label-bold add-padding" for="milk">You’ve ran out of milk and need to get some more. You need to go to the local shop. Do you need someone to help you decide how much money to take?</legend>			
+                        <div class="form-group">
+                            <label class="block-label" data-target="milk-details" for="milk-yes">
+                                <input id="milk-yes" type="radio" name="milk" value="Yes">
+                                Yes
+                            </label>
+                            <label class="block-label" data-target="milk-details" for="milk-sometimes">
+                                <input id="milk-sometimes" type="radio" name="milk" value="Sometimes">
+                                Sometimes
+                            </label>  
+                            <label class="block-label" for="milk-no">
+                                <input id="milk-no" type="radio" name="milk" value="No">
+                                No
+                            </label>  
+                        </div>
+                    </fieldset>   
+                    
+                    <div class="js-hidden" id="milk-details">
+                        <div class="form-group">
+                            <label class="form-label" for="aids-appliances-details-box">Tell us how they help you.</label>
+                             <textarea type="text" class="form-control-3-4" id="how-they-help"></textarea>  
+                        </div>
+                        <br />
+                    </div>
+                    
+                    
+                    <fieldset class="form-group">
+                        <legend class="form-label-bold add-padding" for="shop">Think about a local shop you go to. Does your condition affect how you’d get there? </legend>			
+                        <div class="form-group">
+                            <label class="block-label" data-target="shop-details" for="shop-yes">
+                                <input id="shop-yes" type="radio" name="shop" value="Yes">
+                                Yes
+                            </label>
+                            <label class="block-label" data-target="shop-details" for="shop-sometimes">
+                                <input id="shop-sometimes" type="radio" name="shop" value="Sometimes">
+                                Sometimes
+                            </label>  
+                            <label class="block-label" for="shop-no">
+                                <input id="shop-no" type="radio" name="shop" value="No">
+                                No
+                            </label>  
+                        </div>
+                    </fieldset>  
+                    
+                    
+                    
+                    <div class="js-hidden" id="shop-details">
+
+                        <div class="form-group-related">
+                            <label class="form-label" for="aids-appliances-details-box">How would you get there from your home?  </label>
+
+                            <p class="form-hint">Tell us:</p>
+                            <ul class="form-hint list-bullet">
+                                <li>roughly how far it is</li>
+                                 <li>if you’d walk, drive or get public transport </li>
+                                 <li>if you’d use an aid or guide dog </li>
+                                 <li>if you need someone to help </li>
+                                 <li>how you feel about going to the shop or any side-effects you get </li>                                                
+                            </ul>
+
+                             <textarea type="text" class="form-control-3-4" id="how-they-help"></textarea>  
+                        </div>
+
+                    </div>
+                    
+
+                    <div class="form-group-related">
+                        <label class="form-label-bold" for="aids-appliances-details-box">If a road you’d usually use to get to the shop had closed, what would you do? </label>
+                         <textarea type="text" class="form-control-3-4" id="how-they-help"></textarea>  
+                    </div>
+                        
+                    
+                    <fieldset class="form-group">
+                        <legend class="form-label-bold add-padding" for="condition">You’ve got to the local shop.  Does your condition affect how you  get around it?  
+                     </legend>			
+                        <div class="form-group">
+                            <label class="block-label" data-target="condition-details" for="local-shop-yes">
+                                <input id="local-shop-yes" type="radio" name="condition" value="Yes">
+                                Yes
+                            </label>
+                            <label class="block-label" for="local-shop-no">
+                                <input id="local-shop-no" type="radio" name="condition" value="No">
+                                No
+                            </label>  
+                        </div>
+                    </fieldset>     
+                    
+                    
+                    <div class="js-hidden" id="condition-details">
+
+                        <div class="form-group-related">
+                            <label class="form-label" for="condition-box">How do you get around the shop? </label>
+
+
+                            <ul class="form-hint list-bullet">
+                                <li>about any aids you use to shop or get around</li>
+                                 <li>if you need someone to help</li>
+                                 <li>how you feel or any side-effects you get</li>
+                            </ul>
+
+                             <textarea type="text" class="form-control-3-4" id="condition-help"></textarea>  
+                        </div>
+                        <br />
+                    </div>
+                    
+                </div>
+                
+
+                <div class="form-group">
+					<input type="submit" class="button" value="Save and continue">
+				</div>
+			</form>
+		
+		</div>
+		<div class="column-third">
+			
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

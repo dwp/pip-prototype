@@ -1,0 +1,77 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+	
+	<div class="grid-row">
+		<div class="column-two-thirds">
+            
+			<form action="scenario04" method="get" class="form">
+			
+				<a href="scenario02" class="example-back-link">Back</a>
+
+				<h1 class="form-title heading-large">
+				Having a shower or bath
+				</h1>
+				
+				<div class="form-group">
+				    <label class="form-label-bold" for="toilet">Does your condition affect you when you have a bath or shower?</label>
+				      <label class="block-label" data-target="toilet-more" for="toilet-yes">
+				        <input id="toilet-yes" type="radio" name="toilet" value="true">
+                            Yes
+				    </label>
+				    <label class="block-label" data-target="toilet-more" for="toilet-sometimes">
+                        <input id="toilet-sometimes" type="radio" name="toilet" value="">
+				            Sometimes
+				    </label> 
+				    <label class="block-label" for="toilet-no">
+                        <input id="toilet-no" type="radio" name="toilet" value="">
+				            No
+				    </label>  
+                </div>
+
+                <div class="js-hidden panel-indent" id="toilet-more">
+                	<label class="form-label-bold" for="toilet-more-too">How do you have a bath or shower?</label>
+                	<p class="form-hint">Tell us if you:</p>
+                	<ul class="form-hint list-bullet">
+                		<li>use anything to help you get into the bath or shower</li>
+                		<li>use anything to help you wash</li>
+                		<li>can wash all parts of your body</li>
+                		<li>need someone to help</li>
+                		<li>get any side-effects</li>
+                	</ul>
+                	<textarea type="text" class="form-control-3-4" id="toilet-more-too"></textarea>
+                </div>
+				
+
+                <div class="form-group">
+					<input type="submit" class="button" value="Save and continue">
+				</div>
+			</form>
+		
+		</div>
+		<div class="column-third">
+			
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
