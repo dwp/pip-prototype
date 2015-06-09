@@ -23,20 +23,32 @@
 				<a href="understanding" class="example-back-link">Back</a>
 
 				<h1 class="form-title heading-large">
-				Your day
+				Getting up
 				</h1>
 				
-				<p>Tell us as much as you can about how your disability or health condition affects your day-to-day life. </p>
-				<p>In your answers, include information about:</p>
-				<ul class="list-bullet">
-					<li>any aids you have</li>
-					<li>any adjustments or modifications that have been made</li>
-					<li>if you need someone to help</li>
-					<li>how it makes you feel or any side-effects you get</li>
-				</ul>
+				<div class="form-group">
+				    <label class="form-label-bold" for="getting-up">Does your disability or health condition affect how you get up and out of bed?</label>
+				      <label class="block-label" data-target="bed-more" for="getting-up-yes">
+				        <input id="getting-up-yes" type="radio" name="getting-up" value="true">
+                            Yes
+				    </label>
+				    <label class="block-label" data-target="bed-more" for="getting-up-sometimes">
+                        <input id="getting-up-sometimes" type="radio" name="getting-up" value="">
+				            Sometimes
+				    </label> 
+				    <label class="block-label" for="getting-up-no">
+                        <input id="getting-up-no" type="radio" name="getting-up" value="">
+				            No
+				    </label>  
+                </div>
+
+                <div class="js-hidden panel-indent" id="bed-more">
+                	<label class="form-label-bold" for="getting-up-more">Tell us why you have difficulty getting up and out of bed</label>
+                	<textarea type="text" class="form-control-3-4" id="getting-up-more"></textarea>
+                </div>
 
                 <div class="form-group">
-					<input type="submit" class="button" value="Continue">
+					<input type="submit" class="button" value="Save and continue">
 				</div>
 			</form>
 		
