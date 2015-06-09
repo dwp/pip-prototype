@@ -23,37 +23,58 @@
 				<a href="scenario02" class="example-back-link">Back</a>
 
 				<h1 class="form-title heading-large">
-				Having a shower or bath
+				Washing yourself
 				</h1>
 				
 				<div class="form-group">
-				    <label class="form-label-bold" for="toilet">Does your condition affect you when you have a bath or shower?</label>
-				      <label class="block-label" data-target="toilet-more" for="toilet-yes">
-				        <input id="toilet-yes" type="radio" name="toilet" value="true">
+				    <label class="form-label-bold" for="wash">Does your condition affect how you wash yourself?</label>
+				      <label class="block-label" data-target="wash-more" for="wash-yes">
+				        <input id="wash-yes" type="radio" name="wash" value="true">
                             Yes
 				    </label>
-				    <label class="block-label" data-target="toilet-more" for="toilet-sometimes">
-                        <input id="toilet-sometimes" type="radio" name="toilet" value="">
+				    <label class="block-label" data-target="wash-more" for="wash-sometimes">
+                        <input id="wash-sometimes" type="radio" name="wash" value="">
 				            Sometimes
 				    </label> 
-				    <label class="block-label" for="toilet-no">
-                        <input id="toilet-no" type="radio" name="toilet" value="">
+				    <label class="block-label" for="wash-no">
+                        <input id="wash-no" type="radio" name="wash" value="">
 				            No
 				    </label>  
                 </div>
 
-                <div class="js-hidden panel-indent" id="toilet-more">
-                	<label class="form-label-bold" for="toilet-more-too">How do you have a bath or shower?</label>
-                	<p class="form-hint">Tell us if you:</p>
-                	<ul class="form-hint list-bullet">
-                		<li>use anything to help you get into the bath or shower</li>
-                		<li>use anything to help you wash</li>
-                		<li>can wash all parts of your body</li>
-                		<li>need someone to help</li>
-                		<li>get any side-effects</li>
-                	</ul>
-                	<textarea type="text" class="form-control-3-4" id="toilet-more-too"></textarea>
+                <div class="js-hidden panel-indent form-group" id="wash-more">
+				    <label class="form-label-bold" for="wash-help">Do you have someone who helps you wash yourself?</label>
+				      <label class="block-label" data-target="wash-help-more" for="wash-help-yes">
+				        <input id="wash-help-yes" type="radio" name="wash-help" value="true">
+                            Yes
+				    </label>
+				    <label class="block-label" data-target="wash-help-more" for="wash-help-sometimes">
+                        <input id="wash-help-sometimes" type="radio" name="wash-help" value="">
+				            Sometimes
+				    </label> 
+				    <label class="block-label" data-target="wash-help-none" for="wash-help-no">
+                        <input id="wash-help-no" type="radio" name="wash-help" value="">
+				            No
+				    </label>  
+
+				    <div class="js-hidden panel-indent" id="wash-help-more">
+                		<label class="form-label-bold" for="wash-more-too">Why do you need help?</label>
+                		<textarea type="text" class="form-control-3-4" id="wash-more-too"></textarea>
+                	</div>
+
+                	<div class="js-hidden panel-indent" id="wash-help-none">
+                		<label class="form-label-bold" for="wash-help-none-too">Tell us why you have difficulty washing yourself.</label>
+                		<p class="form-hint">Include:</p>
+	                	<ul class="form-hint list-bullet">
+	                		<li>if you find any part especially difficult or painful</li>
+	                		<li>if there’s anything you can’t do</li>
+	                		<li>if you need someone to prompt you to wash</li>
+	                	</ul>
+                		<textarea type="text" class="form-control-3-4" id="wash-help-none-too"></textarea>
+                	</div>
                 </div>
+
+                
 				
 
                 <div class="form-group">
