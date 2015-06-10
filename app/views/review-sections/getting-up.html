@@ -1,0 +1,39 @@
+              <!-- food -->
+                    </tr>
+                        <td><a href="#gettingUp" class="section-link"  id="gettingUp">Getting up</a></td>
+                        <td>{{#sectionGettingUpComplete}} <span class="status-label complete">COMPLETE</span> {{/sectionGettingUpComplete}}
+                        
+                            {{^sectionGettingUpComplete}} <span class="status-label incomplete">INCOMPLETE</span> {{/sectionGettingUpComplete}}</td>
+                        <td class="text-right"><a href="scenario01?edit=true">Edit</a></td>    
+                    </tr>
+                    <tr class="js-hidden section-panel" id="gettingUpArea">
+                        <td colspan="3">
+                        
+                        <table>
+                            
+                            <tr{{^sectionGettingUp.getting-up-more-display}} class="no-border" {{/sectionGettingUp.getting-up-more-display}}>
+                                <th>Does your disability or health condition affect how you get up and out of bed?</th>
+                                <td>
+                            {{#sectionGettingUp.getting-up-yes}} Yes {{/sectionGettingUp.getting-up-yes}}
+                        
+                            {{#sectionGettingUp.getting-up-no}} No {{/sectionGettingUp.getting-up-no}}
+                                
+                            {{#sectionGettingUp.getting-up-sometimes}} Sometimes {{/sectionGettingUp.getting-up-sometimes}}
+                                    
+                                </td>
+                            </tr>
+                            
+                            {{#sectionGettingUp.getting-up-more-display}}
+                           
+                            <tr  class="no-border">
+                                <th>Tell us why you have difficulty getting around your home.</th>
+                                <td>{{sectionGettingUp.getting-up-more}}</td>
+                            </tr>  
+                            
+                            {{/sectionGettingUp.getting-up-more-display}}
+                            
+                        </table>
+                        
+                        
+                        </td>
+                    </tr>

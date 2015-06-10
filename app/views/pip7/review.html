@@ -31,6 +31,24 @@
 				Review and edit
 				</h1>
 			
+                
+                
+                 <table class="review-table">
+
+                     {{>review-sections/details-open}}
+                    
+                     
+                     {{>review-sections/getting-up}}
+                     
+                   
+                     {{>review-sections/getting-around}}
+       
+              
+              
+              
+                </table>
+                
+                
 			</form>
 		
 		</div>
@@ -45,22 +63,29 @@
 {{$bodyEnd}}
   {{>includes/elements_scripts}}
  
-  <script>
-  $(document).ready(function() {
-  
-  	$("#show-health-worker-2").click(function() {
-  	  $("#health-worker-2").show();
-  	  $("#show-health-worker-2").hide();
-  	   return false;
-  	});
-  	$("#show-health-worker-3").click(function() {
-  	  $("#health-worker-3").show();
-  	  $("#show-health-worker-3").hide();
-  	   return false;
-  	});
-  	
-  });
-  </script>
+<script>
+$(document).ready(function() {
+        $(".section-link").click(function() {
+             
+            //hide and reset link
+            $(".section-panel").hide();
+            $(".section-link").removeClass("section-link-before");
+            $(".row-highlight").removeClass("row-highlight");
+            
+            //display new and change font arrow
+            $(this).addClass("section-link-before");
+           
+            
+            $(this).parent().parent().addClass("row-highlight");
+            $("#"+this.id+"Area").addClass("row-highlight");
+            
+          $("#"+this.id+"Area").toggle();
+            return false;
+             $(this).focus();
+        });
+});
+</script>
+
   
 {{/bodyEnd}}
 

@@ -1,0 +1,39 @@
+
+                    </tr>
+                        <td><a href="#getAround" class="section-link"  id="getAround">Getting around</a></td>
+                        <td>{{#sectionGetAroundComplete}} <span class="status-label complete">COMPLETE</span> {{/sectionGetAroundComplete}}
+                        
+                            {{^sectionGetAroundComplete}} <span class="status-label incomplete">INCOMPLETE</span> {{/sectionGetAroundComplete}}</td>
+                        <td class="text-right"><a href="scenario02?edit=true">Edit</a></td>    
+                    </tr>
+                    <tr class="js-hidden section-panel" id="getAroundArea">
+                        <td colspan="3">
+                        
+                        <table>
+                            
+                            <tr{{^sectionGetAround.get-around-more-display}} class="no-border" {{/sectionGetAround.get-around-more-display}}>
+                                <th>Does your condition affect how you get around your home?</th>
+                                <td>
+                            {{#sectionGetAround.get-around-yes}} Yes {{/sectionGetAround.get-around-yes}}
+                        
+                            {{#sectionGetAround.get-around-no}} No {{/sectionGetAround.get-around-no}}
+                                
+                            {{#sectionGetAround.get-around-sometimes}} Sometimes {{/sectionGetAround.get-around-sometimes}}
+                                    
+                                </td>
+                            </tr>
+                            
+                            {{#sectionGetAround.get-around-more-display}}
+                           
+                            <tr  class="no-border">
+                                <th>Tell us why you have difficulty getting up and out of bed.</th>
+                                <td>{{sectionGetAround.get-around-more}}</td>
+                            </tr>  
+                            
+                            {{/sectionGetAround.get-around-more-display}}
+                            
+                        </table>
+                        
+                        
+                        </td>
+                    </tr>

@@ -5,13 +5,13 @@
 				<ul>
 					<li>
 						<div class="form-group">
-							<label class="form-label-bold" for="full-number">
+							<label class="form-label-bold" for="full-name">
 							Full name
 								<span class="form-hint">
 								For example, 'Mr. John Smith'
 								</span>
 							</label>
-							<input type="text" class="form-control" id="full-number">
+							<input type="text" class="form-control" id="full-name" name="full-name" value="{{form.full-name}}" >
 						</div>
 					</li>
 					<li>
@@ -24,15 +24,15 @@
 									
 									<div class="form-group form-group-day">
 										<label for="dob-day">Day</label>
-										<input type="text" class="form-control" id="dob-day">
+										<input type="text" class="form-control" id="dob-day" maxlength="2" name="dob-day" value="{{form.dob-day}}">
 									</div>
 									<div class="form-group form-group-month">
 										<label for="dob-month">Month</label>
-										<input type="text" class="form-control" id="dob-month">
+										<input type="text" class="form-control" id="dob-month" maxlength="2" name="dob-month" value="{{form.dob-month}}">
 									</div>
 									<div class="form-group form-group-year">
 										<label for="dob-year">Year</label>
-										<input type="text" class="form-control" id="dob-year">
+										<input type="text" class="form-control" id="dob-year" maxlength="4" name="dob-year" value="{{form.dob-year}}">
 									</div>
 								</div>
 							</fieldset>
@@ -46,7 +46,7 @@
 								For example, 'VO123456D'
 								</span>
 							</label>
-							<input type="text" class="form-control" id="ni-number">
+							<input type="text" class="form-control" id="ni-number" name="ni-number" value="{{form.ni-number}}">
 						</div>
 					</li>
 				</ul>

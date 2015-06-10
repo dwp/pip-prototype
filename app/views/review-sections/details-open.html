@@ -1,0 +1,27 @@
+                    <tr class="row-highlight">
+                        <td><a href="#personal" class="section-link" id="person">Personal Details</a></td>
+                        <td>       
+                            {{#sectionDetails}}  <span class="status-label complete">COMPLETE</span> {{/sectionDetails}}
+                            {{^sectionDetails}}  <span class="status-label incomplete">INCOMPLETE</span> {{/sectionDetails}}
+                        </td>
+                        <td class="text-right"><a href="pip01?edit=true">Edit</a></td>
+                    </tr>
+                    <tr class="section-panel row-highlight" id="personArea">
+                        <td colspan="3">
+                        
+                        <table>
+                            <tr class="no-border">
+                                <th>Full name</th>
+                                <td>{{sectionDetails.full-name}}</td>
+                            </tr>
+                            <tr class="no-border">
+                                <th>Date of Birth</th>
+                                <td>{{sectionDetails.dob-day}}/{{sectionDetails.dob-month}}/{{sectionDetails.dob-year}} </td>
+                            </tr>
+                            <tr class="no-border">
+                                <th>National Insurance number</th>
+                                <td>{{sectionDetails.ni-number}}</td>
+                            </tr>
+                        </table>
+                        </td>
+                    </tr>

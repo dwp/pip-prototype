@@ -18,7 +18,7 @@
 	<div class="grid-row">
 		<div class="column-two-thirds">
             
-			<form action="scenario02" method="get" class="form">
+			<form action="scenario01{{#edit}}?edit=true{{/edit}}" method="post" class="form">
 			
 				<a href="understanding" class="example-back-link">Back</a>
 
@@ -29,22 +29,22 @@
 				<div class="form-group">
 				    <label class="form-label-bold" for="getting-up">Does your disability or health condition affect how you get up and out of bed?</label>
 				      <label class="block-label" data-target="bed-more" for="getting-up-yes">
-				        <input id="getting-up-yes" type="radio" name="getting-up" value="true">
+				        <input id="getting-up-yes" type="radio" name="getting-up" value="yes" {{#form.getting-up-yes}} checked{{/form.getting-up-yes}}>
                             Yes
 				    </label>
 				    <label class="block-label" data-target="bed-more" for="getting-up-sometimes">
-                        <input id="getting-up-sometimes" type="radio" name="getting-up" value="">
+                        <input id="getting-up-sometimes" type="radio" name="getting-up" value="sometimes" {{#form.getting-up-sometimes}} checked{{/form.getting-up-sometimes}}>
 				            Sometimes
 				    </label> 
 				    <label class="block-label" for="getting-up-no">
-                        <input id="getting-up-no" type="radio" name="getting-up" value="">
+                        <input id="getting-up-no" type="radio" name="getting-up" value="no" {{#form.getting-up-no}} checked{{/form.getting-up-no}}>
 				            No
 				    </label>  
                 </div>
 
-                <div class="js-hidden panel-indent" id="bed-more">
+                <div class="{{^form.getting-up-more-display}} js-hidden {{/form.getting-up-more-display}} panel-indent" id="bed-more">
                 	<label class="form-label-bold" for="getting-up-more">Tell us why you have difficulty getting up and out of bed</label>
-                	<textarea type="text" class="form-control-3-4" id="getting-up-more"></textarea>
+                	<textarea type="text" class="form-control-3-4" id="getting-up-more" name="getting-up-more">{{#form.getting-up-more-display}}{{form.getting-up-more}}{{/form.getting-up-more-display}}</textarea>
                 </div>
 
                 <div class="form-group">
