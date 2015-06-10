@@ -112,24 +112,28 @@ module.exports = function(app){
         {
            reviewSection['sectionGettingUp'] = gettingUpToForm(req); 
             
-        if(req.session['pip7_scenario01']['getting-up'] != ""){
+        if(req.session['pip7_scenario01']['getting-up'] != undefined && req.session['pip7_scenario01']['getting-up'] != ""){
                 reviewSection['sectionGettingUpComplete'] = true;
             }else{ reviewSection['sectionGettingUpComplete'] = false; }
             
         }else{ reviewSection['sectionGettingUp'] = new Array; }
         
         //scenario02
-        
         if(req.session['pip7_scenario02'])
         {
            reviewSection['sectionGetAround'] = getAroundToForm(req);    
             
-        if(req.session['pip7_scenario02']['getting-around'] != ""){
+        if(req.session['pip7_scenario02']['get-around'] != undefined && req.session['pip7_scenario02']['get-around'] != ""){
                 reviewSection['sectionGetAroundComplete'] = true;
             }else{ reviewSection['sectionGetAroundComplete'] = false; }
              
         }else{ reviewSection['sectionGetAround'] = new Array; }
  
+    if(reviewSection['sectionDetails'] &&  reviewSection['sectionGetAround'] &&  reviewSection['sectionGettingUp'])
+    {
+        reviewSection['link'] = true;
+    }
+        
       res.render('pip7/review',reviewSection);        
     });   
     
