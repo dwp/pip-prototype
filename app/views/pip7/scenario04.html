@@ -18,7 +18,7 @@
 	<div class="grid-row">
 		<div class="column-two-thirds">
             
-			<form action="scenario05" method="get" class="form">
+			<form action="scenario04{{#edit}}?edit=true{{/edit}}" method="post" class="form">
 			
 				<a href="scenario03" class="example-back-link">Back</a>
 
@@ -29,48 +29,48 @@
                 <div class="form-group">
 				    <label class="form-label-bold" for="dress">Does your condition affect you getting dressed?</label>
 				      <label class="block-label" data-target="dress-more" for="dress-yes">
-				        <input id="dress-yes" type="radio" name="dress" value="true">
+				        <input id="dress-yes" type="radio" name="dress" value="yes" {{#form.dress-yes}} checked{{/form.dress-yes}}>
                             Yes
 				    </label>
 				    <label class="block-label" data-target="dress-more" for="dress-sometimes">
-                        <input id="dress-sometimes" type="radio" name="dress" value="">
+                        <input id="dress-sometimes" type="radio" name="dress" value="sometimes" {{#form.dress-sometimes}} checked{{/form.dress-sometimes}}> 
 				            Sometimes
 				    </label> 
 				    <label class="block-label" for="dress-no">
-                        <input id="dress-no" type="radio" name="dress" value="">
+                        <input id="dress-no" type="radio" name="dress" value="no" {{#form.wash-no}} checked{{/form.wash-no}}>
 				            No
 				    </label>  
                 </div>
 
-                <div class="js-hidden panel-indent form-group" id="dress-more">
+                <div class="{{^form.dress-more-display}} js-hidden {{/form.dress-more-display}}  panel-indent form-group" id="dress-more">
 				    <label class="form-label-bold" for="dress-help">Do you have someone who helps you getting dressed?</label>
 				    <p class="form-hint">This includes if someone reminds you, chooses appropiate clothes for you or physically helps you.</p>
 				      <label class="block-label" data-target="dress-help-more" for="dress-help-yes">
-				        <input id="dress-help-yes" type="radio" name="dress-help" value="true">
+				        <input id="dress-help-yes" type="radio" name="dress-help" value="yes"  {{#form.dress-help-yes}} checked{{/form.dress-help-yes}}>
                             Yes
 				    </label>
 				    <label class="block-label" data-target="dress-help-more" for="dress-help-sometimes">
-                        <input id="dress-help-sometimes" type="radio" name="dress-help" value="">
+                        <input id="dress-help-sometimes" type="radio" name="dress-help" value="sometimes"  {{#form.dress-help-sometimes}} checked{{/form.dress-help-sometimes}}>
 				            Sometimes
 				    </label> 
 				    <label class="block-label" data-target="dress-help-none" for="dress-help-no">
-                        <input id="dress-help-no" type="radio" name="dress-help" value="">
+                        <input id="dress-help-no" type="radio" name="dress-help" value="no" {{#form.dress-help-no}} checked{{/form.dress-help-no}}>
 				            No
 				    </label>  
 
-				    <div class="js-hidden panel-indent" id="dress-help-more">
+				    <div class="{{^form.dress-help-display-yes}} js-hidden {{/form.dress-help-display-yes}}  panel-indent" id="dress-help-more">
                 		<label class="form-label-bold" for="dress-more-too">Why do you need help?</label>
-                		<textarea type="text" class="form-control-3-4" id="dress-more-too"></textarea>
+                		<textarea type="text" class="form-control-3-4" id="dress-more-too" name="dress-help-info-yes">{{#form.dress-help-display-yes}}{{form.dress-help-info-yes}}{{/form.dress-help-display-yes}}</textarea>
                 	</div>
 
-                	<div class="js-hidden panel-indent" id="dress-help-none">
+                	<div class="{{^form.dress-help-display-no}} js-hidden {{/form.dress-help-display-no}} panel-indent" id="dress-help-none">
                 		<label class="form-label-bold" for="dress-help-none-too">Tell us why you have difficulty getting dressed.</label>
                 		<p class="form-hint">Include:</p>
 	                	<ul class="form-hint list-bullet">
 	                		<li>if you find any part especially difficult or painful</li>
 	                		<li>if there’s anything you can’t do</li>
 	                	</ul>
-                		<textarea type="text" class="form-control-3-4" id="dress-help-none-too"></textarea>
+                		<textarea type="text" class="form-control-3-4" id="dress-help-none-too" name="dress-help-info-none">{{#form.dress-help-display-no}}{{form.dress-help-info-none}}{{/form.dress-help-display-no}}</textarea>
                 	</div>
                 </div>
 				

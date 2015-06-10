@@ -1,0 +1,65 @@
+              <!-- washing -->
+                    </tr>
+                        <td><a href="#washing" class="section-link"  id="washing">Washing</a></td>
+                        <td>{{#sectionWashingComplete}} <span class="status-label complete">COMPLETE</span> {{/sectionWashingComplete}}
+                        
+                            {{^sectionWashingComplete}} <span class="status-label incomplete">INCOMPLETE</span> {{/sectionWashingComplete}}</td>
+                        <td class="text-right"><a href="scenario03?edit=true">Edit</a></td>    
+                    </tr>
+                    <tr class="js-hidden section-panel" id="washingArea">
+                        <td colspan="3">
+                        
+                        <table>
+                            
+                            <tr{{^sectionWashing.wash-more-display}} class="no-border" {{/sectionWashing.wash-more-display}}>
+                                <th>Does your condition affect how you wash yourself?</th>
+                                <td>
+                            {{#sectionWashing.wash-yes}} Yes {{/sectionWashing.wash-yes}}
+                        
+                            {{#sectionWashing.wash-no}} No {{/sectionWashing.wash-no}}
+                                
+                            {{#sectionWashing.wash-sometimes}} Sometimes {{/sectionWashing.wash-sometimes}}
+                                    
+                                </td>
+                            </tr>
+                            
+                            {{#sectionWashing.wash-more-display}}
+                           
+                            <tr>
+                                <th>Do you have someone who helps you wash yourself?</th>
+                                <td>
+                            {{#sectionWashing.wash-help-yes}} Yes {{/sectionWashing.wash-help-yes}}
+                        
+                            {{#sectionWashing.wash-help-no}} No {{/sectionWashing.wash-help-no}}
+                                
+                            {{#sectionWashing.wash-help-sometimes}} Sometimes {{/sectionWashing.wash-help-sometimes}}
+                                </td>
+                            </tr>
+                             
+                            {{#sectionWashing.wash-help-display-yes}}
+                            <tr class="no-border" >
+                                <th>Why do you need help?/th>
+                                <td>
+                                {{sectionWashing.wash-help-info-yes}}
+                                </td>
+                            </tr>
+                            {{/sectionWashing.wash-help-display-yes}}
+                            
+                            {{#sectionWashing.wash-help-display-no}}
+                            <tr class="no-border" >
+                                <th>Tell us why you have difficulty washing yourself.</th>
+                                <td>
+                                        {{sectionWashing.wash-help-info-none}}
+                                </td>
+                            </tr>
+                            {{/sectionWashing.wash-help-display-no}}
+                            
+                            
+                            
+                            {{/sectionWashing.wash-more-display}}
+                            
+                        </table>
+                        
+                        
+                        </td>
+                    </tr>

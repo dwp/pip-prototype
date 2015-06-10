@@ -43,6 +43,75 @@ module.exports = function(app){
         return formData
     }
     
+    
+    function washingToForm(req)
+    {
+        var formData = new Array;
+        
+        formData['session'] = true;
+        
+        if(req.session['pip7_scenario03']['wash'] == 'yes'){ formData['wash-yes'] = true; }
+        if(req.session['pip7_scenario03']['wash'] == 'no'){ formData['wash-no'] = true; }
+        if(req.session['pip7_scenario03']['wash'] == 'sometimes'){ formData['wash-sometimes'] = true; }
+        
+        if(req.session['pip7_scenario03']['wash'] == 'yes' || 
+           req.session['pip7_scenario03']['wash'] == 'sometimes'){
+             formData['wash-more-display'] = true; 
+        }
+        
+        if(req.session['pip7_scenario03']['wash-help'] == 'yes'){ formData['wash-help-yes'] = true; }
+        if(req.session['pip7_scenario03']['wash-help'] == 'no'){ formData['wash-help-no'] = true; }
+        if(req.session['pip7_scenario03']['wash-help'] == 'sometimes'){ formData['wash-help-sometimes'] = true; }
+        
+        if(req.session['pip7_scenario03']['wash-help'] == 'yes' || 
+           req.session['pip7_scenario03']['wash-help'] == 'sometimes'){
+             formData['wash-help-display-yes'] = true; 
+        }
+        
+        if(req.session['pip7_scenario03']['wash-help'] == 'no'){
+             formData['wash-help-display-no'] = true; 
+        }
+        
+                formData['wash-help-info-none'] =req.session['pip7_scenario03']['wash-help-info-none'];
+                formData['wash-help-info-yes'] =req.session['pip7_scenario03']['wash-help-info-yes'];
+        
+        return formData
+    }
+    
+    function dressingToForm(req)
+    {
+        var formData = new Array;
+        
+        formData['session'] = true;
+        
+        if(req.session['pip7_scenario04']['dress'] == 'yes'){ formData['dress-yes'] = true; }
+        if(req.session['pip7_scenario04']['dress'] == 'no'){ formData['dress-no'] = true; }
+        if(req.session['pip7_scenario04']['dress'] == 'sometimes'){ formData['dress-sometimes'] = true; }
+        
+        if(req.session['pip7_scenario04']['dress'] == 'yes' || 
+           req.session['pip7_scenario04']['dress'] == 'sometimes'){
+             formData['dress-more-display'] = true; 
+        }
+        
+        if(req.session['pip7_scenario04']['dress-help'] == 'yes'){ formData['dress-help-yes'] = true; }
+        if(req.session['pip7_scenario04']['dress-help'] == 'no'){ formData['dress-help-no'] = true; }
+        if(req.session['pip7_scenario04']['dress-help'] == 'sometimes'){ formData['dress-help-sometimes'] = true; }
+        
+        if(req.session['pip7_scenario04']['dress-help'] == 'yes' || 
+           req.session['pip7_scenario04']['dress-help'] == 'sometimes'){
+             formData['dress-help-display-yes'] = true; 
+        }
+        
+        if(req.session['pip7_scenario04']['dress-help'] == 'no'){
+             formData['dress-help-display-no'] = true; 
+        }
+        
+                formData['dress-help-info-none'] =req.session['pip7_scenario04']['dress-help-info-none'];
+                formData['dress-help-info-yes'] =req.session['pip7_scenario04']['dress-help-info-yes'];
+        
+        return formData
+    }
+    
     //review pages personal
     app.get('/pip7/pip01', function (req, res) {    
       res.render('pip7/pip01',{'form': req.session['pip7_details'],'edit': req.param('edit')});
@@ -74,6 +143,7 @@ module.exports = function(app){
     //review pages Getting around
     app.get('/pip7/scenario02', function (req, res) {   
         if(req.session['pip7_scenario02']){ var formData = getAroundToForm(req) }else{ formData = new Array; }
+        
       res.render('pip7/scenario02',{'form':formData,'edit': req.param('edit')});
     });   
     
@@ -85,7 +155,33 @@ module.exports = function(app){
             res.redirect('/pip7/scenario03'); }
     });
     
+    //review pages Washing
+    app.get('/pip7/scenario03', function (req, res) {   
+        if(req.session['pip7_scenario03']){ var formData = washingToForm(req) }else{ formData = new Array; }
+      res.render('pip7/scenario03',{'form':formData,'edit': req.param('edit')});
+    });   
     
+    app.post('/pip7/scenario03', function (req, res) {
+        req.session['pip7_scenario03'] = req.body;
+        if(req.param('edit')){ 
+            res.redirect('/pip7/review');
+        }else{
+            res.redirect('/pip7/scenario04'); }
+    });
+    
+    //review dressing
+    app.get('/pip7/scenario04', function (req, res) {   
+        if(req.session['pip7_scenario04']){ var formData = dressingToForm(req) }else{ formData = new Array; }
+      res.render('pip7/scenario04',{'form':formData,'edit': req.param('edit')});
+    });   
+    
+    app.post('/pip7/scenario04', function (req, res) {
+        req.session['pip7_scenario04'] = req.body;
+        if(req.param('edit')){ 
+            res.redirect('/pip7/review');
+        }else{
+            res.redirect('/pip7/scenario05'); }
+    });
     
     //review page
     app.get('/pip7/review', function (req, res) {  
@@ -102,7 +198,7 @@ module.exports = function(app){
             req.session['pip7_details']['dob-month']  != "" &&
             req.session['pip7_details']['dob-year'] !="" &&
             req.session['pip7_details']['ni-number'] !=""){
-                reviewSection['sectionDetailsComplete'] = true;
+                reviewSection['sectionDetailsCo§mplete'] = true;
             }else{ reviewSection['sectionDetailsComplete'] = false; }
             reviewSection['sectionDetails'] = req.session['pip7_details'];  
         }
@@ -129,7 +225,31 @@ module.exports = function(app){
              
         }else{ reviewSection['sectionGetAround'] = new Array; }
  
-    if(reviewSection['sectionDetails'] &&  reviewSection['sectionGetAround'] &&  reviewSection['sectionGettingUp'])
+        
+        //scenario03
+        if(req.session['pip7_scenario03'])
+        {
+           reviewSection['sectionWashing'] = washingToForm(req);    
+            
+        if(req.session['pip7_scenario03']['wash'] != undefined && req.session['pip7_scenario03']['wash'] != ""){
+                reviewSection['sectionWashingComplete'] = true;
+            }else{ reviewSection['sectionWashingComplete'] = false; }
+             
+        }else{ reviewSection['sectionWashing'] = new Array; }
+        
+        //scenario03
+        if(req.session['pip7_scenario04'])
+        {
+           reviewSection['sectionDressing'] = dressingToForm(req);    
+            
+        if(req.session['pip7_scenario04']['dress'] != undefined && req.session['pip7_scenario04']['dress'] != ""){
+                reviewSection['sectionDressingComplete'] = true;
+            }else{ reviewSection['sectionDressingComplete'] = false; }
+             
+        }else{ reviewSection['sectionDressing'] = new Array; }
+        
+        
+    if(reviewSection['sectionDetails'] &&  reviewSection['sectionGetAround'] &&  reviewSection['sectionGettingUp'] &&  reviewSection['sectionWashing'] && reviewSection['sectionDressing'])
     {
         reviewSection['link'] = true;
     }
@@ -137,5 +257,9 @@ module.exports = function(app){
       res.render('pip7/review',reviewSection);        
     });   
     
+        app.get('/pip7/logout', function (req, res) {
+            req.session.destroy();
+            res.redirect('/pip7/overview');
+    }); 
     
 };

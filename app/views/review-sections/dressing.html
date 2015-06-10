@@ -1,0 +1,65 @@
+              <!-- washing -->
+                    </tr>
+                        <td><a href="#dressing" class="section-link"  id="dressing">Getting dressed</a></td>
+                        <td>{{#sectionDressingComplete}} <span class="status-label complete">COMPLETE</span> {{/sectionDressingComplete}}
+                        
+                            {{^sectionDressingComplete}} <span class="status-label incomplete">INCOMPLETE</span> {{/sectionDressingComplete}}</td>
+                        <td class="text-right"><a href="scenario04?edit=true">Edit</a></td>    
+                    </tr>
+                    <tr class="js-hidden section-panel" id="dressingArea">
+                        <td colspan="3">
+                        
+                        <table>
+                            
+                            <tr{{^sectionDressing.dress-more-display}} class="no-border" {{/sectionDressing.dress-more-display}}>
+                                <th>Does your condition affect you getting dressed?</th>
+                                <td>
+                            {{#sectionDressing.dress-yes}} Yes {{/sectionDressing.dress-yes}}
+                        
+                            {{#sectionDressing.dress-no}} No {{/sectionDressing.dress-no}}
+                                
+                            {{#sectionDressing.dress-sometimes}} Sometimes {{/sectionDressing.dress-sometimes}}
+                                    
+                                </td>
+                            </tr>
+                            
+                            {{#sectionDressing.dress-more-display}}
+                           
+                            <tr>
+                                <th>Do you have someone who helps you getting dressed?</th>
+                                <td>
+                            {{#sectionDressing.dress-help-yes}} Yes {{/sectionDressing.dress-help-yes}}
+                        
+                            {{#sectionDressing.dress-help-no}} No {{/sectionDressing.dress-help-no}}
+                                
+                            {{#sectionDressing.dress-help-sometimes}} Sometimes {{/sectionDressing.dress-help-sometimes}}
+                                </td>
+                            </tr>
+                             
+                            {{#sectionDressing.dress-help-display-yes}}
+                            <tr class="no-border">
+                                <th>Why do you need help?</th>
+                                <td>
+                                {{sectionDressing.dress-help-info-yes}}
+                                </td>
+                            </tr>
+                            {{/sectionDressing.dress-help-display-yes}}
+                            
+                            {{#sectionDressing.dress-help-display-no}}
+                            <tr class="no-border" >
+                                <th>Tell us why you have difficulty getting dressed.</th>
+                                <td>
+                                        {{sectionDressing.dress-help-info-none}}
+                                </td>
+                            </tr>
+                            {{/sectionDressing.dress-help-display-no}}
+                            
+                            
+                            
+                            {{/sectionDressing.dress-more-display}}
+                            
+                        </table>
+                        
+                        
+                        </td>
+                    </tr>
