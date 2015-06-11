@@ -56,9 +56,18 @@ table.condition {
 }
 
 ul.side-nav {
-	margin-top: 100px;
+	margin-top: 25px;
+	margin-bottom: 50px;
 }
 
-ul.side-nav {
-	
+ul.side-nav li {
+	font-size: 16px;
+
+}
+
+ul.side-nav li a {
+	padding: 7px 0 6px 20px;
+	display: block;
+	text-decoration: none;
+	background: transparent url("/public/images/left-arrow.png") no-repeat 0px 12px;
 }
