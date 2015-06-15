@@ -1,0 +1,187 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+	
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="pip10" method="#" class="form">
+			
+				<a href="pip05" class="example-back-link">Back</a>
+				
+				<!--div class="section-progress">
+				Step 1 of 17
+				</div-->
+				
+				<h1 class="form-title heading-large">
+				<!--Hospital, hospice, residential or nursing care-->
+				Review and edit
+				</h1>
+			
+                
+                
+                 <table class="review-table">
+
+                     {{>review-sections/details-open}}
+                    
+                    </tr>
+                        <td><a href="#" class="section-link"  id="demo">Contact details</a></td>
+                        <td><span class="status-label complete">COMPLETE</span>  </td>
+                        <td class="text-right"><a href="#ßßß">Edit</a></td>    
+                    </tr>
+                    </tr>
+                        <td><a href="#" class="section-link"  id="demo">Nationality declaration</a></td>
+                        <td><span class="status-label complete">COMPLETE</span>  </td>
+                        <td class="text-right"><a href="#ßßß">Edit</a></td>    
+                    </tr>
+                    </tr>
+                        <td><a href="#" class="section-link"  id="demo"> Working and payments abroad</a></td>
+                        <td><span class="status-label complete">COMPLETE</span>  </td>
+                        <td class="text-right"><a href="#ßßß">Edit</a></td>    
+                    </tr>
+                    </tr>
+                        <td><a href="#" class="section-link"  id="demo">Your health conditions</a></td>
+                        <td><span class="status-label complete">COMPLETE</span>  </td>
+                        <td class="text-right"><a href="#ßßß">Edit</a></td>    
+                    </tr>
+                    </tr>
+                        <td><a href="#" class="section-link"  id="demo">Good and bad days</a></td>
+                        <td><span class="status-label complete">COMPLETE</span>  </td>
+                        <td class="text-right"><a href="#ßßß">Edit</a></td>    
+                    </tr>
+                    </tr>
+                        <td><a href="#" class="section-link"  id="demo">Healthcare professionals</a></td>
+                        <td><span class="status-label complete">COMPLETE</span>  </td>
+                        <td class="text-right"><a href="#ßßß">Edit</a></td>    
+                    </tr>
+                    </tr>
+                        <td><a href="#" class="section-link"  id="demo">Submit evidence</a></td>
+                        <td><span class="status-label complete">COMPLETE</span>  </td>
+                        <td class="text-right"><a href="#ßßß">Edit</a></td>    
+                    </tr>
+                    </tr>
+                        <td><a href="#" class="section-link"  id="demo">Special aids and adaptations</a></td>
+                        <td><span class="status-label complete">COMPLETE</span>  </td>
+                        <td class="text-right"><a href="#ßßß">Edit</a></td>    
+                    </tr>
+                    </tr>
+                        <td><a href="#" class="section-link"  id="demo">Your understanding</a></td>
+                        <td><span class="status-label complete">COMPLETE</span>  </td>
+                        <td class="text-right"><a href="#ßßß">Edit</a></td>    
+                    </tr>
+
+
+
+
+            
+            
+            
+                     {{>review-sections/getting-up}}
+                     
+                   
+                     {{>review-sections/getting-around}}
+       
+              
+              
+                     {{>review-sections/washing}}
+
+                        {{>review-sections/dressing}}
+                    </tr>
+                        <td><a href="#" class="section-link"  id="demo">Going out</a></td>
+                        <td><span class="status-label complete">COMPLETE</span>  </td>
+                        <td class="text-right"><a href="#ßßß">Edit</a></td>    
+                    </tr>
+                    </tr>
+                        <td><a href="#" class="section-link"  id="demo">At the shop</a></td>
+                        <td><span class="status-label complete">COMPLETE</span>  </td>
+                        <td class="text-right"><a href="#ßßß">Edit</a></td>    
+                    </tr>
+                    </tr>
+                        <td><a href="#" class="section-link"  id="demo">Paying for shopping</a></td>
+                        <td><span class="status-label complete">COMPLETE</span>  </td>
+                        <td class="text-right"><a href="#ßßß">Edit</a></td>    
+                    </tr>
+                    </tr>
+                        <td><a href="#" class="section-link"  id="demo">Dinner time</a></td>
+                        <td><span class="status-label complete">COMPLETE</span>  </td>
+                        <td class="text-right"><a href="#ßßß">Edit</a></td>    
+                    </tr>
+                    </tr>
+                        <td><a href="#" class="section-link"  id="demo">Banking details</a></td>
+                        <td><span class="status-label complete">COMPLETE</span>  </td>
+                        <td class="text-right"><a href="#ßßß">Edit</a></td>    
+                    </tr>
+
+
+
+                </table>
+        
+
+        <div class="form-group">
+             <br />
+                {{#link}} <a class="button" href="pip10">Submit</a> {{/link}}
+
+                {{^link}} 
+
+                <a class="button disabled">Submit</a>
+
+
+                {{/link}}
+        </div>
+
+			</form>
+
+
+		
+		</div>
+		<div class="column-third">
+			
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+ 
+<script>
+$(document).ready(function() {
+        $(".section-link").click(function() {
+             
+            //hide and reset link
+            $(".section-panel").hide();
+            $(".section-link").removeClass("section-link-before");
+            $(".row-highlight").removeClass("row-highlight");
+            
+            //display new and change font arrow
+            $(this).addClass("section-link-before");
+           
+            
+            $(this).parent().parent().addClass("row-highlight");
+            $("#"+this.id+"Area").addClass("row-highlight");
+            
+          $("#"+this.id+"Area").toggle();
+            return false;
+             $(this).focus();
+        });
+});
+</script>
+
+  
+{{/bodyEnd}}
+
+{{/govuk_template}}

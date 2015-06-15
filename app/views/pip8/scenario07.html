@@ -1,0 +1,72 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+	
+	<div class="grid-row">
+		<div class="column-two-thirds">
+            
+			<form action="scenario08" method="get" class="form">
+			
+				<a href="scenario06" class="example-back-link">Back</a>
+
+				<h1 class="form-title heading-large">
+				Paying for your shopping
+				</h1>
+
+                <fieldset>
+					<legend class="form-label-bold add-padding" for="till">Do you need to have someone to help you with your money when you're at the till?</legend>			
+					<div class="form-group">
+						<label class="block-label" data-target="till-details" for="till-yes">
+							<input id="till-yes" type="radio" name="till" value="Yes">
+							Yes
+						</label>
+                        <label class="block-label" data-target="till-details" for="till-sometimes">
+							<input id="till-sometimes" type="radio" name="till" value="Sometimes">
+							Sometimes
+						</label> 
+						<label class="block-label"for="till-no">
+							<input id="till-no" type="radio" name="till" value="No">
+							No
+						</label>   
+					</div>
+				</fieldset>
+                
+                <div class="js-hidden panel-indent" id="till-details">
+                    <label class="form-label-bold" for="till-details-more">Why do you need help?</label>
+                    <textarea type="text" class="form-control-3-4" id="till-details-more"></textarea>  
+                </div>
+                
+                
+                
+                <div class="form-group">
+					<input type="submit" class="button" value="Save and continue">
+				</div>
+			</form>
+		
+		</div>
+		<div class="column-third app">
+			{{>includes/nav/side-nav}}
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
