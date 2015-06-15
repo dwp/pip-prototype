@@ -23,11 +23,12 @@
 				<a href="scenario06" class="example-back-link">Back</a>
 
 				<h1 class="form-title heading-large">
-				Paying for your shopping
+				Money and bills
 				</h1>
 
                 <fieldset>
-					<legend class="form-label-bold add-padding" for="till">Do you need to have someone to help you with your money when you're at the till?</legend>			
+					<legend class="form-label-bold add-padding" for="till">Would your condition cause you difficulty buying something in a shop?</legend>
+					<p class="form-hint">This includes knowing what something costs, whether you have enough money and counting your change.</p>			
 					<div class="form-group">
 						<label class="block-label" data-target="till-details" for="till-yes">
 							<input id="till-yes" type="radio" name="till" value="Yes">
@@ -45,10 +46,32 @@
 				</fieldset>
                 
                 <div class="js-hidden panel-indent" id="till-details">
-                    <label class="form-label-bold" for="till-details-more">Why do you need help?</label>
+                    <label class="form-label-bold" for="till-details-more">Why?</label>
                     <textarea type="text" class="form-control-3-4" id="till-details-more"></textarea>  
                 </div>
+                                <fieldset>
+					<legend class="form-label-bold add-padding" for="till">Does your condition cause you difficulty or mean you need extra help paying bills?</legend>
+					<p class="form-hint">This includes remembering to pay on time, knowing the amount you have to pay and knowing how to pay.</p>			
+					<div class="form-group">
+						<label class="block-label" data-target="till-details" for="till-yes">
+							<input id="till-yes" type="radio" name="till" value="Yes">
+							Yes
+						</label>
+                        <label class="block-label" data-target="till-details" for="till-sometimes">
+							<input id="till-sometimes" type="radio" name="till" value="Sometimes">
+							Sometimes
+						</label> 
+						<label class="block-label"for="till-no">
+							<input id="till-no" type="radio" name="till" value="No">
+							No
+						</label>   
+					</div>
+				</fieldset>
                 
+                <div class="js-hidden panel-indent" id="till-details">
+                    <label class="form-label-bold" for="till-details-more">Why?</label>
+                    <textarea type="text" class="form-control-3-4" id="till-details-more"></textarea>  
+                </div> 
                 
                 
                 <div class="form-group">
