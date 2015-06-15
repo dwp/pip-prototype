@@ -3,9 +3,9 @@
 .text-right { text-align:right; }
 
 
-.section-link { font-size:19px; font-weight:bold; text-decoration:none; color:black; }
-.section-link:link { color:black; }
-.section-link:visited { color:black; }
+.section-link { font-size:19px; font-weight:bold; text-decoration:none; color:#005ea5; }
+.section-link:link { color:#005ea5; }
+.section-link:visited { color:#005ea5; }
 
 .section-link::before { content: "\25B6"; padding-right:10px; font-size:16px; padding-left:10px; }
 
