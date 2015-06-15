@@ -27,7 +27,7 @@
 				</h1>
 
                 <div class="form-group">
-				    <label class="form-label-bold" for="dress">Does your condition affect you getting dressed?</label>
+				    <label class="form-label-bold" for="dress">Do you have difficulty dressing yourself because of your condition?</label>
 				      <label class="block-label" data-target="dress-more" for="dress-yes">
 				        <input id="dress-yes" type="radio" name="dress" value="yes" {{#form.dress-yes}} checked{{/form.dress-yes}}>
                             Yes
@@ -43,8 +43,8 @@
                 </div>
 
                 <div class="{{^form.dress-more-display}} js-hidden {{/form.dress-more-display}}  panel-indent form-group" id="dress-more">
-				    <label class="form-label-bold" for="dress-help">Do you have someone who helps you getting dressed?</label>
-				    <p class="form-hint">This includes if someone reminds you, chooses appropiate clothes for you or physically helps you.</p>
+				    <label class="form-label-bold" for="dress-help">Do you need someone to help you get dressed?</label>
+				    <p class="form-hint">This includes if someone has to remind you to get dressed or choose what you wear.</p>
 				      <label class="block-label" data-target="dress-help-more" for="dress-help-yes">
 				        <input id="dress-help-yes" type="radio" name="dress-help" value="yes"  {{#form.dress-help-yes}} checked{{/form.dress-help-yes}}>
                             Yes
