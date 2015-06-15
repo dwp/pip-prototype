@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="{{^form.wash-more-display}} js-hidden {{/form.wash-more-display}} panel-indent form-group" id="wash-more">
-				    <label class="form-label-bold" for="wash-help">Do you have someone who helps you wash yourself?</label>
+				    <label class="form-label-bold" for="wash-help">Do you need someone to help you wash or remind you to wash?</label>
 				      <label class="block-label" data-target="wash-help-more" for="wash-help-yes">
 				        <input id="wash-help-yes" type="radio" name="wash-help" value="yes" {{#form.wash-help-yes}} checked{{/form.wash-help-yes}}>
                             Yes
@@ -64,13 +64,7 @@
                 	</div>
 
                 	<div class="{{^form.wash-help-display-no}} js-hidden {{/form.wash-help-display-no}} panel-indent" id="wash-help-none">
-                		<label class="form-label-bold" for="wash-help-none-too">Tell us why you have difficulty washing yourself.</label>
-                		<p class="form-hint">Include:</p>
-	                	<ul class="form-hint list-bullet">
-	                		<li>if you find any part especially difficult or painful</li>
-	                		<li>if there’s anything you can’t do</li>
-	                		<li>if you need someone to prompt you to wash</li>
-	                	</ul>
+                		<label class="form-label-bold" for="wash-help-none-too">Describe the difficulties you have safely washing yourself, including using either the bath or shower.</label>
                 		<textarea type="text" class="form-control-3-4" id="wash-help-none-too" name="wash-help-info-none">{{#form.wash-help-display-no}}{{form.wash-help-info-none}}{{/form.wash-help-display-no}} </textarea>
                 	</div>
                 </div>
