@@ -51,3 +51,23 @@ table.condition {
 	}
 }
 
+.column-third.app {
+	border-left: 1px solid #bfc1c3;
+}
+
+ul.side-nav {
+	margin-top: 25px;
+	margin-bottom: 50px;
+}
+
+ul.side-nav li {
+	font-size: 16px;
+
+}
+
+ul.side-nav li a {
+	padding: 7px 0 6px 20px;
+	display: block;
+	text-decoration: none;
+	background: transparent url("/public/images/left-arrow.png") no-repeat 0px 12px;
+}
