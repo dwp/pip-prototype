@@ -125,6 +125,8 @@ module.exports = {
       require('./review_flow')(app);
       
       require('./sprint6_1')(app);
+
+       require('./sprint7_1')(app);
       
   }
 };
