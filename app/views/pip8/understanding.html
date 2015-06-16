@@ -33,21 +33,52 @@
 				<p>Give details of whether your condition affects your ability to read or understand every day things.</p>
 				<fieldset>
 					<div class="form-group">  
-					<label class="form-label-bold add-padding" for="aids-other">Do you have any problems or difficulties reading?</label>
-					<p class="form-hint">This includes if it takes you a long time or you need help to read.</p>
-					<label class="block-label" data-target="reading-more" for="reading-yes">
-				        <input id="reading-help-yes" type="radio" name="reading-help" value="yes">
-                            Always
-				    </label>
-				    <label class="block-label" data-target="reading-more" for="reading-help-sometimes">
-                        <input id="reading-help-sometimes" type="radio" name="reading-help" value="sometimes">
-				            Most of the time
-				    </label> 
-				    <label class="block-label" data-target="reading-none" for="reading-no">
-                        <input id="reading-no" type="radio" name="reading-help" value="no">
-				            Not usually
-				    </label>
-				    </div>  
+						<label class="form-label-bold add-padding" for="aids-other">Do you have any problems or difficulties reading?</label>
+						<p class="form-hint">This includes if it takes you a long time or you need help to read.</p>
+						<label class="block-label" data-target="reading-more" for="reading-yes">
+					        <input id="reading-yes" type="radio" name="reading" value="yes">
+	                            Always
+					    </label>
+					    <label class="block-label" data-target="reading-more" for="reading-sometimes">
+	                        <input id="reading-sometimes" type="radio" name="reading" value="sometimes">
+					            Most of the time
+					    </label> 
+					    <label class="block-label" data-target="reading-none" for="reading-no">
+	                        <input id="reading-no" type="radio" name="reading" value="no">
+					            Not usually
+					    </label>
+				    </div> 
+
+				    <div class="js-hidden panel-indent form-group" id="reading-more">
+	                    <label class="form-label-bold" for="reading-help">Do you need someone to help you to read?</label>
+	                    <p class="form-hint">This includes if someone has to encourage you.</p>
+	                      <label class="block-label" data-target="reading-help-more" for="reading-help-yes">
+	                        <input id="reading-help-yes" type="radio" name="reading-help" value="true">
+	                            Yes
+	                    </label>
+	                    <label class="block-label" data-target="reading-help-more" for="reading-help-sometimes">
+	                        <input id="reading-help-sometimes" type="radio" name="reading-help" value="">
+	                            Sometimes
+	                    </label> 
+	                    <label class="block-label" data-target="reading-help-none" for="reading-help-no">
+	                        <input id="reading-help-no" type="radio" name="reading-help" value="">
+	                            No
+	                    </label> 
+
+	                    <div class="js-hidden panel-indent" id="reading-help-more">
+	                        <label class="form-label-bold" for="reading-more-too">Why do you need help?</label>
+	                        <textarea type="text" class="form-control-3-4" id="reading-more-too"></textarea>
+	                    </div>
+
+	                    <div class="js-hidden panel-indent" id="reading-help-none">
+	                        <label class="form-label-bold" for="reading-help-none-too">Describe the difficulties you have reading.</label>
+	                        <textarea type="text" class="form-control-3-4" id="reading-help-none-too"></textarea>
+	                    </div>
+
+	                </div>
+
+
+
 					<div class="form-group">
 						<legend class="form-label-bold" for="aids-appliances">Which of these do you have trouble or need help understanding?</legend>
 						<label class="block-label"  data-target="people-saying" for="aids-preparing-food">
