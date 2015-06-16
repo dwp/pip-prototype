@@ -40,7 +40,25 @@
 {{/content}}
 
 {{$bodyEnd}}
-{{>includes/elements_scripts}}
+  {{>includes/elements_scripts}}
+ 
+  <script>
+  $(document).ready(function() {
+  
+  	$("#show-health-worker-2").click(function() {
+  	  $("#health-worker-2").show();
+  	  $("#show-health-worker-2").hide();
+  	   return false;
+  	});
+  	$("#show-health-worker-3").click(function() {
+  	  $("#health-worker-3").show();
+  	  $("#show-health-worker-3").hide();
+  	   return false;
+  	});
+  	
+  });
+  </script>
+  
 {{/bodyEnd}}
 
 {{/govuk_template}}
