@@ -27,28 +27,44 @@
 				</div-->
 				
 				<h1 class="form-title heading-large">
-				Your understanding
+				Reading and understanding
 				</h1>
 				
-				
+				<p>Give details of whether your condition affects your ability to read or understand every day things.</p>
 				<fieldset>
+					<div class="form-group">  
+					<label class="form-label-bold add-padding" for="aids-other">Do you have any problems or difficulties reading?</label>
+					<p class="form-hint">This includes if it takes you a long time or you need help to read.</p>
+					<label class="block-label" data-target="reading-more" for="reading-yes">
+				        <input id="reading-help-yes" type="radio" name="reading-help" value="yes" {{#form.reading-yes}} checked{{/form.reading-yes}}>
+                            Always
+				    </label>
+				    <label class="block-label" data-target="reading-more" for="reading-help-sometimes">
+                        <input id="reading-help-sometimes" type="radio" name="reading-help" value="sometimes" {{#form.reading-help-sometimes}} checked{{/form.reading-help-sometimes}}>
+				            Most of the time
+				    </label> 
+				    <label class="block-label" data-target="reading-none" for="reading-no">
+                        <input id="reading-no" type="radio" name="reading-help" value="no" {{#form.reading-no}} checked{{/form.reading-help-no}}>
+				            Not usually
+				    </label>
+				    </div>  
 					<div class="form-group">
-						<legend class="form-label-bold" for="aids-appliances">Which of the following do you ever have trouble or need help understanding?</legend>
+						<legend class="form-label-bold" for="aids-appliances">Which of these do you have trouble or need help understanding?</legend>
 						<label class="block-label"  data-target="people-saying" for="aids-preparing-food">
 							<input id="aids-preparing-food" type="checkbox" name="aids-appliances" value="Preparing food">
 							What people are saying
 						</label>
 						<fieldset class="js-hidden form-group inner-panel" id="people-saying">
-                           <label class="form-label" for="example1">Give an example of when you've had difficulty understanding what people are saying</label>
+                           <label class="form-label" for="example1">Give an example</label>
                            <textarea type="text" class="form-control-3-4" id="example1" name="example1"></textarea>
                         </fieldset>
 
 						<label class="block-label" data-target="signs-symbols" for="aids-eating-food">
 							<input id="aids-eating-food" type="checkbox" name="aids-appliances" value="Eating food">
-							Signs, symbols, letters or words
+							Signs or symbols
 						</label> 
 						<fieldset class="js-hidden form-group inner-panel" id="signs-symbols">
-                           <label class="form-label" for="example2">Give an example of when you've had difficulty understanding signs, symbols, letters or words.</label>
+                           <label class="form-label" for="example2">Give an example</label>
                            <textarea type="text" class="form-control-3-4" id="example2" name="example2"></textarea>
                         </fieldset>
 
@@ -57,7 +73,7 @@
 							Numbers (eg what things cost or money)
 						</label> 
 						<fieldset class="js-hidden form-group inner-panel" id="numbers">
-                           <label class="form-label" for="example3">Give an example of when you've had difficulty understanding numbers</label>
+                           <label class="form-label" for="example3">Give an example</label>
                            <textarea type="text" class="form-control-3-4" id="example3" name="example3"></textarea>
                         </fieldset>
 
@@ -66,7 +82,7 @@
 							How to get around (eg public transport)
 						</label> 
 						<fieldset class="js-hidden form-group inner-panel" id="get-around">
-                           <label class="form-label" for="example4">Give an example of when you've had difficulty understanding how to get around</label>
+                           <label class="form-label" for="example4">Give an example</label>
                            <textarea type="text" class="form-control-3-4" id="example4" name="example4"></textarea>
                         </fieldset>
 
@@ -75,7 +91,7 @@
 							Other people's feelings
 						</label> 
 						<fieldset class="js-hidden form-group inner-panel" id="feelings">
-                           <label class="form-label" for="example5">Give an example of when you've had difficulty understanding other people's feelings</label>
+                           <label class="form-label" for="example5">Give an example</label>
                            <textarea type="text" class="form-control-3-4" id="example5" name="example5"></textarea>
                         </fieldset>
 
@@ -84,7 +100,7 @@
 							How to behave around others or in public
 						</label> 
 						<fieldset class="js-hidden form-group inner-panel" id="in-public">
-                           <label class="form-label" for="example6">Give an example of when you've had difficulty understanding how to behave arounds others or in public</label>
+                           <label class="form-label" for="example6">Give an example</label>
                            <textarea type="text" class="form-control-3-4" id="example6" name="example6"></textarea>
                         </fieldset>
 
@@ -93,17 +109,14 @@
 							Basic instructions
 						</label>  
 						<fieldset class="js-hidden form-group inner-panel" id="instructions">
-                           <label class="form-label" for="example7">Give an example of when you've had difficulty understanding basic instructions</label>
+                           <label class="form-label" for="example7">Give an example</label>
                            <textarea type="text" class="form-control-3-4" id="example7" name="example7"></textarea>
                         </fieldset>
 
 					</div>
 				</fieldset>
 					
-				<!--div class="panel form-group">  
-					<label class="form-label-bold add-padding" for="aids-other">Tell us about the difficulties you have understanding the above and how often</label>
-					<textarea type="text" class="form-control-3-4" id="aids-other"></textarea>
-				</div-->  
+
 				
 				<!-- Primary buttons, secondary links -->
 				<div class="form-group">
