@@ -73,6 +73,54 @@
                 	</div>
                 	
                 </div>
+
+                <fieldset>
+					<legend class="form-label-bold add-padding" for="dinner">Does your condition make it difficult for you to safely eat or drink?</legend>			
+					<div class="form-group">
+						<label class="block-label" data-target="dinner-details" for="dinner-yes">
+							<input id="dinner-yes" type="radio" name="dinner" value="Yes">
+							Yes
+						</label>
+                        <label class="block-label" data-target="dinner-details" for="dinner-sometimes">
+							<input id="dinner-sometimes" type="radio" name="dinner" value="Sometimes">
+							Sometimes
+						</label> 
+						<label class="block-label"for="dinner-no">
+							<input id="dinner-no" type="radio" name="dinner" value="No">
+							No
+						</label>   
+					</div>
+				</fieldset>
+                
+                <div class="js-hidden panel-indent form-group" id="eat-details">
+
+				    <label class="form-label-bold" for="eat-help">Do you need someone to help you eat or drink?</label>
+				    <p class="form-hint">This includes if they remind you to eat or supervise you.</p>
+				    <label class="block-label" data-target="eat-help-more" for="eat-help-yes">
+				        <input id="eat-help-yes" type="radio" name="eat-help" value="true">
+                            Yes
+				    </label>
+				    <label class="block-label" data-target="eat-help-more" for="eat-help-sometimes">
+                        <input id="eat-help-sometimes" type="radio" name="eat-help" value="">
+				            Sometimes
+				    </label> 
+				    <label class="block-label" data-target="eat-help-none" for="eat-help-no">
+                        <input id="eat-help-no" type="radio" name="eat-help" value="">
+				            No
+				    </label>  
+
+				    <div class="js-hidden panel-indent" id="eat-help-more">
+	            		<label class="form-label-bold" for="eat-more">Why do you need help?</label>
+	            		<textarea type="text" class="form-control-3-4" id="eat-more"></textarea>
+            		</div>
+
+                	<div class="js-hidden panel-indent" id="eat-help-none">
+                		<label class="form-label-bold" for="eat-help-none-too">Describe the difficulties you have eating or drinking.</label>
+
+                		<textarea type="text" class="form-control-3-4" id="eat-help-none-too"></textarea>
+                	</div>
+                	
+                </div>
                 
                 
                 
