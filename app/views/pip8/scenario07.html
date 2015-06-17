@@ -71,19 +71,27 @@
                     <label class="form-label-bold" for="bill-details-more">Why?</label>
                     <textarea type="text" class="form-control-3-4" id="bill-details-more"></textarea>  
                 </div>
-                                <fieldset>
-					<legend class="form-label-bold add-padding" for="bill">Does someone help you pay bills or manage your money?</legend>		
+                <fieldset>
+					<legend class="form-label-bold add-padding" for="bill-help">Does someone help you pay bills or manage your money?</legend>		
 					<div class="form-group">
-						<label class="block-label" data-target="bill-details" for="bill-yes">
-							<input id="bill-yes" type="radio" name="bill" value="Yes">
+						<label class="block-label" data-target="bill-gethelp" for="bill-help-yes">
+							<input id="bill-help-yes" type="radio" name="bill-help" value="Yes">
 							Yes
 						</label>
-						<label class="block-label"for="bill-no">
-							<input id="bill-no" type="radio" name="bill" value="No">
+						<label class="block-label" data-target="bill-gethelp" for="bill-help-sometimes">
+							<input id="bill-help-sometimes" type="radio" name="bill-help" value="Sometimes">
+							Sometimes
+						</label>
+						<label class="block-label"for="bill-help-no">
+							<input id="bill-help-no" type="radio" name="bill-help" value="No">
 							No
 						</label>   
 					</div>
 				</fieldset> 
+				<div class="js-hidden panel-indent" id="bill-gethelp">
+                    <label class="form-label-bold" for="bill-gethelp-more">Why do they help you?</label>
+                    <textarea type="text" class="form-control-3-4" id="bill-gethelp-more"></textarea>  
+                </div>
                 
                 
                 <div class="form-group">
