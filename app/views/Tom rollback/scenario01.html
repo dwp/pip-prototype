@@ -1,0 +1,68 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+	
+	<div class="grid-row">
+		<div class="column-two-thirds">
+            
+			<form action="scenario01{{#edit}}?edit=true{{/edit}}" method="post" class="form">
+			
+				<a href="understanding" class="example-back-link">Back</a>
+
+				<h1 class="form-title heading-large">
+				Getting up
+				</h1>
+				
+				<div class="form-group">
+				    <label class="form-label-bold" for="getting-up">Does your condition affect how you get up and out of bed?</label>
+				      <label class="block-label" data-target="bed-more" for="getting-up-yes">
+				        <input id="getting-up-yes" type="radio" name="getting-up" value="yes" {{#form.getting-up-yes}} checked{{/form.getting-up-yes}}>
+                            Yes
+				    </label>
+				    <label class="block-label" data-target="bed-more" for="getting-up-sometimes">
+                        <input id="getting-up-sometimes" type="radio" name="getting-up" value="sometimes" {{#form.getting-up-sometimes}} checked{{/form.getting-up-sometimes}}>
+				            Sometimes
+				    </label> 
+				    <label class="block-label" for="getting-up-no">
+                        <input id="getting-up-no" type="radio" name="getting-up" value="no" {{#form.getting-up-no}} checked{{/form.getting-up-no}}>
+				            No
+				    </label>  
+                </div>
+
+                <div class="{{^form.getting-up-more-display}} js-hidden {{/form.getting-up-more-display}} panel-indent" id="bed-more">
+                	<label class="form-label-bold" for="getting-up-more">Tell us why you have difficulty getting up and out of bed</label>
+                	<textarea type="text" class="form-control-3-4" id="getting-up-more" name="getting-up-more">{{#form.getting-up-more-display}}{{form.getting-up-more}}{{/form.getting-up-more-display}}</textarea>
+                </div>
+
+                <div class="form-group">
+					<input type="submit" class="button" value="Save and continue">
+				</div>
+			</form>
+		
+		</div>
+		<div class="column-third app">
+			{{>includes/nav/side-nav}}
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

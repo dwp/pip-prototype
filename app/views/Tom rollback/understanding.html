@@ -1,0 +1,171 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+	
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="scenario01" method="#" class="form">
+			
+				<a href="special-aids" class="example-back-link">Back</a>
+				
+				<!--div class="section-progress">
+				Step 6 of 17
+				</div-->
+				
+				<h1 class="form-title heading-large">
+				Reading and understanding
+				</h1>
+				
+				<fieldset>
+					<div class="form-group">  
+						<label class="form-label-bold add-padding" for="aids-other">Does your condition mean you have any problems or difficulties reading?</label>
+						<p class="form-hint">This includes if it takes you a long time or you need help to read.</p>
+						<label class="block-label" data-target="reading-more" for="reading-yes">
+					        <input id="reading-yes" type="radio" name="reading" value="yes">
+	                            Always
+					    </label>
+					    <label class="block-label" data-target="reading-more" for="reading-sometimes">
+	                        <input id="reading-sometimes" type="radio" name="reading" value="sometimes">
+					            Most of the time
+					    </label> 
+					    <label class="block-label" data-target="reading-none" for="reading-no">
+	                        <input id="reading-no" type="radio" name="reading" value="no">
+					            Not usually
+					    </label>
+				    </div> 
+
+				    <div class="js-hidden panel-indent form-group" id="reading-more">
+	                    <label class="form-label-bold" for="reading-help">Do you need someone to help you to read?</label>
+	                    <p class="form-hint">This includes if someone has to encourage you.</p>
+	                      <label class="block-label" data-target="reading-help-more" for="reading-help-yes">
+	                        <input id="reading-help-yes" type="radio" name="reading-help" value="true">
+	                            Yes
+	                    </label>
+	                    <label class="block-label" data-target="reading-help-more" for="reading-help-sometimes">
+	                        <input id="reading-help-sometimes" type="radio" name="reading-help" value="">
+	                            Sometimes
+	                    </label> 
+	                    <label class="block-label" data-target="reading-help-none" for="reading-help-no">
+	                        <input id="reading-help-no" type="radio" name="reading-help" value="">
+	                            No
+	                    </label> 
+
+	                    <div class="js-hidden panel-indent" id="reading-help-more">
+	                        <label class="form-label-bold" for="reading-more-too">Why do you need help?</label>
+	                        <textarea type="text" class="form-control-3-4" id="reading-more-too"></textarea>
+	                    </div>
+
+	                    <div class="js-hidden panel-indent" id="reading-help-none">
+	                        <label class="form-label-bold" for="reading-help-none-too">Describe the difficulties you have reading.</label>
+	                        <textarea type="text" class="form-control-3-4" id="reading-help-none-too"></textarea>
+	                    </div>
+
+	                </div>
+
+
+
+					<div class="form-group">
+						<legend class="form-label-bold" for="aids-appliances">Which of these do you have trouble or need help understanding?</legend>
+						<label class="block-label"  data-target="people-saying" for="aids-preparing-food">
+							<input id="aids-preparing-food" type="checkbox" name="aids-appliances" value="Preparing food">
+							What people are saying
+						</label>
+						<fieldset class="js-hidden form-group inner-panel" id="people-saying">
+                           <label class="form-label" for="example1">Give an example of when you've had difficulty understanding what people are saying.</label>
+                           <textarea type="text" class="form-control-3-4" id="example1" name="example1"></textarea>
+                        </fieldset>
+
+						<label class="block-label" data-target="signs-symbols" for="aids-eating-food">
+							<input id="aids-eating-food" type="checkbox" name="aids-appliances" value="Eating food">
+							Signs or symbols
+						</label> 
+						<fieldset class="js-hidden form-group inner-panel" id="signs-symbols">
+                           <label class="form-label" for="example2">Give an example of when you've had difficulty understanding signs or symbols.</label>
+                           <textarea type="text" class="form-control-3-4" id="example2" name="example2"></textarea>
+                        </fieldset>
+
+						<label class="block-label" data-target="numbers" for="aids-communicating">
+							<input id="aids-communicating" type="checkbox" name="aids-appliances" value="Communicating">
+							Numbers, including what things cost or money
+						</label> 
+						<fieldset class="js-hidden form-group inner-panel" id="numbers">
+                           <label class="form-label" for="example3">Give an example of when you've had difficulty understanding numbers.</label>
+                           <textarea type="text" class="form-control-3-4" id="example3" name="example3"></textarea>
+                        </fieldset>
+
+						<label class="block-label" data-target="get-around" for="aids-moving">
+							<input id="aids-moving" type="checkbox" name="aids-appliances" value="Moving around">
+							How to get around, eg public transport
+						</label> 
+						<fieldset class="js-hidden form-group inner-panel" id="get-around">
+                           <label class="form-label" for="example4">Give an example of when you've had difficulty understanding how to get around.</label>
+                           <textarea type="text" class="form-control-3-4" id="example4" name="example4"></textarea>
+                        </fieldset>
+
+						<label class="block-label" data-target="feelings" for="aids-medication">
+							<input id="aids-medication" type="checkbox" name="aids-appliances" value="Taking medication">
+							Other people's feelings
+						</label> 
+						<fieldset class="js-hidden form-group inner-panel" id="feelings">
+                           <label class="form-label" for="example5">Give an example of when you've had difficulty understanding other people's feelings.</label>
+                           <textarea type="text" class="form-control-3-4" id="example5" name="example5"></textarea>
+                        </fieldset>
+
+						<label class="block-label" data-target="in-public" for="aids-washing">
+							<input id="aids-washing" type="checkbox" name="aids-appliances" value="Washing">
+							How to behave around others or in public
+						</label> 
+						<fieldset class="js-hidden form-group inner-panel" id="in-public">
+                           <label class="form-label" for="example6">Give an example of when you've had difficulty understanding how to behave.</label>
+                           <textarea type="text" class="form-control-3-4" id="example6" name="example6"></textarea>
+                        </fieldset>
+
+						<label class="block-label" data-target="instructions" for="aids-dressing">
+							<input id="aids-dressing" type="checkbox" name="aids-appliances" value="Dressing">
+							Basic instructions
+						</label>  
+						<fieldset class="js-hidden form-group inner-panel" id="instructions">
+                           <label class="form-label" for="example7">Give an example of when you've had difficulty understanding basic instructions.</label>
+                           <textarea type="text" class="form-control-3-4" id="example7" name="example7"></textarea>
+                        </fieldset>
+
+					</div>
+				</fieldset>
+					
+
+				
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+					<input type="submit" class="button" value="Save and continue">
+				</div>
+			
+			</form>
+		
+		</div>
+		<div class="column-third app">
+			{{>includes/nav/side-nav}}
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

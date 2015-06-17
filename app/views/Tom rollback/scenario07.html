@@ -1,0 +1,114 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+	
+	<div class="grid-row">
+		<div class="column-two-thirds">
+            
+			<form action="scenario08" method="get" class="form">
+			
+				<a href="scenario06" class="example-back-link">Back</a>
+
+				<h1 class="form-title heading-large">
+				Money and bills
+				</h1>
+                <fieldset>
+					<legend class="form-label-bold add-padding" for="till">Does your condition mean you have difficulty with money, eg knowing how much things cost or counting your change?</legend>			
+					<div class="form-group">
+						<label class="block-label" data-target="till-details" for="till-yes">
+							<input id="till-yes" type="radio" name="till" value="Yes">
+							Yes
+						</label>
+                        <label class="block-label" data-target="till-details" for="till-sometimes">
+							<input id="till-sometimes" type="radio" name="till" value="Sometimes">
+							Sometimes
+						</label> 
+						<label class="block-label"for="till-no">
+							<input id="till-no" type="radio" name="till" value="No">
+							No
+						</label>   
+					</div>
+				</fieldset>
+                
+                <div class="js-hidden panel-indent" id="till-details">
+                    <label class="form-label-bold" for="till-details-more">Why?</label>
+                    <textarea type="text" class="form-control-3-4" id="till-details-more"></textarea>  
+                </div>
+                <fieldset>
+					<legend class="form-label-bold add-padding" for="bill">Does your condition cause you difficulty paying or managing household bills?</legend>
+					<p class="form-hint">This includes if you forget to pay on time, don't know how to pay, or aren't sure whether you have enough money.</p>			
+					<div class="form-group">
+						<label class="block-label" data-target="bill-details" for="bill-yes">
+							<input id="bill-yes" type="radio" name="bill" value="Yes">
+							Yes
+						</label>
+                        <label class="block-label" data-target="bill-details" for="bill-sometimes">
+							<input id="bill-sometimes" type="radio" name="bill" value="Sometimes">
+							Sometimes
+						</label> 
+						<label class="block-label"for="bill-no">
+							<input id="bill-no" type="radio" name="bill" value="No">
+							No
+						</label>   
+					</div>
+				</fieldset>
+                
+                <div class="js-hidden panel-indent" id="bill-details">
+                    <label class="form-label-bold" for="bill-details-more">Why?</label>
+                    <textarea type="text" class="form-control-3-4" id="bill-details-more"></textarea>  
+                </div>
+                <fieldset>
+					<legend class="form-label-bold add-padding" for="bill-help">Does someone help you pay bills or manage your money?</legend>		
+					<div class="form-group">
+						<label class="block-label" data-target="bill-gethelp" for="bill-help-yes">
+							<input id="bill-help-yes" type="radio" name="bill-help" value="Yes">
+							Yes
+						</label>
+						<label class="block-label" data-target="bill-gethelp" for="bill-help-sometimes">
+							<input id="bill-help-sometimes" type="radio" name="bill-help" value="Sometimes">
+							Sometimes
+						</label>
+						<label class="block-label"for="bill-help-no">
+							<input id="bill-help-no" type="radio" name="bill-help" value="No">
+							No
+						</label>   
+					</div>
+				</fieldset> 
+				<div class="js-hidden panel-indent" id="bill-gethelp">
+                    <label class="form-label-bold" for="bill-gethelp-more">Why do they help you?</label>
+                    <textarea type="text" class="form-control-3-4" id="bill-gethelp-more"></textarea>  
+                </div>
+                
+                
+                <div class="form-group">
+					<input type="submit" class="button" value="Save and continue">
+				</div>
+			</form>
+		
+		</div>
+		<div class="column-third app">
+			{{>includes/nav/side-nav}}
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

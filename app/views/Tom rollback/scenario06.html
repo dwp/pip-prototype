@@ -1,0 +1,145 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+	
+	<div class="grid-row">
+		<div class="column-two-thirds">
+            
+			<form action="scenario07" method="get" class="form">
+			
+				<a href="scenario05" class="example-back-link">Back</a>
+
+				<h1 class="form-title heading-large">
+				Out and about
+				</h1>
+				
+                <fieldset>
+					<legend class="form-label-bold add-padding" for="shop">Would your condition mean you'd have problems getting around easily and safely if you were out and about, eg in a shop?</legend>			
+					<div class="form-group">
+						<label class="block-label" data-target="shop-details" for="shop-yes">
+							<input id="shop-yes" type="radio" name="shop" value="Yes">
+							Yes
+						</label>
+                        <label class="block-label" data-target="shop-details" for="shop-sometimes">
+							<input id="shop-sometimes" type="radio" name="shop" value="Sometimes">
+							Sometimes
+						</label> 
+						<label class="block-label" for="shop-no">
+							<input id="shop-no" type="radio" name="shop" value="No">
+							No
+						</label>   
+					</div>
+				</fieldset>
+
+				
+				<div class="js-hidden panel-indent form-group" id="shop-details">
+
+				    <label class="form-label-bold" for="shop-help">Would you need someone to help you get around if you were out and about?</label>
+				    <label class="block-label" data-target="shop-help-more" for="shop-help-yes">
+				        <input id="shop-help-yes" type="radio" name="shop-help" value="true">
+                            Yes
+				    </label>
+				    <label class="block-label" data-target="shop-help-more" for="shop-help-sometimes">
+                        <input id="shop-help-sometimes" type="radio" name="shop-help" value="">
+				            Sometimes
+				    </label> 
+				    <label class="block-label" data-target="shop-help-none" for="shop-help-no">
+                        <input id="shop-help-no" type="radio" name="shop-help" value="">
+				            No
+				    </label>  
+
+				    <div class="js-hidden panel-indent" id="shop-help-more">
+	            		<label class="form-label-bold" for="shop-more">Why would you need help?</label>
+	            		<textarea type="text" class="form-control-3-4" id="shop-more"></textarea>
+            		</div>
+
+                	<div class="js-hidden panel-indent" id="shop-help-none">
+                		<label class="form-label-bold" for="shop-help-none-too">How would your condition cause you difficulty getting around safely?</label>
+                		<textarea type="text" class="form-control-3-4" id="shop-help-none-too"></textarea>
+                	</div>
+                	
+                </div>
+
+                <fieldset>
+					<legend class="form-label-bold add-padding" for="ask">Would your condition make it difficult for you to ask someone for help or directions?</legend>			
+					<div class="form-group">
+						<label class="block-label" for="ask-yes">
+							<input id="ask-yes" type="radio" name="ask" value="Yes">
+							Yes
+						</label>
+                        <label class="block-label" data-target="ask-details" for="ask-sometimes">
+							<input id="ask-sometimes" type="radio" name="ask" value="Sometimes">
+							Sometimes
+						</label> 
+						<label class="block-label" data-target="ask-details" for="ask-no">
+							<input id="ask-no" type="radio" name="ask" value="No">
+							No
+						</label>   
+					</div>
+				</fieldset>
+
+                <div class="js-hidden panel-indent form-group" id="ask-details">
+					
+				    <label class="form-label-bold" for="ask-help">Do you need someone to encourage or help you talk to other people?</label>
+				    <label class="block-label" data-target="ask-help-more" for="ask-help-yes">
+				        <input id="ask-help-yes" type="radio" name="ask-help" value="true">
+                            Yes
+				    </label>
+				    <label class="block-label" data-target="ask-help-more" for="ask-help-sometimes">
+                        <input id="ask-help-sometimes" type="radio" name="ask-help" value="">
+				            Sometimes
+				    </label> 
+				    <label class="block-label" data-target="ask-help-none" for="ask-help-no">
+                        <input id="ask-help-no" type="radio" name="ask-help" value="">
+				            No
+				    </label>  
+
+				    <div class="js-hidden panel-indent" id="ask-help-more">
+	            		<label class="form-label-bold" for="ask-more">Why do you need help?</label>
+	            		<textarea type="text" class="form-control-3-4" id="ask-more"></textarea>
+            		</div>
+
+                	<div class="js-hidden panel-indent" id="ask-help-none">
+                		<label class="form-label-bold" for="ask-help-none-too">How would your condition affect you when talking to someone?</label>
+                		<p class="form-hint">Include if you find talking to people confusing or hard to understand, and give examples if you want.</p>
+                		<textarea type="text" class="form-control-3-4" id="ask-help-none-too"></textarea>
+                	</div>
+                	
+                </div>
+                
+                    
+                    
+                
+                
+                <div class="form-group">
+					<input type="submit" class="button" value="Save and continue">
+				</div>
+			</form>
+		
+		</div>
+		<div class="column-third app">
+			{{>includes/nav/side-nav}}
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
