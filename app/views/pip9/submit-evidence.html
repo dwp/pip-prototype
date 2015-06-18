@@ -1,0 +1,111 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+	
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="#" method="#" class="form">
+			
+				<a href="#" class="example-back-link">Back</a>
+				
+				<!--div class="section-progress">
+				Step 1 of 17
+				</div-->
+				<h1 class="form-title heading-large">
+				Upload medical information
+				</h1>
+
+				<p>You can upload electronic copies of medical information that helps explain your condition, medication and treatments. If you don't have electronic copies you can post them after you apply.</p>
+
+				<p>Upload your:</p>
+
+				<ul class="list-bullet font-xsmall list-tick">
+					<li>medical reports <span class="font-xsmall">- from doctors, occupational therapists and other medical experts</span></li>
+					<li>care or treatment plans</li>
+					<li>medical test results</li>
+					<li>hospital discharge letters</li>
+					<li>outpatient clinic letters</li>
+					<li>current prescription lists</li>
+					<li>statement of special needs</li>
+				</ul>
+
+				<h2 class="heading-medium">
+				Upload medical information
+				</h2>
+
+				<script>
+				  function openFileOption()
+					{
+					  document.getElementById("file1").click();
+					}
+				</script>
+			    <input type="file" id="file1" style="display:none">
+			    <a href="#" onclick="openFileOption();return;">Select files to upload</a>
+
+
+			    <table>
+				    <thead>
+				      <tr>
+				        <th scope="col">Filename</th>
+				        <th class="numeric" scope="col"></th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr>
+				        <td>Occupational-Therapist-Report.pdf</td>
+				        <td class="numeric"><a href="#">Remove</a></td>
+				      </tr>
+				      <tr>
+				        <td>Care-plan.pdf</td>
+				        <td class="numeric"><a href="#">Remove</a></td>
+				      </tr>
+				      <tr>
+				       <td>Outpatient-letter.doc</td>
+				        <td class="numeric"><a href="#">Remove</a></td>
+				      </tr>
+				    </tbody>
+				</table>
+
+				<h2 class="heading-medium">
+				Post medical information
+				</h2>
+
+				<p>Write your National Insurance number on each page you send.</p> 
+				<p><span class="heading-small">FREEPOST RTEU-HBEC-RGTG</span><br>
+				Personal Independence Payment 1<br>
+				Mail Handling Site A<br>
+				Wolverhampton<br>
+				WV98 1AA</p>
+				<p>You don't have to send original documents - anything you send won't be returned.</p>
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+					<input type="submit" class="button" value="Save and continue">
+				</div>
+			</form>
+		</div>
+		<div class="column-third app">
+			{{>includes/nav/side-nav}}
+		</div>
+	</div>
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

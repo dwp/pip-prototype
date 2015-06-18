@@ -18,22 +18,21 @@
 	<div class="grid-row">
 		<div class="column-two-thirds">
 
-			<form action="pip06" method="#" class="form">
+			<form action="#" method="#" class="form">
 			
-				<a href="pip04" class="example-back-link">Back</a>
+				<a href="#" class="example-back-link">Back</a>
 				
 				<!--div class="section-progress">
 				Step 1 of 17
 				</div-->
-				
-				<h1 class="form-title heading-large">
+								<h1 class="form-title heading-large">
 				<!--Hospital, hospice, residential or nursing care-->
 				Your health conditions and disabilities
 				</h1>
 				
 				<!-- health conditions or disabilities -->
 				<div class="form-group">  
-					<label class="form-label-bold" for="health-conditions">List your health conditions and disabilities and when they started</label> 
+					<label class="form-label-bold" for="health-conditions">List your health conditions and disabilities and when they started.</label> 
 
 
 
@@ -90,15 +89,14 @@
 
 				<!-- medication -->
 				<div class="form-group">  
-					<label class="form-label-bold" for="health-conditions">List any medication that you are currently on</label> 
-					<p class="form-hint">You can skip this section and send a copy of your prescription later</p>
+					<label class="form-label-bold" for="health-conditions">List any medication that you're currently taking</label> 
 
 					<table class="condition">
 					    <thead>
 							<tr>
 								<th scope="col">Medication</th>
 								<th class="numeric" scope="col">Dosage</th>
-								<th class="numeric" scope="col">How often do you take it</th>
+								<th class="numeric" scope="col">How often do you take it?</th>
 							</tr>
 					    </thead>
 					    <tbody>
@@ -136,11 +134,81 @@
 						<a href="#" id="show-condition7">Add another medication</a>
 					</div>
 
-					<table class="condition js-hidden" id="condition7">
+					<div class="js-hidden" id="condition7">
+						<table class="condition">
+						    <tbody>
+								<tr>
+									<td><input type="text" class="form-control"></td>
+									<td class="numeric"><input type="text" class="form-control"></td>
+									<td class="numeric"><input type="text" class="form-control"></td>
+								</tr>
+						    </tbody>
+						</table>
+
+						<a href="#" id="show-condition10">Add another medication</a>
+					</div>
+
+					<div class="js-hidden" id="condition10">
+						<table class="condition">
+						    <tbody>
+								<tr>
+									<td><input type="text" class="form-control"></td>
+									<td class="numeric"><input type="text" class="form-control"></td>
+									<td class="numeric"><input type="text" class="form-control"></td>
+								</tr>
+						    </tbody>
+						</table>
+
+						<a href="#" id="show-condition11">Add another medication</a>
+					</div>
+
+					<div class="js-hidden" id="condition11">
+						<table class="condition">
+						    <tbody>
+								<tr>
+									<td><input type="text" class="form-control"></td>
+									<td class="numeric"><input type="text" class="form-control"></td>
+									<td class="numeric"><input type="text" class="form-control"></td>
+								</tr>
+						    </tbody>
+						</table>
+
+						<a href="#" id="show-condition12">Add another medication</a>
+					</div>
+
+					<div class="js-hidden" id="condition12">
+						<table class="condition">
+						    <tbody>
+								<tr>
+									<td><input type="text" class="form-control"></td>
+									<td class="numeric"><input type="text" class="form-control"></td>
+									<td class="numeric"><input type="text" class="form-control"></td>
+								</tr>
+						    </tbody>
+						</table>
+
+						<a href="#" id="show-condition13">Add another medication</a>
+					</div>
+
+					<div class="js-hidden" id="condition13">
+						<table class="condition">
+						    <tbody>
+								<tr>
+									<td><input type="text" class="form-control"></td>
+									<td class="numeric"><input type="text" class="form-control"></td>
+									<td class="numeric"><input type="text" class="form-control"></td>
+								</tr>
+						    </tbody>
+						</table>
+
+						<a href="#" id="show-condition14">Add another medication</a>
+					</div>
+
+
+					<table class="condition js-hidden" id="condition14">
 					    <tbody>
 							<tr>
 								<td><input type="text" class="form-control"></td>
-								<td class="numeric"><input type="text" class="form-control"></td>
 								<td class="numeric"><input type="text" class="form-control"></td>
 								<td class="numeric"><input type="text" class="form-control"></td>
 							</tr>
@@ -207,10 +275,9 @@
 
 				<!-- catch all -->
 				<div class="form-group">  
-					<label class="form-label-bold" for="health-conditions">Tell us about any side-effects you get from your medication or treatments</label> 
+					<label class="form-label-bold" for="health-conditions">Describe any side-effects you get from your medication or treatments</label> 
 					<textarea type="text" name="health-conditions" class="health-conditions form-control-3-4"></textarea>    
-				</div> 
-
+				</div>
 
 				<fieldset>
 					<legend class="form-label-bold add-padding" for="dinner">Do you have any difficulty managing your treatments or taking your medication?</legend>			
@@ -256,7 +323,7 @@
                 		<textarea type="text" class="form-control-3-4" id="dinner-help-none-too"></textarea>
                 	</div>
                 	
-                </div>
+                </div> 
 				
 				<!-- Primary buttons, secondary links -->
 				<div class="form-group">
@@ -265,11 +332,6 @@
 
 			</form>
 		</div>
-
-		<div class="column-third app">
-			{{>includes/nav/side-nav}}
-		</div>
-		
 	</div>
 </main><!-- / #page-container -->
 {{/content}}
@@ -308,6 +370,31 @@
 				  	$("#show-condition9").click(function() {
 				  	  $("#condition9").show();
 				  	  $("#show-condition9").hide();
+				  	   return false;
+				  	});
+				  	$("#show-condition10").click(function() {
+				  	  $("#condition10").show();
+				  	  $("#show-condition10").hide();
+				  	   return false;
+				  	});
+				  	$("#show-condition11").click(function() {
+				  	  $("#condition11").show();
+				  	  $("#show-condition11").hide();
+				  	   return false;
+				  	});
+				  	$("#show-condition12").click(function() {
+				  	  $("#condition12").show();
+				  	  $("#show-condition12").hide();
+				  	   return false;
+				  	});
+				  	$("#show-condition13").click(function() {
+				  	  $("#condition13").show();
+				  	  $("#show-condition13").hide();
+				  	   return false;
+				  	});
+				  	$("#show-condition14").click(function() {
+				  	  $("#condition14").show();
+				  	  $("#show-condition14").hide();
 				  	   return false;
 				  	});
 				  	

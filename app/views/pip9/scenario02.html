@@ -1,0 +1,74 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+	
+	<div class="grid-row">
+		<div class="column-two-thirds">
+            
+			<form action="scenario02{{#edit}}?edit=true{{/edit}}" method="post" class="form">
+			
+				<a href="scenario01" class="example-back-link">Back</a>
+
+				<h1 class="form-title heading-large">
+				Getting around
+				</h1>
+				
+				<div class="form-group">
+				    <label class="form-label-bold" for="get-around">Does your condition affect how you get around your home?</label>
+				      <label class="block-label" data-target="around-more" for="get-around-yes">
+				        <input id="get-around-yes" type="radio" name="get-around" value="yes" {{#form.get-around-yes}} checked{{/form.get-around-yes}}>
+                            Yes
+				    </label>
+				    <label class="block-label" data-target="around-more" for="get-around-sometimes">
+                        <input id="get-around-sometimes" type="radio" name="get-around" value="sometimes" {{#form.get-around-sometimes}} checked{{/form.get-around-sometimes}}>
+				            Sometimes
+				    </label> 
+				    <label class="block-label" for="get-around-no">
+                        <input id="get-around-no" type="radio" name="get-around" value="no" {{#form.get-around-no}} checked{{/form.get-around-no}}>
+				            No
+				    </label>  
+                </div>
+
+                <div class="{{^form.get-around-more-display}} js-hidden {{/form.get-around-more-display}} panel-indent" id="around-more">
+                	<label class="form-label-bold" for="get-around-more">Tell us why you have difficulty getting around your home.</label>
+                	<p class="form-hint">Include:</p>
+                	<ul class="form-hint list-bullet">
+                		<li>if you find any part especially difficult or painful</li>
+                		<li>if there’s anything you can’t do</li>
+                		<li>if you need someone to help you or prompt</li>
+                	</ul>
+                	<textarea type="text" class="form-control-3-4" id="get-around-more" name="get-around-more">{{#form.get-around-more-display}}{{form.get-around-more}}{{/form.get-around-more-display}}</textarea>
+                </div>
+
+                <div class="form-group">
+					<input type="submit" class="button" value="Save and continue">
+				</div>
+			</form>
+		
+		</div>
+		<div class="column-third app">
+			{{>includes/nav/side-nav}}
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

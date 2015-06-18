@@ -1,0 +1,145 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+	
+	<div class="grid-row">
+		<div class="column-two-thirds">
+            
+			<form action="scenario09" method="get" class="form">
+			
+				<a href="scenario07" class="example-back-link">Back</a>
+
+				<h1 class="form-title heading-large">
+				Meal times
+				</h1>
+
+                <fieldset>
+					<legend class="form-label-bold add-padding" for="dinner">Would your condition make it difficult for you to safely prepare and cook yourself a hot meal?</legend>			
+					<div class="form-group">
+						<label class="block-label" data-target="dinner-details" for="dinner-yes">
+							<input id="dinner-yes" type="radio" name="dinner" value="Yes">
+							Yes
+						</label>
+                        <label class="block-label" data-target="dinner-details" for="dinner-sometimes">
+							<input id="dinner-sometimes" type="radio" name="dinner" value="Sometimes">
+							Sometimes
+						</label> 
+						<label class="block-label"for="dinner-no">
+							<input id="dinner-no" type="radio" name="dinner" value="No">
+							No
+						</label>   
+					</div>
+				</fieldset>
+                
+                <div class="js-hidden panel-indent form-group" id="dinner-details">
+
+				    <label class="form-label-bold" for="dinner-help">Do you need someone to help you make a hot meal safely?</label>
+				    <p class="form-hint">This includes if they remind you to make a meal, supervise you or cook for you.</p>
+				    <label class="block-label" data-target="dinner-help-more" for="dinner-help-yes">
+				        <input id="dinner-help-yes" type="radio" name="dinner-help" value="true">
+                            Yes
+				    </label>
+				    <label class="block-label" data-target="dinner-help-more" for="dinner-help-sometimes">
+                        <input id="dinner-help-sometimes" type="radio" name="dinner-help" value="">
+				            Sometimes
+				    </label> 
+				    <label class="block-label" data-target="dinner-help-none" for="dinner-help-no">
+                        <input id="dinner-help-no" type="radio" name="dinner-help" value="">
+				            No
+				    </label>  
+
+				    <div class="js-hidden panel-indent" id="dinner-help-more">
+	            		<label class="form-label-bold" for="dinner-more">Why do you need help?</label>
+	            		<textarea type="text" class="form-control-3-4" id="dinner-more"></textarea>
+            		</div>
+
+                	<div class="js-hidden panel-indent" id="dinner-help-none">
+                		<label class="form-label-bold" for="dinner-help-none-too">Describe the difficulties you'd have preparing and cooking a hot meal.</label>
+
+                		<textarea type="text" class="form-control-3-4" id="dinner-help-none-too"></textarea>
+                	</div>
+                	
+                </div>
+
+                <fieldset>
+					<legend class="form-label-bold add-padding" for="eat">Does your condition make it difficult for you to safely eat or drink?</legend>			
+					<div class="form-group">
+						<label class="block-label" data-target="eat-details" for="eat-yes">
+							<input id="eat-yes" type="radio" name="eat" value="Yes">
+							Yes
+						</label>
+                        <label class="block-label" data-target="eat-details" for="eat-sometimes">
+							<input id="eat-sometimes" type="radio" name="eat" value="Sometimes">
+							Sometimes
+						</label> 
+						<label class="block-label"for="eat-no">
+							<input id="eat-no" type="radio" name="eat" value="No">
+							No
+						</label>   
+					</div>
+				</fieldset>
+                
+                <div class="js-hidden panel-indent form-group" id="eat-details">
+
+				    <label class="form-label-bold" for="eat-help">Do you need someone to help you eat or drink?</label>
+				    <p class="form-hint">This includes if they remind you to eat or supervise you.</p>
+				    <label class="block-label" data-target="eat-help-more" for="eat-help-yes">
+				        <input id="eat-help-yes" type="radio" name="eat-help" value="true">
+                            Yes
+				    </label>
+				    <label class="block-label" data-target="eat-help-more" for="eat-help-sometimes">
+                        <input id="eat-help-sometimes" type="radio" name="eat-help" value="">
+				            Sometimes
+				    </label> 
+				    <label class="block-label" data-target="eat-help-none" for="eat-help-no">
+                        <input id="eat-help-no" type="radio" name="eat-help" value="">
+				            No
+				    </label>  
+
+				    <div class="js-hidden panel-indent" id="eat-help-more">
+	            		<label class="form-label-bold" for="eat-more">Why do you need help?</label>
+	            		<textarea type="text" class="form-control-3-4" id="eat-more"></textarea>
+            		</div>
+
+                	<div class="js-hidden panel-indent" id="eat-help-none">
+                		<label class="form-label-bold" for="eat-help-none-too">Describe the difficulties you have eating or drinking.</label>
+
+                		<textarea type="text" class="form-control-3-4" id="eat-help-none-too"></textarea>
+                	</div>
+                	
+                </div>
+                
+                
+                
+                <div class="form-group">
+					<input type="submit" class="button" value="Save and continue">
+				</div>
+			</form>
+		
+		</div>
+		<div class="column-third app">
+			{{>includes/nav/side-nav}}
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

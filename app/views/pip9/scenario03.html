@@ -1,0 +1,90 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+	
+	<div class="grid-row">
+		<div class="column-two-thirds">
+            
+			<form action="scenario03{{#edit}}?edit=true{{/edit}}" method="post" class="form">
+			
+				<a href="scenario02" class="example-back-link">Back</a>
+
+				<h1 class="form-title heading-large">
+				Washing yourself
+				</h1>
+				
+				<div class="form-group">
+				    <label class="form-label-bold" for="wash">Do you have difficulty washing yourself because of your condition?</label>
+				    <p class="form-hint">Washing yourself includes being able to safely use a bath or shower.</p>
+				      <label class="block-label" data-target="wash-more" for="wash-yes">
+				        <input id="wash-yes" type="radio" name="wash" value="yes" {{#form.wash-yes}} checked{{/form.wash-yes}}>
+                            Yes
+				    </label>
+				    <label class="block-label" data-target="wash-more" for="wash-sometimes">
+                        <input id="wash-sometimes" type="radio" name="wash" value="sometimes" {{#form.wash-sometimes}} checked{{/form.wash-sometimes}}>
+				            Sometimes
+				    </label> 
+				    <label class="block-label" for="wash-no">
+                        <input id="wash-no" type="radio" name="wash" value="no" {{#form.wash-no}} checked{{/form.wash-no}}>
+				            No
+				    </label>  
+                </div>
+
+                <div class="{{^form.wash-more-display}} js-hidden {{/form.wash-more-display}} panel-indent form-group" id="wash-more">
+				    <label class="form-label-bold" for="wash-help">Do you need someone to help you wash or remind you to wash?</label>
+				      <label class="block-label" data-target="wash-help-more" for="wash-help-yes">
+				        <input id="wash-help-yes" type="radio" name="wash-help" value="yes" {{#form.wash-help-yes}} checked{{/form.wash-help-yes}}>
+                            Yes
+				    </label>
+				    <label class="block-label" data-target="wash-help-more" for="wash-help-sometimes">
+                        <input id="wash-help-sometimes" type="radio" name="wash-help" value="sometimes" {{#form.wash-help-sometimes}} checked{{/form.wash-help-sometimes}}>
+				            Sometimes
+				    </label> 
+				    <label class="block-label" data-target="wash-help-none" for="wash-help-no">
+                        <input id="wash-help-no" type="radio" name="wash-help" value="no" {{#form.wash-help-no}} checked{{/form.wash-help-no}}>
+				            No
+				    </label>  
+
+				    <div class="{{^form.wash-help-display-yes}} js-hidden {{/form.wash-help-display-yes}}  panel-indent" id="wash-help-more">
+                		<label class="form-label-bold" for="wash-more-too">Why do you need help?</label>
+                		<textarea type="text" class="form-control-3-4" id="wash-more-too" name="wash-help-info-yes">{{#form.wash-help-display-yes}}{{form.wash-help-info-yes}}{{/form.wash-help-display-yes}} </textarea>
+                	</div>
+
+                	<div class="{{^form.wash-help-display-no}} js-hidden {{/form.wash-help-display-no}} panel-indent" id="wash-help-none">
+                		<label class="form-label-bold" for="wash-help-none-too">Describe the difficulties you have safely washing yourself, including using either the bath or shower.</label>
+                		<textarea type="text" class="form-control-3-4" id="wash-help-none-too" name="wash-help-info-none">{{#form.wash-help-display-no}}{{form.wash-help-info-none}}{{/form.wash-help-display-no}} </textarea>
+                	</div>
+                </div>
+
+                <div class="form-group">
+					<input type="submit" class="button" value="Save and continue">
+				</div>
+			</form>
+		
+		</div>
+		<div class="column-third app">
+			{{>includes/nav/side-nav}}
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
