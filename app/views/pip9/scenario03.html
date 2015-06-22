@@ -31,15 +31,15 @@
 				    <p class="form-hint">Washing yourself includes being able to safely use a bath or shower.</p>
 				      <label class="block-label" data-target="wash-more" for="wash-yes">
 				        <input id="wash-yes" type="radio" name="wash" value="yes" {{#form.wash-yes}} checked{{/form.wash-yes}}>
-                            Yes
+                            All the time
 				    </label>
 				    <label class="block-label" data-target="wash-more" for="wash-sometimes">
                         <input id="wash-sometimes" type="radio" name="wash" value="sometimes" {{#form.wash-sometimes}} checked{{/form.wash-sometimes}}>
-				            Sometimes
+				            Most days
 				    </label> 
 				    <label class="block-label" for="wash-no">
                         <input id="wash-no" type="radio" name="wash" value="no" {{#form.wash-no}} checked{{/form.wash-no}}>
-				            No
+				            Not really
 				    </label>  
                 </div>
                 <div class="js-hidden" id="wash-more">
@@ -47,15 +47,15 @@
 					    <label class="form-label-bold" for="wash-help">Do you need someone to help you wash or remind you to wash?</label>
 					      <label class="block-label" data-target="wash-help-more" for="wash-help-yes">
 					        <input id="wash-help-yes" type="radio" name="wash-help" value="yes" {{#form.wash-help-yes}} checked{{/form.wash-help-yes}}>
-	                            Yes
+	                            All the time
 					    </label>
 					    <label class="block-label" data-target="wash-help-more" for="wash-help-sometimes">
 	                        <input id="wash-help-sometimes" type="radio" name="wash-help" value="sometimes" {{#form.wash-help-sometimes}} checked{{/form.wash-help-sometimes}}>
-					            Sometimes
+					            Most days
 					    </label> 
 					    <label class="block-label" for="wash-help-no">
 	                        <input id="wash-help-no" type="radio" name="wash-help" value="no" {{#form.wash-help-no}} checked{{/form.wash-help-no}}>
-					            No
+					            Not really
 					    </label>  
 
 					    <div class="{{^form.wash-help-display-yes}} js-hidden {{/form.wash-help-display-yes}}  panel-indent" id="wash-help-more">

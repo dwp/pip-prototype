@@ -31,62 +31,63 @@
 					<div class="form-group">
 						<label class="block-label" data-target="shop-details" for="shop-yes">
 							<input id="shop-yes" type="radio" name="shop" value="Yes">
-							Yes
+							All the time
 						</label>
                         <label class="block-label" data-target="shop-details" for="shop-sometimes">
 							<input id="shop-sometimes" type="radio" name="shop" value="Sometimes">
-							Sometimes
+							Most days
 						</label> 
 						<label class="block-label" for="shop-no">
 							<input id="shop-no" type="radio" name="shop" value="No">
-							No
+							Not really
 						</label>   
 					</div>
 				</fieldset>
 
-				
-				<div class="js-hidden panel-indent form-group" id="shop-details">
+				<div class="js-hidden" id="shop-details">
+					<div class="panel-indent form-group" >
 
-				    <label class="form-label-bold" for="shop-help">Would you need someone to help you get around if you were out and about?</label>
-				    <label class="block-label" data-target="shop-help-more" for="shop-help-yes">
-				        <input id="shop-help-yes" type="radio" name="shop-help" value="true">
-                            Yes
-				    </label>
-				    <label class="block-label" data-target="shop-help-more" for="shop-help-sometimes">
-                        <input id="shop-help-sometimes" type="radio" name="shop-help" value="">
-				            Sometimes
-				    </label> 
-				    <label class="block-label" data-target="shop-help-none" for="shop-help-no">
-                        <input id="shop-help-no" type="radio" name="shop-help" value="">
-				            No
-				    </label>  
+					    <label class="form-label-bold" for="shop-help">Would you need someone to help you get around if you were out and about?</label>
+					    <label class="block-label" data-target="shop-help-more" for="shop-help-yes">
+					        <input id="shop-help-yes" type="radio" name="shop-help" value="true">
+	                            All the time
+					    </label>
+					    <label class="block-label" data-target="shop-help-more" for="shop-help-sometimes">
+	                        <input id="shop-help-sometimes" type="radio" name="shop-help" value="">
+					            Most days
+					    </label> 
+					    <label class="block-label" for="shop-help-no">
+	                        <input id="shop-help-no" type="radio" name="shop-help" value="">
+					            Not really
+					    </label>  
 
-				    <div class="js-hidden panel-indent" id="shop-help-more">
-	            		<label class="form-label-bold" for="shop-more">Why would you need help?</label>
-	            		<textarea type="text" class="form-control-3-4" id="shop-more"></textarea>
-            		</div>
+					    <div class="js-hidden panel-indent" id="shop-help-more">
+		            		<label class="form-label-bold" for="shop-more">Why would you need help?</label>
+		            		<textarea type="text" class="form-control-3-4" id="shop-more"></textarea>
+	            		</div>
+	                	
+	                </div>
 
-                	<div class="js-hidden panel-indent" id="shop-help-none">
+	                <div class="panel-indent" >
                 		<label class="form-label-bold" for="shop-help-none-too">How would your condition cause you difficulty getting around safely?</label>
                 		<textarea type="text" class="form-control-3-4" id="shop-help-none-too"></textarea>
                 	</div>
-                	
-                </div>
+	            </div>
 
                 <fieldset>
 					<legend class="form-label-bold add-padding" for="ask">Could you ask someone for help or directions if you needed them?</legend>			
 					<div class="form-group">
 						<label class="block-label" for="ask-yes">
 							<input id="ask-yes" type="radio" name="ask" value="Yes">
-							Yes
+							All the time	
 						</label>
                         <label class="block-label" data-target="ask-details" for="ask-sometimes">
 							<input id="ask-sometimes" type="radio" name="ask" value="Sometimes">
-							Sometimes
+							Most days
 						</label> 
 						<label class="block-label" data-target="ask-details" for="ask-no">
 							<input id="ask-no" type="radio" name="ask" value="No">
-							No
+							Not really
 						</label>   
 					</div>
 				</fieldset>
@@ -96,15 +97,15 @@
 				    <label class="form-label-bold" for="ask-help">Do you need someone to encourage or help you talk to other people?</label>
 				    <label class="block-label" data-target="ask-help-more" for="ask-help-yes">
 				        <input id="ask-help-yes" type="radio" name="ask-help" value="true">
-                            Yes
+                            All the time
 				    </label>
 				    <label class="block-label" data-target="ask-help-more" for="ask-help-sometimes">
                         <input id="ask-help-sometimes" type="radio" name="ask-help" value="">
-				            Sometimes
+				            Most days
 				    </label> 
 				    <label class="block-label" data-target="ask-help-none" for="ask-help-no">
                         <input id="ask-help-no" type="radio" name="ask-help" value="">
-				            No
+				            Not really
 				    </label>  
 
 				    <div class="js-hidden panel-indent" id="ask-help-more">
