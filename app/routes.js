@@ -127,6 +127,8 @@ module.exports = {
       require('./sprint6_1')(app);
 
        require('./sprint7_1')(app);
+
+       require('./sprint8_1')(app);
       
   }
 };
