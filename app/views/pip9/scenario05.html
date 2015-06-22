@@ -41,29 +41,31 @@
                             No
                     </label>  
                 </div>
+                <div class="js-hidden" id="going-out-more">
+                    <div class="panel-indent form-group" >
+                        <label class="form-label-bold" for="going-out-help">Do you need someone to help you to leave the house?</label>
+                        <p class="form-hint">This includes if someone has to encourage you to leave the house.</p>
+                          <label class="block-label" data-target="going-out-help-more" for="going-out-help-yes">
+                            <input id="going-out-help-yes" type="radio" name="going-out-help" value="true">
+                                Yes
+                        </label>
+                        <label class="block-label" data-target="going-out-help-more" for="going-out-help-sometimes">
+                            <input id="going-out-help-sometimes" type="radio" name="going-out-help" value="">
+                                Sometimes
+                        </label> 
+                        <label class="block-label" for="going-out-help-no">
+                            <input id="going-out-help-no" type="radio" name="going-out-help" value="">
+                                No
+                        </label> 
 
-                <div class="js-hidden panel-indent form-group" id="going-out-more">
-                    <label class="form-label-bold" for="going-out-help">Do you need someone to help you to leave the house?</label>
-                    <p class="form-hint">This includes if someone has to encourage you to leave the house.</p>
-                      <label class="block-label" data-target="going-out-help-more" for="going-out-help-yes">
-                        <input id="going-out-help-yes" type="radio" name="going-out-help" value="true">
-                            Yes
-                    </label>
-                    <label class="block-label" data-target="going-out-help-more" for="going-out-help-sometimes">
-                        <input id="going-out-help-sometimes" type="radio" name="going-out-help" value="">
-                            Sometimes
-                    </label> 
-                    <label class="block-label" data-target="going-out-help-none" for="going-out-help-no">
-                        <input id="going-out-help-no" type="radio" name="going-out-help" value="">
-                            No
-                    </label> 
+                        <div class="js-hidden panel-indent" id="going-out-help-more">
+                            <label class="form-label-bold" for="going-out-more-too">Why do you need help?</label>
+                            <textarea type="text" class="form-control-3-4" id="going-out-more-too"></textarea>
+                        </div>
 
-                    <div class="js-hidden panel-indent" id="going-out-help-more">
-                        <label class="form-label-bold" for="going-out-more-too">Why do you need help?</label>
-                        <textarea type="text" class="form-control-3-4" id="going-out-more-too"></textarea>
                     </div>
 
-                    <div class="js-hidden panel-indent" id="going-out-help-none">
+                    <div class="panel-indent" id="going-out-help-none">
                         <label class="form-label-bold" for="going-out-help-none-too">Describe the difficulties you have leaving the house.</label>
                         <textarea type="text" class="form-control-3-4" id="going-out-help-none-too"></textarea>
                     </div>

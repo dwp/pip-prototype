@@ -42,32 +42,35 @@
 				            No
 				    </label>  
                 </div>
+                <div class="js-hidden" id="wash-more">
+	                <div class="{{^form.wash-more-display}} {{/form.wash-more-display}} panel-indent form-group">
+					    <label class="form-label-bold" for="wash-help">Do you need someone to help you wash or remind you to wash?</label>
+					      <label class="block-label" data-target="wash-help-more" for="wash-help-yes">
+					        <input id="wash-help-yes" type="radio" name="wash-help" value="yes" {{#form.wash-help-yes}} checked{{/form.wash-help-yes}}>
+	                            Yes
+					    </label>
+					    <label class="block-label" data-target="wash-help-more" for="wash-help-sometimes">
+	                        <input id="wash-help-sometimes" type="radio" name="wash-help" value="sometimes" {{#form.wash-help-sometimes}} checked{{/form.wash-help-sometimes}}>
+					            Sometimes
+					    </label> 
+					    <label class="block-label" for="wash-help-no">
+	                        <input id="wash-help-no" type="radio" name="wash-help" value="no" {{#form.wash-help-no}} checked{{/form.wash-help-no}}>
+					            No
+					    </label>  
 
-                <div class="{{^form.wash-more-display}} js-hidden {{/form.wash-more-display}} panel-indent form-group" id="wash-more">
-				    <label class="form-label-bold" for="wash-help">Do you need someone to help you wash or remind you to wash?</label>
-				      <label class="block-label" data-target="wash-help-more" for="wash-help-yes">
-				        <input id="wash-help-yes" type="radio" name="wash-help" value="yes" {{#form.wash-help-yes}} checked{{/form.wash-help-yes}}>
-                            Yes
-				    </label>
-				    <label class="block-label" data-target="wash-help-more" for="wash-help-sometimes">
-                        <input id="wash-help-sometimes" type="radio" name="wash-help" value="sometimes" {{#form.wash-help-sometimes}} checked{{/form.wash-help-sometimes}}>
-				            Sometimes
-				    </label> 
-				    <label class="block-label" data-target="wash-help-none" for="wash-help-no">
-                        <input id="wash-help-no" type="radio" name="wash-help" value="no" {{#form.wash-help-no}} checked{{/form.wash-help-no}}>
-				            No
-				    </label>  
+					    <div class="{{^form.wash-help-display-yes}} js-hidden {{/form.wash-help-display-yes}}  panel-indent" id="wash-help-more">
+	                		<label class="form-label-bold" for="wash-more-too">Why do you need help?</label>
+	                		<textarea type="text" class="form-control-3-4" id="wash-more-too" name="wash-help-info-yes">{{#form.wash-help-display-yes}}{{form.wash-help-info-yes}}{{/form.wash-help-display-yes}} </textarea>
+	                	</div>
 
-				    <div class="{{^form.wash-help-display-yes}} js-hidden {{/form.wash-help-display-yes}}  panel-indent" id="wash-help-more">
-                		<label class="form-label-bold" for="wash-more-too">Why do you need help?</label>
-                		<textarea type="text" class="form-control-3-4" id="wash-more-too" name="wash-help-info-yes">{{#form.wash-help-display-yes}}{{form.wash-help-info-yes}}{{/form.wash-help-display-yes}} </textarea>
-                	</div>
+	                	
+	                </div>
 
-                	<div class="{{^form.wash-help-display-no}} js-hidden {{/form.wash-help-display-no}} panel-indent" id="wash-help-none">
-                		<label class="form-label-bold" for="wash-help-none-too">Describe the difficulties you have safely washing yourself, including using either the bath or shower.</label>
-                		<textarea type="text" class="form-control-3-4" id="wash-help-none-too" name="wash-help-info-none">{{#form.wash-help-display-no}}{{form.wash-help-info-none}}{{/form.wash-help-display-no}} </textarea>
-                	</div>
-                </div>
+	                <div class="{{^form.wash-help-display-no}} {{/form.wash-help-display-no}} panel-indent" id="wash-help-none">
+	            		<label class="form-label-bold" for="wash-help-none-too">Describe the difficulties you have safely washing yourself, including using either the bath or shower.</label>
+	            		<textarea type="text" class="form-control-3-4" id="wash-help-none-too" name="wash-help-info-none">{{#form.wash-help-display-no}}{{form.wash-help-info-none}}{{/form.wash-help-display-no}} </textarea>
+	            	</div>
+	            </div>
 
                 <div class="form-group">
 					<input type="submit" class="button" value="Save and continue">
