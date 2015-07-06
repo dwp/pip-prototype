@@ -1,0 +1,113 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="pip07" method="#" class="form">
+
+				<a href="pip05" class="example-back-link">Back</a>
+
+				<!--div class="section-progress">
+				Step 1 of 17
+				</div-->
+
+				<h1 class="form-title heading-large">
+				<!--Hospital, hospice, residential or nursing care-->
+				Good and bad days
+				</h1>
+
+				<p>Use this section to describe how often your condition affects you - you'll be asked questions about your daily life later.</p>
+
+				<div class="form-group">
+				    <label class="form-label-bold" for="condition">How often do you have bad days?</label>
+				      <label class="block-label" for="condition-yes">
+				        <input id="condition-yes" type="radio" name="condition" value="true">
+                            My condition stays the same every day
+				    </label>
+				    <label class="block-label" for="condition-4-7">
+                        <input id="condition-4-7" type="radio" name="condition" value="">
+				            4-7 days a week
+				    </label>
+				    <label class="block-label" for="condition-1-3">
+                        <input id="condition-1-3" type="radio" name="condition" value="">
+				            1-3 days a week
+				    </label>
+				    <label class="block-label" data-target="depends" for="condition-depends">
+                        <input id="condition-depends" type="radio" name="condition" value="">
+				            It depends
+				    </label>
+                </div>
+
+                <div class="js-hidden panel-indent" id="depends">
+                	<label class="form-label-bold" for="condition-varies">How often does your condition vary?</label>
+                	<textarea type="text" class="form-control-3-4" id="condition-varies"></textarea>
+                </div>
+
+                <div class="panel">
+                	<label class="form-label-bold" for="bad-day">Describe your condition on a bad day.</label>
+                	<p class="form-hint">Include how your condition gets worse and how it affects you.</p>
+                	<textarea type="text" class="form-control-3-4" id="bad-day"></textarea>
+                </div>
+
+                <div class="panel">
+                	<label class="form-label-bold" for="bad-day-cause">What causes you to have a bad day?</label>
+                	<textarea type="text" class="form-control-3-4" id="bad-day-cause"></textarea>
+                </div>
+
+                <div class="panel">
+                	<label class="form-label-bold" for="good-day">Describe your condition on a good day.</label>
+                	<textarea type="text" class="form-control-3-4" id="good-day"></textarea>
+                </div>
+
+                <div class="form-group">
+					<input type="submit" class="button" value="Save and continue">
+				</div>
+
+			</form>
+
+		</div>
+		<div class="column-third app">
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+
+  <script>
+  $(document).ready(function() {
+
+  	$("#show-health-worker-2").click(function() {
+  	  $("#health-worker-2").show();
+  	  $("#show-health-worker-2").hide();
+  	   return false;
+  	});
+  	$("#show-health-worker-3").click(function() {
+  	  $("#health-worker-3").show();
+  	  $("#show-health-worker-3").hide();
+  	   return false;
+  	});
+
+  });
+  </script>
+
+{{/bodyEnd}}
+
+{{/govuk_template}}

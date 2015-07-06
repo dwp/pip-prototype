@@ -1,0 +1,156 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="scenario02" method="#" class="form">
+
+				<a href="summary-about-your-home" class="example-back-link">Back</a>
+
+				<!--div class="section-progress">
+				Step 6 of 17
+				</div-->
+
+				<h1 class="form-title heading-large">
+				Special aids and adaptations
+				</h1>
+
+
+					<fieldset>
+						<div class="form-group">
+
+							<legend class="form-label-bold" for="house">Where in your home do you have special aids or adaptations?</legend>
+
+                                <label class="block-label"   for="front-door" data-target="front-door-details">
+                                    <input id="front-door" type="checkbox" name="front-door" value="Front door">
+                                    Front door
+                                </label>
+                                <fieldset class="js-hidden form-group inner-panel" id="front-door-details">
+                                       <label class="form-label" for="front-door">Tell us about any special aids or adaptations you have on your front door?</label>
+                                       <textarea type="text" class="form-control-3-4" id="front-door" name="front-door"></textarea>
+                                </fieldset>
+
+                                <label class="block-label"  for="house-hallway" data-target="hallway-details">
+                                    <input id="house-hallway" type="checkbox" name="house-hallway" value="Hallway">
+                                    Hallway
+                                </label>
+                                <fieldset class="js-hidden form-group inner-panel" id="hallway-details">
+                                       <label class="form-label" for="hallway-details">Tell us about any special aids or adaptations you have in your hall?</label>
+                                       <textarea type="text" class="form-control-3-4" id="hallway-details" name="hallway-details"></textarea>
+                                </fieldset>
+
+                                <label class="block-label"  for="house-stairs" data-target="stairs-details">
+                                    <input id="house-stairs" type="checkbox" name="house-stairs" value="stairs">
+                                    Stairs
+                                </label>
+                                <fieldset class="js-hidden form-group inner-panel" id="stairs-details">
+                                       <label class="form-label" for="stairs-details">Tell us about any special aids or adaptations you have on your stairs?</label>
+                                       <textarea type="text" class="form-control-3-4" id="stairs-details" name="stairs-details"></textarea>
+                                </fieldset>
+
+                                <label class="block-label"  for="house-kitchen" data-target="kitchen-details">
+                                    <input id="house-kitchen" type="checkbox" name="house-kitchen" value="kitchen">
+                                    Kitchen
+                                </label>
+                                <fieldset class="js-hidden form-group inner-panel" id="kitchen-details">
+                                       <label class="form-label" for="kitchen-details">Tell us about any special aids or adaptations you have in your kitchen?</label>
+                                       <textarea type="text" class="form-control-3-4" id="kitchen-details" name="kitchen-details"></textarea>
+                                </fieldset>
+
+                                <label class="block-label"  for="house-lounge-or-sitting-room" data-target="lounge-or-sitting-room-details">
+                                    <input id="house-lounge-or-sitting-room" type="checkbox" name="house-lounge-or-sitting-room" value="lounge-or-sitting-room">
+                                     Lounge or sitting room
+                                </label>
+                                <fieldset class="js-hidden form-group inner-panel" id="lounge-or-sitting-room-details">
+                                       <label class="form-label" for="lounge-or-sitting-room-details">Tell us about any special aids or adaptations you have in your lounge or sitting room?</label>
+                                       <textarea type="text" class="form-control-3-4" id="lounge-or-sitting-room-details" name="lounge-or-sitting-room-details"></textarea>
+                                </fieldset>
+
+
+
+                            <label class="block-label"  for="house-dining-room" data-target="dining-room-details">
+                                    <input id="house-dining-room" type="checkbox" name="house-dining-room" value="dining-room">
+                                    Dining room/area
+                                </label>
+                                <fieldset class="js-hidden form-group inner-panel" id="dining-room-details">
+                                       <label class="form-label" for="dining-room-details">Tell us about any special aids or adaptations you have in your dining room?</label>
+                                       <textarea type="text" class="form-control-3-4" id="dining-room-details" name="dining-room-details"></textarea>
+                                </fieldset>
+
+
+                            <label class="block-label"  for="house-your-bedroom" data-target="your-bedroom-details">
+                                    <input id="house-your-bedroom" type="checkbox" name="house-your-bedroom" value="your-bedroom">
+                                    Your Bedroom
+                                </label>
+                                <fieldset class="js-hidden form-group inner-panel" id="your-bedroom-details">
+                                       <label class="form-label" for="your-bedroom-details">Tell us about any special aids or adaptations you have in your bedroom?</label>
+                                       <textarea type="text" class="form-control-3-4" id="your-bedroom-details" name="your-bedroom-details"></textarea>
+                                </fieldset>
+
+
+                                <label class="block-label"  for="house-bathrooms-and-toilet" data-target="bathrooms-and-toilet-details">
+                                    <input id="house-bathrooms-and-toilet" type="checkbox" name="house-bathrooms-and-toilet" value="bathrooms-and-toilet">
+                                    Bathrooms and toilet
+                                </label>
+                                <fieldset class="js-hidden form-group inner-panel" id="bathrooms-and-toilet-details">
+                                       <label class="form-label" for="bathrooms-and-toilet-details">Tell us about any special aids or adaptations you have in your bathrooms and toilet?</label>
+                                       <textarea type="text" class="form-control-3-4" id="bathrooms-and-toilet-details" name="bathrooms-and-toilet-details"></textarea>
+                                </fieldset>
+
+
+                                <label class="block-label"  for="house-garden" data-target="garden-details">
+                                    <input id="house-garden" type="checkbox" name="house-garden" value="garden">
+                                    Garden
+                                </label>
+                                <fieldset class="js-hidden form-group inner-panel" id="garden-details">
+                                       <label class="form-label" for="garden-details">Tell us about any special aids or adaptations you have in your garden?</label>
+                                       <textarea type="text" class="form-control-3-4" id="garden-details" name="garden-details"></textarea>
+                                </fieldset>
+
+						</div>
+					</fieldset>
+
+
+
+				<fieldset>
+					<legend class="form-label-bold add-padding" for="home">Tell us about any other special equipment you have in your home?</legend>
+					<textarea type="text" class="form-control-3-4" id="home"></textarea>
+				</fieldset>
+
+
+
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+					<input type="submit" class="button" value="Save and continue">
+				</div>
+
+			</form>
+
+		</div>
+		<div class="column-third app">
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

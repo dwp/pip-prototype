@@ -226,7 +226,7 @@ label + textarea { margin-top:10px; }
 
 .panel {
   clear: both;
-  padding: 10px 0 10px 0;
+  padding: 10px 0;
   margin: 30px 15px 45px 0;
 }
 
@@ -235,10 +235,13 @@ label + textarea { margin-top:10px; }
   min-height: 6em;
 }
 
-.column-full-width { width:100%;  padding: 0 15px;
+.column-full-width {
+  width:100%;
+  padding: 0 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;}
+  box-sizing: border-box;
+}
 
 .login-information { text-align:right; padding-top:10px; colour:grey; }
 

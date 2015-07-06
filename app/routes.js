@@ -22,7 +22,7 @@ module.exports = {
 
 
     //Sprint 5 journey
-    
+
     app.post('/pip5/preparing-food-more', function (req, res) {
 
       res.render('pip5/preparing-food-more',req.body);
@@ -91,7 +91,7 @@ module.exports = {
 
       res.render('story-gen/going-out-more',req.body);
     });
-    
+
     app.post('/story-gen/washing-bathing-more', function (req, res) {
 
       res.render('story-gen/washing-bathing-more',req.body);
@@ -105,7 +105,7 @@ module.exports = {
     app.post('/story-gen/dressing-undressing-more', function (req, res) {
 
       res.render('story-gen/dressing-undressing-more',req.body);
-    }); 
+    });
 
     app.post('/story-gen/reading-more', function (req, res) {
 
@@ -117,18 +117,14 @@ module.exports = {
       res.render('story-gen/managing-money-more',req.body);
     });
 
-      /* route for review */
-      
-      require('./routes_review')(app);
-   
-      
-      require('./review_flow')(app);
-      
-      require('./sprint6_1')(app);
+    /* route for review */
 
-       require('./sprint7_1')(app);
+    require('./routes_review')(app);
+    require('./review_flow')(app);
+    require('./sprint6_1')(app);
+    require('./sprint7_1')(app);
+    require('./sprint8_1')(app);
+    require('./routes-pip10')(app);
 
-       require('./sprint8_1')(app);
-      
   }
 };

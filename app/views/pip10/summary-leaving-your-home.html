@@ -18,7 +18,7 @@
 	<div class="grid-row">
 		<div class="column-two-thirds">
 
-			<form action="pip01{{#edit}}?edit=true{{/edit}}" method="post" class="form">
+			<form action="pip02" class="form">
 
 				<a href="make-a-claim" class="example-back-link">Back</a>
 
@@ -26,13 +26,24 @@
 				Step 1 of 17
 				</div-->
 
-				{{>includes/pages/personal-details}}
+				{{>includes/pages/summary-leaving-your-home}}
 
 			</form>
 
+      <footer>
+			  <nav class="pagination" role="navigation" aria-label="Pagination">
+					<ul class="group">
+        	  <li class="next">
+      				<a href="scenario06" rel="next" title="Navigate to next part">
+        			  <span class="pagination-label">Next</span> <span class="pagination-part-title"> Out and about</span>
+						  </a>
+					  </li>
+  				</ul>
+  			</nav>
+  		</footer>
+
 		</div>
 		<div class="column-third app">
-			{{>includes/nav/side-nav}}
 		</div>
 	</div>
 

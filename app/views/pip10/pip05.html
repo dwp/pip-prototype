@@ -14,14 +14,14 @@
 <main id="content" role="main">
 
 	{{>includes/phase_banner}}
-	
+
 	<div class="grid-row">
 		<div class="column-two-thirds">
 
-			<form action="special-aids" method="get" class="form">
-			
+			<form action="summary-your-condition" method="get" class="form">
+
 				<a href="pip04" class="example-back-link">Back</a>
-				
+
 				<!--div class="section-progress">
 				Step 1 of 17
 				</div-->
@@ -29,10 +29,10 @@
 				<!--Hospital, hospice, residential or nursing care-->
 				Your health conditions and disabilities
 				</h1>
-				
+
 				<!-- health conditions or disabilities -->
-				<div class="form-group">  
-					<label class="form-label-bold" for="health-conditions">List your health conditions and disabilities and when they started.</label> 
+				<div class="form-group">
+					<label class="form-label-bold" for="health-conditions">List your health conditions and disabilities and when they started.</label>
 
 
 
@@ -88,8 +88,8 @@
 
 
 				<!-- medication -->
-				<div class="form-group">  
-					<label class="form-label-bold" for="health-conditions">List any medication that you're currently taking</label> 
+				<div class="form-group">
+					<label class="form-label-bold" for="health-conditions">List any medication that you're currently taking</label>
 
 					<table class="condition">
 					    <thead>
@@ -215,12 +215,12 @@
 					    </tbody>
 					</table>
 
-				</div> 
+				</div>
 
 
 				<!-- treatments -->
-				<div class="form-group">  
-					<label class="form-label-bold" for="health-conditions">List any treatments you've had or have planned</label> 
+				<div class="form-group">
+					<label class="form-label-bold" for="health-conditions">List any treatments you've had or have planned</label>
 
 
 
@@ -274,57 +274,57 @@
 				</div>
 
 				<!-- catch all -->
-				<div class="form-group">  
-					<label class="form-label-bold" for="health-conditions">Describe any side-effects you get from your medication or treatments</label> 
-					<textarea type="text" name="health-conditions" class="health-conditions form-control-3-4"></textarea>    
+				<div class="form-group">
+					<label class="form-label-bold" for="health-conditions">Describe any side-effects you get from your medication or treatments</label>
+					<textarea type="text" name="health-conditions" class="health-conditions form-control-3-4"></textarea>
 				</div>
 
 				<fieldset>
-					<legend class="form-label-bold add-padding" for="dinner">Do you have any difficulty managing your treatments or taking your medication?</legend>			
+					<legend class="form-label-bold add-padding" for="dinner">Do you have any difficulty managing your treatments or taking your medication?</legend>
 					<div class="form-group">
 						<label class="block-label" data-target="dinner-details" for="dinner-yes">
 							<input id="dinner-yes" type="radio" name="dinner" value="Yes">
-							Yes
+							All the time
 						</label>
                         <label class="block-label" data-target="dinner-details" for="dinner-sometimes">
 							<input id="dinner-sometimes" type="radio" name="dinner" value="Sometimes">
-							Sometimes
-						</label> 
-						<label class="block-label"for="dinner-no">
+							Most days
+						</label>
+						<label class="block-label" for="dinner-no">
 							<input id="dinner-no" type="radio" name="dinner" value="No">
-							No
-						</label>   
+							Not usually
+						</label>
 					</div>
 				</fieldset>
-                
-                <div class="js-hidden panel-indent form-group" id="dinner-details">
 
-				    <label class="form-label-bold" for="dinner-help">Do you have someone who reminds you or helps you manage your treatments or take medication?</label>
-				    <label class="block-label" data-target="dinner-help-more" for="dinner-help-yes">
-				        <input id="dinner-help-yes" type="radio" name="dinner-help" value="true">
-                            Yes
-				    </label>
-				    <label class="block-label" data-target="dinner-help-more" for="dinner-help-sometimes">
-                        <input id="dinner-help-sometimes" type="radio" name="dinner-help" value="">
-				            Sometimes
-				    </label> 
-				    <label class="block-label" data-target="dinner-help-none" for="dinner-help-no">
-                        <input id="dinner-help-no" type="radio" name="dinner-help" value="">
-				            No
-				    </label>  
+                <div class="js-hidden" id="dinner-details">
+	                <div class="panel-indent form-group">
 
-				    <div class="js-hidden panel-indent" id="dinner-help-more">
-	            		<label class="form-label-bold" for="dinner-more">Why do you need help?</label>
-	            		<textarea type="text" class="form-control-3-4" id="dinner-more"></textarea>
-            		</div>
+					    <label class="form-label-bold" for="dinner-help">Do you have someone who reminds you or helps you manage your treatments or take medication?</label>
+					    <label class="block-label" data-target="dinner-help-more" for="dinner-help-yes">
+					        <input id="dinner-help-yes" type="radio" name="dinner-help" value="true">
+	                            All the time
+					    </label>
+					    <label class="block-label" data-target="dinner-help-more" for="dinner-help-sometimes">
+	                        <input id="dinner-help-sometimes" type="radio" name="dinner-help" value="">
+					            Most days
+					    </label>
+					    <label class="block-label" for="dinner-help-no">
+	                        <input id="dinner-help-no" type="radio" name="dinner-help" value="">
+					            Not usually
+					    </label>
 
-                	<div class="js-hidden panel-indent" id="dinner-help-none">
-                		<label class="form-label-bold" for="dinner-help-none-too">Tell us why you have difficulty managing your treatments or taking medication.</label>
-                		<textarea type="text" class="form-control-3-4" id="dinner-help-none-too"></textarea>
-                	</div>
-                	
-                </div> 
-				
+					    <div class="js-hidden panel-indent" id="dinner-help-more">
+		            		<label class="form-label-bold" for="dinner-more">Why do you need help?</label>
+		            		<textarea type="text" class="form-control-3-4" id="dinner-more"></textarea>
+	            		</div>
+
+	                </div>
+	                <div class="panel-indent" id="dinner-help-none">
+	            		<label class="form-label-bold" for="dinner-help-none-too">What difficulties do you have managing your treatments or taking medication.</label>
+	            		<textarea type="text" class="form-control-3-4" id="dinner-help-none-too"></textarea>
+	            	</div>
+				</div>
 				<!-- Primary buttons, secondary links -->
 				<div class="form-group">
 					<input type="submit" class="button" value="Save and continue">
@@ -333,7 +333,6 @@
 			</form>
 		</div>
 		<div class="column-third app">
-			{{>includes/nav/side-nav}}
 		</div>
 	</div>
 </main><!-- / #page-container -->
@@ -344,7 +343,7 @@
 
 				<script>
 				  $(document).ready(function() {
-				  
+
 				  	$("#show-condition4").click(function() {
 				  	  $("#condition4").show();
 				  	  $("#show-condition4").hide();
@@ -400,7 +399,7 @@
 				  	  $("#show-condition14").hide();
 				  	   return false;
 				  	});
-				  	
+
 				  });
 				</script>
 {{/bodyEnd}}

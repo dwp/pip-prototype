@@ -18,21 +18,20 @@
 	<div class="grid-row">
 		<div class="column-two-thirds">
 
-			<form action="pip01{{#edit}}?edit=true{{/edit}}" method="post" class="form">
+			<form action="special-aids" method="#" class="form">
 
-				<a href="make-a-claim" class="example-back-link">Back</a>
+				<a href="pip06" class="example-back-link">Back</a>
 
 				<!--div class="section-progress">
 				Step 1 of 17
 				</div-->
 
-				{{>includes/pages/personal-details}}
+				{{>includes/pages/healthcare-professionals}}
 
 			</form>
 
 		</div>
 		<div class="column-third app">
-			{{>includes/nav/side-nav}}
 		</div>
 	</div>
 
@@ -40,7 +39,25 @@
 {{/content}}
 
 {{$bodyEnd}}
-{{>includes/elements_scripts}}
+  {{>includes/elements_scripts}}
+
+  <script>
+  $(document).ready(function() {
+
+  	$("#show-health-worker-2").click(function() {
+  	  $("#health-worker-2").show();
+  	  $("#show-health-worker-2").hide();
+  	   return false;
+  	});
+  	$("#show-health-worker-3").click(function() {
+  	  $("#health-worker-3").show();
+  	  $("#show-health-worker-3").hide();
+  	   return false;
+  	});
+
+  });
+  </script>
+
 {{/bodyEnd}}
 
 {{/govuk_template}}

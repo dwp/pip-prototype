@@ -1,0 +1,94 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="scenario08{{#edit}}?edit=true{{/edit}}" method="get" class="form">
+
+				<a href="scenario03" class="example-back-link">Back</a>
+
+				<h1 class="form-title heading-large">
+				Getting dressed
+				</h1>
+
+                <div class="form-group">
+				    <label class="form-label-bold" for="dress">Do you have difficulty dressing yourself because of your condition?</label>
+				      <label class="block-label" data-target="dress-more" for="dress-yes">
+				        <input id="dress-yes" type="radio" name="dress" value="yes" {{#form.dress-yes}} checked{{/form.dress-yes}}>
+                            All the time
+				    </label>
+				    <label class="block-label" data-target="dress-more" for="dress-sometimes">
+                        <input id="dress-sometimes" type="radio" name="dress" value="sometimes" {{#form.dress-sometimes}} checked{{/form.dress-sometimes}}>
+				            Most days
+				    </label>
+				    <label class="block-label" for="dress-no">
+                        <input id="dress-no" type="radio" name="dress" value="no" {{#form.wash-no}} checked{{/form.wash-no}}>
+				            Not usually
+				    </label>
+                </div>
+
+                <div class="js-hidden" id="dress-more">
+
+	                <div class="{{^form.dress-more-display}} {{/form.dress-more-display}}  panel-indent form-group">
+					    <label class="form-label-bold" for="dress-help">Do you need someone to help you get dressed?</label>
+					    <p class="form-hint">This includes if someone has to remind you to get dressed or choose what you wear.</p>
+					      <label class="block-label" data-target="dress-help-more" for="dress-help-yes">
+					        <input id="dress-help-yes" type="radio" name="dress-help" value="yes"  {{#form.dress-help-yes}} checked{{/form.dress-help-yes}}>
+	                            All the time
+					    </label>
+					    <label class="block-label" data-target="dress-help-more" for="dress-help-sometimes">
+	                        <input id="dress-help-sometimes" type="radio" name="dress-help" value="sometimes"  {{#form.dress-help-sometimes}} checked{{/form.dress-help-sometimes}}>
+					            Most days
+					    </label>
+					    <label class="block-label" for="dress-help-no">
+	                        <input id="dress-help-no" type="radio" name="dress-help" value="no" {{#form.dress-help-no}} checked{{/form.dress-help-no}}>
+					            Not usually
+					    </label>
+
+					    <div class="{{^form.dress-help-display-yes}} js-hidden {{/form.dress-help-display-yes}}  panel-indent" id="dress-help-more">
+	                		<label class="form-label-bold" for="dress-more-too">Why do you need help?</label>
+	                		<textarea type="text" class="form-control-3-4" id="dress-more-too" name="dress-help-info-yes">{{#form.dress-help-display-yes}}{{form.dress-help-info-yes}}{{/form.dress-help-display-yes}}</textarea>
+	                	</div>
+
+	                </div>
+
+	                <div class="{{^form.dress-help-display-no}} {{/form.dress-help-display-no}} panel-indent" id="dress-help-none">
+                		<label class="form-label-bold" for="dress-help-none-too">Describe the difficulties you have getting dressed.</label>
+                		<textarea type="text" class="form-control-3-4" id="dress-help-none-too" name="dress-help-info-none">{{#form.dress-help-display-no}}{{form.dress-help-info-none}}{{/form.dress-help-display-no}}</textarea>
+                	</div>
+
+				</div>
+
+                <div class="form-group">
+					<input type="submit" class="button" value="Save and continue">
+				</div>
+			</form>
+
+		</div>
+		<div class="column-third app">
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
