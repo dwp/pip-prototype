@@ -1,0 +1,952 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="submitEvidence" method="#" class="form checkMyAnswers" data-question="healthcareprofessional">
+
+          		<h1 class="heading-large">Professionals who know about your condition</h1>
+
+        			<p>To help us get all the information we need to make a decision, you can include up to 5 professionals who will share details about the effect of your condition with us (or a company working on our behalf).</p>
+        			<p>They could be a doctor, counsellor, teacher, key worker or anyone else who has information about the effects of your condition.</p>
+
+        	<!-- include csrf token -->
+            <input type="hidden" name="_csrf" value="057852d7-e3f6-49e5-b1e1-1fb7484831ee">
+
+
+                   <ul>
+        						<li>
+
+            <div class="form-group" id="form-group-consent">
+              <fieldset class="inline">
+                <legend class="form-label-bold" id="consent" for="consent">
+                <span class="frequency-question">Do you want to add the details of a professional who knows about the effects of your condition?</span>
+
+
+
+                </legend>
+
+
+                          		<label class="block-label" for="consent-Yes" data-target="healthcareProfessionals">
+              							<input id="consent-Yes" type="radio" name="consent" value="Yes" aria-controls="healthcareProfessionals">
+              							Yes
+              					</label>
+                          		<label class="block-label" for="consent-No">
+              							<input id="consent-No" type="radio" name="consent" value="No">
+              							No
+              					</label>
+
+              </fieldset>
+              </div>
+
+
+        		<div class="js-hidden" id="healthcareProfessionals">
+
+
+        			<div id="healthcare-professional-0">
+
+        			  <legend class="heading-medium">Professional's details</legend>
+
+        				<fieldset>
+        					<ul>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[0].profession">
+
+                <label class="form-label" for="healthcareProfessionalList[0].profession">
+
+
+        What is their profession?
+
+                </label>
+
+                <select id="healthcareProfessionalList[0].profession" name="healthcareProfessionalList[0].profession" class="form-control form-select-control  hc-profession ">
+                    <option>Please select</option>
+                     <option value="Doctor">Doctor</option>
+                     <option value="GP">GP</option>
+                     <option value="Hospital Doctor">Hospital Doctor</option>
+                     <option value="Specialist Nurse">Specialist Nurse</option>
+                     <option value="Community Psychiatric Nurse">Community Psychiatric Nurse</option>
+                     <option value="Physiotherapist">Physiotherapist</option>
+                     <option value="Occupational therapist">Occupational therapist</option>
+                     <option value="Social worker">Social worker</option>
+                     <option value="Counsellor">Counsellor</option>
+                     <option value="Support worker">Support worker</option>
+                     <option value="Other">Other</option>
+                </select>
+
+            </div>
+        						</li>
+        						<li class="select-other js-hidden">
+            <div class="form-group" id="form-group-healthcareProfessionalList[0].other">
+
+             <label class="form-label" for="healthcareProfessionalList[0].other">
+
+
+        Their profession
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[0].other" name="healthcareProfessionalList[0].other" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[0].hpName">
+
+             <label class="form-label" for="healthcareProfessionalList[0].hpName">
+
+
+        Name
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[0].hpName" name="healthcareProfessionalList[0].hpName" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group form-group-related" id="form-group-healthcareProfessionalList[0].address1">
+
+             <label class="form-label" for="healthcareProfessionalList[0].address1">
+
+
+        Address
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[0].address1" name="healthcareProfessionalList[0].address1" value="">
+              </div>
+            <div class="form-group form-group-related" id="form-group-healthcareProfessionalList[0].address2">
+
+
+
+
+
+
+
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[0].address2" name="healthcareProfessionalList[0].address2" value="">
+              </div>
+            <div class="form-group form-group-related" id="form-group-healthcareProfessionalList[0].address3">
+
+
+
+
+
+
+
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[0].address3" name="healthcareProfessionalList[0].address3" value="">
+              </div>
+            <div class="form-group" id="form-group-healthcareProfessionalList[0].postcode">
+
+             <label class="form-label" for="healthcareProfessionalList[0].postcode">
+
+
+        Postcode
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[0].postcode" name="healthcareProfessionalList[0].postcode" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[0].phoneNo">
+
+             <label class="form-label" for="healthcareProfessionalList[0].phoneNo">
+
+
+        Phone number
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[0].phoneNo" name="healthcareProfessionalList[0].phoneNo" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[0].lastSeen">
+
+             <label class="form-label" for="healthcareProfessionalList[0].lastSeen">
+
+
+        When did you last see them?
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[0].lastSeen" name="healthcareProfessionalList[0].lastSeen" value="">
+              </div>
+        					 	</li>
+        					</ul>
+        				</fieldset>
+
+        					<p><a href="#" class="link-show " data-target="healthcare-professional-1">Add another professional</a></p>
+        				</div>
+
+        			<div id="healthcare-professional-1" class="js-hidden">
+
+        			  <legend class="heading-medium">Professional's details</legend>
+
+        				<fieldset>
+        					<ul>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[1].profession">
+
+                <label class="form-label" for="healthcareProfessionalList[1].profession">
+
+
+        What is their profession?
+
+                </label>
+
+                <select id="healthcareProfessionalList[1].profession" name="healthcareProfessionalList[1].profession" class="form-control form-select-control  hc-profession ">
+                    <option>Please select</option>
+                     <option value="Doctor">Doctor</option>
+                     <option value="GP">GP</option>
+                     <option value="Hospital Doctor">Hospital Doctor</option>
+                     <option value="Specialist Nurse">Specialist Nurse</option>
+                     <option value="Community Psychiatric Nurse">Community Psychiatric Nurse</option>
+                     <option value="Physiotherapist">Physiotherapist</option>
+                     <option value="Occupational therapist">Occupational therapist</option>
+                     <option value="Social worker">Social worker</option>
+                     <option value="Counsellor">Counsellor</option>
+                     <option value="Support worker">Support worker</option>
+                     <option value="Other">Other</option>
+                </select>
+
+            </div>
+        						</li>
+        						<li class="select-other js-hidden">
+            <div class="form-group" id="form-group-healthcareProfessionalList[1].other">
+
+             <label class="form-label" for="healthcareProfessionalList[1].other">
+
+
+        Their profession
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[1].other" name="healthcareProfessionalList[1].other" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[1].hpName">
+
+             <label class="form-label" for="healthcareProfessionalList[1].hpName">
+
+
+        Name
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[1].hpName" name="healthcareProfessionalList[1].hpName" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group form-group-related" id="form-group-healthcareProfessionalList[1].address1">
+
+             <label class="form-label" for="healthcareProfessionalList[1].address1">
+
+
+        Address
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[1].address1" name="healthcareProfessionalList[1].address1" value="">
+              </div>
+            <div class="form-group form-group-related" id="form-group-healthcareProfessionalList[1].address2">
+
+
+
+
+
+
+
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[1].address2" name="healthcareProfessionalList[1].address2" value="">
+              </div>
+            <div class="form-group form-group-related" id="form-group-healthcareProfessionalList[1].address3">
+
+
+
+
+
+
+
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[1].address3" name="healthcareProfessionalList[1].address3" value="">
+              </div>
+            <div class="form-group" id="form-group-healthcareProfessionalList[1].postcode">
+
+             <label class="form-label" for="healthcareProfessionalList[1].postcode">
+
+
+        Postcode
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[1].postcode" name="healthcareProfessionalList[1].postcode" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[1].phoneNo">
+
+             <label class="form-label" for="healthcareProfessionalList[1].phoneNo">
+
+
+        Phone number
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[1].phoneNo" name="healthcareProfessionalList[1].phoneNo" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[1].lastSeen">
+
+             <label class="form-label" for="healthcareProfessionalList[1].lastSeen">
+
+
+        When did you last see them?
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[1].lastSeen" name="healthcareProfessionalList[1].lastSeen" value="">
+              </div>
+        					 	</li>
+        					</ul>
+        				</fieldset>
+
+        					<p><a href="#" class="link-show " data-target="healthcare-professional-2">Add another professional</a></p>
+        				</div>
+
+        			<div id="healthcare-professional-2" class="js-hidden">
+
+        			  <legend class="heading-medium">Professional's details</legend>
+
+        				<fieldset>
+        					<ul>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[2].profession">
+
+                <label class="form-label" for="healthcareProfessionalList[2].profession">
+
+
+        What is their profession?
+
+                </label>
+
+                <select id="healthcareProfessionalList[2].profession" name="healthcareProfessionalList[2].profession" class="form-control form-select-control  hc-profession ">
+                    <option>Please select</option>
+                     <option value="Doctor">Doctor</option>
+                     <option value="GP">GP</option>
+                     <option value="Hospital Doctor">Hospital Doctor</option>
+                     <option value="Specialist Nurse">Specialist Nurse</option>
+                     <option value="Community Psychiatric Nurse">Community Psychiatric Nurse</option>
+                     <option value="Physiotherapist">Physiotherapist</option>
+                     <option value="Occupational therapist">Occupational therapist</option>
+                     <option value="Social worker">Social worker</option>
+                     <option value="Counsellor">Counsellor</option>
+                     <option value="Support worker">Support worker</option>
+                     <option value="Other">Other</option>
+                </select>
+
+            </div>
+        						</li>
+        						<li class="select-other js-hidden">
+            <div class="form-group" id="form-group-healthcareProfessionalList[2].other">
+
+             <label class="form-label" for="healthcareProfessionalList[2].other">
+
+
+        Their profession
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[2].other" name="healthcareProfessionalList[2].other" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[2].hpName">
+
+             <label class="form-label" for="healthcareProfessionalList[2].hpName">
+
+
+        Name
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[2].hpName" name="healthcareProfessionalList[2].hpName" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group form-group-related" id="form-group-healthcareProfessionalList[2].address1">
+
+             <label class="form-label" for="healthcareProfessionalList[2].address1">
+
+
+        Address
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[2].address1" name="healthcareProfessionalList[2].address1" value="">
+              </div>
+            <div class="form-group form-group-related" id="form-group-healthcareProfessionalList[2].address2">
+
+
+
+
+
+
+
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[2].address2" name="healthcareProfessionalList[2].address2" value="">
+              </div>
+            <div class="form-group form-group-related" id="form-group-healthcareProfessionalList[2].address3">
+
+
+
+
+
+
+
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[2].address3" name="healthcareProfessionalList[2].address3" value="">
+              </div>
+            <div class="form-group" id="form-group-healthcareProfessionalList[2].postcode">
+
+             <label class="form-label" for="healthcareProfessionalList[2].postcode">
+
+
+        Postcode
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[2].postcode" name="healthcareProfessionalList[2].postcode" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[2].phoneNo">
+
+             <label class="form-label" for="healthcareProfessionalList[2].phoneNo">
+
+
+        Phone number
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[2].phoneNo" name="healthcareProfessionalList[2].phoneNo" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[2].lastSeen">
+
+             <label class="form-label" for="healthcareProfessionalList[2].lastSeen">
+
+
+        When did you last see them?
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[2].lastSeen" name="healthcareProfessionalList[2].lastSeen" value="">
+              </div>
+        					 	</li>
+        					</ul>
+        				</fieldset>
+
+        					<p><a href="#" class="link-show " data-target="healthcare-professional-3">Add another professional</a></p>
+        				</div>
+
+        			<div id="healthcare-professional-3" class="js-hidden">
+
+        			  <legend class="heading-medium">Professional's details</legend>
+
+        				<fieldset>
+        					<ul>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[3].profession">
+
+                <label class="form-label" for="healthcareProfessionalList[3].profession">
+
+
+        What is their profession?
+
+                </label>
+
+                <select id="healthcareProfessionalList[3].profession" name="healthcareProfessionalList[3].profession" class="form-control form-select-control  hc-profession ">
+                    <option>Please select</option>
+                     <option value="Doctor">Doctor</option>
+                     <option value="GP">GP</option>
+                     <option value="Hospital Doctor">Hospital Doctor</option>
+                     <option value="Specialist Nurse">Specialist Nurse</option>
+                     <option value="Community Psychiatric Nurse">Community Psychiatric Nurse</option>
+                     <option value="Physiotherapist">Physiotherapist</option>
+                     <option value="Occupational therapist">Occupational therapist</option>
+                     <option value="Social worker">Social worker</option>
+                     <option value="Counsellor">Counsellor</option>
+                     <option value="Support worker">Support worker</option>
+                     <option value="Other">Other</option>
+                </select>
+
+            </div>
+        						</li>
+        						<li class="select-other js-hidden">
+            <div class="form-group" id="form-group-healthcareProfessionalList[3].other">
+
+             <label class="form-label" for="healthcareProfessionalList[3].other">
+
+
+        Their profession
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[3].other" name="healthcareProfessionalList[3].other" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[3].hpName">
+
+             <label class="form-label" for="healthcareProfessionalList[3].hpName">
+
+
+        Name
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[3].hpName" name="healthcareProfessionalList[3].hpName" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group form-group-related" id="form-group-healthcareProfessionalList[3].address1">
+
+             <label class="form-label" for="healthcareProfessionalList[3].address1">
+
+
+        Address
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[3].address1" name="healthcareProfessionalList[3].address1" value="">
+              </div>
+            <div class="form-group form-group-related" id="form-group-healthcareProfessionalList[3].address2">
+
+
+
+
+
+
+
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[3].address2" name="healthcareProfessionalList[3].address2" value="">
+              </div>
+            <div class="form-group form-group-related" id="form-group-healthcareProfessionalList[3].address3">
+
+
+
+
+
+
+
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[3].address3" name="healthcareProfessionalList[3].address3" value="">
+              </div>
+            <div class="form-group" id="form-group-healthcareProfessionalList[3].postcode">
+
+             <label class="form-label" for="healthcareProfessionalList[3].postcode">
+
+
+        Postcode
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[3].postcode" name="healthcareProfessionalList[3].postcode" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[3].phoneNo">
+
+             <label class="form-label" for="healthcareProfessionalList[3].phoneNo">
+
+
+        Phone number
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[3].phoneNo" name="healthcareProfessionalList[3].phoneNo" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[3].lastSeen">
+
+             <label class="form-label" for="healthcareProfessionalList[3].lastSeen">
+
+
+        When did you last see them?
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[3].lastSeen" name="healthcareProfessionalList[3].lastSeen" value="">
+              </div>
+        					 	</li>
+        					</ul>
+        				</fieldset>
+
+        					<p><a href="#" class="link-show " data-target="healthcare-professional-4">Add another professional</a></p>
+        				</div>
+
+        			<div id="healthcare-professional-4" class="js-hidden">
+
+        			  <legend class="heading-medium">Professional's details</legend>
+
+        				<fieldset>
+        					<ul>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[4].profession">
+
+                <label class="form-label" for="healthcareProfessionalList[4].profession">
+
+
+        What is their profession?
+
+                </label>
+
+                <select id="healthcareProfessionalList[4].profession" name="healthcareProfessionalList[4].profession" class="form-control form-select-control  hc-profession ">
+                    <option>Please select</option>
+                     <option value="Doctor">Doctor</option>
+                     <option value="GP">GP</option>
+                     <option value="Hospital Doctor">Hospital Doctor</option>
+                     <option value="Specialist Nurse">Specialist Nurse</option>
+                     <option value="Community Psychiatric Nurse">Community Psychiatric Nurse</option>
+                     <option value="Physiotherapist">Physiotherapist</option>
+                     <option value="Occupational therapist">Occupational therapist</option>
+                     <option value="Social worker">Social worker</option>
+                     <option value="Counsellor">Counsellor</option>
+                     <option value="Support worker">Support worker</option>
+                     <option value="Other">Other</option>
+                </select>
+
+            </div>
+        						</li>
+        						<li class="select-other js-hidden">
+            <div class="form-group" id="form-group-healthcareProfessionalList[4].other">
+
+             <label class="form-label" for="healthcareProfessionalList[4].other">
+
+
+        Their profession
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[4].other" name="healthcareProfessionalList[4].other" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[4].hpName">
+
+             <label class="form-label" for="healthcareProfessionalList[4].hpName">
+
+
+        Name
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[4].hpName" name="healthcareProfessionalList[4].hpName" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group form-group-related" id="form-group-healthcareProfessionalList[4].address1">
+
+             <label class="form-label" for="healthcareProfessionalList[4].address1">
+
+
+        Address
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[4].address1" name="healthcareProfessionalList[4].address1" value="">
+              </div>
+            <div class="form-group form-group-related" id="form-group-healthcareProfessionalList[4].address2">
+
+
+
+
+
+
+
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[4].address2" name="healthcareProfessionalList[4].address2" value="">
+              </div>
+            <div class="form-group form-group-related" id="form-group-healthcareProfessionalList[4].address3">
+
+
+
+
+
+
+
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[4].address3" name="healthcareProfessionalList[4].address3" value="">
+              </div>
+            <div class="form-group" id="form-group-healthcareProfessionalList[4].postcode">
+
+             <label class="form-label" for="healthcareProfessionalList[4].postcode">
+
+
+        Postcode
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[4].postcode" name="healthcareProfessionalList[4].postcode" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[4].phoneNo">
+
+             <label class="form-label" for="healthcareProfessionalList[4].phoneNo">
+
+
+        Phone number
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[4].phoneNo" name="healthcareProfessionalList[4].phoneNo" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[4].lastSeen">
+
+             <label class="form-label" for="healthcareProfessionalList[4].lastSeen">
+
+
+        When did you last see them?
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[4].lastSeen" name="healthcareProfessionalList[4].lastSeen" value="">
+              </div>
+        					 	</li>
+        					</ul>
+        				</fieldset>
+
+        				</div>
+
+        			<div id="healthcare-professional-5" class="js-hidden">
+
+        			  <legend class="heading-medium">Professional's details</legend>
+
+        				<fieldset>
+        					<ul>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[5].profession">
+
+                <label class="form-label" for="healthcareProfessionalList[5].profession">
+
+
+        What is their profession?
+
+                </label>
+
+                <select id="healthcareProfessionalList[5].profession" name="healthcareProfessionalList[5].profession" class="form-control form-select-control  hc-profession ">
+                    <option>Please select</option>
+                     <option value="Doctor">Doctor</option>
+                     <option value="GP">GP</option>
+                     <option value="Hospital Doctor">Hospital Doctor</option>
+                     <option value="Specialist Nurse">Specialist Nurse</option>
+                     <option value="Community Psychiatric Nurse">Community Psychiatric Nurse</option>
+                     <option value="Physiotherapist">Physiotherapist</option>
+                     <option value="Occupational therapist">Occupational therapist</option>
+                     <option value="Social worker">Social worker</option>
+                     <option value="Counsellor">Counsellor</option>
+                     <option value="Support worker">Support worker</option>
+                     <option value="Other">Other</option>
+                </select>
+
+            </div>
+        						</li>
+        						<li class="select-other js-hidden">
+            <div class="form-group" id="form-group-healthcareProfessionalList[5].other">
+
+             <label class="form-label" for="healthcareProfessionalList[5].other">
+
+
+        Their profession
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[5].other" name="healthcareProfessionalList[5].other" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[5].hpName">
+
+             <label class="form-label" for="healthcareProfessionalList[5].hpName">
+
+
+        Name
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[5].hpName" name="healthcareProfessionalList[5].hpName" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group form-group-related" id="form-group-healthcareProfessionalList[5].address1">
+
+             <label class="form-label" for="healthcareProfessionalList[5].address1">
+
+
+        Address
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[5].address1" name="healthcareProfessionalList[5].address1" value="">
+              </div>
+            <div class="form-group form-group-related" id="form-group-healthcareProfessionalList[5].address2">
+
+
+
+
+
+
+
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[5].address2" name="healthcareProfessionalList[5].address2" value="">
+              </div>
+            <div class="form-group form-group-related" id="form-group-healthcareProfessionalList[5].address3">
+
+
+
+
+
+
+
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[5].address3" name="healthcareProfessionalList[5].address3" value="">
+              </div>
+            <div class="form-group" id="form-group-healthcareProfessionalList[5].postcode">
+
+             <label class="form-label" for="healthcareProfessionalList[5].postcode">
+
+
+        Postcode
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[5].postcode" name="healthcareProfessionalList[5].postcode" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[5].phoneNo">
+
+             <label class="form-label" for="healthcareProfessionalList[5].phoneNo">
+
+
+        Phone number
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[5].phoneNo" name="healthcareProfessionalList[5].phoneNo" value="">
+              </div>
+        						</li>
+        						<li>
+            <div class="form-group" id="form-group-healthcareProfessionalList[5].lastSeen">
+
+             <label class="form-label" for="healthcareProfessionalList[5].lastSeen">
+
+
+        When did you last see them?
+
+             </label>
+
+
+                <input type="text" class="form-control " id="healthcareProfessionalList[5].lastSeen" name="healthcareProfessionalList[5].lastSeen" value="">
+              </div>
+        					 	</li>
+        					</ul>
+        				</fieldset>
+
+        				</div>
+
+
+
+        			</div>
+        		</li></ul>
+            <div class="form-group">
+            					<input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+            					<input type="submit" value="Save and exit" name="saveAndExit" class="exit-link">
+            				</div>
+			</form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

@@ -1,0 +1,54 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+      <a href="/pipDigital/user-data/submitEvidence" class="example-back-link">Back</a>
+
+      <h1 class="form-title heading-large">
+You and your home				</h1>
+
+      <p>We need to understand how your condition affects you, so we're going to ask about:</p>
+      <ul class="list-bullet">
+        <li>any aids or adaptations you have</li>
+        <li>how you get around your home</li>
+        <li>seeing</li>
+        <li>speaking</li>
+        <li>hearing</li>
+      </ul>
+
+      <div class="application-notice panel-indent">
+        <p>Include as much information as you can in your answers. This helps us to understand how your condition affects you.</p>
+      </div>
+
+      <a href="specialAids" class="button">Continue</a>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

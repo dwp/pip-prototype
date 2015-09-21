@@ -1,0 +1,83 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="caringForYourself" method="#" class="form checkMyAnswers" data-question="hearing">
+
+
+        			<a href="/pipDigital/activities/speaking" class="example-back-link">Back</a>
+
+<h1 class="form-title heading-large">
+        Hearing			</h1>
+        			<ul>
+        				<li>
+
+            <div class="form-group" id="form-group-frequency">
+              <fieldset>
+                <legend class="form-label-bold" id="frequency" for="frequency">
+                <span class="frequency-question">Does your condition affect your hearing?</span>
+
+                 <p class="form-hint">This includes if you rely on someone to help you or interpret for you.</p>
+
+                </legend>
+
+
+                {{>includes/pages/variability}}
+
+              </fieldset>
+              </div>
+
+        					<div class="panel-indent js-hidden" id="details">
+                <div class="form-group">
+        						<label class="form-label-bold" for="detailsWhy">
+
+        Describe why your condition affects your hearing.
+        						</label>
+        						<textarea class="form-control-3-4  " id="detailsWhy" name="detailsWhy"></textarea>
+        		</div>
+                <div class="form-group">
+        						<label class="form-label-bold" for="detailsHow">
+
+        Describe how you know what's being said at the moment.						<p class="form-hint">If you can't tell what's being said, tell us.</p>
+        						</label>
+        						<textarea class="form-control-3-4  " id="detailsHow" name="detailsHow"></textarea>
+        		</div>
+        					</div>
+        				</li>
+              </ul>
+        			<div class="form-group">
+        				<input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+        				<input type="submit" value="Save and exit" name="saveAndExit" class="exit-link">
+        			</div>
+			</form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
