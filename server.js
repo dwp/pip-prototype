@@ -2,7 +2,7 @@ var path = require('path'),
     express = require('express'),
     routes = require(__dirname + '/app/routes.js'),
     app = express(),
-    port = (process.env.PORT || 3000),
+    port = (process.env.PORT || 8000),
 
 // Grab environment variables specified in Procfile or as Heroku config vars
     username = process.env.USERNAME,
@@ -39,7 +39,7 @@ app.use('/public', express.static(__dirname + '/public'));
 app.use('/public', express.static(__dirname + '/govuk_modules/govuk_template/assets'));
 app.use('/public', express.static(__dirname + '/govuk_modules/govuk_frontend_toolkit'));
 
-app.use(express.favicon(path.join(__dirname, 'govuk_modules', 'govuk_template', 'assets', 'images','favicon.ico'))); 
+app.use(express.favicon(path.join(__dirname, 'govuk_modules', 'govuk_template', 'assets', 'images','favicon.ico')));
 
 
 // send assetPath to all views

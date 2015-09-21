@@ -71,3 +71,163 @@ ul.side-nav li a {
 	text-decoration: none;
 	background: transparent url("/public/images/left-arrow.png") no-repeat 0px 12px;
 }
+
+/*******
+sprint 15
+********/
+.exit-link {
+  cursor: pointer;
+  display: block;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  background-color: #fff;
+  color: #00f;
+  text-decoration: underline;
+  margin-top: 20px;
+}
+
+
+/* this needs to be refactored into css build process */
+
+legend.form-label-bold {
+	float:left;
+	width:100%;
+}
+
+table.condition .form-control {
+  width: 95%;
+}
+
+table.condition .numeric,
+table.condition th.numeric {
+  width: 25%;
+  text-align: left;
+}
+
+table.condition th,
+table.condition td {
+  border: none;
+  padding: 0.5em 1em 0.5em 0;
+ }
+
+.error .form-control-no-error { border: 1px solid #bfc1c3; }
+
+.inner-panel { margin-bottom:0px; }
+.inner-panel .form-group { margin-top:10px;}
+
+table.condition .form-group {
+	margin-bottom:0;
+}
+
+
+ul.submit-evidence li {
+	float:left;
+	width:100%;
+}
+
+.account-number {
+	background:#d3d3d3;
+	font-size:40px;
+	font-weight:900;
+}
+
+label + textarea {
+	height:200px;
+}
+
+label + textarea.additionalInfo {
+	height:325px;
+}
+
+.exit-link {
+	cursor: pointer;
+	display:block;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	background-color: #fff;
+	color: #00f;
+	text-decoration: underline;
+	margin-top: 20px;
+}
+
+/********************
+Errors
+********************/
+
+.error-summary .error-summary-list li {
+	color:#b10e1e;
+	display:list-item;
+	list-style-type:disc;
+	margin-left:20px;
+}
+
+.error-summary .error-summary-list li::first-letter {
+	text-transform:lowercase;
+}
+
+
+/********************
+Check and change
+********************/
+
+.check-and-change > li {
+	border:1px solid #dee0e2;
+	float:left;
+	margin-bottom:10px;
+	padding-top:15px;
+	width:100%;
+}
+
+.check-and-change li .form-group {
+	margin-bottom:0;
+}
+
+.check-and-change .column-two-thirds,
+.show-all .column-two-thirds {
+	float: right;
+}
+
+#check-my-answers section {
+  margin-left:30px;
+}
+
+.show-all {
+  margin-left:0px;
+}
+
+.question {
+	font-size:20px;
+}
+
+#check-my-answers h3{
+	float:left;
+	margin-top:1em;
+}
+
+.answered-question {
+	float:left;
+	margin-bottom:5px;
+	width:100%;
+}
+
+.seperator {
+  border-top:1px solid #dee0e2;
+  padding-top:20px;
+}
+
+@media only all and (max-width:40em) {
+	.check-and-change .column-two-thirds,
+	.show-all .column-two-thirds {
+		float: none;
+	}
+	.check-and-change .button {
+		text-align: center;
+		margin-left:-13px;
+		width:100%;
+	}
+	.show-all {
+	  margin-left:8px;
+	}
+}

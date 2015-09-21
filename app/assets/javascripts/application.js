@@ -1,3 +1,40 @@
+$.fn.checkboxNone = function(options) {
+	var settings = $.extend({
+		textarea: false
+	}, options );
+
+    $(this).click(function() {
+    	if($(this).data('none')) {
+			$(":checkbox:checked").each(function() {
+				if(!$(this).data('none')){
+					if(settings.textarea) {
+						$(this).attr('checked', false)
+						.parent().removeClass('selected')
+						.next().hide();
+						$('.special-aids textarea').not( "#otherSpecialEquipment" ).prop("disabled", true )
+					} else {
+						$(this).attr('checked', false)
+						.parent().removeClass('selected');
+
+						$('#other-box:visible').hide()
+						.find('input').prop("disabled", true );
+					}
+				}
+			})
+    	} else {
+    		$(":checkbox:checked").each(function() {
+    			if($(this).data('none')){
+    				$(this).attr('checked', false).parent().removeClass('selected');
+				}
+    		});
+    		if(settings.textarea) {
+    			$('.special-aids textarea').not( "#otherSpecialEquipment" ).prop("disabled", false )
+    		} else {
+    			$('#other-box:visible').find('input').prop("disabled", false )
+    		}
+		}
+    })
+};
 function ShowHideContent() {
   var self = this;
   self.showHideRadioToggledContent = function () {
@@ -124,4 +161,74 @@ $(document).ready(function() {
   toggleContent.showHideRadioToggledContent();
   toggleContent.showHideCheckboxToggledContent();
 
+  /******************
+  pip11
+  *******************/
+  $(".link-table").click(function () {
+		var dataTarget = $(this).attr('data-target');
+		$("tr."+dataTarget+".js-hidden").first().removeClass('js-hidden');
+		if($("tr."+dataTarget+".js-hidden").length == 0){ $(this).addClass('js-hidden');}
+		return false;
+	});
+
+  $('.hc-profession').change(function() {
+		$(this).val() === 'Other' ? $(this).parents('li').next('li').show() : $(this).parents('li').next('li').hide();
+	});
+
+	$(".link-show").click(function () {
+		var dataTarget = $(this).attr('data-target');
+		$("#"+dataTarget).removeClass('js-hidden');
+		$(this).hide();
+		return false;
+
+	});
+
+  $('.special-aids input[type=checkbox]').checkboxNone({textarea:true});
+	$('.submit-evidence input[type=checkbox]').checkboxNone();
+
+  /******************
+  Check your answers
+
+
+  $('form.checkMyAnswers').submit(function(){
+  console.log($(this).data('question'))
+  console.log($(this).serialize());
+  return false;
+  })
+  *******************/
+  $('.show-answer').click(function(e) {
+  		var linkText    = $(this).text(),
+  			openText    = $(this).data('open-text'),
+  			closeText   = $(this).data('close-text'),
+  			questionHd  = $(this).parent().prev().text(),
+  			newLinkText = linkText === openText ? closeText : openText;
+
+  		$(this).text(newLinkText);
+  		$(this).attr('aria-label',$(this).attr('aria-label').replace(linkText,newLinkText));
+  		$(this).closest('.form-group').next('.answered-question-cont').toggle();
+
+  		return false;
+  	});
+
+  	$('.show-all').click(function(e) {
+  		var action    = $(this).data('action'),
+  			openText  = $(this).data('open-text'),
+  			closeText = $(this).data('close-text'),
+  			linkText  = $(this).text();
+
+  		action === 'open' ? $(this).text(closeText) : $(this).text(openText);
+
+  		$( ".answered-question-cont" ).each(function() {
+  			var linkText  = $(this).prev().find('.show-answer'),
+  				openText  = linkText.data('open-text'),
+  				closeText = linkText.data('close-text');
+
+  				action === 'open' ? $(this).show() : $(this).hide();
+  				action === 'open' ? linkText.text(closeText) : linkText.text(openText);
+  		});
+
+  		action === 'open' ? $(this).data('action','close') : $(this).data('action','open');
+
+  		return false;
+  	});
 });
