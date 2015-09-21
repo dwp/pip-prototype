@@ -217,6 +217,13 @@ Check and change
   padding-top:20px;
 }
 
+#check-my-answers .grid-row {
+margin-right: 0;
+}
+#check-my-answers section {
+  margin-left:15px;
+}
+
 @media only all and (max-width:40em) {
 	.check-and-change .column-two-thirds,
 	.show-all .column-two-thirds {
