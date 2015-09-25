@@ -231,4 +231,8 @@ $(document).ready(function() {
 
   		return false;
   	});
+
+		$('#help-link').click(function(){
+			return false;
+		})
 });
