@@ -36,9 +36,34 @@
                 </legend>
 
 
-                {{>includes/pages/variability}}
+                <label class="block-label" for="pip.radio.allthetime.id" data-target="details">
+                <input id="pip.radio.allthetime.id" type="radio" name="frequency" value="All the time" aria-controls="details">
+                Atleast once a day
+                </label>
+                <label class="block-label" for="pip.radio.morethanhalf.id" data-target="details">
+                <input id="pip.radio.morethanhalf.id" type="radio" name="frequency" value="More than half the time" aria-controls="details">
+                Most days
+                </label>
+                <label class="block-label" for="pip.radio.lessthanhalf.id" data-target="details">
+                <input id="pip.radio.lessthanhalf.id" type="radio" name="frequency" value="Less than half the time" aria-controls="details">
+                Some days
+                </label>
+                <label class="block-label" for="pip.radio.noneofthetime.id">
+                <input id="pip.radio.noneofthetime.id" type="radio" name="frequency" value="None of the time">
+                No it doesn't affect me using the the toilet
+                </label>
+
+                <p class="form-block">or</p>
+
+                <label class="block-label" for="pip.radio.own-words.id" data-target="own-words">
+                <input id="pip.radio.own-words.id" type="radio" name="frequency" value="More than half the time" aria-controls="details">
+                I want to tell you in my own words
+                </label>
 
               </fieldset>
+              </div>
+              <div class="panel-indent js-hidden" id="own-words">
+                <textarea class="form-control-3-4  " id="ownWords" name="ownWords"></textarea>
               </div>
         					<div class="panel-indent js-hidden" id="details">
                 <div class="form-group">
