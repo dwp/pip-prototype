@@ -56,14 +56,32 @@
 
            <label class="block-label" for="pip.radio.own-words.id" data-target="own-words">
            <input id="pip.radio.own-words.id" type="radio" name="frequency" value="More than half the time" aria-controls="details">
-           I want to tell you in my own words
+           Tell us how often in your own words
            </label>
 
 
          </fieldset>
          </div>
          <div class="panel-indent js-hidden" id="own-words">
-           <textarea class="form-control-3-4  " id="ownWords" name="ownWords"></textarea>
+           <div class="form-group">
+             <label class="form-label-bold" for="ownWords">How often your condition affects you getting up and out of bed</label>
+             <input type="text" class="form-control" id="ownWords" name="ownWords"/>
+           </div>
+           <div class="form-group">
+   						<label class="form-label-bold" for="detailsWhy">
+
+   Describe why your condition affects you getting up and out of bed.
+   						</label>
+   						<textarea class="form-control-3-4  " id="detailsWhy" name="detailsWhy"></textarea>
+   		</div>
+           <div class="form-group">
+   						<label class="form-label-bold" for="detailsHow">
+
+   Describe how you get up and out of bed at the moment.
+   <p class="form-hint">If you dont get out of bed, tell us why.</p>
+   						</label>
+   						<textarea class="form-control-3-4  " id="detailsHow" name="detailsHow"></textarea>
+   		</div>
          </div>
    						<div class="panel-indent js-hidden" id="details">
            <div class="form-group">
