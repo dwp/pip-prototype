@@ -43,9 +43,12 @@ module.exports = {
       res.render('pip5/mixing-with-people-more',req.body);
     });
 
-    app.post('/pip5/communicating-more', function (req, res) {
-
-      res.render('pip5/communicating-more',req.body);
+    app.get('/pip11/healthcareprofessional', function (req, res) {
+      if(req.query.monitored === 'Yes') {
+        res.render('pip11/hcp-condition-2');
+      } else {
+        res.render('pip11/healthcareprofessional');
+      }
     });
 
     app.post('/pip5/going-out-more', function (req, res) {

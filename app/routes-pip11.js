@@ -117,6 +117,11 @@ module.exports = {
       res.render('story-gen/managing-money-more',req.body);
     });
 
+    app.post('/pip11/hcp-condition', function(req, res) {
+      console.log(req)
+      res.render('/pip11/hcp-condition');
+    });
+
     /* route for review */
 
     require('./routes_review')(app);
