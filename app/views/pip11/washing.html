@@ -34,9 +34,51 @@ Washing yourself      </h1>
          <p class="form-hint">This includes if you find any part particularly difficult or if you rely on someone to help or encourage you to wash.</p>
 
         </legend>
-          {{>includes/pages/variability}}
+        <label class="block-label" for="pip.radio.allthetime.id" data-target="details">
+        <input id="pip.radio.allthetime.id" type="radio" name="frequency" value="All the time" aria-controls="details">
+        Everytime I wash
+        </label>
+        <label class="block-label" for="pip.radio.morethanhalf.id" data-target="details">
+        <input id="pip.radio.morethanhalf.id" type="radio" name="frequency" value="More than half the time" aria-controls="details">
+        More than half the time
+        </label>
+        <label class="block-label" for="pip.radio.lessthanhalf.id" data-target="details">
+        <input id="pip.radio.lessthanhalf.id" type="radio" name="frequency" value="Less than half the time" aria-controls="details">
+        Less than half the time
+        </label>
+        <label class="block-label" for="pip.radio.noneofthetime.id">
+        <input id="pip.radio.noneofthetime.id" type="radio" name="frequency" value="None of the time">
+        None of the time
+        </label>
+        <p class="form-block">or</p>
+
+        <label class="block-label" for="pip.radio.own-words.id" data-target="own-words">
+        <input id="pip.radio.own-words.id" type="radio" name="frequency" value="More than half the time" aria-controls="details">
+        Tell us how often in your own words
+        </label>
 
       </fieldset>
+      </div>
+
+      <div class="panel-indent js-hidden" id="own-words">
+        <div class="form-group">
+          <label class="form-label-bold" for="ownWords">How often your condition affects you washing your hair or any part of your body.</label>
+          <input type="text" class="form-control" id="ownWords" name="ownWords"/>
+        </div>
+    <div class="form-group">
+        <label class="form-label-bold" for="detailsWhy">
+
+Describe why your condition affects you washing your hair or any part of your body.
+        </label>
+        <textarea class="form-control-3-4  " id="detailsWhy" name="detailsWhy"></textarea>
+</div>
+    <div class="form-group">
+        <label class="form-label-bold" for="detailsHow">
+
+Describe how you wash your hair and body at the moment.
+        </label>
+        <textarea class="form-control-3-4  " id="detailsHow" name="detailsHow"></textarea>
+</div>
       </div>
 
 					<div class="panel-indent js-hidden" id="details">
