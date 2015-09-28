@@ -211,7 +211,7 @@ $(document).ready(function() {
   	});
 
   	$('.show-all').click(function(e) {
-  		var action    = $(this).data('action'),
+  		var action  = $(this).data('action'),
   			openText  = $(this).data('open-text'),
   			closeText = $(this).data('close-text'),
   			linkText  = $(this).text();
@@ -234,5 +234,5 @@ $(document).ready(function() {
 
 		$('#help-link').click(function(){
 			return false;
-		})
+		});
 });
