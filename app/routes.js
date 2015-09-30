@@ -43,14 +43,6 @@ module.exports = {
       res.render('pip5/mixing-with-people-more',req.body);
     });
 
-    app.get('/pip11/healthcareprofessional', function (req, res) {
-      if(req.query.monitored === 'Yes') {
-        res.render('pip11/hcp-condition-2');
-      } else {
-        res.render('pip11/healthcareprofessional');
-      }
-    });
-
     app.post('/pip5/going-out-more', function (req, res) {
 
       res.render('pip5/going-out-more',req.body);
@@ -118,6 +110,30 @@ module.exports = {
     app.post('/story-gen/managing-money-more', function (req, res) {
 
       res.render('story-gen/managing-money-more',req.body);
+    });
+
+
+    app.get('/pip11/healthcareprofessional', function (req, res) {
+      if(req.query.monitored === 'Yes') {
+        res.render('pip11/hcp-condition-2');
+      } else {
+        res.render('pip11/healthcareprofessional');
+      }
+    });
+
+    app.get('/pip11/emailtest', function (req, res) {
+
+      var sendgrid  = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD);
+      sendgrid.send({
+        to:       'gup.dwp@gmail.com',
+        from:     'gup.dwp@gmail.com',
+        subject:  'Hello World',
+        text:     'My first email through SendGrid.'
+      }, function(err, json) {
+        if (err) { return console.error(err); }
+        console.log('error = ' + json);
+      });
+      res.render('pip11/emailtest');
     });
 
     /* route for review */
