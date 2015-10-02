@@ -20,7 +20,6 @@
       <h1 class="form-title heading-large">
 Check your answers				</h1>
 
-
     <div class="grid-row show-all">
       <p class="column-two-thirds">
         <a href="#" class="show-all"
@@ -46,14 +45,14 @@ Check your answers				</h1>
             <div class="answered-question-cont js-hidden">
 <div class="answered-question  ">
 <p class="question form-label-bold column-third">The name of the person helping you</p>
-<p class="show-answer column-two-thirds"></p>
+<p class="show-answer column-two-thirds">{{#helper.name}}{{helper.name}}{{/helper.name}}</p>
 </div>
 <div class="answered-question  ">
 <p class="question form-label-bold column-third">Their relationship to you</p>
-<p class="show-answer column-two-thirds"></p>
+<p class="show-answer column-two-thirds">{{#helper.relationship}}{{helper.relationship}}{{/helper.relationship}}</p>
 </div>
               <div class="column-two-thirds">
-                <a href="/pipDigital/user-data/helperDetails" class="button change-my-answer"
+                <a href="/pip11/helper?edit=true" class="button change-my-answer"
                 aria-label="Change my answers for Help with your application">
 Change my answers									</a>
               </div>
@@ -73,26 +72,26 @@ Change my answers									</a>
             <div class="answered-question-cont js-hidden">
 <div class="answered-question  ">
 <p class="question form-label-bold column-third">What is your nationality?</p>
-<p class="show-answer column-two-thirds"></p>
+<p class="show-answer column-two-thirds">{{#nationality.britishCitizen}}{{nationality.britishCitizen}}{{/nationality.britishCitizen}}</p>
 </div>
 <div class="answered-question  ">
 <p class="question form-label-bold column-third">Your nationality</p>
-<p class="show-answer column-two-thirds"></p>
+<p class="show-answer column-two-thirds">{{#nationality.yourNationality}}{{nationality.yourNationality}}{{/nationality.yourNationality}}</p>
 </div>
 <div class="answered-question  ">
 <p class="question form-label-bold column-third">Do you live in England, Scotland or Wales?</p>
-<p class="show-answer column-two-thirds"></p>
+<p class="show-answer column-two-thirds">{{#nationality.livingUK}}{{nationality.livingUK}}{{/nationality.livingUK}}</p>
 </div>
 <div class="answered-question  ">
 <p class="question form-label-bold column-third">Country you live in</p>
-<p class="show-answer column-two-thirds"></p>
+<p class="show-answer column-two-thirds">{{#nationality.livingCountry}}{{nationality.livingCountry}}{{/nationality.livingCountry}}</p>
 </div>
 <div class="answered-question  ">
 <p class="question form-label-bold column-third">Have you been out of England, Scotland or Wales for more than a year in the last 3 years?</p>
-<p class="show-answer column-two-thirds"></p>
+<p class="show-answer column-two-thirds">{{#nationality.beenAbroad}}{{nationality.beenAbroad}}{{/nationality.beenAbroad}}</p>
 </div>
               <div class="column-two-thirds">
-                <a href="/pipDigital/user-data/nationality" class="button change-my-answer"
+                <a href="/pip11/nationality?edit=true" class="button change-my-answer"
                 aria-label="Change my answers for Nationality and where you live">
 Change my answers									</a>
               </div>
@@ -108,17 +107,17 @@ Change my answers									</a>
   data-close-text="Hide my answers" >Show my answers</a>
 </p>
 </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont js-hiddedn">
 <div class="answered-question  ">
 <p class="question form-label-bold column-third">Have you, or anyone in your family, ever claimed benefits or been paid a pension from any country outside of England, Wales or Scotland?</p>
-<p class="show-answer column-two-thirds"></p>
+<p class="show-answer column-two-thirds">{{#paymentsFromAbroad.benefitsAbroadPayment}}{{paymentsFromAbroad.benefitsAbroadPayment}}{{/paymentsFromAbroad.benefitsAbroadPayment}}</p>
 </div>
 <div class="answered-question  ">
 <p class="question form-label-bold column-third">Do you, or anyone in your family, work or pay insurance to any country outside of England, Wales or Scotland?</p>
-<p class="show-answer column-two-thirds"></p>
+<p class="show-answer column-two-thirds">{{#paymentsFromAbroad.payInsuranceAbroad}}{{paymentsFromAbroad.payInsuranceAbroad}}{{/paymentsFromAbroad.payInsuranceAbroad}}</p>
 </div>
               <div class="column-two-thirds">
-                <a href="/pipDigital/user-data/paymentsFromAbroad" class="button change-my-answer"
+                <a href="/pip11/paymentsFromAbroad?edit=true" class="button change-my-answer"
                 aria-label="Change my answers for Payments from abroad and working abroad">
 Change my answers									</a>
               </div>

@@ -1,135 +1,106 @@
-module.exports = {
-  bind : function (app) {
+module.exports = function(app){
 
-    app.get('/', function (req, res) {
-      res.render('index');
-    });
+   // session to forms
 
-    app.get('/examples/template-data', function (req, res) {
-      res.render('examples/template-data', { 'name' : 'Foo' });
-    });
+   app.get('/pip11/', function (req, res) {
+     res.render('pip11/apply');
+   });
 
-    // add your routes her
+   /*******************
+   Helper
+   *******************/
+   app.get('/pip11/helper', function (req, res) {
+       res.render('pip11/helper', {
+         helper : req.session['pip11-helper'],
+         'edit' : req.param('edit')
+       });
+   });
 
-    //Test journey for 'sandbox'
+   app.post('/pip11/helper', function (req, res) {
+     req.session['pip11-helper'] = req.body;
+     req.session['pip11-helper']['helper' + req.body.helper] = req.body.helper;
 
-    app.post('/test-post', function (req, res) {
+     if (req.param('edit')) {
+       res.redirect('pip11/check-and-change');
+     } else {
+       res.redirect('pip11/nationality');
+     }
+   });
 
+   /*******************
+   Nationality
+   *******************/
+   app.get('/pip11/nationality', function (req, res) {
+       res.render('pip11/nationality', {
+         nationality : req.session['pip11-nationality'],
+         'edit'      : req.param('edit')
+       });
+   });
 
-      res.render('sandbox/pip07',req.body);
-    });
+   app.post('/pip11/nationality', function (req, res) {
+     req.session['pip11-nationality'] = req.body;
+     req.session['pip11-nationality']['britishCitizen' + req.body.britishCitizen] = req.body.britishCitizen;
+     req.session['pip11-nationality']['livingUK' + req.body.livingUK]             = req.body.livingUK;
+     req.session['pip11-nationality']['beenAbroad' + req.body.beenAbroad]         = req.body.beenAbroad;
 
+     if (req.param('edit')) {
+       res.redirect('pip11/check-and-change');
+     } else {
+       res.redirect('pip11/paymentsFromAbroad');
+     }
+   });
 
+   /*******************
+   Payments from abroad
+   *******************/
+   app.get('/pip11/paymentsFromAbroad', function (req, res) {
+       res.render('pip11/paymentsFromAbroad', {
+         paymentsFromAbroad : req.session['pip11-paymentsFromAbroad'],
+         'edit'             : req.param('edit')
+       });
+   });
+   app.post('/pip11/paymentsFromAbroad', function (req, res) {
+     req.session['pip11-paymentsFromAbroad'] = req.body;
+     req.session['pip11-paymentsFromAbroad']['benefitsAbroadPayment' + req.body.benefitsAbroadPayment] = req.body.benefitsAbroadPayment;
+     req.session['pip11-paymentsFromAbroad']['payInsuranceAbroad' + req.body.payInsuranceAbroad]       = req.body.payInsuranceAbroad;
 
-    //Sprint 5 journey
+     if (req.param('edit')) {
+       res.redirect('pip11/check-and-change');
+     } else {
+       res.redirect('pip11/conditionDetails');
+     }
+   });
 
-    app.post('/pip5/preparing-food-more', function (req, res) {
+   /*******************
+   conditionDetails
+   *******************/
+   app.get('/pip11/conditionDetails', function (req, res) {
+       res.render('pip11/conditionDetails', {
+         paymentsFromAbroad : req.session['pip11-conditionDetails'],
+         'edit'             : req.param('edit')
+       });
+   });
+   app.post('/pip11/conditionDetails', function (req, res) {
+     req.session['pip11-conditionDetails'] = req.body;
+     //req.session['pip11-conditionDetails']['benefitsAbroadPayment' + req.body.benefitsAbroadPayment] = req.body.benefitsAbroadPayment;
+     //req.session['pip11-conditionDetails']['payInsuranceAbroad' + req.body.payInsuranceAbroad]       = req.body.payInsuranceAbroad;
 
-      res.render('pip5/preparing-food-more',req.body);
-    });
+     //console.log(JSON.stringify(req.session['pip11-conditionDetails']));
+     if (req.param('edit')) {
+       res.redirect('pip11/check-and-change');
+     } else {
+       res.redirect('pip11/conditionAffects');
+     }
+   });
 
-    app.post('/pip5/eating-drinking-more', function (req, res) {
-
-      res.render('pip5/eating-drinking-more',req.body);
-    });
-
-    app.post('/pip5/moving-around-more', function (req, res) {
-
-      res.render('pip5/moving-around-more',req.body);
-    });
-
-    app.post('/pip5/mixing-with-people-more', function (req, res) {
-
-      res.render('pip5/mixing-with-people-more',req.body);
-    });
-
-    app.post('/pip5/communicating-more', function (req, res) {
-
-      res.render('pip5/communicating-more',req.body);
-    });
-
-    app.post('/pip5/going-out-more', function (req, res) {
-
-      res.render('pip5/going-out-more',req.body);
-    });
-
-
-
-
-
-    app.post('/story-gen/preparing-food-more', function (req, res) {
-
-      res.render('story-gen/preparing-food-more',req.body);
-    });
-
-    app.post('/story-gen/eating-drinking-more', function (req, res) {
-
-      res.render('story-gen/eating-drinking-more',req.body);
-    });
-
-    app.post('/story-gen/moving-around-more', function (req, res) {
-
-      res.render('story-gen/moving-around-more',req.body);
-    });
-
-    app.post('/story-gen/mixing-with-people-more', function (req, res) {
-
-      res.render('story-gen/mixing-with-people-more',req.body);
-    });
-
-    app.post('/story-gen/comunicating-more', function (req, res) {
-
-      res.render('story-gen/communicating-more',req.body);
-    });
-
-    app.post('/story-gen/managing-treatments-more', function (req, res) {
-
-      res.render('story-gen/managing-treatments-more',req.body);
-    });
-
-    app.post('/story-gen/going-out-more', function (req, res) {
-
-      res.render('story-gen/going-out-more',req.body);
-    });
-
-    app.post('/story-gen/washing-bathing-more', function (req, res) {
-
-      res.render('story-gen/washing-bathing-more',req.body);
-    });
-
-    app.post('/story-gen/going-to-toilet-more', function (req, res) {
-
-      res.render('story-gen/going-to-toilet-more',req.body);
-    });
-
-    app.post('/story-gen/dressing-undressing-more', function (req, res) {
-
-      res.render('story-gen/dressing-undressing-more',req.body);
-    });
-
-    app.post('/story-gen/reading-more', function (req, res) {
-
-      res.render('story-gen/reading-more',req.body);
-    });
-
-    app.post('/story-gen/managing-money-more', function (req, res) {
-
-      res.render('story-gen/managing-money-more',req.body);
-    });
-
-    app.post('/pip11/hcp-condition', function(req, res) {
-      console.log(req)
-      res.render('/pip11/hcp-condition');
-    });
-
-    /* route for review */
-
-    require('./routes_review')(app);
-    require('./review_flow')(app);
-    require('./sprint6_1')(app);
-    require('./sprint7_1')(app);
-    require('./sprint8_1')(app);
-    require('./routes-pip10')(app);
-
-  }
+   /*******************
+   check and change
+   *******************/
+   app.get('/pip11/check-and-change', function (req, res) {
+     res.render('pip11/check-and-change', {
+       helper             : req.session['pip11-helper'],
+       nationality        : req.session['pip11-nationality'],
+       paymentsFromAbroad : req.session['pip11-paymentsFromAbroad']
+     });
+   });
 };

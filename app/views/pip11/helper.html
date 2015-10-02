@@ -11,6 +11,7 @@
 {{$headerClass}}with-proposition{{/headerClass}}
 
 {{$content}}
+
 <main id="content" role="main">
 
 	{{>includes/phase_banner}}
@@ -18,9 +19,9 @@
 	<div class="grid-row">
 		<div class="column-two-thirds">
 
-			<form action="nationality" method="#" class="form checkMyAnswers" data-question="helper">
+			<form action="helper{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="helper">
 
-				<a href="pip01" class="example-back-link">Back</a>
+				<a href="/pip11/apply" class="example-back-link">Back</a>
 
 				<!--div class="section-progress">
 				Step 1 of 17
@@ -30,6 +31,7 @@
           <h1 class="form-title heading-large">
             Help with your application </h1>
         </header>
+
 
         <ul>
           <li>
@@ -42,19 +44,17 @@
 
 
                 </legend>
-
-
                 <label class="block-label" for="helper-Yes" data-target="helperDetailsFields">
-                  <input id="helper-Yes" type="radio" name="helper" value="Yes" aria-controls="helperDetailsFields"> Yes
+                  <input id="helper-Yes" type="radio" name="helper" {{#helper.helperYes}}checked=checked{{/helper.helperYes}} value="Yes" aria-controls="helperDetailsFields"> Yes
                 </label>
                 <label class="block-label" for="helper-No">
-                  <input id="helper-No" type="radio" name="helper" value="No"> No
+                  <input id="helper-No" type="radio" name="helper" {{#helper.helperNo}}checked=checked{{/helper.helperNo}} value="No"> No
                 </label>
 
               </fieldset>
             </div>
 
-            <div class="panel-indent js-hidden" id="helperDetailsFields">
+            <div class="panel-indent {{^helper.helperYes}}js-hidden{{/helper.helperYes}}" id="helperDetailsFields">
               <ul>
                 <li>
                 </li>
@@ -62,13 +62,13 @@
 
                   <legend class="form-label">The name of the person helping you</legend>
                   <div class="form-group" id="form-group-name">
-                    <input type="text" class="form-control " id="name" name="name" value="">
+                    <input type="text" class="form-control " id="name"  name="name" value="{{#helper.name}}{{helper.name}}{{/helper.name}}">
                   </div>
                 </li>
                 <li class="form-group">
                   <legend class="form-label">Their relationship to you</legend>
                   <div class="form-group" id="form-group-relationship">
-                    <input type="text" class="form-control " id="relationship" name="relationship" value="">
+                    <input type="text" class="form-control " id="relationship" name="relationship" value="{{#helper.relationship}}{{helper.relationship}}{{/helper.relationship}}">
                   </div>
 
                 </li>
@@ -90,6 +90,8 @@
 	</div>
 
 </main><!-- / #page-container -->
+
+
 {{/content}}
 
 {{$bodyEnd}}

@@ -123,15 +123,19 @@ module.exports = {
 
     app.get('/pip11/emailtest', function (req, res) {
 
-      var sendgrid  = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD);
+      var sendgrid  = require('sendgrid')('app38093582@heroku.com', 'sjdylbcy8257');
+      //(process.env.SENDGRID_USERNAME, sjdylbcy8257);
+      var emailText = "test line 1" + "\n" +
+                      " test line 2<br />" +
+                      "test line 3";
       sendgrid.send({
         to:       'gup.dwp@gmail.com',
-        from:     'gup.dwp@gmail.com',
-        subject:  'Hello World',
-        text:     'My first email through SendGrid.'
+        from:     'app38093582@heroku.com',
+        subject:  'PIP User researhc --- Sept 30',
+        html:     emailText
       }, function(err, json) {
         if (err) { return console.error(err); }
-        console.log('error = ' + json);
+        console.error(json);
       });
       res.render('pip11/emailtest');
     });
@@ -143,7 +147,7 @@ module.exports = {
     require('./sprint6_1')(app);
     require('./sprint7_1')(app);
     require('./sprint8_1')(app);
-    require('./routes-pip10')(app);
+    require('./routes-pip11')(app);
 
   }
 };
