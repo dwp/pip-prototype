@@ -18,7 +18,7 @@
 	<div class="grid-row">
 		<div class="column-two-thirds">
 
-			<form action="seeing" method="#" class="form checkMyAnswers" data-question="gettingAround">
+			<form action="gettingAround{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="gettingAround">
         <a href="/pipDigital/user-data/specialAids" class="example-back-link">Back</a>
 
 
@@ -44,20 +44,20 @@
 
               </fieldset>
               </div>
-        							<div class="panel-indent js-hidden" id="details">
+        							<div class="panel-indent {{^frequency.frequency}}js-hidden{{/frequency.frequency}} {{#frequency.frequencyNone of the time}}js-hidden{{/frequency.frequencyNone of the time}}" id="details">
                 <div class="form-group">
         						<label class="form-label-bold" for="detailsWhy">
 
         Describe why your condition affects you getting around your home.
         						</label>
-        						<textarea class="form-control-3-4  " id="detailsWhy" name="detailsWhy"></textarea>
+        						<textarea class="form-control-3-4  " id="detailsWhy" name="detailsWhy">{{#frequency.detailsWhy}}{{frequency.detailsWhy}}{{/frequency.detailsWhy}}</textarea>
         		</div>
                 <div class="form-group">
         						<label class="form-label-bold" for="detailsHow">
 
         Describe how you get around your home at the moment.
         						</label>
-        						<textarea class="form-control-3-4  " id="detailsHow" name="detailsHow"></textarea>
+        						<textarea class="form-control-3-4  " id="detailsHow" name="detailsHow">{{#frequency.detailsHow}}{{frequency.detailsHow}}{{/frequency.detailsHow}}</textarea>
         		</div>
         							</div>
         						</li>

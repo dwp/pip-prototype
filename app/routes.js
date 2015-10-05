@@ -112,14 +112,14 @@ module.exports = {
       res.render('story-gen/managing-money-more',req.body);
     });
 
-
+/*
     app.get('/pip11/healthcareprofessional', function (req, res) {
       if(req.query.monitored === 'Yes') {
         res.render('pip11/hcp-condition-2');
       } else {
         res.render('pip11/healthcareprofessional');
       }
-    });
+    });*/
 
     app.get('/pip11/emailtest', function (req, res) {
 

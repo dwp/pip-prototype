@@ -37,25 +37,25 @@
            </legend>
 
            <label class="block-label" for="pip.radio.allthetime.id" data-target="details">
-           <input id="pip.radio.allthetime.id" type="radio" name="frequency" value="All the time" aria-controls="details">
+           <input id="pip.radio.allthetime.id" type="radio" name="frequency" value="Everytime I get out of bed" {{#frequency.frequencyEverytime I get out of bed}}checked=checked{{/frequency.frequencyEverytime I get out of bed}} aria-controls="details">
            Everytime I get out of bed
            </label>
            <label class="block-label" for="pip.radio.morethanhalf.id" data-target="details">
-           <input id="pip.radio.morethanhalf.id" type="radio" name="frequency" value="More than half the time" aria-controls="details">
+           <input id="pip.radio.morethanhalf.id" type="radio" name="frequency" value="More than half the time" {{#frequency.frequencyMore than half the time}}checked=checked{{/frequency.frequencyMore than half the time}} aria-controls="details">
            More than half the time
            </label>
            <label class="block-label" for="pip.radio.lessthanhalf.id" data-target="details">
-           <input id="pip.radio.lessthanhalf.id" type="radio" name="frequency" value="Less than half the time" aria-controls="details">
+           <input id="pip.radio.lessthanhalf.id" type="radio" name="frequency" value="Less than half the time" {{#frequency.frequencyLess than half the time}}checked=checked{{/frequency.frequencyLess than half the time}} aria-controls="details">
            Less than half the time
            </label>
            <label class="block-label" for="pip.radio.noneofthetime.id">
-           <input id="pip.radio.noneofthetime.id" type="radio" name="frequency" value="None of the time">
+           <input id="pip.radio.noneofthetime.id" type="radio" name="frequency" value="None of the time"  {{#frequency.frequencyNone of the time}}checked=checked{{/frequency.frequencyNone of the time}}>
            None of the time
            </label>
            <p class="form-block">or</p>
 
            <label class="block-label" for="pip.radio.own-words.id" data-target="own-words">
-           <input id="pip.radio.own-words.id" type="radio" name="frequency" value="More than half the time" aria-controls="details">
+           <input id="pip.radio.own-words.id" type="radio" name="frequency" value="Tell us how often in your own words"  {{#frequency.frequencyTell us how often in your own words}}checked=checked{{/frequency.frequencyTell us how often in your own words}} aria-controls="details">
            Tell us how often in your own words
            </label>
 
@@ -65,14 +65,14 @@
          <div class="panel-indent js-hidden" id="own-words">
            <div class="form-group">
              <label class="form-label-bold" for="ownWords">How often your condition affects you getting up and out of bed.</label>
-             <input type="text" class="form-control" id="ownWords" name="ownWords"/>
+             <input type="text" class="form-control" id="ownWords" name="ownWords" value="{{#frequency.ownWords}}{{frequency.ownWords}}{{/frequency.ownWords}}"/>
            </div>
            <div class="form-group">
    						<label class="form-label-bold" for="detailsWhy">
 
    Describe why your condition affects you getting up and out of bed.
    						</label>
-   						<textarea class="form-control-3-4  " id="detailsWhy" name="detailsWhy"></textarea>
+   						<textarea class="form-control-3-4  " id="detailsWhy" name="ownWordsDetailsWhy">{{#frequency.ownWordsDetailsWhy}}{{frequency.ownWordsDetailsWhy}}{{/frequency.ownWordsDetailsWhy}}</textarea>
    		</div>
            <div class="form-group">
    						<label class="form-label-bold" for="detailsHow">
@@ -80,7 +80,7 @@
    Describe how you get up and out of bed at the moment.
    <p class="form-hint">If you dont get out of bed, tell us why.</p>
    						</label>
-   						<textarea class="form-control-3-4  " id="detailsHow" name="detailsHow"></textarea>
+   						<textarea class="form-control-3-4  " id="detailsHow" name="ownWordsDetailsHow">{{#frequency.ownWordsDetailsHow}}{{frequency.ownWordsDetailsHow}}{{/frequency.ownWordsDetailsHow}}</textarea>
    		</div>
          </div>
    						<div class="panel-indent js-hidden" id="details">
@@ -89,7 +89,7 @@
 
    Describe why your condition affects you getting up and out of bed.
    						</label>
-   						<textarea class="form-control-3-4  " id="detailsWhy" name="detailsWhy"></textarea>
+   						<textarea class="form-control-3-4  " id="detailsWhy" name="detailsWhy">{{#frequency.detailsWhy}}{{frequency.detailsWhy}}{{/frequency.detailsWhy}}</textarea>
    		</div>
            <div class="form-group">
    						<label class="form-label-bold" for="detailsHow">
@@ -97,7 +97,7 @@
    Describe how you get up and out of bed at the moment.
    <p class="form-hint">If you dont get out of bed, tell us why.</p>
    						</label>
-   						<textarea class="form-control-3-4  " id="detailsHow" name="detailsHow"></textarea>
+   						<textarea class="form-control-3-4  " id="detailsHow" name="detailsHow">{{#frequency.detailsHow}}{{frequency.detailsHow}}{{/frequency.detailsHow}}</textarea>
    		</div>
    						</div>
    					</li>

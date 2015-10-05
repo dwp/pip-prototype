@@ -18,7 +18,7 @@
 <div class="grid-row">
   <div class="column-two-thirds">
 
-    <form action="healthcareprofessional" method="#" class="form checkMyAnswers" data-question="hcp-condition">
+    <form action="hcp-condition{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="hcp-condition">
 
       <a href="/pipDigital/activities/outAndAbout" class="example-back-link">Back</a>
 
@@ -34,11 +34,11 @@
           </legend>
           <div class="form-group form-group-compound">
             <label class="block-label"  for="radio-indent-1">
-              <input id="radio-indent-1" type="radio" name="monitored" value="Yes">
+              <input id="radio-indent-1" type="radio" name="monitored" {{#hcpcondition.monitoredYes}}checked=checked{{/hcpcondition.monitoredYes}} value="Yes">
               Yes
             </label>
             <label class="block-label" for="radio-indent-2">
-              <input id="radio-indent-2" type="radio" name="monitored" value="No">
+              <input id="radio-indent-2" type="radio" name="monitored" {{#hcpcondition.monitoredNo}}checked=checked{{/hcpcondition.monitoredNo}} value="No">
               No
             </label>
           </div>
