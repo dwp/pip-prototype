@@ -122,12 +122,13 @@ module.exports = {
     });*/
 
     app.get('/pip11/emailtest', function (req, res) {
+      var toilet = req.session['pip11-toilet'];
 
       var sendgrid  = require('sendgrid')('app38093582@heroku.com', 'sjdylbcy8257');
       //(process.env.SENDGRID_USERNAME, sjdylbcy8257);
       var emailText = "test line 1" + "\n" +
                       " test line 2<br />" +
-                      "test line 3";
+                      "test line 3<br />" + toilet;
       sendgrid.send({
         to:       'gup.dwp@gmail.com',
         from:     'app38093582@heroku.com',
@@ -137,7 +138,36 @@ module.exports = {
         if (err) { return console.error(err); }
         console.error(json);
       });
-      res.render('pip11/emailtest');
+      res.render('pip11/emailtest', {
+        helper                        : req.session['pip11-helper'],
+        nationality                   : req.session['pip11-nationality'],
+        paymentsFromAbroad            : req.session['pip11-paymentsFromAbroad'],
+        conditionDetails              : req.session['pip11-conditionDetails'],
+        conditioneffects              : req.session['pip11-conditioneffects'],
+        hcpcondition                  : req.session['pip11-hcp-condition'],
+        hcpcondition2                 : req.session['pip11-hcp-condition-2'],
+        healthcareprofessional        : req.session['pip11-healthcareprofessional'],
+        submitEvidence                : req.session['pip11-submitEvidence'],
+        specialAids                   : req.session['pip11-specialAids'],
+        gettingAround                 : req.session['pip11-gettingAround'],
+        seeing                        : req.session['pip11-seeing'],
+        hearing                       : req.session['pip11-hearing'],
+        speaking                      : req.session['pip11-speaking'],
+        gettingUp                     : req.session['pip11-gettingUp'],
+        toilet                        : req.session['pip11-toilet'],
+        washing                       : req.session['pip11-washing'],
+        gettingDressed                : req.session['pip11-gettingDressed'],
+        preparingandcookingfood       : req.session['pip11-preparingandcookingfood'],
+        eatinganddrinking             : req.session['pip11-eatinganddrinking'],
+        goingOut                      : req.session['pip11-goingOut'],
+        outAndAbout                   : req.session['pip11-outAndAbout'],
+        gettingOn                     : req.session['pip11-gettingOn'],
+        goingSomewhereNeverbeenBefore : req.session['pip11-goingSomewhereNeverbeenBefore'],
+        goingSomewherebeenBefore      : req.session['pip11-goingSomewherebeenBefore'],
+        understandingq                : req.session['pip11-understanding-q'],
+        money                         : req.session['pip11-money'],
+        additionalInfo                : req.session['pip11-additionalInfo']
+      });
     });
 
     /* route for review */

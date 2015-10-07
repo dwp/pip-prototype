@@ -448,10 +448,153 @@ module.exports = function(app){
       if (req.param('edit')) {
         res.redirect('pip11/check-and-change');
       } else {
-        res.redirect('pip11/goingOut');
+        res.redirect('pip11/outAndAbout');
       }
     });
 
+    /*******************
+    outAndAbout **todo
+    *******************/
+    app.get('/pip11/outAndAbout', function (req, res) {
+        res.render('pip11/outAndAbout', {
+          frequency : req.session['pip11-outAndAbout'],
+          'edit'    : req.param('edit')
+        });
+    });
+
+    app.post('/pip11/outAndAbout', function (req, res) {
+      req.session['pip11-outAndAbout'] = req.body;
+      req.session['pip11-outAndAbout']['outAndAbout' + req.body.frequency] = req.body.frequency;
+
+      if (req.param('edit')) {
+        res.redirect('pip11/check-and-change');
+      } else {
+        res.redirect('pip11/gettingOn');
+      }
+    });
+
+    /*******************
+    gettingOn **todo
+    *******************/
+    app.get('/pip11/gettingOn', function (req, res) {
+        res.render('pip11/gettingOn', {
+          frequency : req.session['pip11-gettingOn'],
+          'edit'    : req.param('edit')
+        });
+    });
+
+    app.post('/pip11/gettingOn', function (req, res) {
+      req.session['pip11-gettingOn'] = req.body;
+      req.session['pip11-gettingOn']['gettingOn' + req.body.frequency] = req.body.frequency;
+
+      if (req.param('edit')) {
+        res.redirect('pip11/check-and-change');
+      } else {
+        res.redirect('pip11/understanding');
+      }
+    });
+
+    /*******************
+    goingSomewhereNeverbeenBefore **todo
+    *******************/
+    app.get('/pip11/goingSomewhereNeverbeenBefore', function (req, res) {
+        res.render('pip11/goingSomewhereNeverbeenBefore', {
+          frequency : req.session['pip11-goingSomewhereNeverbeenBefore'],
+          'edit'    : req.param('edit')
+        });
+    });
+
+    app.post('/pip11/goingSomewhereNeverbeenBefore', function (req, res) {
+      req.session['pip11-goingSomewhereNeverbeenBefore'] = req.body;
+      req.session['pip11-goingSomewhereNeverbeenBefore']['goingSomewhereNeverbeenBefore' + req.body.frequency] = req.body.frequency;
+
+      if (req.param('edit')) {
+        res.redirect('pip11/check-and-change');
+      } else {
+        res.redirect('pip11/goingSomewherebeenBefore');
+      }
+    });
+
+    /*******************
+    goingSomewherebeenBefore **todo
+    *******************/
+    app.get('/pip11/goingSomewherebeenBefore', function (req, res) {
+        res.render('pip11/goingSomewherebeenBefore', {
+          frequency : req.session['pip11-goingSomewherebeenBefore'],
+          'edit'    : req.param('edit')
+        });
+    });
+
+    app.post('/pip11/goingSomewherebeenBefore', function (req, res) {
+      req.session['pip11-goingSomewherebeenBefore'] = req.body;
+      req.session['pip11-goingSomewherebeenBefore']['goingSomewherebeenBefore' + req.body.frequency] = req.body.frequency;
+
+      if (req.param('edit')) {
+        res.redirect('pip11/check-and-change');
+      } else {
+        res.redirect('pip11/understanding-q');
+      }
+    });
+
+    /*******************
+    understanding-q **todo
+    *******************/
+    app.get('/pip11/understanding-q', function (req, res) {
+        res.render('pip11/understanding-q', {
+          frequency : req.session['pip11-understanding-q'],
+          'edit'    : req.param('edit')
+        });
+    });
+
+    app.post('/pip11/understanding-q', function (req, res) {
+      req.session['pip11-understanding-q'] = req.body;
+      req.session['pip11-understanding-q']['understanding-q' + req.body.frequency] = req.body.frequency;
+
+      if (req.param('edit')) {
+        res.redirect('pip11/check-and-change');
+      } else {
+        res.redirect('pip11/money');
+      }
+    });
+
+    /*******************
+    money **todo
+    *******************/
+    app.get('/pip11/money', function (req, res) {
+        res.render('pip11/money', {
+          frequency : req.session['pip11-money'],
+          'edit'    : req.param('edit')
+        });
+    });
+
+    app.post('/pip11/money', function (req, res) {
+      req.session['pip11-money'] = req.body;
+      req.session['pip11-money']['money' + req.body.frequency] = req.body.frequency;
+
+      if (req.param('edit')) {
+        res.redirect('pip11/check-and-change');
+      } else {
+        res.redirect('pip11/additionalInfo');
+      }
+    });
+
+    /*******************
+    additionalInfo **todo
+    *******************/
+    app.get('/pip11/additionalInfo', function (req, res) {
+        res.render('pip11/additionalInfo', {
+          frequency : req.session['pip11-additionalInfo'],
+          'edit'    : req.param('edit')
+        });
+    });
+
+    app.post('/pip11/additionalInfo', function (req, res) {
+      req.session['pip11-additionalInfo'] = req.body;
+      req.session['pip11-additionalInfo']['additionalInfo' + req.body.frequency] = req.body.frequency;
+
+      res.redirect('pip11/check-and-change');
+
+    });
 
 
    /*******************
@@ -459,27 +602,34 @@ module.exports = function(app){
    *******************/
    app.get('/pip11/check-and-change', function (req, res) {
      res.render('pip11/check-and-change', {
-       helper                  : req.session['pip11-helper'],
-       nationality             : req.session['pip11-nationality'],
-       paymentsFromAbroad      : req.session['pip11-paymentsFromAbroad'],
-       conditionDetails        : req.session['pip11-conditionDetails'],
-       conditioneffects        : req.session['pip11-conditioneffects'],
-       hcpcondition            : req.session['pip11-hcp-condition'],
-       hcpcondition2           : req.session['pip11-hcp-condition-2'],
-       healthcareprofessional  : req.session['pip11-healthcareprofessional'],
-       submitEvidence          : req.session['pip11-submitEvidence'],
-       specialAids             : req.session['pip11-specialAids'],
-       gettingAround           : req.session['pip11-gettingAround'],
-       seeing                  : req.session['pip11-seeing'],
-       hearing                 : req.session['pip11-hearing'],
-       speaking                : req.session['pip11-speaking'],
-       gettingUp               : req.session['pip11-gettingUp'],
-       toilet                  : req.session['pip11-toilet'],
-       washing                 : req.session['pip11-washing'],
-       gettingDressed          : req.session['pip11-gettingDressed'],
-       preparingandcookingfood : req.session['pip11-preparingandcookingfood'],
-       eatinganddrinking       : req.session['pip11-eatinganddrinking'],
-       goingOut                : req.session['pip11-goingOut']
+       helper                        : req.session['pip11-helper'],
+       nationality                   : req.session['pip11-nationality'],
+       paymentsFromAbroad            : req.session['pip11-paymentsFromAbroad'],
+       conditionDetails              : req.session['pip11-conditionDetails'],
+       conditioneffects              : req.session['pip11-conditioneffects'],
+       hcpcondition                  : req.session['pip11-hcp-condition'],
+       hcpcondition2                 : req.session['pip11-hcp-condition-2'],
+       healthcareprofessional        : req.session['pip11-healthcareprofessional'],
+       submitEvidence                : req.session['pip11-submitEvidence'],
+       specialAids                   : req.session['pip11-specialAids'],
+       gettingAround                 : req.session['pip11-gettingAround'],
+       seeing                        : req.session['pip11-seeing'],
+       hearing                       : req.session['pip11-hearing'],
+       speaking                      : req.session['pip11-speaking'],
+       gettingUp                     : req.session['pip11-gettingUp'],
+       toilet                        : req.session['pip11-toilet'],
+       washing                       : req.session['pip11-washing'],
+       gettingDressed                : req.session['pip11-gettingDressed'],
+       preparingandcookingfood       : req.session['pip11-preparingandcookingfood'],
+       eatinganddrinking             : req.session['pip11-eatinganddrinking'],
+       goingOut                      : req.session['pip11-goingOut'],
+       outAndAbout                   : req.session['pip11-outAndAbout'],
+       gettingOn                     : req.session['pip11-gettingOn'],
+       goingSomewhereNeverbeenBefore : req.session['pip11-goingSomewhereNeverbeenBefore'],
+       goingSomewherebeenBefore      : req.session['pip11-goingSomewherebeenBefore'],
+       understandingq                : req.session['pip11-understanding-q'],
+       money                         : req.session['pip11-money'],
+       additionalInfo                : req.session['pip11-additionalInfo']
      });
    });
 };
