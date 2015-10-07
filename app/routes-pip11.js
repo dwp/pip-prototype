@@ -633,7 +633,7 @@ module.exports = function(app){
      });
    });
 
-   app.get('/pip11/emailtest', function (req, res) {
+   app.post('/pip11/check-and-change', function (req, res) {
 
      var sendgrid  = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD),
          date      = new Date(),
@@ -693,16 +693,16 @@ module.exports = function(app){
          '<hr />' +
          '<b>additionalInfo</b>'                + JSON.stringify(req.session['pip11-additionalInfo'], null, " <br/>");
      sendgrid.send({
-       //joe.chapman@dwp.gsi.gov.uk
+       //to :       'gup.dwp@gmail.com',
        to:       process.env.EMAIL,
        from:     'PIP-User-Research@UserResearch.com',
        subject:  'Sent at - ' + date.toString(),
        html:     emailText
      }, function(err, json) {
        if (err) { return console.error(err); }
-       console.error(json);
+       //console.error(json);
      });
-     res.render('pip11/emailtest');
+     res.redirect('pip11/declaration');
    });
 
 
