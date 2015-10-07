@@ -30,44 +30,45 @@
             <div class="form-group" id="form-group-frequency">
               <fieldset>
                 <legend class="form-label-bold" id="frequency" for="frequency">
-                  <span class="frequency-question">Does your condition affect you preparing or cooking a hot meal from scratch?</span>
+                  <span class="frequency-question">Does your condition affect you preparing or cooking a hot meal from fresh ingredients?</span>
 
-                  <p class="form-hint">This includes if you need someone to remind you to make a meal, supervise you or cook for you.</p>
+                  <p class="form-hint">This includes if you find any part difficult or if you rely on someone to remind you to make a meal, supervise you or cook for you.</p>
 
                 </legend>
 
                 {{>includes/pages/variability}}
 
+
               </fieldset>
             </div>
 
             <div class="panel-indent {{^frequency.frequency}}js-hidden{{/frequency.frequency}} {{#frequency.frequencyNone of the time}}js-hidden{{/frequency.frequencyNone of the time}}" id="details">
+              <div id="how-often" class="form-group js-hidden">
+                <label class="form-label-bold" for="ownWords">How often your condition affects you preparing or cooking a hot meal from fresh ingredients?</label>
+                <input type="text" class="form-control" id="ownWords" name="ownWords" value="{{#frequency.ownWords}}{{frequency.ownWords}}{{/frequency.ownWords}}" />
+              </div>
               <fieldset class="form-group">
                 <legend class="form-label-bold">What do you have difficulty with?</legend>
                 <p>Select all that apply</p>
                 <label class="block-label" for="waste-type-1">
-                  <input id="waste-type-1" name="preparingandcookingfood-difficulty" type="checkbox" value="Chopping veg">
-                  Chopping veg
+                  <input id="waste-type-1" name="preparingandcookingfood-difficulty" type="checkbox" value="chopping or peeling">
+                  chopping or peeling
                 </label>
                 <label class="block-label" for="waste-type-2">
-                  <input id="waste-type-2" name="preparingandcookingfood-difficulty" type="checkbox" value="Turning on taps">
-                  Turning on taps
-                </label>
-                <label class="block-label" for="waste-type-3">
-                  <input id="waste-type-3" name="preparingandcookingfood-difficulty" type="checkbox" value="Lifting pans">
-                  Lifting pans
+                  <input id="waste-type-2" name="preparingandcookingfood-difficulty" type="checkbox" value="turning on taps">
+                  turning on taps
                 </label>
                 <label class="block-label" for="waste-type-4">
-                  <input id="waste-type-4" name="preparingandcookingfood-difficulty" type="checkbox" value="Forgetting what you are doing">
-                  Forgetting what you are doing
+                  <input id="waste-type-4" name="preparingandcookingfood-difficulty" type="checkbox" value="using a hob or microwave">
+                  using a hob or microwave
+                </label>
+                <label class="block-label" for="waste-type-3">
+                  <input id="waste-type-3" name="preparingandcookingfood-difficulty" type="checkbox" value="lifting pans">
+                  lifting pans
                 </label>
                 <label class="block-label" for="waste-type-5">
-                  <input id="waste-type-5" name="preparingandcookingfood-difficulty" type="checkbox" value="Remembering times">
-                  Remembering times
-                </label>
-                <label class="block-label" for="waste-type-6">
-                  <input id="waste-type-6" name="preparingandcookingfood-difficulty" type="checkbox" value="Opening cans or jars">
-                  Opening cans or jars
+                  <input id="waste-type-5" name="preparingandcookingfood-difficulty" type="checkbox" value="putting food on a plate">
+                  putting food on a plate
                 </label>
                 <label class="block-label" for="waste-type-7" data-target="other">
                   <input id="waste-type-7" name="preparingandcookingfood-difficulty" type="checkbox" value="Other">
@@ -82,6 +83,19 @@
 
                   Describe why your condition affects you preparing or cooking a hot meal from scratch.
                 </label>
+                <details class="help-text">
+                  <summary><span class="summary">What to include in your answer</span></summary>
+                  <div class="panel-indent">
+                    <p>
+                      Include as much information as you can, such as:
+                    </p>
+                    <ul class="list-bullet">
+                      <li>if you risk hurting yourself or having an accident when you’re preparing or cooking a hot meal</li>
+                      <li>how you feel during and after you’ve done it </li>
+                      <li>if you can do it as often as you need to, or if it depends on what kind of day you're having </li>
+                    </ul>
+                  </div>
+                </details>
                 <textarea class="form-control-3-4  " id="detailsWhy" name="detailsWhy">{{#frequency.detailsWhy}}{{frequency.detailsWhy}}{{/frequency.detailsWhy}}</textarea>
               </div>
               <div class="form-group">
@@ -89,6 +103,20 @@
 
                   Describe how you cook and prepare a hot meal from scratch at the moment.
                 </label>
+                <details class="help-text">
+                  <summary><span class="summary">What to include in your answer</span></summary>
+                  <div class="panel-indent">
+                    <p>
+                      Include as much information as you can, such as:
+                    </p>
+                    <ul class="list-bullet">
+                      <li>roughly how long it takes to prepare or cook a hot meal  </li>
+                      <li>if you can prepare and cook all parts of the meal, or if you can do some parts but not others</li>
+                      <li>if you rely on any aids or adaptations for any part of it</li>
+                      <li>if you rely on someone to remind you to make a meal, supervise you or cook for you</li>
+                    </ul>
+                  </div>
+                </details>
                 <textarea class="form-control-3-4  " id="detailsHow" name="detailsHow">{{#frequency.detailsHow}}{{frequency.detailsHow}}{{/frequency.detailsHow}}</textarea>
               </div>
             </div>

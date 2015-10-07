@@ -232,7 +232,13 @@ $(document).ready(function() {
   		return false;
   	});
 
-		$('#help-link').click(function(){
+		$('#help-link, .example-back-link').click(function(){
 			return false;
 		});
+
+		$("input[type='radio']").click(function() {
+		if($(this).val() === 'Tell us how often in your own words') {
+		$('#how-often').show()
+		} else {$('#how-often').hide()}
+		})
 });

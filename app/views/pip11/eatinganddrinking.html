@@ -37,6 +37,10 @@
               </fieldset>
               </div>
         						<div class="panel-indent {{^frequency.frequency}}js-hidden{{/frequency.frequency}} {{#frequency.frequencyNone of the time}}js-hidden{{/frequency.frequencyNone of the time}}" id="details">
+                      <div id="how-often" class="form-group js-hidden">
+                        <label class="form-label-bold" for="ownWords">How often your condition affects you eating or drinking?</label>
+                        <input type="text" class="form-control" id="ownWords" name="ownWords" value="{{#frequency.ownWords}}{{frequency.ownWords}}{{/frequency.ownWords}}" />
+                      </div>
                 <div class="form-group">
         						<label class="form-label-bold" for="detailsWhy">
 
