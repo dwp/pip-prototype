@@ -634,6 +634,7 @@ module.exports = function(app){
    });
 
    app.post('/pip11/check-and-change', function (req, res) {
+
      var sendgrid  = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD),
          date      = new Date(),
          emailText = '<b>helper</b>'            + JSON.stringify(req.session['pip11-helper'], null, " <br/>") +
