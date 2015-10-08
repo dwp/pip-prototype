@@ -700,7 +700,7 @@ module.exports = function(app){
        html:     emailText
      }, function(err, json) {
        if (err) { return console.error(err); }
-       console.error(json);
+       //console.error(json);
      });
      res.redirect('pip11/declaration');
    });
