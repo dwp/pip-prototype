@@ -173,7 +173,7 @@ Check and change
 ********************/
 
 .check-and-change > li {
-	border:1px solid #dee0e2;
+	border-bottom:1px solid #dee0e2;
 	float:left;
 	margin-bottom:10px;
 	padding-top:15px;
@@ -194,7 +194,7 @@ Check and change
 }
 
 .show-all {
-  margin-left:0px;
+  margin-left:-3px;
 }
 
 .question {
@@ -234,7 +234,6 @@ margin-right: 0;
 		margin-left:-13px;
 		width:100%;
 	}
-
 }
 
 
@@ -245,4 +244,8 @@ margin-right: 0;
 
 .help-text .list-bullet {
   margin-bottom:0;
+}
+
+.form-control {
+  border:1px solid #6F777B;
 }

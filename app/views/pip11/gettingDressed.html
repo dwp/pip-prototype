@@ -52,7 +52,7 @@
                 </label>
                 <p class="form-block">or</p>
 
-                <label class="block-label" for="pip.radio.own-words.id" data-target="own-words">
+                <label class="block-label" for="pip.radio.own-words.id" data-target="details">
                   <input id="pip.radio.own-words.id" type="radio" name="frequency" value="Tell us how often in your own words" {{#frequency.frequencyTell us how often in your own words}}checked=checked{{/frequency.frequencyTell us how often in your own words}} aria-controls="details">
                   Tell us how often in your own words
                 </label>
@@ -60,45 +60,85 @@
 
               </fieldset>
             </div>
-            <div class="panel-indent js-hidden" {{#frequency.frequencyTell us how often in your own words}}style="display:block;"{{/frequency.frequencyTell us how often in your own words}} id="own-words">
-              <div class="form-group">
+            <div class="panel-indent js-hidden"  id="details">
+              <div  id="how-often" class="form-group js-hidden">
                 <label class="form-label-bold" for="ownWords">How often your condition affects you getting dressed.</label>
                 <input type="text" class="form-control" id="ownWords" value="{{#frequency.ownWords}}{{frequency.ownWords}}{{/frequency.ownWords}}" name="ownWords" />
               </div>
+              <fieldset class="form-group">
+                <legend class="form-label-bold">What do you have difficulty with?</legend>
+                <p>Select as many as you need</p>
+                <label class="block-label" for="waste-type-1">
+                  <input id="waste-type-1" name="gettingDressed-difficulty" type="checkbox" value="shoes or socks">
+                  shoes or socks
+                </label>
+                <label class="block-label" for="waste-type-2">
+                  <input id="waste-type-2" name="gettingDressed-difficulty" type="checkbox" value="shoe laces">
+                  shoe laces
+                </label>
+                <label class="block-label" for="waste-type-4">
+                  <input id="waste-type-4" name="gettingDressed-difficulty" type="checkbox" value="buttons or zips">
+                  buttons or zips
+                </label>
+                <label class="block-label" for="waste-type-3">
+                  <input id="waste-type-3" name="gettingDressed-difficulty" type="checkbox" value="bra’s">
+                  bra’s
+                </label>
+                <label class="block-label" for="waste-type-5">
+                  <input id="waste-type-5" name="gettingDressed-difficulty" type="checkbox" value="trousers or shorts">
+                  trousers or shorts
+                </label>
+                <label class="block-label" for="waste-type-6">
+                  <input id="waste-type-6" name="gettingDressed-difficulty" type="checkbox" value="choosing suitable clothes,eg. for the weather">
+                  choosing suitable clothes,eg. for the weather
+                </label>
+                <label class="block-label" for="waste-type-7" data-target="other">
+                  <input id="waste-type-7" name="gettingDressed-difficulty" type="checkbox" value="Other">
+                  other
+                </label>
+                <div class="panel-indent js-hidden" id="other">
+                  <input class="form-control" type="text" id="nationalities-other-country" name="other-difficulty">
+                </div>
+              </fieldset>
+
               <div class="form-group">
                 <label class="form-label-bold" for="ownWordsDetailsWhy">
-
-                  Describe why your condition affects you getting dressed.
+                  Describe why your condition makes it difficult to get dressed.
                 </label>
+                <details class="help-text">
+                  <summary><span class="summary">What to include in your answer</span></summary>
+                  <div class="panel-indent">
+                    <p>
+                      Include as much information as you can, such as:
+                    </p>
+                    <ul class="list-bullet">
+                      <li>if you risk hurting yourself or having an accident when you’re getting dressed</li>
+                      <li>if you get any side-effects from getting dressed</li>
+                      <li>if you can get dressed as often as you need to, or if it depends on what kind of day you're having </li>
+                    </ul>
+                  </div>
+                </details>
                 <textarea class="form-control-3-4  " id="ownWordsDetailsWhy" name="ownWordsDetailsWhy">{{#frequency.ownWordsDetailsWhy}}{{frequency.ownWordsDetailsWhy}}{{/frequency.ownWordsDetailsWhy}}</textarea>
               </div>
               <div class="form-group">
                 <label class="form-label-bold" for="ownWordsDetailsHow">
-
                   Describe how you get dressed at the moment.
-                  <p class="form-hint">If you don't get dressed, tell us why.</p>
                 </label>
+                <details class="help-text">
+                  <summary><span class="summary">What to include in your answer</span></summary>
+                  <div class="panel-indent">
+                    <p>
+                      Include as much information as you can, such as:
+                    </p>
+                    <ul class="list-bullet">
+                      <li>roughly how long it takes you to get dressed</li>
+                      <li>if you can do some parts but not others</<li>
+                      <li>if you rely on any aids or adaptations</li>
+                      <li>if you rely on someone to help you, supervise you or encourage you to get dressed</li>
+                    </ul>
+                  </div>
+                </details>
                 <textarea class="form-control-3-4  " id="ownWordsDetailsHow" name="ownWordsDetailsHow">{{#frequency.ownWordsDetailsHow}}{{frequency.ownWordsDetailsHow}}{{/frequency.ownWordsDetailsHow}}</textarea>
-              </div>
-            </div>
-            <div class="panel-indent
-            {{^frequency.frequency}}js-hidden{{/frequency.frequency}}
-            {{#frequency.frequencyNone of the time}} js-hidden{{/frequency.frequencyNone of the time}}
-            {{#frequency.frequencyTell us how often in your own words}}js-hidden{{/frequency.frequencyTell us how often in your own words}}" id="details">
-              <div class="form-group">
-                <label class="form-label-bold" for="detailsWhy">
-
-                  Describe why your condition affects you getting dressed.
-                </label>
-                <textarea class="form-control-3-4  " id="detailsWhy" name="detailsWhy">{{#frequency.detailsWhy}}{{frequency.detailsWhy}}{{/frequency.detailsWhy}}</textarea>
-              </div>
-              <div class="form-group">
-                <label class="form-label-bold" for="detailsHow">
-
-                  Describe how you get dressed at the moment.
-                  <p class="form-hint">If you don't get dressed, tell us why.</p>
-                </label>
-                <textarea class="form-control-3-4  " id="detailsHow" name="detailsHow">{{#frequency.detailsHow}}{{frequency.detailsHow}}{{/frequency.detailsHow}}</textarea>
               </div>
             </div>
           </li>

@@ -29,11 +29,8 @@
               <fieldset>
                 <legend class="form-label-bold" id="frequency" for="frequency">
                   <span class="frequency-question">Does your condition affect you using the toilet?</span>
-
-                  <p class="form-hint">This includes if you're incontinent, if you find any part particularly difficult, or if you rely on someone to help you.</p>
-
+                  <p class="form-hint">This includes if you’re incontinent, have difficulty getting on or off the toilet or if you rely on someone to help or remind you.</p>
                 </legend>
-
 
                 <label class="block-label" for="pip.radio.allthetime.id" data-target="details">
                   <input id="pip.radio.allthetime.id" type="radio" name="frequency" value="At least once a day" {{#frequency.frequencyAt least once a day}}checked=checked{{/frequency.frequencyAt least once a day}} aria-controls="details"> At least once a day
@@ -49,51 +46,88 @@
                 </label>
                 <p class="form-block">or</p>
 
-                <label class="block-label" for="pip.radio.own-words.id" data-target="own-words">
+                <label class="block-label" for="pip.radio.own-words.id" data-target="details">
                   <input id="pip.radio.own-words.id" type="radio" name="frequency" value="Tell us how often in your own words" {{#frequency.frequencyTell us how often in your own words}}checked=checked{{/frequency.frequencyTell us how often in your own words}} aria-controls="details"> Tell us how often in your own words
                 </label>
 
               </fieldset>
             </div>
-            <div class="panel-indent js-hidden" {{#frequency.frequencyTell us how often in your own words}}style="display:block;"{{/frequency.frequencyTell us how often in your own words}} id="own-words">
-              <div class="form-group">
-                <label class="form-label-bold" for="ownWords">How often your condition affects you going to the toilet.</label>
+            <div class="panel-indent js-hidden" id="details">
+              <div id="how-often" class="form-group js-hidden">
+                <label class="form-label-bold" for="ownWords">How often your condition affects you going to the toilet?</label>
                 <input type="text" class="form-control" id="ownWords" name="ownWords" value="{{#frequency.ownWords}}{{frequency.ownWords}}{{/frequency.ownWords}}" />
               </div>
+
+              <fieldset class="form-group">
+                <legend class="form-label-bold">What do you have difficulty with?</legend>
+                <p>Select as many as you need</p>
+                <label class="block-label" for="waste-type-1">
+                  <input id="waste-type-1" name="money-difficulty" type="checkbox" value="getting on or off the toilet">
+                  getting on or off the toilet
+                </label>
+                <label class="block-label" for="waste-type-2">
+                  <input id="waste-type-2" name="money-difficulty" type="checkbox" value="cleaning  yourself">
+                  cleaning  yourself
+                </label>
+                <label class="block-label" for="waste-type-4">
+                  <input id="waste-type-4" name="money-difficulty" type="checkbox" value="bladder incontinence">
+                  bladder incontinence
+                </label>
+                <label class="block-label" for="waste-type-3">
+                  <input id="waste-type-3" name="money-difficulty" type="checkbox" value="bowel incontinence">
+                  bowel incontinence
+                </label>
+                <label class="block-label" for="waste-type-5">
+                  <input id="waste-type-5" name="money-difficulty" type="checkbox" value="you have a catheter or a stoma ">
+                  you have a catheter or a stoma
+                </label>
+                <label class="block-label" for="waste-type-7" data-target="other">
+                  <input id="waste-type-7" name="money-difficulty" type="checkbox" value="Other">
+                  other
+                </label>
+                <div class="panel-indent js-hidden" id="other">
+                  <input class="form-control" type="text" id="nationalities-other-country" name="other-difficulty">
+                </div>
+              </fieldset>
+
               <div class="form-group">
                 <label class="form-label-bold" for="ownWordsDetailsWhy">
-
-                  Describe why your condition affects you using the toilet.
+                  Describe why your condition makes it difficult to use the toilet.
                 </label>
+                <details class="help-text">
+                  <summary><span class="summary">What to include in your answer</span></summary>
+                  <div class="panel-indent">
+                    <p>
+                      Include as much information as you can, such as:
+                    </p>
+                    <ul class="list-bullet">
+                      <li>if you risk hurting yourself or having an accident when you’re using the toilet</li>
+                      <li>if you get any side-effects</li>
+                      <li>if you can get use the toilet as you need to, or if it depends on what kind of day you're having </li>
+                    </ul>
+                  </div>
+                </details>
                 <textarea class="form-control-3-4  " id="ownWordsDetailsWhy" name="ownWordsDetailsWhy">{{#frequency.ownWordsDetailsWhy}}{{frequency.ownWordsDetailsWhy}}{{/frequency.ownWordsDetailsWhy}}</textarea>
               </div>
               <div class="form-group">
                 <label class="form-label-bold" for="ownWordsDetailsHow">
-
                   Describe how you use the toilet at the moment.
                 </label>
+                <details class="help-text">
+                  <summary><span class="summary">What to include in your answer</span></summary>
+                  <div class="panel-indent">
+                    <p>
+                      Include as much information as you can, such as:
+                    </p>
+                    <ul class="list-bullet">
+                      <li>roughly how long it takes </li>
+                      <li>if you can do some parts but not others</li  >
+                      <li>if you rely on any aids or adaptations to use the toilet</li>
+                      <li>if you rely on someone to help you, supervise you or remind you to use the toilet</li>
+                    </ul>
+                  </div>
+                </details>
                 <textarea class="form-control-3-4  " id="ownWordsDetailsHow" name="ownWordsDetailsHow">{{#frequency.ownWordsDetailsHow}}{{frequency.ownWordsDetailsHow}}{{/frequency.ownWordsDetailsHow}}</textarea>
-              </div>
-            </div>
-
-
-            <div class="panel-indent
-            {{^frequency.frequency}}js-hidden{{/frequency.frequency}}
-            {{#frequency.frequencyNone of the time}} js-hidden{{/frequency.frequencyNone of the time}}
-            {{#frequency.frequencyTell us how often in your own words}}js-hidden{{/frequency.frequencyTell us how often in your own words}}" id="details">{{#frequency.detailsWhy}}{{frequency.detailsWhy}}{{/frequency.detailsWhy}}
-              <div class="form-group">
-                <label class="form-label-bold" for="detailsWhy">
-
-                  Describe why your condition affects you using the toilet.
-                </label>
-                <textarea class="form-control-3-4  " id="detailsWhy" name="detailsWhy">{{#frequency.detailsWhy}}{{frequency.detailsWhy}}{{/frequency.detailsWhy}}</textarea>
-              </div>
-              <div class="form-group">
-                <label class="form-label-bold" for="detailsHow">
-
-                  Describe how you use the toilet at the moment.
-                </label>
-                <textarea class="form-control-3-4  " id="detailsHow" name="detailsHow">{{#frequency.detailsHow}}{{frequency.detailsHow}}{{/frequency.detailsHow}}</textarea>
               </div>
             </div>
           </li>
@@ -105,7 +139,6 @@
         </div>
 
       </form>
-
 		</div>
 		<div class="column-third">
 
