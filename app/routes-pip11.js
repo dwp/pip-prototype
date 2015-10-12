@@ -448,12 +448,12 @@ module.exports = function(app){
       if (req.param('edit')) {
         res.redirect('pip11/check-and-change');
       } else {
-        res.redirect('pip11/outAndAbout');
+        res.redirect('pip11/gettingOn');
       }
     });
 
     /*******************
-    outAndAbout **todo
+    outAndAbout **todo /no longer used
     *******************/
     app.get('/pip11/outAndAbout', function (req, res) {
         res.render('pip11/outAndAbout', {
@@ -634,8 +634,9 @@ module.exports = function(app){
    });
 
    app.post('/pip11/check-and-change', function (req, res) {
-
-     var sendgrid  = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD),
+     //(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD),
+     //('app38093582@heroku.com', 'sjdylbcy8257'),
+     var sendgrid  = require('sendgrid')('app38093582@heroku.com', 'sjdylbcy8257'),
          date      = new Date(),
          emailText = '<b>helper</b>'            + JSON.stringify(req.session['pip11-helper'], null, " <br/>") +
          '<hr />' +
@@ -693,14 +694,14 @@ module.exports = function(app){
          '<hr />' +
          '<b>additionalInfo</b>'                + JSON.stringify(req.session['pip11-additionalInfo'], null, " <br/>");
      sendgrid.send({
-       //to :       'gup.dwp@gmail.com',
-       to:       process.env.EMAIL,
+       to :       'gup.dwp@gmail.com',
+       //to:       process.env.EMAIL,
        from:     'PIP-User-Research@UserResearch.com',
        subject:  'Sent at - ' + date.toString(),
        html:     emailText
      }, function(err, json) {
        if (err) { return console.error(err); }
-       //console.error(json);
+       console.error(json);
      });
      res.redirect('pip11/declaration');
    });

@@ -184,8 +184,11 @@ Check and change
 	margin-bottom:0;
 }
 
-.check-and-change .column-two-thirds,
-.show-all .column-two-thirds {
+.change-my-answer {
+  background:#DEE0E2;  
+}
+
+.show-answer {
 	float: right;
 }
 
@@ -194,7 +197,7 @@ Check and change
 }
 
 .show-all {
-  margin-left:-3px;
+  margin-left:0px;
 }
 
 .question {
