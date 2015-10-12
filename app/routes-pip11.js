@@ -634,9 +634,8 @@ module.exports = function(app){
    });
 
    app.post('/pip11/check-and-change', function (req, res) {
-     //(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD),
-     //('app38093582@heroku.com', 'sjdylbcy8257'),
-     var sendgrid  = require('sendgrid')('app38093582@heroku.com', 'sjdylbcy8257'),
+
+     var sendgrid  = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD),
          date      = new Date(),
          emailText = '<b>helper</b>'            + JSON.stringify(req.session['pip11-helper'], null, " <br/>") +
          '<hr />' +
@@ -694,8 +693,8 @@ module.exports = function(app){
          '<hr />' +
          '<b>additionalInfo</b>'                + JSON.stringify(req.session['pip11-additionalInfo'], null, " <br/>");
      sendgrid.send({
-       to :       'gup.dwp@gmail.com',
-       //to:       process.env.EMAIL,
+       //to :       'gup.dwp@gmail.com',
+       to:       process.env.EMAIL,
        from:     'PIP-User-Research@UserResearch.com',
        subject:  'Sent at - ' + date.toString(),
        html:     emailText
