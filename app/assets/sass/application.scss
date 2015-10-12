@@ -185,7 +185,7 @@ Check and change
 }
 
 .change-my-answer {
-  background:#DEE0E2;  
+  background:#DEE0E2;
 }
 
 .show-answer {
@@ -227,6 +227,13 @@ margin-right: 0;
   margin-left:15px;
 }
 
+.check-and-change .button {
+  background:#eee;
+  box-shadow:0 0;
+  color:#000;
+  margin:10px 0 15px;
+}
+
 @media only all and (max-width:40em) {
 	.check-and-change .column-two-thirds,
 	.show-all .column-two-thirds {
@@ -238,6 +245,7 @@ margin-right: 0;
 		width:100%;
 	}
 }
+
 
 
 /*****************************/
