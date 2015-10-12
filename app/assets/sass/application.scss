@@ -235,9 +235,13 @@ margin-right: 0;
 }
 
 @media only all and (max-width:40em) {
-	.check-and-change .column-two-thirds,
+	.check-and-change .column-two-thirds {
+    float:none;
+  }
+
+  .check-and-change p.column-two-thirds,
 	.show-all .column-two-thirds {
-		float: none;
+		float: left;
 	}
 	.check-and-change .button {
 		text-align: center;
