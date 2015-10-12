@@ -1,0 +1,101 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="paymentsFromAbroad{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="paymentsFromAbroad">
+
+        <a href="/pipDigital/user-data/nationality" class="example-back-link">Back</a>
+
+
+
+
+
+        	        <h1 class="form-title heading-large">
+        Payments from abroad and working abroad					</h1>
+
+        					<ul>
+        						<li>
+        							<fieldset class="inline">
+
+            <div class="form-group" id="form-group-benefitsAbroadPayment">
+              <fieldset class="inline">
+                <legend class="form-label-bold" id="benefitsAbroadPayment" for="benefitsAbroadPayment">
+        Have you, or anyone in your family, ever claimed benefits or been paid a pension from any country outside of England, Scotland or Wales?
+                <p class="form-hint">This means your partner, parents or children.</p>
+
+                </legend>
+
+              						<label class="block-label" for="benefitsAbroadPayment-yes" data-target="benefitsAbroad-yes">
+              							<input id="benefitsAbroadPayment-yes" type="radio" name="benefitsAbroadPayment" value="Yes" {{#paymentsFromAbroad.benefitsAbroadPaymentYes}}checked=checked{{/paymentsFromAbroad.benefitsAbroadPaymentYes}} aria-controls="benefitsAbroad-yes">
+              							Yes
+              						</label>
+              						<label class="block-label" for="benefitsAbroadPayment-no">
+              							<input id="benefitsAbroadPayment-no" type="radio" name="benefitsAbroadPayment" {{#paymentsFromAbroad.benefitsAbroadPaymentNo}}checked=checked{{/paymentsFromAbroad.benefitsAbroadPaymentNo}} value="No">
+              							No
+              						</label>
+
+              </fieldset>
+              </div>
+        							</fieldset>
+        						</li>
+        						<li>
+        							<fieldset class="inline">
+
+            <div class="form-group" id="form-group-payInsuranceAbroad">
+              <fieldset class="inline">
+                <legend class="form-label-bold" id="payInsuranceAbroad" for="payInsuranceAbroad">
+        Do you, or anyone in your family, work or pay national insurance to any country outside of England, Scotland or Wales?
+                <p class="form-hint">This means your partner, parents or children.</p>
+
+                </legend>
+
+              						<label class="block-label" for="payInsuranceAbroad-yes" data-target="payInsurance-yes">
+              							<input id="payInsuranceAbroad-yes" type="radio" name="payInsuranceAbroad" value="Yes" {{#paymentsFromAbroad.payInsuranceAbroadYes}}checked=checked{{/paymentsFromAbroad.payInsuranceAbroadYes}}  aria-controls="payInsurance-yes">
+              							Yes
+              						</label>
+              						<label class="block-label" for="payInsuranceAbroad-no">
+              							<input id="payInsuranceAbroad-no" type="radio" name="payInsuranceAbroad" value="No" {{#paymentsFromAbroad.payInsuranceAbroadNo}}checked=checked{{/paymentsFromAbroad.payInsuranceAbroadNo}} >
+              							No
+              						</label>
+
+              </fieldset>
+              </div>
+        							</fieldset>
+        						</li>
+        					</ul>
+        					<div class="form-group">
+        						<input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+        						<input type="submit" value="Save and exit" name="saveAndExit" class="exit-link">
+        					</div>
+			</form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

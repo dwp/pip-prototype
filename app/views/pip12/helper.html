@@ -1,0 +1,101 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="helper{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="helper">
+
+				<a href="/pip11/apply" class="example-back-link">Back</a>
+
+				<!--div class="section-progress">
+				Step 1 of 17
+				</div-->
+
+        <header>
+          <h1 class="form-title heading-large">
+            Help with your application </h1>
+        </header>
+
+
+        <ul>
+          <li>
+
+            <div class="form-group" id="form-group-helper">
+              <fieldset class="inline">
+                <legend class="form-label-bold" id="helper" for="helper">
+                  <span class="frequency-question">Is someone helping you fill in this application?</span>
+
+
+
+                </legend>
+                <label class="block-label" for="helper-Yes" data-target="helperDetailsFields">
+                  <input id="helper-Yes" type="radio" name="helper" {{#helper.helperYes}}checked=checked{{/helper.helperYes}} value="Yes" aria-controls="helperDetailsFields"> Yes
+                </label>
+                <label class="block-label" for="helper-No">
+                  <input id="helper-No" type="radio" name="helper" {{#helper.helperNo}}checked=checked{{/helper.helperNo}} value="No"> No
+                </label>
+
+              </fieldset>
+            </div>
+
+            <div class="panel-indent {{^helper.helperYes}}js-hidden{{/helper.helperYes}}" id="helperDetailsFields">
+              <ul>
+                <li>
+                </li>
+                <li class="form-group">
+
+                  <legend class="form-label">The name of the person helping you</legend>
+                  <div class="form-group" id="form-group-name">
+                    <input type="text" class="form-control " id="name"  name="name" value="{{#helper.name}}{{helper.name}}{{/helper.name}}">
+                  </div>
+                </li>
+                <li class="form-group">
+                  <legend class="form-label">Their relationship to you</legend>
+                  <div class="form-group" id="form-group-relationship">
+                    <input type="text" class="form-control " id="relationship" name="relationship" value="{{#helper.relationship}}{{helper.relationship}}{{/helper.relationship}}">
+                  </div>
+
+                </li>
+              </ul>
+            </div>
+
+          </li>
+        </ul>
+        <div class="form-group">
+          <input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+          <input type="submit" value="Save and exit" name="saveAndExit" class="exit-link">
+        </div>
+			</form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+
+
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

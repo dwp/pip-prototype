@@ -1,0 +1,186 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="specialAids{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="specialAids">
+
+        <a href="/pipDigital/summary/aboutYourHome" class="example-back-link">Back</a>
+	<h1 class="form-title heading-large">
+      Aids and adaptations				</h1>
+
+      				<fieldset id="aidsList" class="form-group  ">
+      					<legend id="aids" class="form-label-bold" for="aidsList">
+      Where do you rely on aids, adaptations or anything else that’s essential to your daily life?					</legend>
+      					<ul class="special-aids">
+      							<li>
+      		<label class="block-label" for="frontdoor-id" data-target="frontdoor-details">
+      			<input type="checkbox" id="frontdoor-id" name="aids0.type" value="Getting in or out of your home" aria-controls="frontdoor-details" aria-expanded="false">
+           	Getting in or out of your home
+           </label>
+      								<fieldset id="frontdoor-details" class="js-hidden panel-indent form-group-related" aria-hidden="true">
+              <div class="form-group">
+      						<label class="form-label" for="aids0.description">
+
+      List aids, adaptations or anything you have to use to make getting in or out of your home easier.
+      						</label>
+      						<textarea class="form-control-3-4  " id="aids0.description" name="aids0.description"></textarea>
+      		</div>
+      								</fieldset>
+      							</li>
+      							<li>
+      		<label class="block-label" for="hallwayOrStairs-id" data-target="hallwayOrStairs-details">
+      			<input type="checkbox" id="hallwayOrStairs-id" name="aids1.type" value="Hallway or stairs" aria-controls="hallwayOrStairs-details" aria-expanded="false">
+           	Hallway or stairs
+           </label>
+      								<fieldset id="hallwayOrStairs-details" class="js-hidden  panel-indent form-group-related" aria-hidden="true">
+              <div class="form-group">
+      						<label class="form-label" for="aids1.description">
+                    List anything else you rely on having with you all or most of the time.
+      						</label>
+      						<textarea class="form-control-3-4  " id="aids1.description" name="aids1.description"></textarea>
+      		</div>
+      								</fieldset>
+      							</li>
+      							<li>
+      		<label class="block-label" for="kitchen-id" data-target="kitchen-details">
+      			<input type="checkbox" id="kitchen-id" name="aids2.type" value="Kitchen " aria-controls="kitchen-details" aria-expanded="false">
+           	Kitchen
+           </label>
+      								<fieldset id="kitchen-details" class="js-hidden  panel-indent form-group-related" aria-hidden="true">
+              <div class="form-group">
+      						<label class="form-label" for="aids2.description">
+
+      List aids, adaptations or anything you have to use in your kitchen to make things easier.
+      						</label>
+      						<textarea class="form-control-3-4  " id="aids2.description" name="aids2.description"></textarea>
+      		</div>
+      								</fieldset>
+      							</li>
+      							<li>
+      		<label class="block-label" for="lounge-id" data-target="lounge-details">
+      			<input type="checkbox" id="lounge-id" name="aids3.type" value="Lounge or sitting room " aria-controls="lounge-details" aria-expanded="false">
+           	Lounge or sitting room
+           </label>
+      								<fieldset id="lounge-details" class="js-hidden  panel-indent form-group-related" aria-hidden="true">
+              <div class="form-group">
+      						<label class="form-label" for="aids3.description">
+
+      List aids, adaptations or anything you have to use in your lounge or sitting room to make things easier.
+      						</label>
+      						<textarea class="form-control-3-4  " id="aids3.description" name="aids3.description"></textarea>
+      		</div>
+      								</fieldset>
+      							</li>
+      							<li>
+      		<label class="block-label" for="dining-id" data-target="dining-details">
+      			<input type="checkbox" id="dining-id" name="aids4.type" value="Dining area " aria-controls="dining-details" aria-expanded="false">
+           	Dining area
+           </label>
+      								<fieldset id="dining-details" class="js-hidden  panel-indent form-group-related" aria-hidden="true">
+              <div class="form-group">
+      						<label class="form-label" for="aids4.description">
+
+      List aids, adaptations or anything you have to use in your dining room to make things easier.
+      						</label>
+      						<textarea class="form-control-3-4  " id="aids4.description" name="aids4.description"></textarea>
+      		</div>
+      								</fieldset>
+      							</li>
+      							<li>
+      		<label class="block-label" for="bedroom-id" data-target="bedroom-details">
+      			<input type="checkbox" id="bedroom-id" name="aids5.type" value="Your bedroom " aria-controls="bedroom-details" aria-expanded="false">
+           	Your bedroom
+           </label>
+      								<fieldset id="bedroom-details" class="js-hidden  panel-indent form-group-related" aria-hidden="true">
+              <div class="form-group">
+      						<label class="form-label" for="aids5.description">
+
+      List aids, adaptations or anything you have to use in your bedroom to make things easier.
+      						</label>
+      						<textarea class="form-control-3-4  " id="aids5.description" name="aids5.description"></textarea>
+      		</div>
+      								</fieldset>
+      							</li>
+      							<li>
+      		<label class="block-label" for="bathrooms-id" data-target="bathrooms-details">
+      			<input type="checkbox" id="bathrooms-id" name="aids6.type" value="Bathroom or toilet " aria-controls="bathrooms-details" aria-expanded="false">
+           	Bathroom or toilet
+           </label>
+      								<fieldset id="bathrooms-details" class="js-hidden  panel-indent form-group-related" aria-hidden="true">
+              <div class="form-group">
+      						<label class="form-label" for="aids6.description">
+
+      List aids, adaptations or anything you have to use in your bathroom or toilet to make things easier.
+      						</label>
+      						<textarea class="form-control-3-4  " id="aids6.description" name="aids6.description"></textarea>
+      		</div>
+      								</fieldset>
+      							</li>
+      							<li>
+      		<label class="block-label" for="garden-id" data-target="garden-details">
+      			<input type="checkbox" id="garden-id" name="aids7.type" value="Outside " aria-controls="garden-details" aria-expanded="false">
+           	Outside
+           </label>
+      								<fieldset id="garden-details" class="js-hidden  panel-indent form-group-related" aria-hidden="true">
+              <div class="form-group">
+      						<label class="form-label" for="aids7.description">
+
+      List aids, adaptations or anything you have to use when you're outside to make things easier.
+      						</label>
+      						<textarea class="form-control-3-4  " id="aids7.description" name="aids7.description"></textarea>
+      		</div>
+      								</fieldset>
+      							</li>
+      							<li class="form-group">
+      		<label class="block-label" for="none-id">
+      			<input type="checkbox" id="none-id" name="aids8.type" data-none="true" value="You don't use aids, adaptations or anything else to make things easier.">
+             You don’t use any aids, adaptations or anything else that’s essential to your daily life.
+           </label>
+      							</li>
+      					</ul>
+      				</fieldset>
+              <div class="form-group">
+      						<label class="form-label-bold" for="otherSpecialEquipment">
+
+      List anything else you have with you all or most of the time to make things easier for you.
+      <p class="form-hint">This might include things like a wheelchair, hearing aid or prosthetic limb.</p>
+      						</label>
+      						<textarea class="form-control-3-4  " id="otherSpecialEquipment" name="otherSpecialEquipment"></textarea>
+      		</div>
+
+      				<div class="form-group">
+      					<input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+      					<input type="submit" value="Save and exit" name="saveAndExit" class="exit-link">
+      				</div>
+			</form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
