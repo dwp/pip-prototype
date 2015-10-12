@@ -196,9 +196,6 @@ Check and change
   margin-left:30px;
 }
 
-.show-all {
-  margin-left:0px;
-}
 
 .question {
 	font-size:20px;
@@ -251,6 +248,10 @@ margin-right: 0;
 }
 
 
+.check-and-change p.column-third,
+.check-and-change .column-two-thirds {
+  padding:0;
+}
 
 /*****************************/
 .help-text .panel-indent {

@@ -120,6 +120,7 @@ module.exports = {
     require('./sprint7_1')(app);
     require('./sprint8_1')(app);
     require('./routes-pip11')(app);
+    require('./routes-pip12')(app);
 
   }
 };
