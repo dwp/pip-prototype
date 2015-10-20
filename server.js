@@ -26,7 +26,7 @@ var session = require('express-session');
 app.use(express.bodyParser());
 
 //app session
-app.use(session({ secret: 'wr34954j54kr', cookie: { maxAge: 60000000 }}))
+app.use(session({ secret: 'wr34954j54kr', cookie: { maxAge: 60000000 }}));
 
 // Application settings
 app.engine('html', require(__dirname + '/lib/template-engine.js').__express);

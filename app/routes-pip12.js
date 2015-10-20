@@ -436,6 +436,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/goingOut', function (req, res) {
         res.render('pip12/goingOut', {
+          'test'    : 'test',
           frequency : req.session['pip12-goingOut'],
           'edit'    : req.param('edit')
         });
@@ -571,11 +572,8 @@ module.exports = function(app){
       req.session['pip12-money'] = req.body;
       req.session['pip12-money']['money' + req.body.frequency] = req.body.frequency;
 
-      if (req.param('edit')) {
-        res.redirect('pip12/check-and-change');
-      } else {
-        res.redirect('pip12/additionalInfo');
-      }
+      res.redirect('pip12/check-and-change');
+
     });
 
     /*******************
@@ -592,7 +590,7 @@ module.exports = function(app){
       req.session['pip12-additionalInfo'] = req.body;
       req.session['pip12-additionalInfo']['additionalInfo' + req.body.frequency] = req.body.frequency;
 
-      res.redirect('pip12/check-and-change');
+      res.redirect('pip12/declaration');
 
     });
 
@@ -634,6 +632,11 @@ module.exports = function(app){
    });
 
    app.post('/pip12/check-and-change', function (req, res) {
+
+     res.redirect('pip12/additionalInfo');
+   });
+
+   app.post('/pip12/declaration', function (req, res) {
 
      var sendgrid  = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD),
          date      = new Date(),
@@ -692,6 +695,7 @@ module.exports = function(app){
          '<b>money</b>'                         + JSON.stringify(req.session['pip12-money'], null, " <br/>") +
          '<hr />' +
          '<b>additionalInfo</b>'                + JSON.stringify(req.session['pip12-additionalInfo'], null, " <br/>");
+
      sendgrid.send({
        //to :       'gup.dwp@gmail.com',
        to:       process.env.EMAIL,
@@ -702,7 +706,7 @@ module.exports = function(app){
        if (err) { return console.error(err); }
        console.error(json);
      });
-     res.redirect('pip12/declaration');
+     res.redirect('pip12/thankyou');
    });
 
 

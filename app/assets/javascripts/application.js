@@ -198,10 +198,10 @@ $(document).ready(function() {
   *******************/
   $('.show-answer').click(function(e) {
   		var linkText    = $(this).text(),
-  			openText    = $(this).data('open-text'),
-  			closeText   = $(this).data('close-text'),
-  			questionHd  = $(this).parent().prev().text(),
-  			newLinkText = linkText === openText ? closeText : openText;
+  			  openText    = $(this).data('open-text'),
+  			  closeText   = $(this).data('close-text'),
+  			  questionHd  = $(this).parent().prev().text(),
+  			  newLinkText = linkText === openText ? closeText : openText;
 
   		$(this).text(newLinkText);
   		$(this).attr('aria-label',$(this).attr('aria-label').replace(linkText,newLinkText));
@@ -241,4 +241,11 @@ $(document).ready(function() {
 		$('#how-often').show()
 		} else {$('#how-often').hide()}
 		})
+
+		$('textarea').each(function() {
+			$(this).keyup(function() {
+				console.log($(this).val().length)
+			})
+		})
+
 });

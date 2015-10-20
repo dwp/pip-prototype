@@ -19,7 +19,7 @@
 
     <div class="grid-row show-all">
       <p class="column-two-thirds">
-        <a href="#" class="show-all" data-action="open" data-open-text="Show all my answers" data-close-text="Hide all my answers">Show all my answers</a>
+        <a href="#" class="show-all" data-action="close" data-open-text="Show all my answers" data-close-text="Hide all my answers">Hide all my answers</a>
       </p>
     </div>
 
@@ -30,10 +30,10 @@
             <div class="form-group">
               <p class="check-question column-third">Help with your application</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Help with your application" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Help with your application" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question  ">
                 <p class="question form-label-bold column-third">The name of the person helping you</p>
                 <p class="show-answer column-two-thirds">{{#helper.name}}{{helper.name}}{{/helper.name}}</p>
@@ -43,7 +43,7 @@
                 <p class="show-answer column-two-thirds">{{#helper.relationship}}{{helper.relationship}}{{/helper.relationship}}</p>
               </div>
               <div class="column-two-thirds">
-                <a href="/pip11/helper?edit=true" class="button change-my-answer" aria-label="Change my answers for Help with your application">
+                <a href="/pip12/helper?edit=true" class="button change-my-answer" aria-label="Change my answers for Help with your application">
   Change my answers									</a>
               </div>
             </div>
@@ -53,10 +53,10 @@
             <div class="form-group">
               <p class="check-question column-third">Nationality and where you live</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Nationality and where you live" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Nationality and where you live" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question  ">
                 <p class="question form-label-bold column-third">What is your nationality?</p>
                 <p class="show-answer column-two-thirds">{{#nationality.britishCitizen}}{{nationality.britishCitizen}}{{/nationality.britishCitizen}}</p>
@@ -78,7 +78,7 @@
                 <p class="show-answer column-two-thirds">{{#nationality.beenAbroad}}{{nationality.beenAbroad}}{{/nationality.beenAbroad}}</p>
               </div>
               <div class="column-two-thirds">
-                <a href="/pip11/nationality?edit=true" class="button change-my-answer" aria-label="Change my answers for Nationality and where you live">
+                <a href="/pip12/nationality?edit=true" class="button change-my-answer" aria-label="Change my answers for Nationality and where you live">
   Change my answers									</a>
               </div>
             </div>
@@ -87,10 +87,10 @@
             <div class="form-group">
               <p class="check-question column-third">Payments from abroad and working abroad</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Payments from abroad and working abroad" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Payments from abroad and working abroad" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question  ">
                 <p class="question form-label-bold column-third">Have you, or anyone in your family, ever claimed benefits or been paid a pension from any country outside of England, Wales or Scotland?</p>
                 <p class="show-answer column-two-thirds">{{#paymentsFromAbroad.benefitsAbroadPayment}}{{paymentsFromAbroad.benefitsAbroadPayment}}{{/paymentsFromAbroad.benefitsAbroadPayment}}</p>
@@ -100,7 +100,7 @@
                 <p class="show-answer column-two-thirds">{{#paymentsFromAbroad.payInsuranceAbroad}}{{paymentsFromAbroad.payInsuranceAbroad}}{{/paymentsFromAbroad.payInsuranceAbroad}}</p>
               </div>
               <div class="column-two-thirds">
-                <a href="/pip11/paymentsFromAbroad?edit=true" class="button change-my-answer" aria-label="Change my answers for Payments from abroad and working abroad">
+                <a href="/pip12/paymentsFromAbroad?edit=true" class="button change-my-answer" aria-label="Change my answers for Payments from abroad and working abroad">
   Change my answers									</a>
               </div>
             </div>
@@ -109,10 +109,10 @@
             <div class="form-group">
               <p class="check-question column-third">Your conditions and disabilities</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Your conditions and disabilities" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Your conditions and disabilities" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question">
                 <p class="question form-label-bold column-third">List your conditions and disabilities</p>
               </div>
@@ -151,10 +151,10 @@
             <div class="form-group">
               <p class="check-question column-third">Changes in your condition</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Payments from abroad and working abroad" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Payments from abroad and working abroad" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question  ">
                 <p class="question form-label-bold column-third">Do the effects of your condition change or vary?</p>
                 <p class="show-answer column-two-thirds">{{#conditioneffects.conditioneffects}}{{conditioneffects.conditioneffects}}{{/conditioneffects.conditioneffects}}</p>
@@ -168,7 +168,7 @@
                 <p class="show-answer column-two-thirds">{{#conditioneffects.conditioneffectsYes}}{{conditioneffects.condition-effects-how}}{{/conditioneffects.conditioneffectsYes}}</p>
               </div>
               <div class="column-two-thirds">
-                <a href="/pip11/conditionAffects?edit=true" class="button change-my-answer" aria-label="Change my answers for Payments from abroad and working abroad">
+                <a href="/pip12/conditionAffects?edit=true" class="button change-my-answer" aria-label="Change my answers for Payments from abroad and working abroad">
   Change my answers									</a>
               </div>
             </div>
@@ -179,16 +179,16 @@
             <div class="form-group">
               <p class="check-question column-third">Monitoring your condition</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Payments from abroad and working abroad" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Payments from abroad and working abroad" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question  ">
                 <p class="question form-label-bold column-third">Has a medical professional told you that your condition is likely to change and needs to be monitored?</p>
                 <p class="show-answer column-two-thirds">{{#hcpcondition.monitored}}{{hcpcondition.monitored}}{{/hcpcondition.monitored}}</p>
               </div>
               <div class="column-two-thirds">
-                <a href="/pip11/hcp-condition?edit=true" class="button change-my-answer" aria-label="Change my answers for Payments from abroad and working abroad">
+                <a href="/pip12/hcp-condition?edit=true" class="button change-my-answer" aria-label="Change my answers for Payments from abroad and working abroad">
   Change my answers									</a>
               </div>
             </div>
@@ -199,10 +199,10 @@
             <div class="form-group">
               <p class="check-question column-third">Help monitoring your condition</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Payments from abroad and working abroad" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Payments from abroad and working abroad" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question  ">
                 <p class="question form-label-bold column-third">Do you rely on someone else to help monitor your condition?</p>
                 <p class="show-answer column-two-thirds">{{#hcpcondition2.conditionEffects}}{{hcpcondition2.conditionEffects}}{{/hcpcondition2.conditionEffects}}</p>
@@ -216,7 +216,7 @@
                 <p class="show-answer column-two-thirds">{{#hcpcondition2.condition-effects-how}}{{hcpcondition2.condition-effects-how}}{{/hcpcondition2.condition-effects-how}}</p>
               </div>
               <div class="column-two-thirds">
-                <a href="/pip11/hcp-condition-2?edit=true" class="button change-my-answer" aria-label="Change my answers for Payments from abroad and working abroad">
+                <a href="/pip12/hcp-condition-2?edit=true" class="button change-my-answer" aria-label="Change my answers for Payments from abroad and working abroad">
   Change my answers									</a>
               </div>
             </div>
@@ -228,10 +228,10 @@
             <div class="form-group">
               <p class="check-question column-third">Professionals who know about your condition</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Professionals who know about your condition" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Professionals who know about your condition" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="column-two-thirds">
                 <a href="/pipDigital/healthcare/healthcareprofessional" class="button change-my-answer" aria-label="Change my answers for Professionals who know about your condition">
   Change my answers										</a>
@@ -242,10 +242,10 @@
             <div class="form-group">
               <p class="check-question column-third">Medical information</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Medical information" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Medical information" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question">
                 <p class="question form-label-bold column-third">Choose what you'll send:</p>
 
@@ -270,10 +270,10 @@
             <div class="form-group">
               <p class="check-question column-third">Aids and adaptations</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Aids and adaptations" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Aids and adaptations" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question">
                 <p class="question form-label-bold column-third">Where do you have to use aids, adaptations or anything else to make things easier for you?</p>
 
@@ -295,10 +295,10 @@
             <div class="form-group">
               <p class="check-question column-third">Getting around</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Getting around" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Getting around" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question  ">
                 <p class="question form-label-bold column-third">Does your condition affect you getting around your home?</p>
                 <p class="show-answer column-two-thirds">{{#gettingAround.frequency}}{{gettingAround.frequency}}{{/gettingAround.frequency}}</p>
@@ -312,7 +312,7 @@
                 <p class="show-answer column-two-thirds">{{#gettingAround.detailsHow}}{{gettingAround.detailsHow}}{{/gettingAround.detailsHow}}</p>
               </div>
               <div class="column-two-thirds">
-                <a href="/pip11/gettingAround?edit=true" class="button change-my-answer" aria-label="Change my answers for Getting around">
+                <a href="/pip12/gettingAround?edit=true" class="button change-my-answer" aria-label="Change my answers for Getting around">
   Change my answers													</a>
               </div>
             </div>
@@ -321,10 +321,10 @@
             <div class="form-group">
               <p class="check-question column-third">Seeing</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Seeing" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Seeing" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question  ">
                 <p class="question form-label-bold column-third">Does your condition affect your sight, which isn't helped by wearing glasses or contact lenses?</p>
                 <p class="show-answer column-two-thirds">{{#seeing.frequency}}{{seeing.frequency}}{{/seeing.frequency}}</p>
@@ -338,7 +338,7 @@
                 <p class="show-answer column-two-thirds">{{#seeing.detailsHow}}{{seeing.detailsHow}}{{/seeing.detailsHow}}</p>
               </div>
               <div class="column-two-thirds">
-                <a href="/pip11/seeing?edit=true" class="button change-my-answer" aria-label="Change my answers for Seeing">
+                <a href="/pip12/seeing?edit=true" class="button change-my-answer" aria-label="Change my answers for Seeing">
   Change my answers													</a>
               </div>
             </div>
@@ -348,10 +348,10 @@
             <div class="form-group">
               <p class="check-question column-third">Hearing</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Hearing" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Hearing" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question  ">
                 <p class="question form-label-bold column-third">Does your condition affect your hearing?</p>
                 <p class="show-answer column-two-thirds">{{#hearing.frequency}}{{hearing.frequency}}{{/hearing.frequency}}</p>
@@ -365,7 +365,7 @@
                 <p class="show-answer column-two-thirds">{{#hearing.detailsHow}}{{hearing.detailsHow}}{{/hearing.detailsHow}}</p>
               </div>
               <div class="column-two-thirds">
-                <a href="/pip11/hearing?edit=true" class="button change-my-answer" aria-label="Change my answers for Hearing">
+                <a href="/pip12/hearing?edit=true" class="button change-my-answer" aria-label="Change my answers for Hearing">
   Change my answers													</a>
               </div>
             </div>
@@ -374,10 +374,10 @@
             <div class="form-group">
               <p class="check-question column-third">Speaking</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Speaking" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Speaking" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question  ">
                 <p class="question form-label-bold column-third">Does your condition affect you speaking</p>
                 <p class="show-answer column-two-thirds">{{#speaking.frequency}}{{speaking.frequency}}{{/speaking.frequency}}</p>
@@ -391,7 +391,7 @@
                   <p class="show-answer column-two-thirds">{{#speaking.detailsHow}}{{speaking.detailsHow}}{{/speaking.detailsHow}}</p>
                 </div>
               <div class="column-two-thirds">
-                <a href="/pip11/speaking?edit=true" class="button change-my-answer" aria-label="Change my answers for Speaking">
+                <a href="/pip12/speaking?edit=true" class="button change-my-answer" aria-label="Change my answers for Speaking">
   Change my answers													</a>
               </div>
             </div>
@@ -405,10 +405,10 @@
             <div class="form-group">
               <p class="check-question column-third">Getting up</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Getting up" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Getting up" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               {{^gettingUp.frequencyTell us how often in your own words}}
                 <div class="answered-question  ">
                   <p class="question form-label-bold column-third">Does your condition affect you getting up and out of bed?</p>
@@ -438,7 +438,7 @@
                 </div>
               {{/gettingUp.frequencyTell us how often in your own words}}
               <div class="column-two-thirds">
-                <a href="/pip11/gettingUp?edit=true" class="button change-my-answer" aria-label="Change my answers for Getting up">
+                <a href="/pip12/gettingUp?edit=true" class="button change-my-answer" aria-label="Change my answers for Getting up">
   Change my answers													</a>
               </div>
             </div>
@@ -447,10 +447,10 @@
             <div class="form-group">
               <p class="check-question column-third">Using the toilet</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Using the toilet" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Using the toilet" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               {{^toilet.frequencyTell us how often in your own words}}
                 <div class="answered-question  ">
                   <p class="question form-label-bold column-third">Does your condition affect you using the toilet?</p>
@@ -480,7 +480,7 @@
                 </div>
               {{/toilet.frequencyTell us how often in your own words}}
               <div class="column-two-thirds">
-                <a href="/pip11/toilet?edit=true" class="button change-my-answer" aria-label="Change my answers for Using the toilet">
+                <a href="/pip12/toilet?edit=true" class="button change-my-answer" aria-label="Change my answers for Using the toilet">
   Change my answers													</a>
               </div>
             </div>
@@ -489,10 +489,10 @@
             <div class="form-group">
               <p class="check-question column-third">Washing yourself</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Washing yourself" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Washing yourself" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               {{^washing.frequencyTell us how often in your own words}}
                 <div class="answered-question  ">
                   <p class="question form-label-bold column-third">Does your condition affect you washing your hair or any part of your body?</p>
@@ -522,7 +522,7 @@
                 </div>
               {{/washing.frequencyTell us how often in your own words}}
               <div class="column-two-thirds">
-                <a href="/pip11/washing?edit=true" class="button change-my-answer" aria-label="Change my answers for Washing yourself">
+                <a href="/pip12/washing?edit=true" class="button change-my-answer" aria-label="Change my answers for Washing yourself">
   Change my answers													</a>
               </div>
             </div>
@@ -531,10 +531,10 @@
             <div class="form-group">
               <p class="check-question column-third">Getting dressed</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Getting dressed" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Getting dressed" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               {{^gettingDressed.frequencyTell us how often in your own words}}
                 <div class="answered-question  ">
                   <p class="question form-label-bold column-third">Does your condition affect you getting dressed?</p>
@@ -564,7 +564,7 @@
                 </div>
               {{/gettingDressed.frequencyTell us how often in your own words}}
               <div class="column-two-thirds">
-                <a href="/pip11/gettingDressed?edit=true" class="button change-my-answer" aria-label="Change my answers for Getting dressed">
+                <a href="/pip12/gettingDressed?edit=true" class="button change-my-answer" aria-label="Change my answers for Getting dressed">
   Change my answers													</a>
               </div>
             </div>
@@ -573,10 +573,10 @@
             <div class="form-group">
               <p class="check-question column-third">Preparing and cooking food</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Preparing and cooking food" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Preparing and cooking food" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question  ">
                 <p class="question form-label-bold column-third">Does your condition affect you preparing or cooking a hot meal from scratch?</p>
                 <p class="show-answer column-two-thirds">{{#preparingandcookingfood.frequency}}{{preparingandcookingfood.frequency}}{{/preparingandcookingfood.frequency}}</p>
@@ -590,7 +590,7 @@
                 <p class="show-answer column-two-thirds">{{^preparingandcookingfood.frequencyNone of the time}}{{preparingandcookingfood.detailsHow}}{{/preparingandcookingfood.frequencyNone of the time}}</p>
               </div>
               <div class="column-two-thirds">
-                <a href="/pip11/preparingandcookingfood?edit=true" class="button change-my-answer" aria-label="Change my answers for Preparing and cooking food">
+                <a href="/pip12/preparingandcookingfood?edit=true" class="button change-my-answer" aria-label="Change my answers for Preparing and cooking food">
   Change my answers													</a>
               </div>
             </div>
@@ -599,10 +599,10 @@
             <div class="form-group">
               <p class="check-question column-third">Eating and drinking</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Eating and drinking" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Eating and drinking" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question  ">
                 <p class="question form-label-bold column-third">Does your condition affect you eating or drinking?</p>
                 <p class="show-answer column-two-thirds">{{#eatinganddrinking.frequency}}{{eatinganddrinking.frequency}}{{/eatinganddrinking.frequency}}</p>
@@ -616,7 +616,7 @@
                 <p class="show-answer column-two-thirds">{{^eatinganddrinking.frequencyNone of the time}}{{eatinganddrinking.detailsHow}}{{/eatinganddrinking.frequencyNone of the time}}</p>
               </div>
               <div class="column-two-thirds">
-                <a href="/pip11/eatinganddrinking?edit=true" class="button change-my-answer" aria-label="Change my answers for Eating and drinking">
+                <a href="/pip12/eatinganddrinking?edit=true" class="button change-my-answer" aria-label="Change my answers for Eating and drinking">
   Change my answers													</a>
               </div>
             </div>
@@ -630,10 +630,10 @@
             <div class="form-group">
               <p class="check-question column-third">Going out</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Going out" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Going out" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question  ">
                 <p class="question form-label-bold column-third">Does your condition affect you leaving your home?</p>
                 <p class="show-answer column-two-thirds">{{#goingOut.frequency}}{{goingOut.frequency}}{{/goingOut.frequency}}</p>
@@ -647,7 +647,7 @@
                 <p class="show-answer column-two-thirds">{{^goingOut.frequencyNone of the time}}{{goingOut.detailsHow}}{{/goingOut.frequencyNone of the time}}</p>
               </div>
               <div class="column-two-thirds">
-                <a href="/pip11/goingOut?edit=true" class="button change-my-answer" aria-label="Change my answers for Going out">
+                <a href="/pip12/goingOut?edit=true" class="button change-my-answer" aria-label="Change my answers for Going out">
   Change my answers													</a>
               </div>
             </div>
@@ -656,10 +656,10 @@
             <div class="form-group">
               <p class="check-question column-third">Out and about</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Out and about" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Out and about" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question  ">
                 <p class="question form-label-bold column-third">Does your condition affect you getting around easily and safely when you're out and about?</p>
                 <p class="show-answer column-two-thirds"></p>
@@ -682,10 +682,10 @@
             <div class="form-group">
               <p class="check-question column-third">Mixing with people</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Mixing with people" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Mixing with people" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question  ">
                 <p class="question form-label-bold column-third">Does your condition affect you mixing with people?</p>
                 <p class="show-answer column-two-thirds"></p>
@@ -713,10 +713,10 @@
             <div class="form-group">
               <p class="check-question column-third">Going somewhere you have not been before</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Going somewhere you have not been before" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Going somewhere you have not been before" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question  ">
                 <p class="question form-label-bold column-third">Would your condition affect you planning or following directions to somewhere you've never been before?</p>
                 <p class="show-answer column-two-thirds"></p>
@@ -739,10 +739,10 @@
             <div class="form-group">
               <p class="check-question column-third">Going somewhere you have been before</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Going somewhere you have been before" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Going somewhere you have been before" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question  ">
                 <p class="question form-label-bold column-third">Does your condition affect you planning or following directions to somewhere you know?</p>
                 <p class="show-answer column-two-thirds"></p>
@@ -765,10 +765,10 @@
             <div class="form-group">
               <p class="check-question column-third">Understanding words, sentences, instructions and signs</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Understanding words, sentences, instructions and signs" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Understanding words, sentences, instructions and signs" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question  ">
                 <p class="question form-label-bold column-third">Does your condition affect your understanding of words, sentences, instructions or signs?</p>
                 <p class="show-answer column-two-thirds"></p>
@@ -791,10 +791,10 @@
             <div class="form-group">
               <p class="check-question column-third">Managing your money</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Managing your money" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
+                <a href="#" class="show-answer" aria-label="Hide my answers for Managing your money" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont js-hidden">
+            <div class="answered-question-cont">
               <div class="answered-question  ">
                 <p class="question form-label-bold column-third">Does your condition affect you managing your money?</p>
                 <p class="show-answer column-two-thirds"></p>
@@ -815,33 +815,13 @@
           </li>
         </ul>
       </section>
-      <section>
-        <h3 class="heading-medium">Additional information</h3>
-        <ul class="check-and-change">
-          <li>
-            <div class="form-group">
-              <p class="check-question column-third">Additional information</p>
-              <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Additional information" data-open-text="Show my answers" data-close-text="Hide my answers">Show my answers</a>
-              </p>
-            </div>
-            <div class="answered-question-cont js-hidden">
-              <div class="answered-question  ">
-                <p class="question form-label-bold column-third">Include anything else that explains how your condition or disability affects you.</p>
-                <p class="show-answer column-two-thirds"></p>
-              </div>
-              <div class="column-two-thirds">
-                <a href="/pipDigital/activities/additionalInfo" class="button change-my-answer" aria-label="Change my answers for Additional information">
-  Change my answers										</a>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </section>
+
     </div>
 
     <div class="form-group">
       <input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+      <br />
+      <a href="#" class="example-back-link">Back</a>
     </div>
 </form>
 

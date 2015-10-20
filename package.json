@@ -27,6 +27,7 @@
     "grunt-sass": "0.16.1",
     "grunt-text-replace": "0.3.12",
     "grunt-concurrent": "0.4.3",
-    "sendgrid": "1.0.4"
+    "sendgrid": "1.0.4",
+    "express-nunjucks": "^0.9.3"
   }
 }

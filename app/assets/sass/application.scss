@@ -250,7 +250,11 @@ margin-right: 0;
 
 .check-and-change p.column-third,
 .check-and-change .column-two-thirds {
-  padding:0;
+  padding:0 ;
+}
+
+.check-and-change .column-two-thirds {
+  padding-left:0;
 }
 
 /*****************************/
