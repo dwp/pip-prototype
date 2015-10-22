@@ -693,7 +693,7 @@ module.exports = function(app){
            '<hr />' +
            '<b>additionalInfo</b>'                + JSON.stringify(req.session['pip12-additionalInfo'], null, " <br/>");
 
-      if (process.env.sendEmail === True) {
+      if (process.env.sendEmail === 'True') {
        sendgrid.send({
          //to :       'gup.dwp@gmail.com',
          to:       process.env.EMAIL,
