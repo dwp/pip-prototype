@@ -50,7 +50,7 @@
                 </label>
                 <p class="form-block">or</p>
 
-                <label class="block-label" for="pip.radio.own-words.id" data-target="own-words">
+                <label class="block-label" for="pip.radio.own-words.id" data-target="details">
                   <input id="pip.radio.own-words.id" type="radio" name="frequency" value="Tell us how often in your own words" {{#frequency.frequencyTell us how often in your own words}}checked=checked{{/frequency.frequencyTell us how often in your own words}} aria-controls="details"> Tell us how often in your own words
                 </label>
 
@@ -58,8 +58,8 @@
               </fieldset>
             </div>
 
-            <div class="panel-indent js-hidden" {{#frequency.frequencyTell us how often in your own words}}style="display:block;"{{/frequency.frequencyTell us how often in your own words}} id="own-words">
-              <div class="form-group">
+            <div class="panel-indent js-hidden" id="details">
+              <div id="how-often" class="form-group js-hidden">
                 <label class="form-label-bold" for="ownWords">How often your condition affects you getting up and out of bed.</label>
                 <input type="text" class="form-control" id="ownWords" name="ownWords" value="{{#frequency.ownWords}}{{frequency.ownWords}}{{/frequency.ownWords}}" />
               </div>
@@ -67,37 +67,20 @@
                 <label class="form-label-bold" for="detailsWhy">
                   Describe why your condition affects you getting up and out of bed.
                 </label>
-                <textarea class="form-control-3-4  " id="detailsWhy" name="ownWordsDetailsWhy">{{#frequency.ownWordsDetailsWhy}}{{frequency.ownWordsDetailsWhy}}{{/frequency.ownWordsDetailsWhy}}</textarea>
+                <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+                <textarea class="form-control-3-4  " maxlength="1500" id="detailsWhy" name="ownWordsDetailsWhy">{{#frequency.ownWordsDetailsWhy}}{{frequency.ownWordsDetailsWhy}}{{/frequency.ownWordsDetailsWhy}}</textarea>
               </div>
               <div class="form-group">
                 <label class="form-label-bold" for="detailsHow">
                   Describe how you get up and out of bed at the moment.
                   <p class="form-hint">If you dont get out of bed, tell us why.</p>
                 </label>
-                <textarea class="form-control-3-4  " id="detailsHow" name="ownWordsDetailsHow">{{#frequency.ownWordsDetailsHow}}{{frequency.ownWordsDetailsHow}}{{/frequency.ownWordsDetailsHow}}</textarea>
+                <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+                <textarea class="form-control-3-4  " maxlength="1500" id="detailsHow" name="ownWordsDetailsHow">{{#frequency.ownWordsDetailsHow}}{{frequency.ownWordsDetailsHow}}{{/frequency.ownWordsDetailsHow}}</textarea>
               </div>
             </div>
 
-            <div class="panel-indent
-            {{^frequency.frequency}}js-hidden{{/frequency.frequency}}
-            {{#frequency.frequencyNone of the time}} js-hidden{{/frequency.frequencyNone of the time}}
-            {{#frequency.frequencyTell us how often in your own words}}js-hidden{{/frequency.frequencyTell us how often in your own words}}" id="details">
-              <div class="form-group">
-                <label class="form-label-bold" for="detailsWhy">
 
-                  Describe why your condition affects you getting up and out of bed.
-                </label>
-                <textarea class="form-control-3-4  " id="detailsWhy" name="detailsWhy">{{#frequency.detailsWhy}}{{frequency.detailsWhy}}{{/frequency.detailsWhy}}</textarea>
-              </div>
-              <div class="form-group">
-                <label class="form-label-bold" for="detailsHow">
-
-                  Describe how you get up and out of bed at the moment.
-                  <p class="form-hint">If you dont get out of bed, tell us why.</p>
-                </label>
-                <textarea class="form-control-3-4 " id="detailsHow" name="detailsHow">{{#frequency.detailsHow}}{{frequency.detailsHow}}{{/frequency.detailsHow}}</textarea>
-              </div>
-            </div>
           </li>
         </ul>
         <div class="form-group">

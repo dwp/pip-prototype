@@ -29,7 +29,7 @@
         				<li>
 
             <div class="form-group" id="form-group-frequency">
-              <fieldset>
+              <fieldset class="inline">
                 <legend class="form-label-bold" id="frequency" for="frequency">
                 <span class="frequency-question">Does your condition affect your hearing?</span>
 
@@ -39,37 +39,28 @@
                 </legend>
 
                 <div class="form-group">
-                      <label class="block-label" data-target="yes" for="radio-indent-1">
-                        <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">
-                        Yes
-                      </label>
-                      <label class="block-label" for="radio-indent-2">
-                        <input id="radio-indent-2" type="radio" name="radio-indent-group" value="No">
-                        No
-                      </label>
-                      <label class="block-label" for="radio-indent-3" data-target="sometimes">
-                        <input id="radio-indent-3" type="radio" name="radio-indent-group" value="Sometimes">
-                        Sometimes
-                      </label>
+                    <label class="block-label" data-target="yes" for="radio-indent-1">
+                      <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">
+                      Yes
+                    </label>
+                    <label class="block-label" for="radio-indent-2">
+                      <input id="radio-indent-2" type="radio" name="radio-indent-group" value="No">
+                      No
+                    </label>
+                </div>
 
-                      <div class="panel-indent js-hidden" id="sometimes">
-                        <div class="form-group">
-                          <label class="form-label-bold" for="national-insurance">Tell us roughly how often</label>
-                          <input class="form-control" name="national-insurance" type="text" id="national-insurance">
-                        </div>
-                        <div class="form-group">
-                						<label class="form-label-bold" for="detailsWhy">Describe how your condition affects your hearing.</label>
-                						<textarea class="form-control-3-4  " id="detailsWhy" name="detailsWhy">{{#frequency.detailsWhy}}{{frequency.detailsWhy}}{{/frequency.detailsWhy}}</textarea>
-                		    </div>
-                      </div>
+                <div class="panel-indent js-hidden" id="yes">
+                  <div class="form-group">
+                    <label class="form-label-bold" for="national-insurance">Tell us roughly how often</label>
+                    <input class="form-control" name="national-insurance" type="text" id="national-insurance">
+                  </div>
+                  <div class="form-group">
+          						<label class="form-label-bold" for="detailsWhy">Describe how your condition affects your hearing.</label>
+                      <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+          						<textarea class="form-control-3-4" maxLength="1500" id="detailsWhy" name="detailsWhy">{{#frequency.detailsWhy}}{{frequency.detailsWhy}}{{/frequency.detailsWhy}}</textarea>
+          		    </div>
+                </div>
 
-                      <div class="panel-indent js-hidden" id="yes">
-                        <div class="form-group">
-                						<label class="form-label-bold" for="detailsWhy">Describe how your condition affects your hearing.</label>
-                						<textarea class="form-control-3-4  " id="detailsWhy" name="detailsWhy">{{#frequency.detailsWhy}}{{frequency.detailsWhy}}{{/frequency.detailsWhy}}</textarea>
-                		    </div>
-                      </div>
-                    </div>
               </fieldset>
         				</li>
               </ul>

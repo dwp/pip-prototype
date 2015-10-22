@@ -621,7 +621,6 @@ module.exports = function(app){
        preparingandcookingfood       : req.session['pip12-preparingandcookingfood'],
        eatinganddrinking             : req.session['pip12-eatinganddrinking'],
        goingOut                      : req.session['pip12-goingOut'],
-       outAndAbout                   : req.session['pip12-outAndAbout'],
        gettingOn                     : req.session['pip12-gettingOn'],
        goingSomewhereNeverbeenBefore : req.session['pip12-goingSomewhereNeverbeenBefore'],
        goingSomewherebeenBefore      : req.session['pip12-goingSomewherebeenBefore'],
@@ -638,75 +637,76 @@ module.exports = function(app){
 
    app.post('/pip12/declaration', function (req, res) {
 
-     var sendgrid  = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD),
-         date      = new Date(),
-         emailText = '<b>helper</b>'            + JSON.stringify(req.session['pip12-helper'], null, " <br/>") +
-         '<hr />' +
-         '<b>nationality</b>'                   + JSON.stringify(req.session['pip12-nationality'], null, " <br/>") +
-         '<hr />' +
-         '<b>paymentsFromAbroad</b>'            + JSON.stringify(req.session['pip12-paymentsFromAbroad'], null, " <br/>") +
-         '<hr />' +
-         '<b>conditionDetails</b>'              + JSON.stringify(req.session['pip12-conditionDetails'], null, " <br/>") +
-         '<hr />' +
-         '<b>conditioneffects</b>'              + JSON.stringify(req.session['pip12-conditioneffects'], null, " <br/>") +
-         '<hr />' +
-         '<b>hcpcondition</b>'                  + JSON.stringify(req.session['pip12-hcp-condition'], null, " <br/>") +
-         '<hr />' +
-         '<b>hcpcondition2</b>'                 + JSON.stringify(req.session['pip12-hcp-condition-2'], null, " <br/>") +
-         '<hr />' +
-         '<b>healthcareprofessional</b>'        + JSON.stringify(req.session['pip12-healthcareprofessional'], null, " <br/>") +
-         '<hr />' +
-         '<b>submitEvidence</b>'                + JSON.stringify(req.session['pip12-submitEvidence'], null, " <br/>") +
-         '<hr />' +
-         '<b>specialAids</b>'                   + JSON.stringify(req.session['pip12-specialAids'], null, " <br/>") +
-         '<hr />' +
-         '<b>gettingAround</b>'                 + JSON.stringify(req.session['pip12-gettingAround'], null, " <br/>") +
-         '<hr />' +
-         '<b>seeing</b>'                        + JSON.stringify(req.session['pip12-seeing'], null, " <br/>") +
-         '<hr />' +
-         '<b>hearing</b>'                       + JSON.stringify(req.session['pip12-hearing'], null, " <br/>") +
-         '<hr />' +
-         '<b>speaking</b>'                      + JSON.stringify(req.session['pip12-speaking'], null, " <br/>") +
-         '<hr />' +
-         '<b>gettingUp</b>'                     + JSON.stringify(req.session['pip12-gettingUp'], null, " <br/>") +
-         '<hr />' +
-         '<b>toilet</b>'                        + JSON.stringify(req.session['pip12-toilet'], null, " <br/>") +
-         '<hr />' +
-         '<b>washing</b>'                       + JSON.stringify(req.session['pip12-washing'], null, " <br/>") +
-         '<hr />' +
-         '<b>gettingDressed</b>'                + JSON.stringify(req.session['pip12-gettingDressed'], null, " <br/>") +
-         '<hr />' +
-         '<b>preparingandcookingfood</b>'       + JSON.stringify(req.session['pip12-preparingandcookingfood'], null, " <br/>") +
-         '<hr />' +
-         '<b>eatinganddrinking</b>'             + JSON.stringify(req.session['pip12-eatinganddrinking'], null, " <br/>") +
-         '<hr />' +
-         '<b>goingOut</b>'                      + JSON.stringify(req.session['pip12-goingOut'], null, " <br/>") +
-         '<hr />' +
-         '<b>outAndAbout</b>'                   + JSON.stringify(req.session['pip12-outAndAbout'], null, " <br/>") +
-         '<hr />' +
-         '<b>gettingOn</b>'                     + JSON.stringify(req.session['pip12-gettingOn'], null, " <br/>") +
-         '<hr />' +
-         '<b>goingSomewhereNeverbeenBefore</b>' + JSON.stringify(req.session['pip12-goingSomewhereNeverbeenBefore'], null, " <br/>") +
-         '<hr />' +
-         '<b>goingSomewherebeenBefore</b>'      + JSON.stringify(req.session['pip12-goingSomewherebeenBefore'], null, " <br/>") +
-         '<hr />' +
-         '<b>understandingq</b>'                + JSON.stringify(req.session['pip12-understanding-q'], null, " <br/>") +
-         '<hr />' +
-         '<b>money</b>'                         + JSON.stringify(req.session['pip12-money'], null, " <br/>") +
-         '<hr />' +
-         '<b>additionalInfo</b>'                + JSON.stringify(req.session['pip12-additionalInfo'], null, " <br/>");
+       var sendgrid  = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD),
+           date      = new Date(),
+           emailText = '<b>helper</b>'            + JSON.stringify(req.session['pip12-helper'], null, " <br/>") +
+           '<hr />' +
+           '<b>nationality</b>'                   + JSON.stringify(req.session['pip12-nationality'], null, " <br/>") +
+           '<hr />' +
+           '<b>paymentsFromAbroad</b>'            + JSON.stringify(req.session['pip12-paymentsFromAbroad'], null, " <br/>") +
+           '<hr />' +
+           '<b>conditionDetails</b>'              + JSON.stringify(req.session['pip12-conditionDetails'], null, " <br/>") +
+           '<hr />' +
+           '<b>conditioneffects</b>'              + JSON.stringify(req.session['pip12-conditioneffects'], null, " <br/>") +
+           '<hr />' +
+           '<b>hcpcondition</b>'                  + JSON.stringify(req.session['pip12-hcp-condition'], null, " <br/>") +
+           '<hr />' +
+           '<b>hcpcondition2</b>'                 + JSON.stringify(req.session['pip12-hcp-condition-2'], null, " <br/>") +
+           '<hr />' +
+           '<b>healthcareprofessional</b>'        + JSON.stringify(req.session['pip12-healthcareprofessional'], null, " <br/>") +
+           '<hr />' +
+           '<b>submitEvidence</b>'                + JSON.stringify(req.session['pip12-submitEvidence'], null, " <br/>") +
+           '<hr />' +
+           '<b>specialAids</b>'                   + JSON.stringify(req.session['pip12-specialAids'], null, " <br/>") +
+           '<hr />' +
+           '<b>gettingAround</b>'                 + JSON.stringify(req.session['pip12-gettingAround'], null, " <br/>") +
+           '<hr />' +
+           '<b>seeing</b>'                        + JSON.stringify(req.session['pip12-seeing'], null, " <br/>") +
+           '<hr />' +
+           '<b>hearing</b>'                       + JSON.stringify(req.session['pip12-hearing'], null, " <br/>") +
+           '<hr />' +
+           '<b>speaking</b>'                      + JSON.stringify(req.session['pip12-speaking'], null, " <br/>") +
+           '<hr />' +
+           '<b>gettingUp</b>'                     + JSON.stringify(req.session['pip12-gettingUp'], null, " <br/>") +
+           '<hr />' +
+           '<b>toilet</b>'                        + JSON.stringify(req.session['pip12-toilet'], null, " <br/>") +
+           '<hr />' +
+           '<b>washing</b>'                       + JSON.stringify(req.session['pip12-washing'], null, " <br/>") +
+           '<hr />' +
+           '<b>gettingDressed</b>'                + JSON.stringify(req.session['pip12-gettingDressed'], null, " <br/>") +
+           '<hr />' +
+           '<b>preparingandcookingfood</b>'       + JSON.stringify(req.session['pip12-preparingandcookingfood'], null, " <br/>") +
+           '<hr />' +
+           '<b>eatinganddrinking</b>'             + JSON.stringify(req.session['pip12-eatinganddrinking'], null, " <br/>") +
+           '<hr />' +
+           '<b>goingOut</b>'                      + JSON.stringify(req.session['pip12-goingOut'], null, " <br/>") +
+           '<hr />' +
+           '<b>gettingOn</b>'                     + JSON.stringify(req.session['pip12-gettingOn'], null, " <br/>") +
+           '<hr />' +
+           '<b>goingSomewhereNeverbeenBefore</b>' + JSON.stringify(req.session['pip12-goingSomewhereNeverbeenBefore'], null, " <br/>") +
+           '<hr />' +
+           '<b>goingSomewherebeenBefore</b>'      + JSON.stringify(req.session['pip12-goingSomewherebeenBefore'], null, " <br/>") +
+           '<hr />' +
+           '<b>understandingq</b>'                + JSON.stringify(req.session['pip12-understanding-q'], null, " <br/>") +
+           '<hr />' +
+           '<b>money</b>'                         + JSON.stringify(req.session['pip12-money'], null, " <br/>") +
+           '<hr />' +
+           '<b>additionalInfo</b>'                + JSON.stringify(req.session['pip12-additionalInfo'], null, " <br/>");
 
-     sendgrid.send({
-       //to :       'gup.dwp@gmail.com',
-       to:       process.env.EMAIL,
-       from:     'PIP-User-Research@UserResearch.com',
-       subject:  'Sent at - ' + date.toString(),
-       html:     emailText
-     }, function(err, json) {
-       if (err) { return console.error(err); }
-       console.error(json);
-     });
-     res.redirect('pip12/thankyou');
+      if (process.env.sendEmail === True) {
+       sendgrid.send({
+         //to :       'gup.dwp@gmail.com',
+         to:       process.env.EMAIL,
+         from:     'PIP-User-Research@UserResearch.com',
+         subject:  'Sent at - ' + date.toString(),
+         html:     emailText
+       }, function(err, json) {
+         if (err) { return console.error(err); } else { req.session.destroy(); }
+         console.error(json);
+       });
+     }
+
+    res.redirect('pip12/thankyou');
    });
 
 

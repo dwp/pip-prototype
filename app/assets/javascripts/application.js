@@ -237,15 +237,17 @@ $(document).ready(function() {
 		});
 
 		$("input[type='radio']").click(function() {
-		if($(this).val() === 'Tell us how often in your own words') {
-		$('#how-often').show()
-		} else {$('#how-often').hide()}
-		})
+			if($(this).val() === 'Tell us how often in your own words') {
+				$('#how-often').show();
+			} else {$('#how-often').hide();}
+		});
 
 		$('textarea').each(function() {
 			$(this).keyup(function() {
-				console.log($(this).val().length)
-			})
-		})
+				var max  = $(this).attr('maxLength'),
+						left = $(this).val().length;
+				$(this).prev('span').text(max - left + ' characters left');
+			});
+		});
 
 });

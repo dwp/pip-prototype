@@ -132,11 +132,11 @@ ul.submit-evidence li {
 	font-weight:900;
 }
 
-label + textarea {
+textarea.form-control-3-4 {
 	height:200px;
 }
 
-label + textarea.additionalInfo {
+textarea.additionalInfo {
 	height:325px;
 }
 
@@ -257,6 +257,9 @@ margin-right: 0;
   padding-left:0;
 }
 
+.check-and-change .show-answer {
+  padding-left:15px;
+}
 /*****************************/
 .help-text .panel-indent {
   margin-bottom:10px;
@@ -268,4 +271,11 @@ margin-right: 0;
 
 .form-control {
   border:1px solid #6F777B;
+}
+
+
+.character-count {
+  float:left;
+  margin:10px 0 0 4px;
+  text-align:right;
 }
