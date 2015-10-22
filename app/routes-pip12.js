@@ -635,6 +635,9 @@ module.exports = function(app){
      res.redirect('pip12/additionalInfo');
    });
 
+   /*******************
+   declaration
+   *******************/
    app.post('/pip12/declaration', function (req, res) {
 
        var sendgrid  = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD),
@@ -691,7 +694,9 @@ module.exports = function(app){
            '<hr />' +
            '<b>money</b>'                         + JSON.stringify(req.session['pip12-money'], null, " <br/>") +
            '<hr />' +
-           '<b>additionalInfo</b>'                + JSON.stringify(req.session['pip12-additionalInfo'], null, " <br/>");
+           '<b>additionalInfo</b>'                + JSON.stringify(req.session['pip12-additionalInfo'], null, " <br/>") +
+           '<hr />' +
+           '<b>declaration</b>'                +   JSON.stringify(req.body, null, " <br/>");
 
       if (process.env.sendEmail === 'True') {
        sendgrid.send({
