@@ -279,3 +279,14 @@ margin-right: 0;
   margin:10px 0 0 4px;
   text-align:right;
 }
+
+.help-text {
+  margin-top:15px;
+}
+
+[class*="heading-"] .section-progress {
+font-size: 2rem;
+font-weight: 300;
+display: block;
+color: #6f777b;
+}

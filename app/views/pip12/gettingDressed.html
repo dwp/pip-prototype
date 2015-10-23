@@ -21,7 +21,7 @@
       <form action="gettingDressed{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="gettingDressed">
 
         <a href="/pipDigital/activities/washing" class="example-back-link">Back</a>
-        <h1 class="form-title heading-large">
+       <h1 class="form-title heading-large">{{>includes/pages/progress}}
           Getting dressed </h1>
         <ul>
           <li>
@@ -50,8 +50,6 @@
                   <input id="pip.radio.noneofthetime.id" type="radio" name="frequency" value="None of the time" {{#frequency.frequencyNone of the time}}checked=checked{{/frequency.frequencyNone of the time}}>
                   None of the time
                 </label>
-                <p class="form-block">or</p>
-
                 <label class="block-label" for="pip.radio.own-words.id" data-target="details">
                   <input id="pip.radio.own-words.id" type="radio" name="frequency" value="Tell us how often in your own words" {{#frequency.frequencyTell us how often in your own words}}checked=checked{{/frequency.frequencyTell us how often in your own words}} aria-controls="details">
                   Tell us how often in your own words

@@ -11,6 +11,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip12/helper', function (req, res) {
        res.render('pip12/helper', {
+         page   : '1',
          helper : req.session['pip12-helper'],
          'edit' : req.param('edit')
        });
@@ -32,6 +33,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip12/nationality', function (req, res) {
        res.render('pip12/nationality', {
+         page        : '2',
          nationality : req.session['pip12-nationality'],
          'edit'      : req.param('edit')
        });
@@ -55,6 +57,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip12/paymentsFromAbroad', function (req, res) {
        res.render('pip12/paymentsFromAbroad', {
+         page               : '3',
          paymentsFromAbroad : req.session['pip12-paymentsFromAbroad'],
          'edit'             : req.param('edit')
        });
@@ -89,9 +92,126 @@ module.exports = function(app){
      if (req.param('edit')) {
        res.redirect('pip12/check-and-change');
      } else {
+       res.redirect('pip12/medications');
+     }
+   });
+
+   /*******************
+   medications **todo
+   *******************/
+   app.get('/pip12/medications', function (req, res) {
+       res.render('pip12/medications', {
+         medications   : req.session['pip12-medications'],
+         'edit'             : req.param('edit')
+       });
+   });
+   app.post('/pip12/medications', function (req, res) {
+     req.session['pip12-medications'] = req.body;
+
+     if(req.body.currentMedications === 'Yes') {
+       if (req.param('edit')) {
+         res.redirect('pip12/manageMedications?edit=true');
+       } else {
+         res.redirect('pip12/manageMedications');
+       }
+     } else if (req.param('edit')) {
+       res.redirect('pip12/check-and-change');
+     } else {
+       res.redirect('pip12/treatments');
+     }
+   });
+
+   /*******************
+   manageMedications **todo
+   *******************/
+   app.get('/pip12/manageMedications', function (req, res) {
+       res.render('pip12/manageMedications', {
+         medications   : req.session['pip12-manageMedications'],
+         'edit'             : req.param('edit')
+       });
+   });
+   app.post('/pip12/manageMedications', function (req, res) {
+     req.session['pip12-manageMedications'] = req.body;
+     //req.session['pip12-conditionDetails']['benefitsAbroadPayment' + req.body.benefitsAbroadPayment] = req.body.benefitsAbroadPayment;
+     //req.session['pip12-conditionDetails']['payInsuranceAbroad' + req.body.payInsuranceAbroad]       = req.body.payInsuranceAbroad;
+
+     //console.log(JSON.stringify(req.session['pip12-conditionDetails']));
+     if (req.param('edit')) {
+       res.redirect('pip12/check-and-change');
+     } else {
+       res.redirect('pip12/treatments');
+     }
+   });
+
+   /*******************
+   treatments **todo
+   *******************/
+   app.get('/pip12/treatments', function (req, res) {
+       res.render('pip12/treatments', {
+         medications   : req.session['pip12-treatments'],
+         'edit'             : req.param('edit')
+       });
+   });
+   app.post('/pip12/treatments', function (req, res) {
+     req.session['pip12-treatments'] = req.body;
+
+     if(req.body.plannedTreatments === 'Yes') {
+       if (req.param('edit')) {
+         res.redirect('pip12/manageTreatments?edit=true');
+       } else {
+         res.redirect('pip12/manageTreatments');
+       }
+     } else if (req.param('edit')) {
+       res.redirect('pip12/check-and-change');
+     } else {
+       res.redirect('pip12/sideEffects');
+     }
+   });
+
+   /*******************
+   manageTreatments **todo
+   *******************/
+   app.get('/pip12/manageTreatments', function (req, res) {
+       res.render('pip12/manageTreatments', {
+         medications   : req.session['pip12-treatments'],
+         'edit'             : req.param('edit')
+       });
+   });
+   app.post('/pip12/manageTreatments', function (req, res) {
+     req.session['pip12-manageTreatments'] = req.body;
+     //req.session['pip12-conditionDetails']['benefitsAbroadPayment' + req.body.benefitsAbroadPayment] = req.body.benefitsAbroadPayment;
+     //req.session['pip12-conditionDetails']['payInsuranceAbroad' + req.body.payInsuranceAbroad]       = req.body.payInsuranceAbroad;
+
+     //console.log(JSON.stringify(req.session['pip12-conditionDetails']));
+     if (req.param('edit')) {
+       res.redirect('pip12/check-and-change');
+     } else {
+       res.redirect('pip12/sideEffects');
+     }
+   });
+
+   /*******************
+   sideEffects **todo
+   *******************/
+   app.get('/pip12/sideEffects', function (req, res) {
+       res.render('pip12/sideEffects', {
+         medications   : req.session['pip12-treatments'],
+         'edit'             : req.param('edit')
+       });
+   });
+   app.post('/pip12/sideEffects', function (req, res) {
+     req.session['pip12-sideEffects'] = req.body;
+     //req.session['pip12-conditionDetails']['benefitsAbroadPayment' + req.body.benefitsAbroadPayment] = req.body.benefitsAbroadPayment;
+     //req.session['pip12-conditionDetails']['payInsuranceAbroad' + req.body.payInsuranceAbroad]       = req.body.payInsuranceAbroad;
+
+     //console.log(JSON.stringify(req.session['pip12-conditionDetails']));
+     if (req.param('edit')) {
+       res.redirect('pip12/check-and-change');
+     } else {
        res.redirect('pip12/conditionAffects');
      }
    });
+
 
    /*******************
    conditionAffects
