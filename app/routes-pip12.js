@@ -801,6 +801,16 @@ module.exports = function(app){
            '<hr />' +
            '<b>conditionDetails</b>'              + JSON.stringify(req.session['pip12-conditionDetails'], null, " <br/>") +
            '<hr />' +
+           '<b>medications</b>'                   + JSON.stringify(req.session['pip12-medications'],null,"<br />") +
+           '<hr />' +
+           '<b>manageMedications</b>'             + JSON.stringify(req.session['pip12-manageMedications'],null,"<br />") +
+           '<hr />' +
+           '<b>treatments</b>'                    + JSON.stringify(req.session['pip12-treatments'],null,"<br />") +
+           '<hr />' +
+           '<b>manageTreatments</b>'              + JSON.stringify(req.session['pip12-manageTreatments'],null,"<br />") +
+           '<hr />' +
+           '<b>sideEffects</b>'                   + JSON.stringify(req.session['pip12-sideEffects'],null,"<br />") +
+           '<hr />' +
            '<b>conditioneffects</b>'              + JSON.stringify(req.session['pip12-conditioneffects'], null, " <br/>") +
            '<hr />' +
            '<b>hcpcondition</b>'                  + JSON.stringify(req.session['pip12-hcp-condition'], null, " <br/>") +
