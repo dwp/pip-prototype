@@ -15,7 +15,7 @@
 
 	{{>includes/phase_banner}}
   <form id="check-my-answers" action="check-and-change" method="post" class="form">
-   <h1 class="form-title heading-large">{{>includes/pages/progress}}Check your answers </h1>
+    <h1 class="form-title heading-large">Check your answers </h1>
 
     <div class="grid-row show-all">
       <p class="column-two-thirds">
@@ -105,48 +105,146 @@
               </div>
             </div>
           </li>
+
           <li>
             <div class="form-group">
-              <p class="check-question column-third">Your conditions and disabilities</p>
+              <p class="check-question column-third">Your health conditions and disabilities</p>
               <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Hide my answers for Your conditions and disabilities" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
+                <a href="#" class="show-answer" aria-label="Show my answers for Your health conditions and disabilities" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
               </p>
             </div>
-            <div class="answered-question-cont">
+            <div class="answered-question-cont ">
               <div class="answered-question">
-                <p class="question form-label-bold column-third">List your conditions and disabilities</p>
-              </div>
-              <div class="answered-question">
-                <p class="question form-label-bold column-third">List any medication that you're currently taking</p>
-              </div>
-              <div class="answered-question">
-                <p class="question form-label-bold column-third">List any treatments or therapy you've had or have planned</p>
-              </div>
-              <div class="answered-question">
+                <p class="question form-label-bold column-third">List your health conditions and disabilities</p>
                 <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe any side-effects you get from your medication or treatments.</p>
+                  <p class="question form-label-bold column-third"></p>
                   <p class="show-answer column-two-thirds"></p>
                 </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Does your condition affect you managing your treatments or taking your medication when you're at home?</p>
-                  <p class="show-answer column-two-thirds"></p>
-                </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe why your condition affects you managing your treatments or taking medication when you're at home.</p>
-                  <p class="show-answer column-two-thirds"></p>
-                </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe how you manage your treatments or take your medication when you're at home, at the moment.</p>
-                  <p class="show-answer column-two-thirds"></p>
+                <div class="column-two-thirds">
+                  <a href="/pip12/conditionDetails?edit=true" class="button change-my-answer" aria-label="Change my answers for Your health conditions and disabilities">
+  Change my answers													</a>
                 </div>
               </div>
-              <div class="column-two-thirds">
-                <a href="/pipDigital/activities/conditionDetails" class="button change-my-answer" aria-label="Change my answers for Your conditions and disabilities">
-  Change my answers										</a>
+            </div>
+          </li>
+          <li>
+            <div class="form-group">
+              <p class="check-question column-third">Your medication</p>
+              <p class="column-two-thirds">
+                <a href="#" class="show-answer" aria-label="Show my answers for Your medication" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
+              </p>
+            </div>
+            <div class="answered-question-cont ">
+              <div class="answered-question">
+                <p class="question form-label-bold column-third">Your Medication</p>
+                <div class="answered-question  ">
+                  <p class="question form-label-bold column-third">Are you currently taking any medication?</p>
+                  <p class="show-answer column-two-thirds"></p>
+                </div>
+                <div class="column-two-thirds">
+                  <a href="/pip12/medications?edit=true" class="button change-my-answer" aria-label="Change my answers for Your medication">
+  Change my answers													</a>
+                </div>
+
               </div>
             </div>
           </li>
 
+          <li>
+            <div class="form-group">
+              <p class="check-question column-third">Managing your medication</p>
+              <p class="column-two-thirds">
+                <a href="#" class="show-answer" aria-label="Show my answers for Managing your medication" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
+              </p>
+            </div>
+            <div class="answered-question-cont ">
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Does your condition affect your managing your medication?</p>
+                <p class="show-answer column-two-thirds"></p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe why your condition affects your managing your medication.</p>
+                <p class="show-answer column-two-thirds"></p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe how you manage your medication at the moment.</p>
+                <p class="show-answer column-two-thirds"></p>
+              </div>
+              <div class="column-two-thirds">
+                <a href="/pip12/manageMedications?edit=true" class="button change-my-answer" aria-label="Change my answers for Managing your medication">
+  Change my answers													</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="form-group">
+              <p class="check-question column-third">Your treatments or therapy</p>
+              <p class="column-two-thirds">
+                <a href="#" class="show-answer" aria-label="Show my answers for Your treatments or therapy" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
+              </p>
+            </div>
+            <div class="answered-question-cont ">
+              <div class="answered-question">
+                <p class="question form-label-bold column-third">Your treatments and therapy</p>
+                <div class="answered-question  ">
+                  <p class="question form-label-bold column-third">Are you having, or do you have planned, any treatments or therapy?</p>
+                  <p class="show-answer column-two-thirds"></p>
+                </div>
+                <div class="column-two-thirds">
+                  <a href="/pip12/treatments?edit=true" class="button change-my-answer" aria-label="Change my answers for Your treatments or therapy">
+  Change my answers													</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="form-group">
+              <p class="check-question column-third">Managing your treatments</p>
+              <p class="column-two-thirds">
+                <a href="#" class="show-answer" aria-label="Show my answers for Managing your treatments" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
+              </p>
+            </div>
+            <div class="answered-question-cont ">
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Do you rely on someone to help you manage your treatment or therapy at home?</p>
+                <p class="show-answer column-two-thirds"></p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe why you rely on someone to help you manage your treatments or therapy at home.</p>
+                <p class="show-answer column-two-thirds"></p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe how someone helps you manage your treatment or therapy at home at the moment.</p>
+                <p class="show-answer column-two-thirds"></p>
+              </div>
+              <div class="column-two-thirds">
+                <a href="/pip12/manageTreatments?edit=true" class="button change-my-answer" aria-label="Change my answers for Managing your treatments">
+  Change my answers													</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="form-group">
+              <p class="check-question column-third">Side effects</p>
+              <p class="column-two-thirds">
+                <a href="#" class="show-answer" aria-label="Show my answers for Side effects" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
+              </p>
+            </div>
+            <div class="answered-question-cont ">
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Do you get any side effects from your medication, treatments or therapy?</p>
+                <p class="show-answer column-two-thirds"></p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe any side effects you get.</p>
+                <p class="show-answer column-two-thirds"></p>
+              </div>
+              <div class="column-two-thirds">
+                <a href="/pip12/sideEffects?edit=true" class="button change-my-answer" aria-label="Change my answers for Side effects">
+  Change my answers													</a>
+              </div>
+            </div>
+          </li>
           <li>
             <div class="form-group">
               <p class="check-question column-third">Changes in your condition</p>
@@ -382,14 +480,14 @@
                 <p class="question form-label-bold column-third">Does your condition affect you speaking</p>
                 <p class="show-answer column-two-thirds">{{#speaking.frequency}}{{speaking.frequency}}{{/speaking.frequency}}</p>
               </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe why your condition affects you speaking.</p>
-                  <p class="show-answer column-two-thirds">{{#speaking.detailsWhy}}{{speaking.detailsWhy}}{{/speaking.detailsWhy}}</p>
-                </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe how you communicate at the moment.</p>
-                  <p class="show-answer column-two-thirds">{{#speaking.detailsHow}}{{speaking.detailsHow}}{{/speaking.detailsHow}}</p>
-                </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe why your condition affects you speaking.</p>
+                <p class="show-answer column-two-thirds">{{#speaking.detailsWhy}}{{speaking.detailsWhy}}{{/speaking.detailsWhy}}</p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe how you communicate at the moment.</p>
+                <p class="show-answer column-two-thirds">{{#speaking.detailsHow}}{{speaking.detailsHow}}{{/speaking.detailsHow}}</p>
+              </div>
               <div class="column-two-thirds">
                 <a href="/pip12/speaking?edit=true" class="button change-my-answer" aria-label="Change my answers for Speaking">
   Change my answers													</a>
@@ -410,32 +508,31 @@
             </div>
             <div class="answered-question-cont">
               {{^gettingUp.frequencyTell us how often in your own words}}
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Does your condition affect you getting up and out of bed?</p>
-                  <p class="show-answer column-two-thirds">{{#gettingUp.frequency}}{{gettingUp.frequency}}{{/gettingUp.frequency}}</p>
-                </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe why your condition affects you getting up and out of bed.</p>
-                  <p class="show-answer column-two-thirds">{{^gettingUp.frequencyNone of the time}}{{gettingUp.detailsWhy}}{{/gettingUp.frequencyNone of the time}}</p>
-                </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe how you get up and out of bed at the moment.</p>
-                  <p class="show-answer column-two-thirds">{{^gettingUp.frequencyNone of the time}}{{gettingUp.detailsHow}}{{/gettingUp.frequencyNone of the time}}</p>
-                </div>
-              {{/gettingUp.frequencyTell us how often in your own words}}
-              {{#gettingUp.frequencyTell us how often in your own words}}
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">How often your condition affects you getting up and out of bed.</p>
-                  <p class="show-answer column-two-thirds">{{#gettingUp.ownWords}}{{gettingUp.ownWords}}{{/gettingUp.ownWords}}</p>
-                </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe why your condition affects you speaking.</p>
-                  <p class="show-answer column-two-thirds">{{#gettingUp.ownWordsDetailsWhy}}{{gettingUp.ownWordsDetailsWhy}}{{/gettingUp.ownWordsDetailsWhy}}</p>
-                </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe how you communicate at the moment.</p>
-                  <p class="show-answer column-two-thirds">{{#gettingUp.ownWordsDetailsHow}}{{gettingUp.ownWordsDetailsHow}}{{/gettingUp.ownWordsDetailsHow}}</p>
-                </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Does your condition affect you getting up and out of bed?</p>
+                <p class="show-answer column-two-thirds">{{#gettingUp.frequency}}{{gettingUp.frequency}}{{/gettingUp.frequency}}</p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe why your condition affects you getting up and out of bed.</p>
+                <p class="show-answer column-two-thirds">{{^gettingUp.frequencyNone of the time}}{{gettingUp.detailsWhy}}{{/gettingUp.frequencyNone of the time}}</p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe how you get up and out of bed at the moment.</p>
+                <p class="show-answer column-two-thirds">{{^gettingUp.frequencyNone of the time}}{{gettingUp.detailsHow}}{{/gettingUp.frequencyNone of the time}}</p>
+              </div>
+              {{/gettingUp.frequencyTell us how often in your own words}} {{#gettingUp.frequencyTell us how often in your own words}}
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">How often your condition affects you getting up and out of bed.</p>
+                <p class="show-answer column-two-thirds">{{#gettingUp.ownWords}}{{gettingUp.ownWords}}{{/gettingUp.ownWords}}</p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe why your condition affects you speaking.</p>
+                <p class="show-answer column-two-thirds">{{#gettingUp.ownWordsDetailsWhy}}{{gettingUp.ownWordsDetailsWhy}}{{/gettingUp.ownWordsDetailsWhy}}</p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe how you communicate at the moment.</p>
+                <p class="show-answer column-two-thirds">{{#gettingUp.ownWordsDetailsHow}}{{gettingUp.ownWordsDetailsHow}}{{/gettingUp.ownWordsDetailsHow}}</p>
+              </div>
               {{/gettingUp.frequencyTell us how often in your own words}}
               <div class="column-two-thirds">
                 <a href="/pip12/gettingUp?edit=true" class="button change-my-answer" aria-label="Change my answers for Getting up">
@@ -452,32 +549,31 @@
             </div>
             <div class="answered-question-cont">
               {{^toilet.frequencyTell us how often in your own words}}
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Does your condition affect you using the toilet?</p>
-                  <p class="show-answer column-two-thirds">{{#toilet.frequency}}{{toilet.frequency}}{{/toilet.frequency}}</p>
-                </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe why your condition affects you using the toilet.</p>
-                  <p class="show-answer column-two-thirds">{{^toilet.frequencyNone of the time}}{{toilet.detailsWhy}}{{/toilet.frequencyNone of the time}}</p>
-                </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe how you use the toilet at the moment.</p>
-                  <p class="show-answer column-two-thirds">{{^toilet.frequencyNone of the time}}{{toilet.detailsHow}}{{/toilet.frequencyNone of the time}}</p>
-                </div>
-              {{/toilet.frequencyTell us how often in your own words}}
-              {{#toilet.frequencyTell us how often in your own words}}
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">How often your condition affects you going to the toilet.</p>
-                  <p class="show-answer column-two-thirds">{{#toilet.ownWords}}{{toilet.ownWords}}{{/toilet.ownWords}}</p>
-                </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe why your condition affects you using the toilet.</p>
-                  <p class="show-answer column-two-thirds">{{#toilet.ownWordsDetailsWhy}}{{toilet.ownWordsDetailsWhy}}{{/toilet.ownWordsDetailsWhy}}</p>
-                </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe how you use the toilet at the moment.</p>
-                  <p class="show-answer column-two-thirds">{{#toilet.ownWordsDetailsHow}}{{toilet.ownWordsDetailsHow}}{{/toilet.ownWordsDetailsHow}}</p>
-                </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Does your condition affect you using the toilet?</p>
+                <p class="show-answer column-two-thirds">{{#toilet.frequency}}{{toilet.frequency}}{{/toilet.frequency}}</p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe why your condition affects you using the toilet.</p>
+                <p class="show-answer column-two-thirds">{{^toilet.frequencyNone of the time}}{{toilet.detailsWhy}}{{/toilet.frequencyNone of the time}}</p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe how you use the toilet at the moment.</p>
+                <p class="show-answer column-two-thirds">{{^toilet.frequencyNone of the time}}{{toilet.detailsHow}}{{/toilet.frequencyNone of the time}}</p>
+              </div>
+              {{/toilet.frequencyTell us how often in your own words}} {{#toilet.frequencyTell us how often in your own words}}
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">How often your condition affects you going to the toilet.</p>
+                <p class="show-answer column-two-thirds">{{#toilet.ownWords}}{{toilet.ownWords}}{{/toilet.ownWords}}</p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe why your condition affects you using the toilet.</p>
+                <p class="show-answer column-two-thirds">{{#toilet.ownWordsDetailsWhy}}{{toilet.ownWordsDetailsWhy}}{{/toilet.ownWordsDetailsWhy}}</p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe how you use the toilet at the moment.</p>
+                <p class="show-answer column-two-thirds">{{#toilet.ownWordsDetailsHow}}{{toilet.ownWordsDetailsHow}}{{/toilet.ownWordsDetailsHow}}</p>
+              </div>
               {{/toilet.frequencyTell us how often in your own words}}
               <div class="column-two-thirds">
                 <a href="/pip12/toilet?edit=true" class="button change-my-answer" aria-label="Change my answers for Using the toilet">
@@ -494,32 +590,31 @@
             </div>
             <div class="answered-question-cont">
               {{^washing.frequencyTell us how often in your own words}}
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Does your condition affect you washing your hair or any part of your body?</p>
-                  <p class="show-answer column-two-thirds">{{#washing.frequency}}{{washing.frequency}}{{/washing.frequency}}</p>
-                </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe why your condition affects you washing your hair or any part of your body.</p>
-                  <p class="show-answer column-two-thirds">{{^washing.frequencyNone of the time}}{{washing.detailsWhy}}{{/washing.frequencyNone of the time}}</p>
-                </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe how you wash your hair and body at the moment.</p>
-                  <p class="show-answer column-two-thirds">{{^washing.frequencyNone of the time}}{{washing.detailsHow}}{{/washing.frequencyNone of the time}}</p>
-                </div>
-              {{/washing.frequencyTell us how often in your own words}}
-              {{#washing.frequencyTell us how often in your own words}}
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">How often your condition affects you washing your hair or any part of your body.</p>
-                  <p class="show-answer column-two-thirds">{{#washing.ownWords}}{{washing.ownWords}}{{/washing.ownWords}}</p>
-                </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe why your condition affects you washing your hair or any part of your body.</p>
-                  <p class="show-answer column-two-thirds">{{#washing.ownWordsDetailsWhy}}{{washing.ownWordsDetailsWhy}}{{/washing.ownWordsDetailsWhy}}</p>
-                </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe how you wash your hair and body at the moment.</p>
-                  <p class="show-answer column-two-thirds">{{#washing.ownWordsDetailsHow}}{{washing.ownWordsDetailsHow}}{{/washing.ownWordsDetailsHow}}</p>
-                </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Does your condition affect you washing your hair or any part of your body?</p>
+                <p class="show-answer column-two-thirds">{{#washing.frequency}}{{washing.frequency}}{{/washing.frequency}}</p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe why your condition affects you washing your hair or any part of your body.</p>
+                <p class="show-answer column-two-thirds">{{^washing.frequencyNone of the time}}{{washing.detailsWhy}}{{/washing.frequencyNone of the time}}</p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe how you wash your hair and body at the moment.</p>
+                <p class="show-answer column-two-thirds">{{^washing.frequencyNone of the time}}{{washing.detailsHow}}{{/washing.frequencyNone of the time}}</p>
+              </div>
+              {{/washing.frequencyTell us how often in your own words}} {{#washing.frequencyTell us how often in your own words}}
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">How often your condition affects you washing your hair or any part of your body.</p>
+                <p class="show-answer column-two-thirds">{{#washing.ownWords}}{{washing.ownWords}}{{/washing.ownWords}}</p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe why your condition affects you washing your hair or any part of your body.</p>
+                <p class="show-answer column-two-thirds">{{#washing.ownWordsDetailsWhy}}{{washing.ownWordsDetailsWhy}}{{/washing.ownWordsDetailsWhy}}</p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe how you wash your hair and body at the moment.</p>
+                <p class="show-answer column-two-thirds">{{#washing.ownWordsDetailsHow}}{{washing.ownWordsDetailsHow}}{{/washing.ownWordsDetailsHow}}</p>
+              </div>
               {{/washing.frequencyTell us how often in your own words}}
               <div class="column-two-thirds">
                 <a href="/pip12/washing?edit=true" class="button change-my-answer" aria-label="Change my answers for Washing yourself">
@@ -536,32 +631,31 @@
             </div>
             <div class="answered-question-cont">
               {{^gettingDressed.frequencyTell us how often in your own words}}
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Does your condition affect you getting dressed?</p>
-                  <p class="show-answer column-two-thirds">{{#gettingDressed.frequency}}{{gettingDressed.frequency}}{{/gettingDressed.frequency}}</p>
-                </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe why your condition affects you getting dressed.</p>
-                  <p class="show-answer column-two-thirds">{{^gettingDressed.frequencyNone of the time}}{{gettingDressed.detailsWhy}}{{/gettingDressed.frequencyNone of the time}}</p>
-                </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe how you get dressed at the moment.</p>
-                  <p class="show-answer column-two-thirds">{{^gettingDressed.frequencyNone of the time}}{{gettingDressed.detailsHow}}{{/gettingDressed.frequencyNone of the time}}</p>
-                </div>
-              {{/gettingDressed.frequencyTell us how often in your own words}}
-              {{#gettingDressed.frequencyTell us how often in your own words}}
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">How often your condition affects you getting dressed.</p>
-                  <p class="show-answer column-two-thirds">{{#gettingDressed.ownWords}}{{gettingDressed.ownWords}}{{/gettingDressed.ownWords}}</p>
-                </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe why your condition affects you getting dressed.</p>
-                  <p class="show-answer column-two-thirds">{{#gettingDressed.ownWordsDetailsWhy}}{{gettingDressed.ownWordsDetailsWhy}}{{/gettingDressed.ownWordsDetailsWhy}}</p>
-                </div>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Describe how you get dressed at the moment.</p>
-                  <p class="show-answer column-two-thirds">{{#gettingDressed.ownWordsDetailsHow}}{{gettingDressed.ownWordsDetailsHow}}{{/gettingDressed.ownWordsDetailsHow}}</p>
-                </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Does your condition affect you getting dressed?</p>
+                <p class="show-answer column-two-thirds">{{#gettingDressed.frequency}}{{gettingDressed.frequency}}{{/gettingDressed.frequency}}</p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe why your condition affects you getting dressed.</p>
+                <p class="show-answer column-two-thirds">{{^gettingDressed.frequencyNone of the time}}{{gettingDressed.detailsWhy}}{{/gettingDressed.frequencyNone of the time}}</p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe how you get dressed at the moment.</p>
+                <p class="show-answer column-two-thirds">{{^gettingDressed.frequencyNone of the time}}{{gettingDressed.detailsHow}}{{/gettingDressed.frequencyNone of the time}}</p>
+              </div>
+              {{/gettingDressed.frequencyTell us how often in your own words}} {{#gettingDressed.frequencyTell us how often in your own words}}
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">How often your condition affects you getting dressed.</p>
+                <p class="show-answer column-two-thirds">{{#gettingDressed.ownWords}}{{gettingDressed.ownWords}}{{/gettingDressed.ownWords}}</p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe why your condition affects you getting dressed.</p>
+                <p class="show-answer column-two-thirds">{{#gettingDressed.ownWordsDetailsWhy}}{{gettingDressed.ownWordsDetailsWhy}}{{/gettingDressed.ownWordsDetailsWhy}}</p>
+              </div>
+              <div class="answered-question  ">
+                <p class="question form-label-bold column-third">Describe how you get dressed at the moment.</p>
+                <p class="show-answer column-two-thirds">{{#gettingDressed.ownWordsDetailsHow}}{{gettingDressed.ownWordsDetailsHow}}{{/gettingDressed.ownWordsDetailsHow}}</p>
+              </div>
               {{/gettingDressed.frequencyTell us how often in your own words}}
               <div class="column-two-thirds">
                 <a href="/pip12/gettingDressed?edit=true" class="button change-my-answer" aria-label="Change my answers for Getting dressed">
@@ -673,7 +767,7 @@
                 <p class="show-answer column-two-thirds"></p>
               </div>
               <div class="column-two-thirds">
-                <a href="/pipDigital/activities/outAndAbout" class="button change-my-answer" aria-label="Change my answers for Out and about">
+                <a href="/pip12/outAndAbout" class="button change-my-answer" aria-label="Change my answers for Out and about">
   Change my answers													</a>
               </div>
             </div>
@@ -699,7 +793,7 @@
                 <p class="show-answer column-two-thirds"></p>
               </div>
               <div class="column-two-thirds">
-                <a href="/pipDigital/activities/gettingOn" class="button change-my-answer" aria-label="Change my answers for Mixing with people">
+                <a href="/pip12/gettingOn" class="button change-my-answer" aria-label="Change my answers for Mixing with people">
   Change my answers													</a>
               </div>
             </div>
@@ -730,7 +824,7 @@
                 <p class="show-answer column-two-thirds"></p>
               </div>
               <div class="column-two-thirds">
-                <a href="/pipDigital/activities/goingSomewhereNeverbeenBefore" class="button change-my-answer" aria-label="Change my answers for Going somewhere you have not been before">
+                <a href="/pip12/goingSomewhereNeverbeenBefore" class="button change-my-answer" aria-label="Change my answers for Going somewhere you have not been before">
   Change my answers										</a>
               </div>
             </div>
@@ -756,7 +850,7 @@
                 <p class="show-answer column-two-thirds"></p>
               </div>
               <div class="column-two-thirds">
-                <a href="/pipDigital/activities/goingSomewherebeenBefore" class="button change-my-answer" aria-label="Change my answers for Going somewhere you have been before">
+                <a href="/pip12/goingSomewherebeenBefore" class="button change-my-answer" aria-label="Change my answers for Going somewhere you have been before">
   Change my answers										</a>
               </div>
             </div>
@@ -782,7 +876,7 @@
                 <p class="show-answer column-two-thirds"></p>
               </div>
               <div class="column-two-thirds">
-                <a href="/pipDigital/activities/understanding" class="button change-my-answer" aria-label="Change my answers for Understanding words, sentences, instructions and signs">
+                <a href="/pip12/understanding" class="button change-my-answer" aria-label="Change my answers for Understanding words, sentences, instructions and signs">
   Change my answers										</a>
               </div>
             </div>
@@ -808,7 +902,7 @@
                 <p class="show-answer column-two-thirds"></p>
               </div>
               <div class="column-two-thirds">
-                <a href="/pipDigital/activities/money" class="button change-my-answer" aria-label="Change my answers for Managing your money">
+                <a href="/pip12/money" class="button change-my-answer" aria-label="Change my answers for Managing your money">
   Change my answers										</a>
               </div>
             </div>
@@ -823,7 +917,7 @@
       <br />
       <a href="#" class="example-back-link">Back</a>
     </div>
-</form>
+  </form>
 
 		<div class="column-third">
 

@@ -79,16 +79,13 @@ module.exports = function(app){
    *******************/
    app.get('/pip12/conditionDetails', function (req, res) {
        res.render('pip12/conditionDetails', {
+         page               : '4',
          conditionDetails   : req.session['pip12-conditionDetails'],
          'edit'             : req.param('edit')
        });
    });
    app.post('/pip12/conditionDetails', function (req, res) {
      req.session['pip12-conditionDetails'] = req.body;
-     //req.session['pip12-conditionDetails']['benefitsAbroadPayment' + req.body.benefitsAbroadPayment] = req.body.benefitsAbroadPayment;
-     //req.session['pip12-conditionDetails']['payInsuranceAbroad' + req.body.payInsuranceAbroad]       = req.body.payInsuranceAbroad;
-
-     //console.log(JSON.stringify(req.session['pip12-conditionDetails']));
      if (req.param('edit')) {
        res.redirect('pip12/check-and-change');
      } else {
