@@ -1,0 +1,81 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+      <a href="/pipDigital/user-data/submitEvidence" class="example-back-link">Back</a>
+      <h1 class="form-title heading-large">
+       What you’ll be asked 			</h1>
+
+      <p>We need to know how your condition affects you, so you’ll be asked about:</p>
+
+      <h2 class="heading-small">Section 1: you and your condition </h2>
+      <ul class="list-bullet">
+        <li>any aids and adaptations you have</li>
+        <li>how you get around your home</li>
+        <li>seeing</li>
+        <li>speaking</li>
+        <li>hearing</li>
+      </ul>
+
+      <h2 class="heading-small">Section 2: you and your home</h2>
+      <ul class="list-bullet">
+        <li>getting up </li>
+        <li>using the toilet</li>
+        <li>washing yourself</li>
+        <li>getting dressed </li>
+        <li>preparing and cooking food</li>
+        <li>eating and drinking</li>
+      </ul>
+
+      <h2 class="heading-small">Section 3: out and about</h2>
+      <ul class="list-bullet">
+        <li>getting out and about</li>
+        <li>mixing with people</li>
+      </ul>
+
+      <h2 class="heading-small">Section 4: making sense of things</h2>
+      <ul class="list-bullet">
+        <li>planning and going somewhere you have never been</li>
+        <li>planning and going somewhere you know</li>
+        <li>your understanding of words, sentences, instructions and signs</li>
+        <li>making decisions about money</li>
+      </ul>
+
+
+      <div class="application-notice panel-indent">
+        <p>Include as much information as you can in your answers.</p>
+      </div>
+
+      <a href="specialAids" class="button">Continue</a>
+      <br />
+      <a href="#" class="example-back-link">Back</a>
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
