@@ -79,9 +79,9 @@ module.exports = function(app){
    *******************/
    app.get('/pip12/conditionDetails', function (req, res) {
        res.render('pip12/conditionDetails', {
-         page               : '4',
-         conditionDetails   : req.session['pip12-conditionDetails'],
-         'edit'             : req.param('edit')
+         page             : '4',
+         conditionDetails : req.session['pip12-conditionDetails'],
+         'edit'           : req.param('edit')
        });
    });
    app.post('/pip12/conditionDetails', function (req, res) {
@@ -98,8 +98,9 @@ module.exports = function(app){
    *******************/
    app.get('/pip12/medications', function (req, res) {
        res.render('pip12/medications', {
-         medications   : req.session['pip12-medications'],
-         'edit'             : req.param('edit')
+         page        : '5',
+         medications : req.session['pip12-medications'],
+         'edit'      : req.param('edit')
        });
    });
    app.post('/pip12/medications', function (req, res) {
@@ -123,6 +124,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip12/manageMedications', function (req, res) {
        res.render('pip12/manageMedications', {
+         page               : '6',
          medications   : req.session['pip12-manageMedications'],
          'edit'             : req.param('edit')
        });
@@ -145,6 +147,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip12/treatments', function (req, res) {
        res.render('pip12/treatments', {
+         page               : '7',
          medications   : req.session['pip12-treatments'],
          'edit'             : req.param('edit')
        });
@@ -170,6 +173,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip12/manageTreatments', function (req, res) {
        res.render('pip12/manageTreatments', {
+         page               : '8',
          medications   : req.session['pip12-treatments'],
          'edit'             : req.param('edit')
        });
@@ -192,6 +196,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip12/sideEffects', function (req, res) {
        res.render('pip12/sideEffects', {
+         page               : '9',
          medications   : req.session['pip12-treatments'],
          'edit'             : req.param('edit')
        });
@@ -215,6 +220,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip12/conditionAffects', function (req, res) {
        res.render('pip12/conditionAffects', {
+         page               : '10',
          conditioneffects : req.session['pip12-conditioneffects'],
          'edit'           : req.param('edit')
        });
@@ -236,6 +242,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip12/hcp-condition', function (req, res) {
        res.render('pip12/hcp-condition', {
+         page               : '11',
          hcpcondition : req.session['pip12-hcp-condition'],
          'edit'       : req.param('edit')
        });
@@ -262,6 +269,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip12/hcp-condition-2', function (req, res) {
        res.render('pip12/hcp-condition-2', {
+         page               : '12',
          hcpcondition2 : req.session['pip12-hcp-condition-2'],
          'edit'        : req.param('edit')
        });
@@ -283,6 +291,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip12/healthcareprofessional', function (req, res) {
        res.render('pip12/healthcareprofessional', {
+         page               : '13',
          healthcareprofessional : req.session['pip12-healthcareprofessional'],
          'edit'                 : req.param('edit')
        });
@@ -303,6 +312,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip12/submitEvidence', function (req, res) {
        res.render('pip12/submitEvidence', {
+         page               : '14',
          submitEvidence : req.session['pip12-submitEvidence'],
          'edit'         : req.param('edit')
        });
@@ -323,6 +333,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip12/specialAids', function (req, res) {
        res.render('pip12/specialAids', {
+         page               : '15',
          specialAids : req.session['pip12-specialAids'],
          'edit'      : req.param('edit')
        });
@@ -343,6 +354,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip12/gettingAround', function (req, res) {
        res.render('pip12/gettingAround', {
+         page               : '16',
          frequency : req.session['pip12-gettingAround'],
          'edit'    : req.param('edit')
        });
@@ -364,6 +376,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip12/seeing', function (req, res) {
        res.render('pip12/seeing', {
+         page               : '17',
          frequency : req.session['pip12-seeing'],
          'edit'    : req.param('edit')
        });
@@ -385,6 +398,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/hearing', function (req, res) {
         res.render('pip12/hearing', {
+          page               : '18',
           frequency : req.session['pip12-hearing'],
           'edit'    : req.param('edit')
         });
@@ -406,6 +420,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/speaking', function (req, res) {
         res.render('pip12/speaking', {
+          page               : '19',
           frequency : req.session['pip12-speaking'],
           'edit'    : req.param('edit')
         });
@@ -427,6 +442,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/gettingUp', function (req, res) {
         res.render('pip12/gettingUp', {
+          page               : '20',
           frequency : req.session['pip12-gettingUp'],
           'edit'    : req.param('edit')
         });
@@ -448,6 +464,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/toilet', function (req, res) {
         res.render('pip12/toilet', {
+          page               : '21',
           frequency : req.session['pip12-toilet'],
           'edit'    : req.param('edit')
         });
@@ -469,6 +486,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/washing', function (req, res) {
         res.render('pip12/washing', {
+          page               : '22',
           frequency : req.session['pip12-washing'],
           'edit'    : req.param('edit')
         });
@@ -490,6 +508,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/gettingDressed', function (req, res) {
         res.render('pip12/gettingDressed', {
+          page               : '23',
           frequency : req.session['pip12-gettingDressed'],
           'edit'    : req.param('edit')
         });
@@ -511,6 +530,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/preparingandcookingfood', function (req, res) {
         res.render('pip12/preparingandcookingfood', {
+          page               : '24',
           frequency : req.session['pip12-preparingandcookingfood'],
           'edit'    : req.param('edit')
         });
@@ -532,6 +552,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/eatinganddrinking', function (req, res) {
         res.render('pip12/eatinganddrinking', {
+          page               : '25',
           frequency : req.session['pip12-eatinganddrinking'],
           'edit'    : req.param('edit')
         });
@@ -553,7 +574,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/goingOut', function (req, res) {
         res.render('pip12/goingOut', {
-          'test'    : 'test',
+          page               : '26',
           frequency : req.session['pip12-goingOut'],
           'edit'    : req.param('edit')
         });
@@ -575,6 +596,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/outAndAbout', function (req, res) {
         res.render('pip12/outAndAbout', {
+          page               : '27',
           frequency : req.session['pip12-outAndAbout'],
           'edit'    : req.param('edit')
         });
@@ -596,6 +618,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/gettingOn', function (req, res) {
         res.render('pip12/gettingOn', {
+          page               : '27',
           frequency : req.session['pip12-gettingOn'],
           'edit'    : req.param('edit')
         });
@@ -617,6 +640,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/goingSomewhereNeverbeenBefore', function (req, res) {
         res.render('pip12/goingSomewhereNeverbeenBefore', {
+          page               : '28',
           frequency : req.session['pip12-goingSomewhereNeverbeenBefore'],
           'edit'    : req.param('edit')
         });
@@ -638,6 +662,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/goingSomewherebeenBefore', function (req, res) {
         res.render('pip12/goingSomewherebeenBefore', {
+          page               : '29',
           frequency : req.session['pip12-goingSomewherebeenBefore'],
           'edit'    : req.param('edit')
         });
@@ -659,6 +684,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/understanding-q', function (req, res) {
         res.render('pip12/understanding-q', {
+          page               : '30',
           frequency : req.session['pip12-understanding-q'],
           'edit'    : req.param('edit')
         });
@@ -680,6 +706,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/money', function (req, res) {
         res.render('pip12/money', {
+          page               : '31',
           frequency : req.session['pip12-money'],
           'edit'    : req.param('edit')
         });
@@ -698,6 +725,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/additionalInfo', function (req, res) {
         res.render('pip12/additionalInfo', {
+          page               : '33',
           frequency : req.session['pip12-additionalInfo'],
           'edit'    : req.param('edit')
         });
@@ -717,10 +745,16 @@ module.exports = function(app){
    *******************/
    app.get('/pip12/check-and-change', function (req, res) {
      res.render('pip12/check-and-change', {
+       page                          : '32',
        helper                        : req.session['pip12-helper'],
        nationality                   : req.session['pip12-nationality'],
        paymentsFromAbroad            : req.session['pip12-paymentsFromAbroad'],
        conditionDetails              : req.session['pip12-conditionDetails'],
+       medications                   : req.session['pip12-medications'],
+       manageMedications             : req.session['pip12-manageMedications'],
+       treatments                    : req.session['pip12-treatments'],
+       manageTreatments              : req.session['pip12-manageTreatments'],
+       sideEffects                   : req.session['pip12-sideEffects'],
        conditioneffects              : req.session['pip12-conditioneffects'],
        hcpcondition                  : req.session['pip12-hcp-condition'],
        hcpcondition2                 : req.session['pip12-hcp-condition-2'],
