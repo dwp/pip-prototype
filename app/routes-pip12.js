@@ -317,7 +317,7 @@ module.exports = function(app){
      if (req.param('edit')) {
        res.redirect('pip12/check-and-change');
      } else {
-       res.redirect('pip12/aboutYourHome');
+       res.redirect('pip12/summaryMain');
      }
    });
 
@@ -421,7 +421,7 @@ module.exports = function(app){
       if (req.param('edit')) {
         res.redirect('pip12/check-and-change');
       } else {
-        res.redirect('pip12/caringForYourself');
+        res.redirect('pip12/gettingUp');
       }
     });
 
@@ -547,7 +547,7 @@ module.exports = function(app){
       if (req.param('edit')) {
         res.redirect('pip12/check-and-change');
       } else {
-        res.redirect('pip12/leavingYourHome');
+        res.redirect('pip12/goingOut');
       }
     });
 
@@ -611,7 +611,7 @@ module.exports = function(app){
       if (req.param('edit')) {
         res.redirect('pip12/check-and-change');
       } else {
-        res.redirect('pip12/understanding');
+        res.redirect('pip12/goingSomewhereNeverbeenBefore');
       }
     });
 
