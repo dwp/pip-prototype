@@ -631,6 +631,28 @@ module.exports = function(app){
       if (req.param('edit')) {
         res.redirect('pip12/check-and-change');
       } else {
+        res.redirect('pip12/goingSomewhereLocalJourney');
+      }
+    });
+
+    /*******************
+    goingSomewhereLocalJourney **todo
+    *******************/
+    app.get('/pip12/goingSomewhereLocalJourney', function (req, res) {
+        res.render('pip12/goingSomewhereLocalJourney', {
+          page               : '28',
+          frequency : req.session['pip12-goingSomewhereLocalJourney'],
+          'edit'    : req.param('edit')
+        });
+    });
+
+    app.post('/pip12/goingSomewhereLocalJourney', function (req, res) {
+      req.session['pip12-goingSomewhereLocalJourney'] = req.body;
+      req.session['pip12-goingSomewhereLocalJourney']['goingSomewhereLocalJourney' + req.body.frequency] = req.body.frequency;
+
+      if (req.param('edit')) {
+        res.redirect('pip12/check-and-change');
+      } else {
         res.redirect('pip12/goingSomewhereNeverbeenBefore');
       }
     });
@@ -640,7 +662,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/goingSomewhereNeverbeenBefore', function (req, res) {
         res.render('pip12/goingSomewhereNeverbeenBefore', {
-          page               : '28',
+          page               : '29',
           frequency : req.session['pip12-goingSomewhereNeverbeenBefore'],
           'edit'    : req.param('edit')
         });
@@ -650,7 +672,13 @@ module.exports = function(app){
       req.session['pip12-goingSomewhereNeverbeenBefore'] = req.body;
       req.session['pip12-goingSomewhereNeverbeenBefore']['goingSomewhereNeverbeenBefore' + req.body.frequency] = req.body.frequency;
 
-      if (req.param('edit')) {
+      if(req.body.frequency === 'None of the time') {
+        if (req.param('edit')) {
+          res.redirect('pip12/understanding-q?edit=true');
+        } else {
+          res.redirect('pip12/understanding-q');
+        }
+      } else if (req.param('edit')) {
         res.redirect('pip12/check-and-change');
       } else {
         res.redirect('pip12/goingSomewherebeenBefore');
@@ -662,7 +690,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/goingSomewherebeenBefore', function (req, res) {
         res.render('pip12/goingSomewherebeenBefore', {
-          page               : '29',
+          page               : '30',
           frequency : req.session['pip12-goingSomewherebeenBefore'],
           'edit'    : req.param('edit')
         });
@@ -684,7 +712,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/understanding-q', function (req, res) {
         res.render('pip12/understanding-q', {
-          page               : '30',
+          page               : '31',
           frequency : req.session['pip12-understanding-q'],
           'edit'    : req.param('edit')
         });
@@ -706,7 +734,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/money', function (req, res) {
         res.render('pip12/money', {
-          page               : '31',
+          page               : '32',
           frequency : req.session['pip12-money'],
           'edit'    : req.param('edit')
         });
@@ -725,7 +753,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip12/additionalInfo', function (req, res) {
         res.render('pip12/additionalInfo', {
-          page               : '33',
+          page               : '34',
           frequency : req.session['pip12-additionalInfo'],
           'edit'    : req.param('edit')
         });
@@ -745,7 +773,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip12/check-and-change', function (req, res) {
      res.render('pip12/check-and-change', {
-       page                          : '32',
+       page                          : '33',
        helper                        : req.session['pip12-helper'],
        nationality                   : req.session['pip12-nationality'],
        paymentsFromAbroad            : req.session['pip12-paymentsFromAbroad'],
@@ -846,6 +874,8 @@ module.exports = function(app){
            '<b>goingOut</b>'                      + JSON.stringify(req.session['pip12-goingOut'], null, " <br/>") +
            '<hr />' +
            '<b>gettingOn</b>'                     + JSON.stringify(req.session['pip12-gettingOn'], null, " <br/>") +
+           '<hr />' +
+           '<b>goingSomewhereLocalJourney</b>' + JSON.stringify(req.session['pip12-goingSomewhereLocalJourney'], null, " <br/>") +
            '<hr />' +
            '<b>goingSomewhereNeverbeenBefore</b>' + JSON.stringify(req.session['pip12-goingSomewhereNeverbeenBefore'], null, " <br/>") +
            '<hr />' +
