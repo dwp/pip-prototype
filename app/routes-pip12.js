@@ -817,6 +817,12 @@ module.exports = function(app){
    /*******************
    declaration
    *******************/
+   app.get('/pip12/declaration', function (req, res) {
+       res.render('pip12/declaration', {
+         page               : '35'
+       });
+   });
+
    app.post('/pip12/declaration', function (req, res) {
 
        var sendgrid  = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD),
