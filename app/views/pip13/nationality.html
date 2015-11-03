@@ -1,0 +1,157 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+      <form action="nationality{{#edit}}?edit=true{{/edit}}" method="post" class="form form-nationality checkMyAnswer" data-question="nationality">
+
+					<a href="/pip12/helper" class="example-back-link">Back</a>
+
+					<header>
+			   			<h1 class="form-title heading-large">
+                 {{>includes/pages/progress}}
+Nationality and where you live						</h1>
+					</header>
+
+					<ul>
+						<li>
+
+    <div class="form-group" id="form-group-britishCitizen">
+      <fieldset>
+        <legend class="form-label-bold" id="britishCitizen" for="britishCitizen">
+        <span class="frequency-question">What is your nationality?</span>
+
+
+
+        </legend>
+
+
+                  		<label class="block-label" for="british">
+      							<input id="british" type="radio" name="britishCitizen" value="British" {{#nationality.britishCitizen}}checked=checked{{/nationality.britishCitizen}}>
+      							British
+      					</label>
+                  		<label class="block-label" for="another" data-target="yourNationalityArea">
+      							<input id="another" type="radio" name="britishCitizen" value="Another nationality" {{#nationality.britishCitizenAnother nationality}}checked=checked{{/nationality.britishCitizenAnother nationality}} aria-controls="yourNationalityArea">
+      							Another nationality
+      					</label>
+
+      </fieldset>
+      </div>
+
+							<div class="panel-indent {{^nationality.britishCitizenAnother nationality}}js-hidden{{/nationality.britishCitizenAnother nationality}}" id="yourNationalityArea">
+    <div class="form-group" id="form-group-yourNationality">
+
+     <label class="form-label" for="yourNationality">
+
+
+Your nationality
+
+     </label>
+
+
+        <input type="text" class="form-control " id="yourNationality" name="yourNationality" value="{{#nationality.yourNationality}}{{nationality.yourNationality}}{{/nationality.yourNationality}}">
+      </div>
+							</div>
+						</li>
+						<li>
+
+    <div class="form-group" id="form-group-livingUK">
+      <fieldset class="inline">
+        <legend class="form-label-bold" id="livingUK" for="livingUK">
+        <span class="frequency-question">Do you live in England, Scotland or Wales?</span>
+
+
+
+        </legend>
+
+
+                  		<label class="block-label" for="livingUK-Yes">
+      							<input id="livingUK-Yes" type="radio" name="livingUK" {{#nationality.livingUKYes}}checked=checked{{/nationality.livingUKYes}} value="Yes">
+      							Yes
+      					</label>
+                  		<label class="block-label" for="livingUK-No" data-target="livingUKAreaNo">
+      							<input id="livingUK-No" type="radio" name="livingUK" {{#nationality.livingUKNo}}checked=checked{{/nationality.livingUKNo}} value="No" aria-controls="livingUKAreaNo">
+      							No
+      					</label>
+
+      </fieldset>
+      </div>
+
+							<div class="panel-indent {{^nationality.livingUKNo}}js-hidden{{/nationality.livingUKNo}}" id="livingUKAreaNo">
+    <div class="form-group" id="form-group-livingCountry">
+
+     <label class="form-label" for="livingCountry">
+
+
+Country you live in
+
+     </label>
+
+
+        <input type="text" class="form-control " id="livingCountry" name="livingCountry" value="{{#nationality.livingCountry}}{{nationality.livingCountry}}{{/nationality.livingCountry}}">
+      </div>
+							</div>
+						</li>
+						<li>
+
+
+    <div class="form-group" id="form-group-beenAbroad">
+      <fieldset class="inline">
+        <legend class="form-label-bold" id="beenAbroad" for="beenAbroad">
+        <span class="frequency-question">Have you been out of England, Scotland or Wales for more than a year in the last 3 years?</span>
+
+         <p class="form-hint">This could be one trip or a number of trips adding up to a year.</p>
+
+        </legend>
+            	<label class="block-label" for="beenAbroad-Yes" data-target="abroadyesArea">
+      							<input id="beenAbroad-Yes" type="radio" name="beenAbroad" value="Yes" {{#nationality.beenAbroadYes}}checked=checked{{/nationality.beenAbroadYes}} aria-controls="abroadyesArea">
+      							Yes
+      					</label>
+                  		<label class="block-label" for="beenAbroad-No">
+      							<input id="beenAbroad-No" type="radio" name="beenAbroad" {{#nationality.beenAbroadNo}}checked=checked{{/nationality.beenAbroadNo}} value="No">
+      							No
+      					</label>
+
+      </fieldset>
+      </div>
+
+						</li>
+					</ul>
+
+					<div class="form-group">
+						<input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+						<input type="submit" value="Save and exit" name="saveAndExit" class="exit-link">
+            <a href="/pip12/helper" class="example-back-link">Back</a>
+					</div>
+
+			</form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

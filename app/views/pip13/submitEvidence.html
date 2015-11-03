@@ -1,0 +1,134 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="submitEvidence{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="submitEvidence">
+
+
+        				<a href="/pipDigital/healthcare/healthcareprofessional" class="example-back-link">Back</a>
+
+
+
+
+
+
+        				<h1 class="form-title heading-large">{{>includes/pages/progress}}Medical information</h1>
+        				<p>If this was a real application we'd ask if you could send in any medical information that could give more detail about the effects of your condition.</p>
+        	      <p>Because this is a test application,<strong class="bold-small"> don't send us any medical information.</strong></p>
+        	      <p>But, we want to know what you could send if this was real.</p>
+        	      <p>Tell us which of the following you already have to hand and would have been able to post to us quickly:</p>
+
+        		<div id="medicalEvidenceList" class="form-group">
+
+
+        			<ul class="submit-evidence">
+        						<li>		<label class="block-label" for="0-id">
+        			<input type="checkbox" id="0-id" name="medicalEvidenceList0.evidence" value="Medical reports">
+             	Medical reports
+             </label>
+         </li>
+        					<input type="hidden" name="medicalEvidenceList0.label" id="medicalEvidenceList0.label" value="submitevidence.medicalreports.label">
+        						<li>		<label class="block-label" for="1-id">
+        			<input type="checkbox" id="1-id" name="medicalEvidenceList1.evidence" value="Your care or treatment plans (plans agreed with you and your healthcare professional to manage your daily care and support)">
+             	Your care or treatment plans (plans agreed with you and your healthcare professional to manage your daily care and support)
+             </label>
+         </li>
+        					<input type="hidden" name="medicalEvidenceList1.label" id="medicalEvidenceList1.label" value="submitevidence.treatmentplans.label">
+        						<li>		<label class="block-label" for="2-id">
+        			<input type="checkbox" id="2-id" name="medicalEvidenceList2.evidence" value="Medical test results">
+             	Medical test results
+             </label>
+         </li>
+        					<input type="hidden" name="medicalEvidenceList2.label" id="medicalEvidenceList2.label" value="submitevidence.medicaltestresults.label">
+        						<li>		<label class="block-label" for="3-id">
+        			<input type="checkbox" id="3-id" name="medicalEvidenceList3.evidence" value="Your hospital discharge letters">
+             	Your hospital discharge letters
+             </label>
+         </li>
+        					<input type="hidden" name="medicalEvidenceList3.label" id="medicalEvidenceList3.label" value="submitevidence.dischargeletters.label">
+        						<li>		<label class="block-label" for="4-id">
+        			<input type="checkbox" id="4-id" name="medicalEvidenceList4.evidence" value="Sight or hearing test results">
+             	Sight or hearing test results
+             </label>
+         </li>
+        					<input type="hidden" name="medicalEvidenceList4.label" id="medicalEvidenceList4.label" value="submitevidence.clinicletters.label">
+        						<li>		<label class="block-label" for="5-id">
+        			<input type="checkbox" id="5-id" name="medicalEvidenceList5.evidence" value="Reports from a Prison Service Disability Employment Advisor">
+             	Reports from a Prison Service Disability Employment Advisor
+             </label>
+         </li>
+        					<input type="hidden" name="medicalEvidenceList5.label" id="medicalEvidenceList5.label" value="submitevidence.prison.label">
+        						<li>		<label class="block-label" for="6-id">
+        			<input type="checkbox" id="6-id" name="medicalEvidenceList6.evidence" value="Education, Health and Care Plans (was called Statement Of Special Needs)">
+             	Education, Health and Care Plans (was called Statement Of Special Needs)
+             </label>
+         </li>
+        					<input type="hidden" name="medicalEvidenceList6.label" id="medicalEvidenceList6.label" value="submitevidence.specialneeds.label">
+        						<li>
+        								<label class="block-label" for="7-id" data-target="other-box">
+        			<input type="checkbox" id="7-id" name="medicalEvidenceList7.evidence" value="Other" aria-controls="other-box" aria-expanded="false">
+             	Other
+             </label>
+         </li>
+        						<fieldset id="other-box" class="js-hidden  panel-indent form-group-related" aria-hidden="true">
+            <div class="form-group" id="form-group-medicalEvidenceList7.otherDesc">
+
+             <label class="form-label" for="medicalEvidenceList7.otherDesc">
+
+
+        Only send information that describes the effect of your condition. Do not send appointment letters or fact sheets.
+
+             </label>
+
+
+                <input type="text" class="form-control " id="medicalEvidenceList7.otherDesc" name="medicalEvidenceList7.otherDesc" value="">
+              </div>
+        						</fieldset>
+        					<input type="hidden" name="medicalEvidenceList7.label" id="medicalEvidenceList7.label" value="submitevidence.other.label">
+        						<li>		<label class="block-label" for="8-id">
+        			<input type="checkbox" id="8-id" name="medicalEvidenceList8.evidence" data-none="true" value="None, you're not sending any medical information">
+             	None, you're not sending any medical information
+             </label>
+         </li>
+        					<input type="hidden" name="medicalEvidenceList8.label" id="medicalEvidenceList8.label" value="submitevidence.noevidence.label">
+        			</ul>
+        		</div>
+
+
+        				<div class="form-group">
+        					<input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+        					<input type="submit" value="Save and exit" name="saveAndExit" class="exit-link">
+                  <a href="#" class="example-back-link">Back</a>
+        				</div>
+			</form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

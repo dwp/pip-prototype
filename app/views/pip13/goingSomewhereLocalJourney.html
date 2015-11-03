@@ -1,0 +1,90 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="goingSomewhereLocalJourney{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="goingSomewherebeenBefore">
+
+        <a href="/pipDigital/activities/goingSomewhereLocalJourney" class="example-back-link">Back</a>
+       <h1 class="form-title heading-large">{{>includes/pages/progress}}
+         Planning a local journey				</h1>
+				<ul>
+					<li>
+
+            <div class="form-group" id="form-group-going-local">
+              <fieldset class="inline">
+                <legend class="form-label-bold" id="going-local" for="going-local">
+                  <span class="frequency-question">Would you have any difficulty planning a local journey to somewhere new?</span>
+
+
+
+                </legend>
+                <label class="block-label" for="going-local-Yes" data-target="details">
+                  <input id="going-local-Yes" type="radio" name="helper" value="Yes" aria-controls="helperDetailsFields"> Yes
+                </label>
+                <label class="block-label" for="going-local-No">
+                  <input id="going-local-No" type="radio" name="helper"  value="No"> No
+                </label>
+
+              </fieldset>
+            </div>
+						<div class="panel-indent js-hidden" id="details">
+
+        <div class="form-group">
+						<label class="form-label-bold" for="whats-difficult">
+
+              What would you find difficult?
+						</label>
+            <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+						<textarea class="form-control-3-4  " maxlength="1500" id="whats-difficult" name="whats-difficult"></textarea>
+		</div>
+        <div class="form-group">
+						<label class="form-label-bold" for="how-you-plan">
+
+              How would you plan the journey?
+						</label>
+            <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+						<textarea class="form-control-3-4  " maxlength="1500" id="how-you-plan" name="how-you-plan"></textarea>
+		</div>
+						</div>
+					</li>
+				</ul>
+
+     		<div class="form-group">
+					<input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+					<input type="submit" value="Save and exit" name="saveAndExit" class="exit-link">
+          <a href="#" class="example-back-link">Back</a>
+				</div>
+
+
+			</form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

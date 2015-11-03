@@ -1,0 +1,86 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="seeing{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="seeing">
+        <a href="/pipDigital/activities/gettingAround" class="example-back-link">Back</a>
+
+        				<h1 class="form-title heading-large">{{>includes/pages/progress}}
+        Your sight				</h1>
+
+        				<ul>
+        					<li>
+
+            <div class="form-group" id="form-group-frequency">
+              <fieldset class="inline">
+                <legend class="form-label-bold" id="frequency" for="frequency">
+                <span class="frequency-question">Does your condition affect your sight?</span>
+
+            
+                </legend>
+
+                <div class="form-group">
+                      <label class="block-label" data-target="yes" for="radio-indent-1">
+                        <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">
+                        Yes
+                      </label>
+                      <label class="block-label" for="radio-indent-2">
+                        <input id="radio-indent-2" type="radio" name="radio-indent-group" value="No">
+                        No
+                      </label>
+                </div>
+
+                  <div class="panel-indent js-hidden" id="yes">
+                    <div class="form-group">
+                      <label class="form-label-bold" for="national-insurance">Tell us roughly how often</label>
+                      <input class="form-control" name="national-insurance" type="text" id="national-insurance">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label-bold" for="detailsWhy">How your condition affects your sight.</label>
+                        <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+                        <textarea class="form-control-3-4" maxlength="1500" id="detailsWhy" name="detailsWhy">{{#frequency.detailsWhy}}{{frequency.detailsWhy}}{{/frequency.detailsWhy}}</textarea>
+                    </div>
+                  </div>
+
+
+                  </fieldset>
+        					</li>
+        				</ul>
+        				<div class="form-group">
+        					<input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+        					<input type="submit" value="Save and exit" name="saveAndExit" class="exit-link">
+                  <a href="#" class="example-back-link">Back</a>
+        				</div>
+
+			</form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

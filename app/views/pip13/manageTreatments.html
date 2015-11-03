@@ -1,0 +1,107 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+      <form action="manageTreatments{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="conditionDetails">
+        <a href="/pipDigital/user-data/paymentsFromAbroad" class="example-back-link">Back</a>
+
+
+
+
+
+       <h1 class="form-title heading-large">{{>includes/pages/progress}}
+         Managing your treatments </h1>
+
+
+         <ul>
+          <li>
+
+            <div class="form-group" id="form-group-frequency">
+              <fieldset>
+                <legend class="form-label-bold" id="frequency" for="frequency">
+                  <span class="frequency-question">Do you rely on someone to help you manage your treatment or therapy at home?</span>
+
+                  <p class="form-hint">This includes if you need them to supervise you or remind you.</p>
+
+                </legend>
+
+
+                <label class="block-label" for="pip.radio.morethan14hours.id" data-target="details">
+                  <input id="pip.radio.morethan14hours.id" type="radio" name="frequency" value="More than 14 hours a week" aria-controls="details"> More than 14 hours a week
+                </label>
+                <label class="block-label" for="pip.radio.between7and14hours.id" data-target="details">
+                  <input id="pip.radio.between7and14hours.id" type="radio" name="frequency" value="Between 7 and 14 hours a week" aria-controls="details"> Between 7 and 14 hours a week
+                </label>
+                <label class="block-label" for="pip.radio.between35and7hours.id" data-target="details">
+                  <input id="pip.radio.between35and7hours.id" type="radio" name="frequency" value="Between 3.5 and 7 hours a week" aria-controls="details"> Between 3.5 and 7 hours a week
+                </label>
+                <label class="block-label" for="pip.radio.lessthan35hours.id" data-target="details">
+                  <input id="pip.radio.lessthan35hours.id" type="radio" name="frequency" value="Less than 3.5 hours a week" aria-controls="details"> Less than 3.5 hours a week
+                </label>
+                <label class="block-label" for="pip.radio.nohours.id">
+                  <input id="pip.radio.nohours.id" type="radio" name="frequency" value="I don't rely on anyone"> I don't rely on anyone
+                </label>
+
+              </fieldset>
+            </div>
+
+            <div class="panel-indent js-hidden" id="details">
+              <div class="form-group">
+                <label class="form-label-bold" for="detailsWhy">
+
+                  Why you rely on someone to help you manage your treatments or therapy at home.
+                </label>
+                <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+                <textarea class="form-control-3-4  " maxlength="1500" id="detailsWhy" name="detailsWhy"></textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-label-bold" for="detailsHow">
+
+                  How someone helps you manage your treatment or therapy at home at the moment.
+                </label>
+                <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+                <textarea class="form-control-3-4  " maxlength="1500" id="detailsHow" name="detailsHow"></textarea>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+          <input type="submit" value="Save and exit" name="saveAndExit" class="exit-link">
+          <a href="#" class="example-back-link">Back</a>
+        </div>
+
+      </form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

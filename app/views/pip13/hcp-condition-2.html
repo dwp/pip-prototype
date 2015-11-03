@@ -1,0 +1,87 @@
+{{<govuk_template}}
+
+{{$head}}
+{{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+{{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+  {{>includes/phase_banner}}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <form action="hcp-condition-2{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="hcp-condition">
+
+      <a href="/pipDigital/activities/outAndAbout" class="example-back-link">Back</a>
+
+     <h1 class="form-title heading-large">{{>includes/pages/progress}}Help monitoring your condition</h1>
+
+      <div class="form-group">
+        <fieldset class="inline">
+
+          <div id="example-ni-no">
+            <fieldset class="inline">
+              <legend>
+                <span class="form-label-bold">Do you rely on someone else to help monitor your condition?</span>
+              </legend>
+              <div class="form-group form-group-compound">
+                <label class="block-label" data-target="example-ni-noa" for="radio-indent-1a">
+                  <input id="radio-indent-1a" type="radio" name="conditionEffects"  {{#hcpcondition2.conditionEffectsYes}}checked=checked{{/hcpcondition2.conditionEffectsYes}}  value="Yes">
+                  Yes
+                </label>
+                <label class="block-label" for="radio-indent-2a">
+                  <input id="radio-indent-2a" type="radio" name="conditionEffects"  {{#hcpcondition2.conditionEffectsNo}}checked=checked{{/hcpcondition2.conditionEffectsNo}}  value="No">
+                  No
+                </label>
+              </div>
+              <div class="panel-indent {{^hcpcondition2.conditionEffectsYes}}js-hidden{{/hcpcondition2.conditionEffectsYes}}" id="example-ni-noa">
+                <div class="form-group">
+                  <label class="form-label-bold" for="condition-effects-often">How often.</label>
+                  <input class="form-control" name="condition-effects-often" type="text" id="condition-effects-often" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label-bold" for="condition-effects-why">Why do you rely on someone else to monitor your condition?</label>
+                  <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+                  <textarea class="form-control-3-4 " maxlength="1500" name="condition-effects-why" type="text" id="condition-effects-why">{{#hcpcondition2.condition-effects-how}}{{hcpcondition2.condition-effects-how}}{{/hcpcondition2.condition-effects-how}}</textarea>
+                </div>
+                <div class="form-group">
+                  <label class="form-label-bold" for="condition-effects-how">How do they monitor your condition?</label>
+                  <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+                  <textarea class="form-control-3-4 " maxlength="1500" name="condition-effects-how" type="text" id="condition-effects-how">{{#hcpcondition2.condition-effects-how}}{{hcpcondition2.condition-effects-how}}{{/hcpcondition2.condition-effects-how}}</textarea>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+        <input type="submit" value="Save and exit" name="saveAndExit" class="exit-link">
+        <a href="#" class="example-back-link">Back</a>
+      </div>
+
+    </form>
+
+  </div>
+  <div class="column-third">
+
+  </div>
+</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

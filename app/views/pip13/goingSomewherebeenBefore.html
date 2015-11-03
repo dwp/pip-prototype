@@ -1,0 +1,132 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="goingSomewherebeenBefore{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="goingSomewherebeenBefore">
+
+        <a href="/pipDigital/activities/goingSomewhereNeverbeenBefore" class="example-back-link">Back</a>
+       <h1 class="form-title heading-large">{{>includes/pages/progress}}
+Going somewhere you know				</h1>
+				<ul>
+					<li>
+
+            <div class="form-group" id="form-group-frequency">
+              <fieldset>
+                <legend class="form-label-bold" id="frequency" for="frequency">
+                  <span class="frequency-question">Would you need help to go somewhere you do know?</span>
+
+                  <p class="form-hint">Help could be from another person, a guide dog or any aids you rely on.</p>
+
+                </legend>
+
+                <label class="block-label" for="pip.radio.allthetime.id" data-target="details">
+                  <input id="pip.radio.allthetime.id" type="radio" name="frequency" {{#frequency.frequencyAll the time}}checked=checked{{/frequency.frequencyAll the time}} value="Every time you go somewhere new" aria-controls="details"> Every time you go somewhere new
+                </label>
+                <label class="block-label" for="pip.radio.morethanhalf.id" data-target="details">
+                  <input id="pip.radio.morethanhalf.id" type="radio" name="frequency" value="More than half the time" {{#frequency.frequencyMore than half the time}}checked=checked{{/frequency.frequencyMore than half the time}} aria-controls="details"> More than half the time
+                </label>
+                <label class="block-label" for="pip.radio.lessthanhalf.id" data-target="details">
+                  <input id="pip.radio.lessthanhalf.id" type="radio" name="frequency" value="Less than half the time" {{#frequency.frequencyLess than half the time}}checked=checked{{/frequency.frequencyLess than half the time}} aria-controls="details"> Less than half the time
+                </label>
+                <label class="block-label" for="pip.radio.noneofthetime.id">
+                  <input id="pip.radio.noneofthetime.id" type="radio" name="frequency" value="None of the time" {{#frequency.frequencyNone of the time}}checked=checked{{/frequency.frequencyNone of the time}}> None of the time
+                </label>
+
+                <label class="block-label" for="pip.radio.own-words.id" data-target="details">
+                  <input id="pip.radio.own-words.id" type="radio" name="frequency" value="Tell us how often in your own words" {{#frequency.frequencyTell us how often in your own words}}checked=checked{{/frequency.frequencyTell us how often in your own words}} aria-controls="own-words"> Tell us how often in your own words
+                </label>
+
+
+              </fieldset>
+            </div>
+            <div class="panel-indent js-hidden" id="details">
+              <div id="how-often" class="form-group js-hidden">
+                <label class="form-label-bold" for="ownWords">How often
+                </label>
+                <input type="text" class="form-control" id="ownWords" name="ownWords" value="{{#frequency.ownWords}}{{frequency.ownWords}}{{/frequency.ownWords}}" />
+              </div>
+
+              <fieldset class="form-group">
+                <legend class="form-label-bold">What do you have difficulty with?</legend>
+                <p>Select as many as you need.</p>
+                <label class="block-label" for="waste-type-1">
+                  <input id="waste-type-1" name="unknow-journey-difficulty" type="checkbox" value="Leaving your home"> Leaving your home
+                </label>
+                <label class="block-label" for="waste-type-2">
+                  <input id="waste-type-2" name="unknow-journey-difficulty" type="checkbox" value="Knowing where to go">Knowing where to go
+                </label>
+                <label class="block-label" for="waste-type-4">
+                  <input id="waste-type-4" name="unknow-journey-difficulty" type="checkbox" value="Asking for help"> Asking for help
+                </label>
+                <label class="block-label" for="waste-type-3">
+                  <input id="waste-type-3" name="unknow-journey-difficulty" type="checkbox" value="Recovering from getting lost"> Recovering from getting lost
+                </label>
+                <label class="block-label" for="waste-type-5">
+                  <input id="waste-type-5" name="unknow-journey-difficulty" type="checkbox" value="Following instructions on a map or sat nav">Following instructions on a map or sat nav
+                </label>
+                <label class="block-label" for="waste-type-7" data-target="other">
+                  <input id="waste-type-7" name="unknow-journey-difficulty" type="checkbox" value="Other"> Anything else
+                </label>
+                <div class="panel-indent js-hidden" id="other">
+                  <input class="form-control" type="text" id="nationalities-other-country" name="other-difficulty">
+                </div>
+              </fieldset>
+
+              <div class="form-group">
+                <label class="form-label-bold" for="detailsWhy">
+
+                  Why do you need help?
+                </label>
+                <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+                <textarea class="form-control-3-4  " maxlength="1500" id="detailsWhy" name="detailsWhy"></textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-label-bold" for="detailsHow">
+                  How would you go somewhere you know?
+                </label>
+                <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+                <textarea class="form-control-3-4  " maxlength="1500" id="detailsHow" name="detailsHow"></textarea>
+              </div>
+            </div>
+					</li>
+				</ul>
+
+     		<div class="form-group">
+					<input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+					<input type="submit" value="Save and exit" name="saveAndExit" class="exit-link">
+          <a href="#" class="example-back-link">Back</a>
+				</div>
+
+
+			</form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

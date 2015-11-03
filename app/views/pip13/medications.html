@@ -1,0 +1,443 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}<main id="content" role="main">
+
+  {{>includes/phase_banner}}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="medications{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="conditionDetails">
+        <a href="/pipDigital/user-data/paymentsFromAbroad" class="example-back-link">Back</a>
+
+
+
+
+
+        <h1 class="form-title heading-large">{{>includes/pages/progress}} Your medication</h1>
+
+
+        <div class="form-group" id="form-group-currentMedications">
+          <fieldset class="inline">
+            <legend class="form-label-bold" id="currentMedications" for="currentMedications">
+              <span class="frequency-question">Are you currently taking any medication?</span>
+
+
+
+            </legend>
+
+
+            <label class="block-label" for="currentMedications-Yes" data-target="medications">
+              <input id="currentMedications-Yes" type="radio" name="currentMedications" value="Yes" aria-controls="medications"> Yes
+            </label>
+            <label class="block-label" for="currentMedications-No">
+              <input id="currentMedications-No" type="radio" name="currentMedications" value="No"> No
+            </label>
+
+          </fieldset>
+        </div>
+        <div class="js-hidden" id="medications" aria-hidden="false">
+          
+          <table class="condition">
+            <tbody>
+              <tr>
+                <th>Medication</th>
+                <th class="numeric">Dosage</th>
+                <th class="numeric">How often you take it</th>
+              </tr>
+
+
+
+              <tr id="medication-row-0" class="medication-row">
+                <td>
+                  <div class="form-group" id="form-group-medicationList0.name">
+                    <label class="form-label" for="medicationList0.name">
+
+
+                      <span class="visuallyhidden">Medication</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList0.name" name="medicationList0.name" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-medicationList0.dosage">
+                    <label class="form-label" for="medicationList0.dosage">
+
+
+                      <span class="visuallyhidden">Dosage</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList0.dosage" name="medicationList0.dosage" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-medicationList0.frequency">
+                    <label class="form-label" for="medicationList0.frequency">
+
+
+                      <span class="visuallyhidden">How often you take it</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList0.frequency" name="medicationList0.frequency" value="">
+                  </div>
+                </td>
+              </tr>
+
+
+              <tr id="medication-row-1" class="medication-row">
+                <td>
+                  <div class="form-group" id="form-group-medicationList1.name">
+                    <label class="form-label" for="medicationList1.name">
+
+
+                      <span class="visuallyhidden">Medication</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList1.name" name="medicationList1.name" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-medicationList1.dosage">
+                    <label class="form-label" for="medicationList1.dosage">
+
+
+                      <span class="visuallyhidden">Dosage</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList1.dosage" name="medicationList1.dosage" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-medicationList1.frequency">
+                    <label class="form-label" for="medicationList1.frequency">
+
+
+                      <span class="visuallyhidden">How often you take it</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList1.frequency" name="medicationList1.frequency" value="">
+                  </div>
+                </td>
+              </tr>
+              <tr id="medication-row-2" class="medication-row">
+                <td>
+                  <div class="form-group" id="form-group-medicationList2.name">
+                    <label class="form-label" for="medicationList2.name">
+
+
+                      <span class="visuallyhidden">Medication</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList2.name" name="medicationList2.name" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-medicationList2.dosage">
+                    <label class="form-label" for="medicationList2.dosage">
+
+
+                      <span class="visuallyhidden">Dosage</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList2.dosage" name="medicationList2.dosage" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-medicationList2.frequency">
+                    <label class="form-label" for="medicationList2.frequency">
+
+
+                      <span class="visuallyhidden">How often you take it</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList2.frequency" name="medicationList2.frequency" value="">
+                  </div>
+                </td>
+              </tr>
+              <tr id="medication-row-3" class="medication-row  js-hidden">
+                <td>
+                  <div class="form-group" id="form-group-medicationList3.name">
+                    <label class="form-label" for="medicationList3.name">
+
+
+                      <span class="visuallyhidden">Medication</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList3.name" name="medicationList3.name" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-medicationList3.dosage">
+                    <label class="form-label" for="medicationList3.dosage">
+
+
+                      <span class="visuallyhidden">Dosage</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList3.dosage" name="medicationList3.dosage" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-medicationList3.frequency">
+                    <label class="form-label" for="medicationList3.frequency">
+
+
+                      <span class="visuallyhidden">How often you take it</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList3.frequency" name="medicationList3.frequency" value="">
+                  </div>
+                </td>
+              </tr>
+              <tr id="medication-row-4" class="medication-row  js-hidden">
+                <td>
+                  <div class="form-group" id="form-group-medicationList4.name">
+                    <label class="form-label" for="medicationList4.name">
+
+
+                      <span class="visuallyhidden">Medication</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList4.name" name="medicationList4.name" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-medicationList4.dosage">
+                    <label class="form-label" for="medicationList4.dosage">
+
+
+                      <span class="visuallyhidden">Dosage</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList4.dosage" name="medicationList4.dosage" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-medicationList4.frequency">
+                    <label class="form-label" for="medicationList4.frequency">
+
+
+                      <span class="visuallyhidden">How often you take it</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList4.frequency" name="medicationList4.frequency" value="">
+                  </div>
+                </td>
+              </tr>
+              <tr id="medication-row-5" class="medication-row  js-hidden">
+                <td>
+                  <div class="form-group" id="form-group-medicationList5.name">
+                    <label class="form-label" for="medicationList5.name">
+
+
+                      <span class="visuallyhidden">Medication</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList5.name" name="medicationList5.name" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-medicationList5.dosage">
+                    <label class="form-label" for="medicationList5.dosage">
+
+
+                      <span class="visuallyhidden">Dosage</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList5.dosage" name="medicationList5.dosage" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-medicationList5.frequency">
+                    <label class="form-label" for="medicationList5.frequency">
+
+
+                      <span class="visuallyhidden">How often you take it</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList5.frequency" name="medicationList5.frequency" value="">
+                  </div>
+                </td>
+              </tr>
+              <tr id="medication-row-6" class="medication-row  js-hidden">
+                <td>
+                  <div class="form-group" id="form-group-medicationList6.name">
+                    <label class="form-label" for="medicationList6.name">
+
+
+                      <span class="visuallyhidden">Medication</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList6.name" name="medicationList6.name" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-medicationList6.dosage">
+                    <label class="form-label" for="medicationList6.dosage">
+
+
+                      <span class="visuallyhidden">Dosage</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList6.dosage" name="medicationList6.dosage" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-medicationList6.frequency">
+                    <label class="form-label" for="medicationList6.frequency">
+
+
+                      <span class="visuallyhidden">How often you take it</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList6.frequency" name="medicationList6.frequency" value="">
+                  </div>
+                </td>
+              </tr>
+              <tr id="medication-row-7" class="medication-row  js-hidden">
+                <td>
+                  <div class="form-group" id="form-group-medicationList7.name">
+                    <label class="form-label" for="medicationList7.name">
+
+
+                      <span class="visuallyhidden">Medication</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList7.name" name="medicationList7.name" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-medicationList7.dosage">
+                    <label class="form-label" for="medicationList7.dosage">
+
+
+                      <span class="visuallyhidden">Dosage</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList7.dosage" name="medicationList7.dosage" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-medicationList7.frequency">
+                    <label class="form-label" for="medicationList7.frequency">
+
+
+                      <span class="visuallyhidden">How often you take it</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList7.frequency" name="medicationList7.frequency" value="">
+                  </div>
+                </td>
+              </tr>
+              <tr id="medication-row-8" class="medication-row  js-hidden">
+                <td>
+                  <div class="form-group" id="form-group-medicationList8.name">
+                    <label class="form-label" for="medicationList8.name">
+
+
+                      <span class="visuallyhidden">Medication</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList8.name" name="medicationList8.name" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-medicationList8.dosage">
+                    <label class="form-label" for="medicationList8.dosage">
+
+
+                      <span class="visuallyhidden">Dosage</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList8.dosage" name="medicationList8.dosage" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-medicationList8.frequency">
+                    <label class="form-label" for="medicationList8.frequency">
+
+
+                      <span class="visuallyhidden">How often you take it</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList8.frequency" name="medicationList8.frequency" value="">
+                  </div>
+                </td>
+              </tr>
+              <tr id="medication-row-9" class="medication-row  js-hidden">
+                <td>
+                  <div class="form-group" id="form-group-medicationList9.name">
+                    <label class="form-label" for="medicationList9.name">
+
+
+                      <span class="visuallyhidden">Medication</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList9.name" name="medicationList9.name" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-medicationList9.dosage">
+                    <label class="form-label" for="medicationList9.dosage">
+
+
+                      <span class="visuallyhidden">Dosage</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList9.dosage" name="medicationList9.dosage" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-medicationList9.frequency">
+                    <label class="form-label" for="medicationList9.frequency">
+
+
+                      <span class="visuallyhidden">How often you take it</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="medicationList9.frequency" name="medicationList9.frequency" value="">
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <p><a href="#" class="link-table" data-target="medication-row">Add another medication</a>
+          </p>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+          <input type="submit" value="Save and exit" name="saveAndExit" class="exit-link">
+          <a href="#" class="example-back-link">Back</a>
+        </div>
+
+      </form>
+
+    </div>
+    <div class="column-third">
+
+    </div>
+  </div>
+
+</main>
+<!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

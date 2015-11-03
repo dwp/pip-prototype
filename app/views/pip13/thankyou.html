@@ -1,0 +1,41 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+  <div class="highlighted-event">
+		<em>Your application has been sent</em>
+		<p>Your reference is your</p>
+		<em>National Insurance number</em>
+	</div>
+
+
+	<h2 class="heading-medium">What happens next</h2>
+
+	<p>You'll get sent a letter telling you the decision. This might include an invite to meet and talk more about how your condition affects you in more detail.</p>
+	<p>If you haven't got your letter by [insert date], phone [some number]</p>
+
+	<div class="form-group">
+		<a type="submit" class="button" href="#">Finished</a>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

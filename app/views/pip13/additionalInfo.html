@@ -1,0 +1,50 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="additionalInfo{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="additionalInfo">
+
+        <a href="/pipDigital/activities/money" class="example-back-link">Back</a>
+       <h1 class="form-title heading-large">{{>includes/pages/progress}}Additional information</h1>
+
+          <div class="form-group">
+						<label class="form-label-bold" for="details">Include anything else that explains how your condition or disability affects you.</label>
+            <span class="font-xsmall form-control-3-4 character-count">3000 characters left</span>
+						<textarea class="form-control-3-4  additionalInfo" maxlength="3000" id="details" name="details"></textarea>
+  		    </div>
+	        <div class="form-group">
+	        	<input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+						<input type="submit" value="Save and exit" name="saveAndExit" class="exit-link">
+					</div>
+			</form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

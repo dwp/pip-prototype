@@ -1,0 +1,181 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+      <form action="washing{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="washing">
+        <a href="/pipDigital/activities/toilet" class="example-back-link">Back</a>
+       <h1 class="form-title heading-large">{{>includes/pages/progress}}
+          Washing yourself </h1>
+
+        <ul>
+          <li>
+
+            <div class="form-group" id="form-group-frequency">
+              <fieldset>
+                <legend class="form-label-bold" id="frequency" for="frequency">
+                  <span class="frequency-question">Does your condition affect you washing your hair or any part of your body?</span>
+
+                  <p class="form-hint">This includes if you need help to get into the bath or shower, to wash any part of your body or if you need to be encouraged to wash.</p>
+
+                </legend>
+                <label class="block-label" for="pip.radio.allthetime.id" data-target="details">
+                  <input id="pip.radio.allthetime.id" type="radio" name="frequency" value="Everytime I wash" aria-controls="details" {{#frequency.frequencyEverytime I wash}}checked=checked{{/frequency.frequencyEverytime I wash}}>
+                  Everytime you wash
+                </label>
+                <label class="block-label" for="pip.radio.morethanhalf.id" data-target="details">
+                  <input id="pip.radio.morethanhalf.id" type="radio" name="frequency" value="More than half the time" {{#frequency.frequencyMore than half the time}}checked=checked{{/frequency.frequencyMore than half the time}} aria-controls="details">
+                  More than half the time
+                </label>
+                <label class="block-label" for="pip.radio.lessthanhalf.id" data-target="details">
+                  <input id="pip.radio.lessthanhalf.id" type="radio" name="frequency" value="Less than half the time" {{#frequency.frequencyLess than half the time}}checked=checked{{/frequency.frequencyLess than half the time}} aria-controls="details">
+                  Less than half the time
+                </label>
+                <label class="block-label" for="pip.radio.noneofthetime.id">
+                  <input id="pip.radio.noneofthetime.id" type="radio" name="frequency" value="None of the time" {{#frequency.frequencyNone of the time}}checked=checked{{/frequency.frequencyNone of the time}}>
+                  None of the time
+                </label>
+
+                <label class="block-label" for="pip.radio.own-words.id" data-target="details">
+                  <input id="pip.radio.own-words.id" type="radio" name="frequency" value="Tell us how often in your own words" {{#frequency.frequencyTell us how often in your own words}}checked=checked{{/frequency.frequencyTell us how often in your own words}} aria-controls="own-words">
+                  Tell us how often in your own words
+                </label>
+
+              </fieldset>
+            </div>
+
+            <div class="panel-indent js-hidden"  id="details">
+
+              <div id="how-often" class="form-group js-hidden">
+                <label class="form-label-bold" for="ownWords">How often.</label>
+                <input type="text" class="form-control" id="ownWords" name="ownWords" value="{{#frequency.ownWords}}{{frequency.ownWords}}{{/frequency.ownWords}}" />
+              </div>
+              <fieldset class="form-group">
+                <legend class="form-label-bold">What do you have difficulty with?</legend>
+                <p>Select as many as you need.</p>
+                <label class="block-label" for="waste-type-1">
+                  <input id="waste-type-1" name="gettingDressed-difficulty" type="checkbox" value="Getting in to or out of the bath or shower">
+                  Getting in to or out of the bath or shower
+                </label>
+                <label class="block-label" for="waste-type-2">
+                  <input id="waste-type-2" name="gettingDressed-difficulty" type="checkbox" value="Washing your hair">
+                  Washing your hair
+                </label>
+                <label class="block-label" for="waste-type-3">
+                  <input id="waste-type-3" name="gettingDressed-difficulty" type="checkbox" value="Washing your feet">
+                  Washing your feet
+                </label>
+                <label class="block-label" for="waste-type-4">
+                  <input id="waste-type-4" name="gettingDressed-difficulty" type="checkbox" value="Washing your legs">
+                  Washing your legs
+                </label>
+                <label class="block-label" for="waste-type-5">
+                  <input id="waste-type-5" name="gettingDressed-difficulty" type="checkbox" value="Washing your back">
+                  Washing your back
+                </label>
+                <label class="block-label" for="waste-type-6">
+                  <input id="waste-type-6" name="gettingDressed-difficulty" type="checkbox" value="Washing between your shoulders and waist">
+                  Washing between your shoulders and waist
+                </label>
+                <label class="block-label" for="waste-type-7">
+                  <input id="waste-type-7" name="gettingDressed-difficulty" type="checkbox" value="Standing">
+                  Standing
+                </label>
+                <label class="block-label" for="waste-type-8">
+                  <input id="waste-type-8" name="gettingDressed-difficulty" type="checkbox" value="Balancing">
+                  Balancing
+                </label>
+                <label class="block-label" for="waste-type-9" data-target="other">
+                  <input id="waste-type-9" name="gettingDressed-difficulty" type="checkbox" value="Other">
+                  Anything else
+                </label>
+                <div class="panel-indent js-hidden" id="other">
+                  <input class="form-control" type="text" id="nationalities-other-country" name="other-difficulty">
+                </div>
+              </fieldset>
+              <div class="form-group">
+                <label class="form-label-bold" for="ownWordsDetailsWhy">
+
+                  Why your condition affects you washing your hair or any part of your body.
+                </label>
+                <details class="help-text">
+                  <summary><span class="summary">What to include in your answer</span></summary>
+                  <div class="panel-indent">
+                    <p>
+                      Include as much information as you can, such as if you:
+                    </p>
+                    <ul class="list-bullet">
+                      <li>if you risk hurting yourself or having an accident when you’re washing yourself</li>
+                      <li>if you get any side-effects</li>
+                      <li>if you can wash as often as you need to, or if it depends on what kind of day you're having </li>
+                    </ul>
+                  </div>
+                </details>
+
+                <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+                <textarea class="form-control-3-4  " maxlength="1500" id="ownWordsDetailsWhy" name="ownWordsDetailsWhy">{{#frequency.ownWordsDetailsWhy}}{{frequency.ownWordsDetailsWhy}}{{/frequency.ownWordsDetailsWhy}}</textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-label-bold" for="ownWordsDetailsHow">
+
+                  How you wash your hair and body at the moment.
+                </label>
+                <details class="help-text">
+                  <summary><span class="summary">What to include in your answer</span></summary>
+                  <div class="panel-indent">
+                    <p>
+                      Include as much information as you can, such as if you:
+                    </p>
+                    <ul class="list-bullet">
+                      <li>how long it takes you to get wash yourself</li>
+                      <li>if you can do some parts but not others</li>
+                      <li>if you rely on any aids or adaptations</li>
+                      <li>if you rely on someone to help you, supervise you or encourage you to wash</li>
+                    </ul>
+                  </div>
+                </details>
+                <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+                <textarea class="form-control-3-4  " maxlength="1500" id="ownWordsDetailsHow" name="ownWordsDetailsHow">{{#frequency.ownWordsDetailsHow}}{{frequency.ownWordsDetailsHow}}{{/frequency.ownWordsDetailsHow}}</textarea>
+              </div>
+            </div>
+
+
+          </li>
+        </ul>
+        <div class="form-group">
+          <input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+          <input type="submit" value="Save and exit" name="saveAndExit" class="exit-link">
+          <a href="#" class="example-back-link">Back</a>
+        </div>
+
+      </form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
