@@ -66,6 +66,35 @@
                 <label class="form-label-bold" for="ownWords">How often.</label>
                 <input type="text" class="form-control" id="ownWords" value="{{#frequency.ownWords}}{{frequency.ownWords}}{{/frequency.ownWords}}" name="ownWords" />
               </div>
+              <fieldset class="form-group">
+                <legend class="form-label-bold">What do you have difficulty with?</legend>
+                <p>Select as many as you need.</p>
+                <label class="block-label" for="waste-type-1">
+                  <input id="waste-type-1" name="manageMedications-difficulty" type="checkbox" value="Swallowing">
+                  Swallowing
+                </label>
+                <label class="block-label" for="waste-type-2">
+                  <input id="waste-type-2" name="manageMedications-difficulty" type="checkbox" value=" Remembering to take your medication">
+                  Remembering to take your medication
+                </label>
+                <label class="block-label" for="waste-type-3">
+                  <input id="waste-type-3" name="manageMedications-difficulty" type="checkbox" value="Making sure you have enough medication">
+                  Making sure you have enough medication
+                </label>
+                <label class="block-label" for="waste-type-4">
+                  <input id="waste-type-4" name="manageMedications-difficulty" type="checkbox" value="Freeing your medication from the packaging">
+                  Freeing your medication from the packaging
+                </label>
+                <label class="block-label" for="waste-type-9" data-target="other">
+                  <input id="waste-type-9" name="manageMedications-difficulty" type="checkbox" value="Other">
+                  Anything else
+                </label>
+                <div class="panel-indent js-hidden" id="other">
+                  <input class="form-control" type="text" id="manageMedications-other-country" name="other-difficulty">
+                </div>
+              </fieldset>
+
+
               <div class="form-group">
                 <label class="form-label-bold" for="detailsWhy">
 
