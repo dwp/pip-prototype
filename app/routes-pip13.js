@@ -70,7 +70,7 @@ module.exports = function(app){
      if (req.param('edit')) {
        res.redirect('pip13/check-and-change');
      } else {
-       res.redirect('pip13/conditionDetails');
+       res.redirect('pip13/youAndYourCondition');
      }
    });
 
@@ -324,7 +324,7 @@ module.exports = function(app){
      if (req.param('edit')) {
        res.redirect('pip13/check-and-change');
      } else {
-       res.redirect('pip13/summaryMain');
+       res.redirect('pip13/specialAids');
      }
    });
 
@@ -345,28 +345,6 @@ module.exports = function(app){
      if (req.param('edit')) {
        res.redirect('pip13/check-and-change');
      } else {
-       res.redirect('pip13/gettingAround');
-     }
-   });
-
-   /*******************
-   gettingAround
-   *******************/
-   app.get('/pip13/gettingAround', function (req, res) {
-       res.render('pip13/gettingAround', {
-         page               : '16',
-         frequency : req.session['pip13-gettingAround'],
-         'edit'    : req.param('edit')
-       });
-   });
-
-   app.post('/pip13/gettingAround', function (req, res) {
-     req.session['pip13-gettingAround'] = req.body;
-     req.session['pip13-gettingAround']['frequency' + req.body.frequency] = req.body.frequency;
-
-     if (req.param('edit')) {
-       res.redirect('pip13/check-and-change');
-     } else {
        res.redirect('pip13/seeing');
      }
    });
@@ -376,7 +354,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip13/seeing', function (req, res) {
        res.render('pip13/seeing', {
-         page               : '17',
+         page               : '16',
          frequency : req.session['pip13-seeing'],
          'edit'    : req.param('edit')
        });
@@ -389,9 +367,31 @@ module.exports = function(app){
      if (req.param('edit')) {
        res.redirect('pip13/check-and-change');
      } else {
-       res.redirect('pip13/hearing');
+       res.redirect('pip13/speaking');
      }
    });
+
+   /*******************
+   speaking
+   *******************/
+   app.get('/pip13/speaking', function (req, res) {
+       res.render('pip13/speaking', {
+         page               : '17',
+         frequency : req.session['pip13-speaking'],
+         'edit'    : req.param('edit')
+       });
+   });
+
+   app.post('/pip13/speaking', function (req, res) {
+     req.session['pip13-speaking'] = req.body;
+     req.session['pip13-speaking']['frequency' + req.body.frequency] = req.body.frequency;
+
+     if (req.param('edit')) {
+       res.redirect('pip13/check-and-change');
+     } else {
+       res.redirect('pip13/hearing');
+     }
+    });
 
     /*******************
     hearing
@@ -411,31 +411,32 @@ module.exports = function(app){
       if (req.param('edit')) {
         res.redirect('pip13/check-and-change');
       } else {
-        res.redirect('pip13/speaking');
+        res.redirect('pip13/youAndYourHome');
       }
     });
 
-    /*******************
-    speaking
-    *******************/
-    app.get('/pip13/speaking', function (req, res) {
-        res.render('pip13/speaking', {
-          page               : '19',
-          frequency : req.session['pip13-speaking'],
-          'edit'    : req.param('edit')
-        });
-    });
+   /*******************
+   gettingAround
+   *******************/
+   app.get('/pip13/gettingAround', function (req, res) {
+       res.render('pip13/gettingAround', {
+         page               : '19',
+         frequency : req.session['pip13-gettingAround'],
+         'edit'    : req.param('edit')
+       });
+   });
 
-    app.post('/pip13/speaking', function (req, res) {
-      req.session['pip13-speaking'] = req.body;
-      req.session['pip13-speaking']['frequency' + req.body.frequency] = req.body.frequency;
+   app.post('/pip13/gettingAround', function (req, res) {
+     req.session['pip13-gettingAround'] = req.body;
+     req.session['pip13-gettingAround']['frequency' + req.body.frequency] = req.body.frequency;
 
-      if (req.param('edit')) {
-        res.redirect('pip13/check-and-change');
-      } else {
-        res.redirect('pip13/gettingUp');
-      }
-    });
+     if (req.param('edit')) {
+       res.redirect('pip13/check-and-change');
+     } else {
+       res.redirect('pip13/gettingUp');
+     }
+   });
+
 
     /*******************
     gettingUp
@@ -565,7 +566,7 @@ module.exports = function(app){
       if (req.param('edit')) {
         res.redirect('pip13/check-and-change');
       } else {
-        res.redirect('pip13/goingOut');
+        res.redirect('pip13/leavingYourHome');
       }
     });
 
@@ -631,7 +632,7 @@ module.exports = function(app){
       if (req.param('edit')) {
         res.redirect('pip13/check-and-change');
       } else {
-        res.redirect('pip13/goingSomewhereLocalJourney');
+        res.redirect('pip13/understanding');
       }
     });
 

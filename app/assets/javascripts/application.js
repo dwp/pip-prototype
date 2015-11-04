@@ -250,4 +250,9 @@ $(document).ready(function() {
 			});
 		});
 
+		$('.heading-small a').click(function() {
+			$(this).parent().next('ul').toggle();
+			return false;
+		});
+
 });
