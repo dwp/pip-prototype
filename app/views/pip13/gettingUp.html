@@ -23,21 +23,21 @@
         <a href="/pipDigital/summary/caringForYourself" class="example-back-link">Back</a>
 
        <h1 class="form-title heading-large">{{>includes/pages/progress}}
-          Getting up </h1>
+          Moving around your home </h1>
         <ul>
           <li>
 
             <div class="form-group" id="form-group-frequency">
               <fieldset>
                 <legend class="form-label-bold" id="frequency" for="frequency">
-                  <span class="frequency-question">Does your condition affect you getting up and out of bed?</span>
+                  <span class="frequency-question">Does your condition affect you moving around your home?</span>
 
-                  <p class="form-hint">This includes if you find any part difficult or if you rely on someone to help or encourage you to get out of bed.</p>
+                  <p class="form-hint">This includes if you find any part difficult or if you rely on someone to help.</p>
 
                 </legend>
 
                 <label class="block-label" for="pip.radio.allthetime.id" data-target="details">
-                  <input id="pip.radio.allthetime.id" type="radio" name="frequency" value="Everytime I get out of bed" {{#frequency.frequencyEverytime I get out of bed}}checked=checked{{/frequency.frequencyEverytime I get out of bed}} aria-controls="details"> Everytime you get out of bed
+                  <input id="pip.radio.allthetime.id" type="radio" name="frequency" value="All the time" {{#frequency.frequenAll the time}}checked=checked{{/frequency.frequenAll the time}} aria-controls="details"> All the time
                 </label>
                 <label class="block-label" for="pip.radio.morethanhalf.id" data-target="details">
                   <input id="pip.radio.morethanhalf.id" type="radio" name="frequency" value="More than half the time" {{#frequency.frequencyMore than half the time}}checked=checked{{/frequency.frequencyMore than half the time}} aria-controls="details"> More than half the time
@@ -64,14 +64,14 @@
               </div>
               <div class="form-group">
                 <label class="form-label-bold" for="detailsWhy">
-                  Why your condition affects you getting up and out of bed.
+                  Why your condition affects you moving around your home.
                 </label>
                 <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
                 <textarea class="form-control-3-4  " maxlength="1500" id="detailsWhy" name="ownWordsDetailsWhy">{{#frequency.ownWordsDetailsWhy}}{{frequency.ownWordsDetailsWhy}}{{/frequency.ownWordsDetailsWhy}}</textarea>
               </div>
               <div class="form-group">
                 <label class="form-label-bold" for="detailsHow">
-                  How you get up and out of bed at the moment.
+                  How you move around your home at the moment.
                 </label>
                 <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
                 <textarea class="form-control-3-4  " maxlength="1500" id="detailsHow" name="ownWordsDetailsHow">{{#frequency.ownWordsDetailsHow}}{{frequency.ownWordsDetailsHow}}{{/frequency.ownWordsDetailsHow}}</textarea>

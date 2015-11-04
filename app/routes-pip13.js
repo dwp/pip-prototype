@@ -415,35 +415,13 @@ module.exports = function(app){
       }
     });
 
-   /*******************
-   gettingAround
-   *******************/
-   app.get('/pip13/gettingAround', function (req, res) {
-       res.render('pip13/gettingAround', {
-         page               : '19',
-         frequency : req.session['pip13-gettingAround'],
-         'edit'    : req.param('edit')
-       });
-   });
-
-   app.post('/pip13/gettingAround', function (req, res) {
-     req.session['pip13-gettingAround'] = req.body;
-     req.session['pip13-gettingAround']['frequency' + req.body.frequency] = req.body.frequency;
-
-     if (req.param('edit')) {
-       res.redirect('pip13/check-and-change');
-     } else {
-       res.redirect('pip13/gettingUp');
-     }
-   });
-
 
     /*******************
     gettingUp
     *******************/
     app.get('/pip13/gettingUp', function (req, res) {
         res.render('pip13/gettingUp', {
-          page               : '20',
+          page               : '19',
           frequency : req.session['pip13-gettingUp'],
           'edit'    : req.param('edit')
         });
@@ -465,7 +443,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip13/toilet', function (req, res) {
         res.render('pip13/toilet', {
-          page               : '21',
+          page               : '20',
           frequency : req.session['pip13-toilet'],
           'edit'    : req.param('edit')
         });
@@ -487,7 +465,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip13/washing', function (req, res) {
         res.render('pip13/washing', {
-          page               : '22',
+          page               : '21',
           frequency : req.session['pip13-washing'],
           'edit'    : req.param('edit')
         });
@@ -509,7 +487,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip13/gettingDressed', function (req, res) {
         res.render('pip13/gettingDressed', {
-          page               : '23',
+          page               : '22',
           frequency : req.session['pip13-gettingDressed'],
           'edit'    : req.param('edit')
         });
@@ -531,7 +509,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip13/preparingandcookingfood', function (req, res) {
         res.render('pip13/preparingandcookingfood', {
-          page               : '24',
+          page               : '23',
           frequency : req.session['pip13-preparingandcookingfood'],
           'edit'    : req.param('edit')
         });
@@ -553,7 +531,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip13/eatinganddrinking', function (req, res) {
         res.render('pip13/eatinganddrinking', {
-          page               : '25',
+          page               : '24',
           frequency : req.session['pip13-eatinganddrinking'],
           'edit'    : req.param('edit')
         });
@@ -575,7 +553,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip13/goingOut', function (req, res) {
         res.render('pip13/goingOut', {
-          page               : '26',
+          page               : '25',
           frequency : req.session['pip13-goingOut'],
           'edit'    : req.param('edit')
         });
@@ -593,33 +571,11 @@ module.exports = function(app){
     });
 
     /*******************
-    outAndAbout **todo /no longer used
-    *******************/
-    app.get('/pip13/outAndAbout', function (req, res) {
-        res.render('pip13/outAndAbout', {
-          page               : '27',
-          frequency : req.session['pip13-outAndAbout'],
-          'edit'    : req.param('edit')
-        });
-    });
-
-    app.post('/pip13/outAndAbout', function (req, res) {
-      req.session['pip13-outAndAbout'] = req.body;
-      req.session['pip13-outAndAbout']['outAndAbout' + req.body.frequency] = req.body.frequency;
-
-      if (req.param('edit')) {
-        res.redirect('pip13/check-and-change');
-      } else {
-        res.redirect('pip13/gettingOn');
-      }
-    });
-
-    /*******************
     gettingOn **todo
     *******************/
     app.get('/pip13/gettingOn', function (req, res) {
         res.render('pip13/gettingOn', {
-          page               : '27',
+          page               : '26',
           frequency : req.session['pip13-gettingOn'],
           'edit'    : req.param('edit')
         });
@@ -641,7 +597,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip13/goingSomewhereLocalJourney', function (req, res) {
         res.render('pip13/goingSomewhereLocalJourney', {
-          page               : '28',
+          page               : '27',
           frequency : req.session['pip13-goingSomewhereLocalJourney'],
           'edit'    : req.param('edit')
         });
@@ -663,7 +619,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip13/goingSomewhereNeverbeenBefore', function (req, res) {
         res.render('pip13/goingSomewhereNeverbeenBefore', {
-          page               : '29',
+          page               : '28',
           frequency : req.session['pip13-goingSomewhereNeverbeenBefore'],
           'edit'    : req.param('edit')
         });
@@ -691,7 +647,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip13/goingSomewherebeenBefore', function (req, res) {
         res.render('pip13/goingSomewherebeenBefore', {
-          page               : '30',
+          page               : '29',
           frequency : req.session['pip13-goingSomewherebeenBefore'],
           'edit'    : req.param('edit')
         });
@@ -713,7 +669,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip13/understanding-q', function (req, res) {
         res.render('pip13/understanding-q', {
-          page               : '31',
+          page               : '30',
           frequency : req.session['pip13-understanding-q'],
           'edit'    : req.param('edit')
         });
@@ -735,7 +691,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip13/money', function (req, res) {
         res.render('pip13/money', {
-          page               : '32',
+          page               : '31',
           frequency : req.session['pip13-money'],
           'edit'    : req.param('edit')
         });
@@ -749,32 +705,12 @@ module.exports = function(app){
 
     });
 
-    /*******************
-    additionalInfo **todo
-    *******************/
-    app.get('/pip13/additionalInfo', function (req, res) {
-        res.render('pip13/additionalInfo', {
-          page               : '34',
-          frequency : req.session['pip13-additionalInfo'],
-          'edit'    : req.param('edit')
-        });
-    });
-
-    app.post('/pip13/additionalInfo', function (req, res) {
-      req.session['pip13-additionalInfo'] = req.body;
-      req.session['pip13-additionalInfo']['additionalInfo' + req.body.frequency] = req.body.frequency;
-
-      res.redirect('pip13/declaration');
-
-    });
-
-
    /*******************
    check and change
    *******************/
    app.get('/pip13/check-and-change', function (req, res) {
      res.render('pip13/check-and-change', {
-       page                          : '33',
+       page                          : '32',
        helper                        : req.session['pip13-helper'],
        nationality                   : req.session['pip13-nationality'],
        paymentsFromAbroad            : req.session['pip13-paymentsFromAbroad'],
@@ -816,11 +752,30 @@ module.exports = function(app){
    });
 
    /*******************
+   additionalInfo **todo
+   *******************/
+   app.get('/pip13/additionalInfo', function (req, res) {
+       res.render('pip13/additionalInfo', {
+         page               : '33',
+         frequency : req.session['pip13-additionalInfo'],
+         'edit'    : req.param('edit')
+       });
+   });
+
+   app.post('/pip13/additionalInfo', function (req, res) {
+     req.session['pip13-additionalInfo'] = req.body;
+     req.session['pip13-additionalInfo']['additionalInfo' + req.body.frequency] = req.body.frequency;
+
+     res.redirect('pip13/declaration');
+
+   });
+   
+   /*******************
    declaration
    *******************/
    app.get('/pip13/declaration', function (req, res) {
        res.render('pip13/declaration', {
-         page               : '35'
+         page               : '34'
        });
    });
 
