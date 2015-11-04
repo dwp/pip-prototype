@@ -18,7 +18,7 @@
 	<div class="grid-row">
 		<div class="column-two-thirds">
 
-      <form action="treatments{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="conditionDetails">
+      <form action="treatment{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="conditionDetails">
         <a href="/pipDigital/user-data/paymentsFromAbroad" class="example-back-link">Back</a>
 
 
@@ -26,26 +26,26 @@
 
 
        <h1 class="form-title heading-large">{{>includes/pages/progress}}
-         Your treatments and therapy</h1>
+         Your treatment and therapy</h1>
 
 
-         <div class="form-group" id="form-group-plannedTreatments">
+         <div class="form-group" id="form-group-plannedtreatment">
           <fieldset class="inline">
-            <legend class="form-label-bold" id="plannedTreatments" for="plannedTreatments">
-              <span class="frequency-question">Are you having, or do you have planned, any treatments or therapy?</span>
+            <legend class="form-label-bold" id="plannedtreatment" for="plannedtreatment">
+              <span class="frequency-question">Are you having, or do you have planned, any treatment or therapy?</span>
             </legend>
-            <label class="block-label" for="plannedTreatments-Yes" data-target="treatments">
-              <input id="plannedTreatments-Yes" type="radio" name="plannedTreatments" value="Yes" aria-controls="treatments"> Yes
+            <label class="block-label" for="plannedtreatment-Yes" data-target="treatment">
+              <input id="plannedtreatment-Yes" type="radio" name="plannedtreatment" value="Yes" aria-controls="treatment"> Yes
             </label>
-            <label class="block-label" for="plannedTreatments-No">
-              <input id="plannedTreatments-No" type="radio" name="plannedTreatments" value="No"> No
+            <label class="block-label" for="plannedtreatment-No">
+              <input id="plannedtreatment-No" type="radio" name="plannedtreatment" value="No"> No
             </label>
           </fieldset>
         </div>
 
-        <div class="js-hidden" id="treatments" aria-hidden="false" >
+        <div class="js-hidden" id="treatment" aria-hidden="false" >
           <h2 class="heading-medium">
-            List any treatments or therapy you're having or have planned </h2>
+            List any treatment or therapy you're having or have planned </h2>
           <table class="condition">
             <tbody>
               <tr>
@@ -81,8 +81,8 @@
                 </td>
 
                 <td>
-                  <label class="block-label" for="treatments.treatmentList0.atHome">
-                    <input type="checkbox" id="treatments.treatmentList0.atHome" name="treatmentList0.atHome" value="Yes"> At home </label>
+                  <label class="block-label" for="treatment.treatmentList0.atHome">
+                    <input type="checkbox" id="treatment.treatmentList0.atHome" name="treatmentList0.atHome" value="Yes"> At home </label>
                 </td>
 
               </tr>
@@ -112,8 +112,8 @@
                   </div>
                 </td>
                 <td>
-                  <label class="block-label" for="treatments.treatmentList1.atHome">
-                    <input type="checkbox" id="treatments.treatmentList1.atHome" name="treatmentList1.atHome" value="Yes"> At home </label>
+                  <label class="block-label" for="treatment.treatmentList1.atHome">
+                    <input type="checkbox" id="treatment.treatmentList1.atHome" name="treatmentList1.atHome" value="Yes"> At home </label>
                 </td>
               </tr>
               <tr id="treatment-row-2" class="treatment-row">
@@ -140,8 +140,8 @@
                   </div>
                 </td>
                 <td>
-                  <label class="block-label" for="treatments.treatmentList2.atHome">
-                    <input type="checkbox" id="treatments.treatmentList2.atHome" name="treatmentList2.atHome" value="Yes"> At home </label>
+                  <label class="block-label" for="treatment.treatmentList2.atHome">
+                    <input type="checkbox" id="treatment.treatmentList2.atHome" name="treatmentList2.atHome" value="Yes"> At home </label>
                 </td>
               </tr>
               <tr id="treatment-row-3" class="treatment-row  ">
@@ -168,8 +168,8 @@
                   </div>
                 </td>
                 <td>
-                  <label class="block-label" for="treatments.treatmentList3.atHome">
-                    <input type="checkbox" id="treatments.treatmentList3.atHome" name="treatmentList3.atHome" value="Yes"> At home </label>
+                  <label class="block-label" for="treatment.treatmentList3.atHome">
+                    <input type="checkbox" id="treatment.treatmentList3.atHome" name="treatmentList3.atHome" value="Yes"> At home </label>
                 </td>
               </tr>
               <tr id="treatment-row-4" class="treatment-row  ">
@@ -196,8 +196,8 @@
                   </div>
                 </td>
                 <td>
-                  <label class="block-label" for="treatments.treatmentList4.atHome">
-                    <input type="checkbox" id="treatments.treatmentList4.atHome" name="treatmentList4.atHome" value="Yes"> At home </label>
+                  <label class="block-label" for="treatment.treatmentList4.atHome">
+                    <input type="checkbox" id="treatment.treatmentList4.atHome" name="treatmentList4.atHome" value="Yes"> At home </label>
                 </td>
               </tr>
               <tr id="treatment-row-5" class="treatment-row  ">
@@ -224,8 +224,8 @@
                   </div>
                 </td>
                 <td>
-                  <label class="block-label" for="treatments.treatmentList5.atHome">
-                    <input type="checkbox" id="treatments.treatmentList5.atHome" name="treatmentList5.atHome" value="Yes"> At home </label>
+                  <label class="block-label" for="treatment.treatmentList5.atHome">
+                    <input type="checkbox" id="treatment.treatmentList5.atHome" name="treatmentList5.atHome" value="Yes"> At home </label>
                 </td>
               </tr>
               <tr id="treatment-row-6" class="treatment-row  ">
@@ -252,8 +252,8 @@
                   </div>
                 </td>
                 <td>
-                  <label class="block-label" for="treatments.treatmentList6.atHome">
-                    <input type="checkbox" id="treatments.treatmentList6.atHome" name="treatmentList6.atHome" value="Yes"> At home </label>
+                  <label class="block-label" for="treatment.treatmentList6.atHome">
+                    <input type="checkbox" id="treatment.treatmentList6.atHome" name="treatmentList6.atHome" value="Yes"> At home </label>
                 </td>
               </tr>
               <tr id="treatment-row-7" class="treatment-row  ">
@@ -280,8 +280,8 @@
                   </div>
                 </td>
                 <td>
-                  <label class="block-label" for="treatments.treatmentList7.atHome">
-                    <input type="checkbox" id="treatments.treatmentList7.atHome" name="treatmentList7.atHome" value="Yes"> At home </label>
+                  <label class="block-label" for="treatment.treatmentList7.atHome">
+                    <input type="checkbox" id="treatment.treatmentList7.atHome" name="treatmentList7.atHome" value="Yes"> At home </label>
                 </td>
               </tr>
               <tr id="treatment-row-8" class="treatment-row  ">
@@ -308,8 +308,8 @@
                   </div>
                 </td>
                 <td>
-                  <label class="block-label" for="treatments.treatmentList8.atHome">
-                    <input type="checkbox" id="treatments.treatmentList8.atHome" name="treatmentList8.atHome" value="Yes"> At home </label>
+                  <label class="block-label" for="treatment.treatmentList8.atHome">
+                    <input type="checkbox" id="treatment.treatmentList8.atHome" name="treatmentList8.atHome" value="Yes"> At home </label>
                 </td>
               </tr>
               <tr id="treatment-row-9" class="treatment-row  ">
@@ -336,8 +336,8 @@
                   </div>
                 </td>
                 <td>
-                  <label class="block-label" for="treatments.treatmentList9.atHome">
-                    <input type="checkbox" id="treatments.treatmentList9.atHome" name="treatmentList9.atHome" value="Yes"> At home </label>
+                  <label class="block-label" for="treatment.treatmentList9.atHome">
+                    <input type="checkbox" id="treatment.treatmentList9.atHome" name="treatmentList9.atHome" value="Yes"> At home </label>
                 </td>
               </tr>
             </tbody>
