@@ -22,44 +22,54 @@
 
         <a href="/pipDigital/activities/goingSomewherebeenBefore" class="example-back-link">Back</a>
        <h1 class="form-title heading-large">{{>includes/pages/progress}}
-Understanding words, sentences, instructions and signs        </h1>
+Understanding signs, symbols and words</h1>
         <ul>
 					<li>
 
     <div class="form-group" id="form-group-frequency">
       <fieldset>
         <legend class="form-label-bold" id="frequency" for="frequency">
-        <span class="frequency-question">Does your condition affect your understanding of words, sentences, instructions or signs?</span>
-
-         <p class="form-hint">This includes if you find any part difficult or if you rely on someone to help or explain information to you.</p>
-
+        <span class="frequency-question">Do you have difficulty understanding written information?</span>
         </legend>
-        {{>includes/pages/variability}}
+
+          <label class="block-label" for="waste-type-1">
+            <input id="waste-type-1" name="money-difficulty" type="checkbox" value="Words or simple sentences">Words or simple sentences
+          </label>
+          <label class="block-label" for="waste-type-2">
+            <input id="waste-type-2" name="money-difficulty" type="checkbox" value="More than once sentence">More than once sentence
+          </label>
+          <label class="block-label" for="waste-type-3">
+            <input id="waste-type-3" name="money-difficulty" type="checkbox" value="Symbols such as '&','£' or '?'">Symbols such as '&','£' or '?'
+          </label>
+          <label class="block-label" for="waste-type-4">
+            <input id="waste-type-4" name="money-difficulty" type="checkbox" value="Dates">Dates
+          </label>
+          <label class="block-label" for="waste-type-5">
+            <input id="waste-type-5" name="money-difficulty" type="checkbox" value="Signs such as safety signs">Signs such as safety signs
+          </label><label class="block-label" for="waste-type-7" data-target="other">
+            <input id="waste-type-7" name="money-difficulty" type="checkbox" value="Other">
+            Anything else
+          </label>
+          <div class="panel-indent js-hidden" id="other">
+            <input class="form-control" type="text" id="nationalities-other-country" name="other-difficulty">
+          </div>
+
+          <br />
+          <label class="block-label" for="waste-type-6">
+            <input id="waste-type-6" name="money-difficulty" type="checkbox" value="I don't have difficulty understanding written information">I don't have difficulty understanding written information
+          </label>
 
       </fieldset>
       </div>
-						<div class="panel-indent js-hidden" id="details">
-              <div id="how-often" class="form-group js-hidden">
-                <label class="form-label-bold" for="ownWords">How often.</label>
-                <input type="text" class="form-control" id="ownWords" name="ownWords" value="{{#frequency.ownWords}}{{frequency.ownWords}}{{/frequency.ownWords}}" />
-              </div>
-        <div class="form-group">
-						<label class="form-label-bold" for="detailsWhy">
+						<div class="form-group">
+    						<label class="form-label-bold" for="detailsHow">
 
-Why your condition affects your understanding of words, sentences, instructions or signs.
-						</label>
-            <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
-						<textarea class="form-control-3-4  " maxlength="1500" id="detailsWhy" name="detailsWhy"></textarea>
-		</div>
-        <div class="form-group">
-						<label class="form-label-bold" for="detailsHow">
-
-How you understand words, sentences, instructions or signs at the moment.
-						</label>
-            <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
-						<textarea class="form-control-3-4  " maxlength="1500" id="detailsHow" name="detailsHow"></textarea>
-		</div>
-						</div>
+    How do you figure out what they mean at the moment?
+    <p class="form-hint">This includes if you rely on someone to help you or explain things to you.</p>
+    						</label>
+                <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+    						<textarea class="form-control-3-4  " maxlength="1500" id="detailsHow" name="detailsHow"></textarea>
+    		</div>
 					</li>
         </ul>
         <div class="form-group">
