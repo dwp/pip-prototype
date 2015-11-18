@@ -155,7 +155,7 @@ module.exports = function(app){
    app.post('/pip13/treatments', function (req, res) {
      req.session['pip13-treatments'] = req.body;
 
-     if(req.body.plannedTreatments === 'Yes') {
+     if(req.body.atHome === 'Yes') {
        if (req.param('edit')) {
          res.redirect('pip13/manageTreatments?edit=true');
        } else {

@@ -30,57 +30,69 @@
 
 
          <ul>
-          <li>
+				<li>
 
-            <div class="form-group" id="form-group-frequency">
-              <fieldset>
-                <legend class="form-label-bold" id="frequency" for="frequency">
-                  <span class="frequency-question">Do you rely on someone to help you manage your treatment or therapy at home?</span>
+    <div class="form-group" id="form-group-frequency">
+      <fieldset class="inline">
+        <legend class="form-label-bold" id="frequency" for="frequency">
+        <span class="frequency-question">Do you rely on someone to help you manage your treatment or therapy at home?</span>
 
-                  <p class="form-hint">This includes if you need them to supervise you or remind you.</p>
+         <p class="form-hint">This includes if you rely on them to supervise you or remind you.</p>
 
-                </legend>
+        </legend>
 
 
-                <label class="block-label" for="pip.radio.morethan14hours.id" data-target="details">
-                  <input id="pip.radio.morethan14hours.id" type="radio" name="frequency" value="More than 14 hours a week" aria-controls="details"> More than 14 hours a week
-                </label>
-                <label class="block-label" for="pip.radio.between7and14hours.id" data-target="details">
-                  <input id="pip.radio.between7and14hours.id" type="radio" name="frequency" value="Between 7 and 14 hours a week" aria-controls="details"> Between 7 and 14 hours a week
-                </label>
-                <label class="block-label" for="pip.radio.between35and7hours.id" data-target="details">
-                  <input id="pip.radio.between35and7hours.id" type="radio" name="frequency" value="Between 3.5 and 7 hours a week" aria-controls="details"> Between 3.5 and 7 hours a week
-                </label>
-                <label class="block-label" for="pip.radio.lessthan35hours.id" data-target="details">
-                  <input id="pip.radio.lessthan35hours.id" type="radio" name="frequency" value="Less than 3.5 hours a week" aria-controls="details"> Less than 3.5 hours a week
-                </label>
-                <label class="block-label" for="pip.radio.nohours.id">
-                  <input id="pip.radio.nohours.id" type="radio" name="frequency" value="I don't rely on anyone"> I don't rely on anyone
-                </label>
+                  		<label class="block-label" for="help-Yes" data-target="helpTreatments">
+      							<input id="help-Yes" type="radio" name="frequency" value="Yes" aria-controls="helpTreatments">
+      							Yes
+      					</label>
+                  		<label class="block-label" for="help-No">
+      							<input id="help-No" type="radio" name="frequency" value="No">
+      							No
+      					</label>
 
-              </fieldset>
-            </div>
+      </fieldset>
+      </div>
 
-            <div class="panel-indent js-hidden" id="details">
-              <div class="form-group">
-                <label class="form-label-bold" for="detailsWhy">
+						<div class="panel-indent js-hidden" id="helpTreatments">
 
-                  Why you rely on someone to help you manage your treatments or therapy at home.
-                </label>
-                <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
-                <textarea class="form-control-3-4  " maxlength="1500" id="detailsWhy" name="detailsWhy"></textarea>
-              </div>
-              <div class="form-group">
-                <label class="form-label-bold" for="detailsHow">
+								<div class="form-group">
+									<legend class="form-label">How many hours a week they help you</legend>
+    <div class="form-group" id="form-group-helpTreatments">
 
-                  How someone helps you manage your treatment or therapy at home at the moment.
-                </label>
-                <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
-                <textarea class="form-control-3-4  " maxlength="1500" id="detailsHow" name="detailsHow"></textarea>
-              </div>
-            </div>
-          </li>
-        </ul>
+
+
+
+
+
+
+
+
+        <input type="text" class="form-control " id="helpTreatments" name="helpTreatments" value="">
+      </div>
+        <div class="form-group">
+						<label class="form-label-bold" for="detailsWhy">
+
+Why do you rely on someone to help you manage your treatment or therapy at home?
+						</label>
+						<span class="font-xsmall js-hidden form-control-3-4 form-hint character-count"><span class="char-count">1500</span> characters left</span>
+						<textarea maxlength="1500" class="form-control-3-4  " id="detailsWhy" name="detailsWhy"></textarea>
+		</div>
+        <div class="form-group">
+						<label class="form-label-bold" for="detailsHow">
+
+How does someone help you manage your treatment or therapy at home, at the moment?
+						</label>
+						<span class="font-xsmall js-hidden form-control-3-4 form-hint character-count"><span class="char-count">1500</span> characters left</span>
+						<textarea maxlength="1500" class="form-control-3-4  " id="detailsHow" name="detailsHow"></textarea>
+		</div>
+
+								</div>
+
+						</div>
+
+					</li>
+      </ul>
 
 
         <div class="form-group">
