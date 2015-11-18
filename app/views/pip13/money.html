@@ -21,14 +21,14 @@
       <form action="money{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="money">
         <a href="/pipDigital/activities/understanding" class="example-back-link">Back</a>
        <h1 class="form-title heading-large">{{>includes/pages/progress}}
-          Making decisions about money </h1>
+          Dealing with money </h1>
         <ul>
           <li>
 
             <div class="form-group" id="form-group-frequency">
               <fieldset>
                 <legend class="form-label-bold" id="frequency" for="frequency">
-                  <span class="frequency-question">Does your condition affect you making decisions about money?</span>
+                  <span class="frequency-question">Does your condition affect you dealing with money?</span>
 
                   <p class="form-hint">This includes if you have difficulty understanding what things cost, managing bills or if you rely on someone to help you.</p>
 
@@ -46,8 +46,8 @@
                 <legend class="form-label-bold">What do you have difficulty with?</legend>
                 <p>Select as many as you need.</p>
                 <label class="block-label" for="waste-type-1">
-                  <input id="waste-type-1" name="money-difficulty" type="checkbox" value="paying bills">
-                  Paying bills
+                  <input id="waste-type-1" name="money-difficulty" type="checkbox" value="Understanding your bills">
+                  Understanding your bills
                 </label>
                 <label class="block-label" for="waste-type-2">
                   <input id="waste-type-2" name="money-difficulty" type="checkbox" value="knowing how much you have to spend ">
@@ -65,9 +65,17 @@
                   <input id="waste-type-5" name="money-difficulty" type="checkbox" value="overspending">
                   Overspending
                 </label>
-                <label class="block-label" for="waste-type-7" data-target="other">
-                  <input id="waste-type-7" name="money-difficulty" type="checkbox" value="Other">
-                  Anything else
+                <label class="block-label" for="waste-type-6">
+                  <input id="waste-type-6" name="money-difficulty" type="checkbox" value="You need to be supervised when dealing with money">
+                  You need to be supervised when dealing with money
+                </label>
+                <label class="block-label" for="waste-type-7">
+                  <input id="waste-type-7" name="money-difficulty" type="checkbox" value="You need to be encouraged to pay bills">
+                  You need to be encouraged to pay bills
+                </label>
+                <label class="block-label" for="waste-type-8" data-target="other">
+                  <input id="waste-type-8" name="money-difficulty" type="checkbox" value="Other">
+                  Something else
                 </label>
                 <div class="panel-indent js-hidden" id="other">
                   <input class="form-control" type="text" id="nationalities-other-country" name="other-difficulty">
@@ -107,7 +115,7 @@
         </ul>
         <div class="form-group">
           <input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
-          <input type="submit" value="Save and exit" name="saveAndExit" class="exit-link">
+          <input type="submit" value="Save and come back later" name="saveAndExit" class="exit-link">
           <a href="#" class="example-back-link">Back</a>
         </div>
 

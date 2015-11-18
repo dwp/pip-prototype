@@ -30,7 +30,7 @@
                 <legend class="form-label-bold" id="frequency" for="frequency">
                 <span class="frequency-question">Does your condition affect you eating or drinking?</span>
 
-                 <p class="form-hint">This includes if you find any part difficult or if you rely someone to remind you, supervise you or help you to eat or drink.</p>
+                 <p class="form-hint">This includes if you find it difficult to cut up or put food in your mouth, or if you rely on someone to remind, supervise or help you.</p>
 
                 </legend>
                 {{>includes/pages/variability}}
@@ -58,12 +58,8 @@
                         Putting food or drink in your mouth
                       </label>
                       <label class="block-label" for="waste-type-4">
-                        <input id="waste-type-4" name="eatingAndDrinking-difficulty" type="checkbox" value="Chewing food">
-                        Chewing food
-                      </label>
-                      <label class="block-label" for="waste-type-5">
-                        <input id="waste-type-5" name="eatingAndDrinking-difficulty" type="checkbox" value="Swallowing food or drink">
-                        Swallowing food or drink
+                        <input id="waste-type-4" name="eatingAndDrinking-difficulty" type="checkbox" value="Chewing or swallowing">
+                        Chewing or swallowing
                       </label>
                       <label class="block-label" for="waste-type-6">
                         <input id="waste-type-6" name="eatingAndDrinking-difficulty" type="checkbox" value="Dribbling">
@@ -77,9 +73,13 @@
                         <input id="waste-type-8" name="eatingAndDrinking-difficulty" type="checkbox" value="Portion size">
                         Portion size
                       </label>
+                      <label class="block-label" for="waste-type-5">
+                        <input id="waste-type-5" name="eatingAndDrinking-difficulty" type="checkbox" value="You need to be supervised or encouraged to eat or drink">
+                        You need to be supervised or encouraged to eat or drink
+                      </label>
                       <label class="block-label" for="waste-type-9" data-target="other">
                         <input id="waste-type-9" name="eatingAndDrinking-difficulty" type="checkbox" value="Other">
-                        Anything else
+                        Something else
                       </label>
                       <div class="panel-indent js-hidden" id="other">
                         <input class="form-control" type="text" id="eatingAndDrinking-other-country" name="other-difficulty">
@@ -106,7 +106,7 @@
         				</ul>
         				<div class="form-group">
         					<input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
-        					<input type="submit" value="Save and exit" name="saveAndExit" class="exit-link">
+        					<input type="submit" value="Save and come back later" name="saveAndExit" class="exit-link">
                   <a href="#" class="example-back-link">Back</a>
         				</div>
 

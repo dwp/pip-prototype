@@ -26,227 +26,18 @@
     <div class="grid-row form-group">
       <section>
         <ul class="check-and-change">
-          <li>
-            <div class="form-group">
-              <p class="check-question column-third">Help with your application</p>
-              <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Hide my answers for Help with your application" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
-              </p>
-            </div>
-            <div class="answered-question-cont">
-              <div class="answered-question  ">
-                <p class="question form-label-bold column-third">The name of the person helping you</p>
-                <p class="show-answer column-two-thirds">{{#helper.name}}{{helper.name}}{{/helper.name}}</p>
-              </div>
-              <div class="answered-question  ">
-                <p class="question form-label-bold column-third">Their relationship to you</p>
-                <p class="show-answer column-two-thirds">{{#helper.relationship}}{{helper.relationship}}{{/helper.relationship}}</p>
-              </div>
-              <div class="column-two-thirds">
-                <a href="/pip12/helper?edit=true" class="button change-my-answer" aria-label="Change my answers for Help with your application">
-  Change my answers									</a>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <div class="form-group">
-              <p class="check-question column-third">Nationality and where you live</p>
-              <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Hide my answers for Nationality and where you live" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
-              </p>
-            </div>
-            <div class="answered-question-cont">
-              <div class="answered-question  ">
-                <p class="question form-label-bold column-third">What is your nationality?</p>
-                <p class="show-answer column-two-thirds">{{#nationality.britishCitizen}}{{nationality.britishCitizen}}{{/nationality.britishCitizen}}</p>
-              </div>
-              <div class="answered-question  ">
-                <p class="question form-label-bold column-third">Your nationality</p>
-                <p class="show-answer column-two-thirds">{{#nationality.yourNationality}}{{nationality.yourNationality}}{{/nationality.yourNationality}}</p>
-              </div>
-              <div class="answered-question  ">
-                <p class="question form-label-bold column-third">Do you live in England, Scotland or Wales?</p>
-                <p class="show-answer column-two-thirds">{{#nationality.livingUK}}{{nationality.livingUK}}{{/nationality.livingUK}}</p>
-              </div>
-              <div class="answered-question  ">
-                <p class="question form-label-bold column-third">Country you live in</p>
-                <p class="show-answer column-two-thirds">{{#nationality.livingCountry}}{{nationality.livingCountry}}{{/nationality.livingCountry}}</p>
-              </div>
-              <div class="answered-question  ">
-                <p class="question form-label-bold column-third">Have you been out of England, Scotland or Wales for more than a year in the last 3 years?</p>
-                <p class="show-answer column-two-thirds">{{#nationality.beenAbroad}}{{nationality.beenAbroad}}{{/nationality.beenAbroad}}</p>
-              </div>
-              <div class="column-two-thirds">
-                <a href="/pip12/nationality?edit=true" class="button change-my-answer" aria-label="Change my answers for Nationality and where you live">
-  Change my answers									</a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="form-group">
-              <p class="check-question column-third">Payments from abroad and working abroad</p>
-              <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Hide my answers for Payments from abroad and working abroad" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
-              </p>
-            </div>
-            <div class="answered-question-cont">
-              <div class="answered-question  ">
-                <p class="question form-label-bold column-third">Have you, or anyone in your family, ever claimed benefits or been paid a pension from any country outside of England, Wales or Scotland?</p>
-                <p class="show-answer column-two-thirds">{{#paymentsFromAbroad.benefitsAbroadPayment}}{{paymentsFromAbroad.benefitsAbroadPayment}}{{/paymentsFromAbroad.benefitsAbroadPayment}}</p>
-              </div>
-              <div class="answered-question  ">
-                <p class="question form-label-bold column-third">Do you, or anyone in your family, work or pay insurance to any country outside of England, Wales or Scotland?</p>
-                <p class="show-answer column-two-thirds">{{#paymentsFromAbroad.payInsuranceAbroad}}{{paymentsFromAbroad.payInsuranceAbroad}}{{/paymentsFromAbroad.payInsuranceAbroad}}</p>
-              </div>
-              <div class="column-two-thirds">
-                <a href="/pip12/paymentsFromAbroad?edit=true" class="button change-my-answer" aria-label="Change my answers for Payments from abroad and working abroad">
-  Change my answers									</a>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <div class="form-group">
-              <p class="check-question column-third">Your health conditions and disabilities</p>
-              <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Your health conditions and disabilities" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
-              </p>
-            </div>
-            <div class="answered-question-cont ">
-              <div class="answered-question">
-                <p class="question form-label-bold column-third">List your health conditions and disabilities</p>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third"></p>
-                  <p class="show-answer column-two-thirds"></p>
-                </div>
+          {{>pip13/check-and-change/helper}}
+          {{>pip13/check-and-change/nationality}}
+          {{>pip13/check-and-change/payments}}
+          {{>pip13/check-and-change/conditions}}
+          {{>pip13/check-and-change/medications}}
+          {{>pip13/check-and-change/ManageMedications}}
+          {{>pip13/check-and-change/treatments}}
+          {{>pip13/check-and-change/manageTreatments}}
+          {{>pip13/check-and-change/sideEffects}}
 
 
-                <div class="column-two-thirds">
-                  <a href="/pip12/conditionDetails?edit=true" class="button change-my-answer" aria-label="Change my answers for Your health conditions and disabilities">
-  Change my answers													</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="form-group">
-              <p class="check-question column-third">Your medication</p>
-              <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Your medication" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
-              </p>
-            </div>
-            <div class="answered-question-cont ">
-              <div class="answered-question">
-                <p class="question form-label-bold column-third">Your Medication</p>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Are you currently taking any medication?</p>
-                  <p class="show-answer column-two-thirds"></p>
-                </div>
-                <div class="column-two-thirds">
-                  <a href="/pip12/medications?edit=true" class="button change-my-answer" aria-label="Change my answers for Your medication">
-  Change my answers													</a>
-                </div>
 
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <div class="form-group">
-              <p class="check-question column-third">Managing your medication</p>
-              <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Managing your medication" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
-              </p>
-            </div>
-            <div class="answered-question-cont ">
-              <div class="answered-question  ">
-                <p class="question form-label-bold column-third">Does your condition affect your managing your medication?</p>
-                <p class="show-answer column-two-thirds"></p>
-              </div>
-              <div class="answered-question  ">
-                <p class="question form-label-bold column-third">Why your condition affects your managing your medication.</p>
-                <p class="show-answer column-two-thirds"></p>
-              </div>
-              <div class="answered-question  ">
-                <p class="question form-label-bold column-third">How you manage your medication at the moment.</p>
-                <p class="show-answer column-two-thirds"></p>
-              </div>
-              <div class="column-two-thirds">
-                <a href="/pip12/manageMedications?edit=true" class="button change-my-answer" aria-label="Change my answers for Managing your medication">
-  Change my answers													</a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="form-group">
-              <p class="check-question column-third">Your treatments or therapy</p>
-              <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Your treatments or therapy" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
-              </p>
-            </div>
-            <div class="answered-question-cont ">
-              <div class="answered-question">
-                <p class="question form-label-bold column-third">Your treatments and therapy</p>
-                <div class="answered-question  ">
-                  <p class="question form-label-bold column-third">Are you having, or do you have planned, any treatments or therapy?</p>
-                  <p class="show-answer column-two-thirds"></p>
-                </div>
-                <div class="column-two-thirds">
-                  <a href="/pip12/treatments?edit=true" class="button change-my-answer" aria-label="Change my answers for Your treatments or therapy">
-  Change my answers													</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="form-group">
-              <p class="check-question column-third">Managing your treatments</p>
-              <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Managing your treatments" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
-              </p>
-            </div>
-            <div class="answered-question-cont ">
-              <div class="answered-question  ">
-                <p class="question form-label-bold column-third">Do you rely on someone to help you manage your treatment or therapy at home?</p>
-                <p class="show-answer column-two-thirds"></p>
-              </div>
-              <div class="answered-question  ">
-                <p class="question form-label-bold column-third">Why you rely on someone to help you manage your treatments or therapy at home.</p>
-                <p class="show-answer column-two-thirds"></p>
-              </div>
-              <div class="answered-question  ">
-                <p class="question form-label-bold column-third">How someone helps you manage your treatment or therapy at home at the moment.</p>
-                <p class="show-answer column-two-thirds"></p>
-              </div>
-              <div class="column-two-thirds">
-                <a href="/pip12/manageTreatments?edit=true" class="button change-my-answer" aria-label="Change my answers for Managing your treatments">
-  Change my answers													</a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="form-group">
-              <p class="check-question column-third">Side effects</p>
-              <p class="column-two-thirds">
-                <a href="#" class="show-answer" aria-label="Show my answers for Side effects" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
-              </p>
-            </div>
-            <div class="answered-question-cont ">
-              <div class="answered-question  ">
-                <p class="question form-label-bold column-third">Do you get any side effects from your medication, treatments or therapy?</p>
-                <p class="show-answer column-two-thirds"></p>
-              </div>
-              <div class="answered-question  ">
-                <p class="question form-label-bold column-third">Describe any side effects you get.</p>
-                <p class="show-answer column-two-thirds"></p>
-              </div>
-              <div class="column-two-thirds">
-                <a href="/pip12/sideEffects?edit=true" class="button change-my-answer" aria-label="Change my answers for Side effects">
-  Change my answers													</a>
-              </div>
-            </div>
-          </li>
           <li>
             <div class="form-group">
               <p class="check-question column-third">Changes in your condition</p>
@@ -375,14 +166,14 @@
             </div>
             <div class="answered-question-cont">
               <div class="answered-question">
-                <p class="question form-label-bold column-third">Where do you have to use aids, adaptations or anything else to make things easier for you?</p>
+                <p class="question form-label-bold column-third">Where do you have to use aids, adaptations or Something else to make things easier for you?</p>
 
                 <ul class="show-answer list-bullet column-two-thirds">
                 </ul>
 
               </div>
               <div class="answered-question  ">
-                <p class="question form-label-bold column-third">List anything else you have with you all or most of the time to make things easier for you.</p>
+                <p class="question form-label-bold column-third">List Something else you have with you all or most of the time to make things easier for you.</p>
                 <p class="show-answer column-two-thirds"></p>
               </div>
               <div class="column-two-thirds">
