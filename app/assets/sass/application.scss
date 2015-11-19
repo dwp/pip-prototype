@@ -14,10 +14,10 @@
 // If you need a phase banner, put this inside the main content area
 // See elements _layout.scss line 22.
 .alpha-banner  {
-  @include phase-banner(alpha); // Change this to (beta) for a beta banner
+  @include phase-banner(beta); // Change this to (beta) for a beta banner
 }
 .alpha-tag {
-  @include phase-tag(alpha); // Change this to (beta) for a beta tag
+  @include phase-tag(beta); // Change this to (beta) for a beta tag
 }
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you,
@@ -289,4 +289,23 @@ font-size: 2rem;
 font-weight: 300;
 display: block;
 color: #6f777b;
+}
+
+
+
+/*************************************
+new designs
+*************************************/
+
+.form-title {
+  font-size:46px;
+  margin-bottom:17px;
+}
+
+.form-login .panel-indent {
+  position:relative;
+  background: rgb(40,161,151); /* Fallback for older browsers without RGBA-support */
+  background: rgba(40,161,151,0.25);
+  border-left:6px solid #28A197;
+  padding:20px 27px 15px;
 }
