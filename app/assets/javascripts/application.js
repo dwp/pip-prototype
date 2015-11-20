@@ -171,15 +171,22 @@ $(document).ready(function() {
 		return false;
 	});
 
+	$('.remove-med').click(function() {
+		var count  = parseInt($('.add-another').attr('data-count')) - 1;
+		$('.add-another').attr('data-count',count);
+		$(this).parent().parent().remove();
+		return false;
+	});
+
 	$(".add-another").click(function() {
 
 		var count  = parseInt($(this).attr('data-count')) + 1,
-				newRow = $('.clone-row').clone();
+				newRow = $('.clone-row').clone(true);
 
 		newRow.find('.med-count').text(count);
 		newRow.find('input').each(function() {
 			var newid = $(this).attr('data-name') + '-' + count;
-		  this.name= this.name.replace('-x', '-2');
+		  this.name= this.name.replace('-x', count);
 			$(this).attr('id',newid);
 			$(this).prev('label').attr('for',newid);
 		});
