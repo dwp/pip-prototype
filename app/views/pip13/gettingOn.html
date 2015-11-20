@@ -23,29 +23,28 @@
         <a href="/pipDigital/activities/outAndAbout" class="example-back-link">Back</a>
        <h1 class="form-title heading-large">{{>includes/pages/progress}}
           Mixing with people </h1>
-        <ul>
-          <li>
 
-            <div class="form-group" id="form-group-frequency">
-              <fieldset>
-                <legend class="form-label-bold" id="frequency" for="frequency">
-                  <span class="frequency-question">Does your condition affect you mixing with people?</span>
+        <p class="form-group">Let us know if you have any difficulty mixing with other people because of your condition or disability. This includes if you find any part difficult or if you rely on someone to help or encourage you to mix with people.</p>
+          <div class="form-group" id="form-group-helper">
+            <fieldset class="inline">
+              <legend class="form-label" id="helper" for="helper">
+                <span class="frequency-question">Does your condition affect you using the gettingOn?</span>
+              </legend>
+              <label class="block-label" for="helper-Yes" data-target="helperDetailsFields">
+                <input id="helper-Yes" type="radio" name="helper" {{#helper.helperYes}}checked=checked{{/helper.helperYes}} value="Yes" aria-controls="helperDetailsFields"> Yes
+              </label>
+              <label class="block-label" for="helper-No">
+                <input id="helper-No" type="radio" name="helper" {{#helper.helperNo}}checked=checked{{/helper.helperNo}} value="No"> No
+              </label>
+            </fieldset>
+          </div>
 
-                  <p class="form-hint">This includes if you find any part difficult or if you rely on someone to help or encourage you to mix with people.</p>
-
-                </legend>
-                {{>includes/pages/variability}}
-
-              </fieldset>
-            </div>
-            <div class="panel-indent js-hidden" id="details">
-              <div id="how-often" class="form-group js-hidden">
-                <label class="form-label-bold" for="ownWords">How often.</label>
-                <input type="text" class="form-control" id="ownWords" name="ownWords" value="{{#frequency.ownWords}}{{frequency.ownWords}}{{/frequency.ownWords}}" />
-              </div>
+          <div class=" js-hidden panel-indent" id="helperDetailsFields" style="margin-top:0;">
               <fieldset class="form-group">
-                <legend class="form-label-bold">What do you find difficult?</legend>
-                <p >Select as many as you need.</p>
+                <legend class="form-label" id="helper" for="helper">
+                  <span class="frequency-question">What aspect of mixing with people do you have an issue with?</span>
+                  <p class="form-hint">You can tick as many of these as you like</p>
+                </legend>
                 <label class="block-label" for="waste-type-1">
                   <input id="waste-type-1" name="gettingOn-difficulty" type="checkbox" value="mixing with people you know">
                   Mixing with people you know
@@ -78,56 +77,79 @@
                   <input id="waste-type-8" name="gettingOn-difficulty" type="checkbox" value="Other">
                   Something else
                 </label>
-                <div class="panel-indent js-hidden" id="other">
-                  <input class="form-control" type="text" id="nationalities-other-country" name="other-difficulty">
+                <div class="panel-indent js-hidden" id="other" style="margin-bottom:20px;">
+                  <label  for="nationalities-other-country">Tell us the details</label><br />
+                  <textarea class="form-control" type="text" style="width:350px; height:100px;" id="nationalities-other-country" name="other-difficulty"></textarea>
                 </div>
               </fieldset>
 
-
-              <div class="form-group">
-                <label class="form-label-bold" for="detailsWhy">
-
-                  Why your condition makes it difficult to mix with people.
+              <fieldset class="form-group">
+                <legend class="form-label" id="freq" for="freq">
+                  <span class="frequency-question">How often do you have problems mixing with other people?</span>
+                </legend>
+                <label class="block-label" for="pip.radio.allthetime.id" >
+                  <input id="pip.radio.allthetime.id" type="radio" name="frequency" value="Always" {{#frequency.frequencyAt least once a day}}checked=checked{{/frequency.frequencyAt least once a day}} aria-controls="details">Always
                 </label>
-                <details class="help-text" open>
-                  <summary><span class="summary">What to include in your answer</span></summary>
-                  <div class="panel-indent">
-                    <p>
-                      Include as much information as you can, such as:
-                    </p>
-                    <ul class="list-bullet">
-                      <li>if you find it hard to know if you’re at risk when you mix with people</li>
-                      <li>if you’re a risk to others when you mix with them</li>
-                      <li>how you feel during and after mixing with people </li>
-                      <li>if you can mix with people as often as you need to, or if it depends on what kind of day you're having </li>
-                    </ul>
-                  </div>
-                </details>
-                <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
-                <textarea class="form-control-3-4  " maxlength="1500" id="detailsWhy" name="detailsWhy"></textarea>
-              </div>
-              <div class="form-group">
-                <label class="form-label-bold" for="detailsHow">
-                  How you mix with people at the moment.
+                <label class="block-label" for="pip.radio.morethanhalf.id" data-target="sometimes">
+                  <input id="pip.radio.morethanhalf.id" type="radio" name="frequency" value="Sometimes" {{#frequency.frequencyMore than half the time}}checked=checked{{/frequency.frequencyMore than half the time}} aria-controls="details">Sometimes
                 </label>
-                <details class="help-text" open>
-                  <summary><span class="summary">What to include in your answer</span></summary>
-                  <div class="panel-indent">
-                    <p>
-                      Include as much information as you can, such as if you:
-                    </p>
-                    <ul class="list-bullet">
-                      <li>mix with some people, but not others</li>
-                      <li>rely on someone to help you or encourage you to mix with people</li>
-                    </ul>
-                  </div>
-                </details>
-                <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
-                <textarea class="form-control-3-4  " maxlength="1500" id="detailsHow" name="detailsHow"></textarea>
-              </div>
-            </div>
-          </li>
-        </ul>
+                <div class="panel-indent js-hidden" id="sometimes" style="margin-bottom:20px;">
+                  <label  for="nationalities-other-country">Tell us the details</label><br />
+                  <textarea class="form-control" type="text" style="width:350px; height:100px;" id="nationalities-other-country" name="other-difficulty"></textarea>
+                </div>
+              </fieldset>
+
+              <fieldset class="form-group">
+                <legend class="form-label" id="helper" for="helper">
+                  <span class="frequency-question">How do you manage mixing with people now?</span>
+                </legend>
+                  <label class="block-label" for="waste-type-1a">
+                    <input id="waste-type-1a" name="gettingOn-manage" type="checkbox" value="Someone helps me">
+                    Someone helps me
+                  </label>
+                  <label class="block-label" for="waste-type-2b">
+                    <input id="waste-type-2b" name="gettingOn-manage" type="checkbox" value="I use an aid to help me">
+                    I use an aid to help me
+                  </label>
+                  <label class="block-label" for="waste-type-4c">
+                    <input id="waste-type-4c" name="gettingOn-manage" type="checkbox" value="I manage it on my own with difficulty">
+                    I manage it on my own with difficulty
+                  </label>
+                  <label class="block-label" for="waste-type-4c">
+                    <input id="waste-type-4c" name="gettingOn-manage" type="checkbox" value="I avoid it completely">
+                    I avoid it completely
+                  </label>
+                </fieldset>
+
+                <div class="form-group">
+                  <label class="form-label" for="detailsHow">
+                    Tell us some more details about the effects your condition or disability has on your ability to mix with people
+                  </label>
+                  <details class="help-text" open>
+                    <summary><span class="summary">What to include in your answer</span></summary>
+                    <div class="panel-indent">
+                      <p>
+                        Include as much information as you can, such as if you:
+                      </p>
+                      <ul class="list-bullet">
+                        <li>if you find it hard to know if you’re at risk when you mix with people</li>
+                        <li>if you’re a risk to others when you mix with them</li>
+                        <li>how you feel during and after mixing with people </li>
+                        <li>if you can mix with people as often as you need to, or if it depends on what kind of day you're having </li>
+                        <li>mix with some people, but not others</li>
+                        <li>rely on someone to help you or encourage you to mix with people</li>
+                      </ul>
+                    </div>
+                  </details>
+                  <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+                  <textarea class="form-control-3-4  " maxlength="1500" id="detailsHow" name="detailsHow"></textarea>
+                </div>
+
+          </div>
+
+
+
+
 
         <div class="form-group">
           <input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
