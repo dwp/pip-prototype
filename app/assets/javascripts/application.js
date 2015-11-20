@@ -171,6 +171,28 @@ $(document).ready(function() {
 		return false;
 	});
 
+	$(".add-another").click(function() {
+
+		var count  = parseInt($(this).attr('data-count')) + 1,
+				newRow = $('.clone-row').clone();
+
+		newRow.find('.med-count').text(count);
+		newRow.find('input').each(function() {
+			var newid = $(this).attr('data-name') + '-' + count;
+		  this.name= this.name.replace('-x', '-2');
+			$(this).attr('id',newid);
+			$(this).prev('label').attr('for',newid);
+		});
+
+
+		newRow.removeClass('js-hidden clone-row').insertBefore( ".add-another" );
+
+		$(this).attr('data-count',count);
+		return false;
+	});
+
+
+
   $('.hc-profession').change(function() {
 		$(this).val() === 'Other' ? $(this).parents('li').next('li').show() : $(this).parents('li').next('li').hide();
 	});

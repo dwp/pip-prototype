@@ -313,3 +313,22 @@ new designs
 .intro-text  {
   font-size:24px;
 }
+
+.add-another,
+.add-another:focus,
+.add-another:hover {
+  background:$panel-colour;
+  box-shadow:0 2px 0 $secondary-text-colour;
+  color:$text-colour !important;
+  font-size:19px;
+}
+
+.medication-row {
+  float:left;
+  margin-bottom:20px;
+}
+
+.repeat-border {
+  border-bottom:1px solid $border-colour;
+  padding-bottom:40px;
+}
