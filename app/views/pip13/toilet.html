@@ -24,95 +24,94 @@
           Using the toilet </h1>
           <p class="form-group">Let us know if you have any difficulty using the toilet because
 of your condition or disability. This includes if you’re incontinent, have difficulty getting on or off the toilet or if you rely on someone to help or remind you.</p>
-        <ul>
-          <li>
 
-            <div class="form-group" id="form-group-frequency">
-              <fieldset>
-                <legend class="form-label-" id="frequency" for="frequency">
-                  <span class="frequency-question">Do you have difficulty using the toilet?</span>
+        <div class="form-group" id="form-group-helper">
+          <fieldset class="inline">
+            <legend class="form-label" id="helper" for="helper">
+              <span class="frequency-question">Do you have difficulty using the toilet?</span>
+            </legend>
+            <label class="block-label" for="helper-Yes" data-target="helperDetailsFields">
+              <input id="helper-Yes" type="radio" name="helper" {{#helper.helperYes}}checked=checked{{/helper.helperYes}} value="Yes" aria-controls="helperDetailsFields"> Yes
+            </label>
+            <label class="block-label" for="helper-No">
+              <input id="helper-No" type="radio" name="helper" {{#helper.helperNo}}checked=checked{{/helper.helperNo}} value="No"> No
+            </label>
+          </fieldset>
+        </div>
+          <div class=" js-hidden panel-indent" id="helperDetailsFields" style="margin-top:0;">
+              <fieldset class="form-group">
+                <legend class="form-label" id="helper" for="helper">
+                  <span class="frequency-question">What aspect of using the toilet do you have an issue with?</span>
+                  <p class="form-hint">You can tick as many of these as you like</p>
                 </legend>
-
-                <label class="block-label" for="pip.radio.allthetime.id" data-target="details">
-                  <input id="pip.radio.allthetime.id" type="radio" name="frequency" value="At least once a day" {{#frequency.frequencyAt least once a day}}checked=checked{{/frequency.frequencyAt least once a day}} aria-controls="details"> At least once a day
-                </label>
-                <label class="block-label" for="pip.radio.morethanhalf.id" data-target="details">
-                  <input id="pip.radio.morethanhalf.id" type="radio" name="frequency" value="More than half the time" {{#frequency.frequencyMore than half the time}}checked=checked{{/frequency.frequencyMore than half the time}} aria-controls="details"> More than half the time
-                </label>
-                <label class="block-label" for="pip.radio.lessthanhalf.id" data-target="details">
-                  <input id="pip.radio.lessthanhalf.id" type="radio" name="frequency" value="Less than half the time" {{#frequency.frequencyLess than half the time}}checked=checked{{/frequency.frequencyLess than half the time}} aria-controls="details"> Less than half the time
-                </label>
-                <label class="block-label" for="pip.radio.noneofthetime.id">
-                  <input id="pip.radio.noneofthetime.id" type="radio" name="frequency" value="None of the time" {{#frequency.frequencyNone of the time}}checked=checked{{/frequency.frequencyNone of the time}}> None of the time
-                </label>
-
-                <label class="block-label" for="pip.radio.own-words.id" data-target="details">
-                  <input id="pip.radio.own-words.id" type="radio" name="frequency" value="Tell us how often in your own words" {{#frequency.frequencyTell us how often in your own words}}checked=checked{{/frequency.frequencyTell us how often in your own words}} aria-controls="details"> Tell us how often in your own words
-                </label>
-
+                  <label class="block-label" for="waste-type-1">
+                    <input id="waste-type-1" name="toilet-difficulty" type="checkbox" value="Getting on or off the toilet">
+                    Getting on or off the toilet
+                  </label>
+                  <label class="block-label" for="waste-type-2">
+                    <input id="waste-type-2" name="toilet-difficulty" type="checkbox" value="cleaning  yourself">
+                    Cleaning  yourself
+                  </label>
+                  <label class="block-label" for="waste-type-4">
+                    <input id="waste-type-4" name="toilet-difficulty" type="checkbox" value="bladder incontinence">
+                    Bladder incontinence
+                  </label>
+                  <label class="block-label" for="waste-type-3">
+                    <input id="waste-type-3" name="toilet-difficulty" type="checkbox" value="bowel incontinence">
+                    Bowel incontinence
+                  </label>
+                  <label class="block-label" for="waste-type-5">
+                    <input id="waste-type-5" name="toilet-difficulty" type="checkbox" value="you have a catheter or a stoma ">
+                    Managing a catheter or a stoma
+                  </label>
+                  <label class="block-label" for="waste-type-7" data-target="other">
+                    <input id="waste-type-7" name="toilet-difficulty" type="checkbox" value="Other">
+                    Something else
+                  </label>
+                  <div class="panel-indent js-hidden" id="other" style="margin-bottom:20px;">
+                    <label  for="nationalities-other-country">Tell us the details</label><br />
+                    <textarea class="form-control" type="text" style="width:350px; height:100px;" id="nationalities-other-country" name="other-difficulty"></textarea>
+                  </div>
+                </fieldset>
               </fieldset>
-            </div>
-            <div class="panel-indent js-hidden" id="details">
-              <div id="how-often" class="form-group js-hidden">
-                <label class="form-label-bold" for="ownWords">How often.</label>
-                <input type="text" class="form-control" id="ownWords" name="ownWords" value="{{#frequency.ownWords}}{{frequency.ownWords}}{{/frequency.ownWords}}" />
-              </div>
 
               <fieldset class="form-group">
-                <legend class="form-label-bold">What do you have difficulty with?</legend>
-                <p>Select as many as you need.</p>
-                <label class="block-label" for="waste-type-1">
-                  <input id="waste-type-1" name="toilet-difficulty" type="checkbox" value="Getting on or off the toilet">
-                  Getting on or off the toilet
+                <legend class="form-label" id="freq" for="freq">
+                  <span class="frequency-question">How often do you have problems using the toilet?</span>
+                </legend>
+                <label class="block-label" for="pip.radio.allthetime.id" >
+                  <input id="pip.radio.allthetime.id" type="radio" name="frequency" value="Always" {{#frequency.frequencyAt least once a day}}checked=checked{{/frequency.frequencyAt least once a day}} aria-controls="details">Always
                 </label>
-                <label class="block-label" for="waste-type-2">
-                  <input id="waste-type-2" name="toilet-difficulty" type="checkbox" value="cleaning  yourself">
-                  Cleaning  yourself
+                <label class="block-label" for="pip.radio.morethanhalf.id" data-target="sometimes">
+                  <input id="pip.radio.morethanhalf.id" type="radio" name="frequency" value="Sometimes" {{#frequency.frequencyMore than half the time}}checked=checked{{/frequency.frequencyMore than half the time}} aria-controls="details">Sometimes
                 </label>
-                <label class="block-label" for="waste-type-4">
-                  <input id="waste-type-4" name="toilet-difficulty" type="checkbox" value="bladder incontinence">
-                  Bladder incontinence
-                </label>
-                <label class="block-label" for="waste-type-3">
-                  <input id="waste-type-3" name="toilet-difficulty" type="checkbox" value="bowel incontinence">
-                  Bowel incontinence
-                </label>
-                <label class="block-label" for="waste-type-5">
-                  <input id="waste-type-5" name="toilet-difficulty" type="checkbox" value="you have a catheter or a stoma ">
-                  Managing a catheter or a stoma
-                </label>
-                <label class="block-label" for="waste-type-7" data-target="other">
-                  <input id="waste-type-7" name="toilet-difficulty" type="checkbox" value="Other">
-                  Something else
-                </label>
-                <div class="panel-indent js-hidden" id="other">
-                  <input class="form-control" type="text" id="nationalities-other-country" name="other-difficulty">
+                <div class="panel-indent js-hidden" id="sometimes" style="margin-bottom:20px;">
+                  <label  for="nationalities-other-country">Tell us the details</label><br />
+                  <textarea class="form-control" type="text" style="width:350px; height:100px;" id="nationalities-other-country" name="other-difficulty"></textarea>
                 </div>
               </fieldset>
 
-              <div class="form-group">
-                <label class="form-label-bold" for="ownWordsDetailsWhy">
-                  Why your condition makes it difficult to use the toilet.
-                </label>
-                <details class="help-text">
-                  <summary><span class="summary">What to include in your answer</span></summary>
-                  <div class="panel-indent">
-                    <p>
-                      Include as much information as you can, such as if you:
-                    </p>
-                    <ul class="list-bullet">
-                      <li>risk hurting yourself or having an accident when you’re using the toilet</li>
-                      <li>get any side effects</li>
-                      <li>can use the toilet as often as you need to, or if it depends on what kind of day you're having </li>
-                    </ul>
-                  </div>
-                </details>
-                <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
-                <textarea class="form-control-3-4  " maxlength="1500" id="ownWordsDetailsWhy" name="ownWordsDetailsWhy">{{#frequency.ownWordsDetailsWhy}}{{frequency.ownWordsDetailsWhy}}{{/frequency.ownWordsDetailsWhy}}</textarea>
-              </div>
+              <fieldset class="form-group">
+                <legend class="form-label" id="helper" for="helper">
+                  <span class="frequency-question">How do you manage using the toilet now?</span>
+                </legend>
+                  <label class="block-label" for="waste-type-1">
+                    <input id="waste-type-1" name="toilet-manage" type="checkbox" value="Someone helps me">
+                    Someone helps me
+                  </label>
+                  <label class="block-label" for="waste-type-2">
+                    <input id="waste-type-2" name="toilet-manage" type="checkbox" value="I use an aid to help me">
+                    I use an aid to help me
+                  </label>
+                  <label class="block-label" for="waste-type-4">
+                    <input id="waste-type-4" name="toilet-manage" type="checkbox" value="I manage it on my own with difficulty">
+                    I manage it on my own with difficulty
+                  </label>
+                </fieldset>
+              </fieldset>
               <div class="form-group">
                 <label class="form-label-bold" for="ownWordsDetailsHow">
-                  How you manage to use the toilet at the moment.
+                  Tell us some more details about the effects your condition or disability has on your ability to use the toilet now
                 </label>
                 <details class="help-text">
                   <summary><span class="summary">What to include in your answer</span></summary>
@@ -132,8 +131,6 @@ of your condition or disability. This includes if you’re incontinent, have dif
                 <textarea class="form-control-3-4" maxlength="1500" id="ownWordsDetailsHow" name="ownWordsDetailsHow">{{#frequency.ownWordsDetailsHow}}{{frequency.ownWordsDetailsHow}}{{/frequency.ownWordsDetailsHow}}</textarea>
               </div>
             </div>
-          </li>
-        </ul>
 
         <div class="form-group">
           <input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
