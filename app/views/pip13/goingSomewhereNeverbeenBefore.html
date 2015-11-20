@@ -21,6 +21,7 @@
       <form action="goingSomewhereNeverbeenBefore{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="goingSomewhereNeverbeenBefore">
         <a href="/pipDigital/summary/understanding" class="example-back-link">Back</a>
         <h1 class="form-title heading-large">{{>includes/pages/progress}} Going somewhere you have never been </h1>
+        <p class="intro-text form-group">This question is about your ability to follow a route to somewhere you have never been and deal with any unexpected changes to the journey. It could apply if you have a mental health, sensory or cognitive condition.</p>
         <ul>
           <li>
 
@@ -29,12 +30,11 @@
                 <legend class="form-label-bold" id="frequency" for="frequency">
                   <span class="frequency-question">Would you need help to go somewhere you have not been before?</span>
 
-                  <p class="form-hint">Help could be from another person, an assistance dog or any aids you rely on.</p>
 
                 </legend>
 
                 <label class="block-label" for="pip.radio.allthetime.id" data-target="details">
-                  <input id="pip.radio.allthetime.id" type="radio" name="frequency" {{#frequency.frequencyAll the time}}checked=checked{{/frequency.frequencyAll the time}} value="Every time you go somewhere new" aria-controls="details"> Every time you go somewhere new
+                  <input id="pip.radio.allthetime.id" type="radio" name="frequency" {{#frequency.frequencyAll the time}}checked=checked{{/frequency.frequencyAll the time}} value="Every time you go somewhere you have never been" aria-controls="details"> Every time you go somewhere you have never been
                 </label>
                 <label class="block-label" for="pip.radio.morethanhalf.id" data-target="details">
                   <input id="pip.radio.morethanhalf.id" type="radio" name="frequency" value="More than half the time" {{#frequency.frequencyMore than half the time}}checked=checked{{/frequency.frequencyMore than half the time}} aria-controls="details"> More than half the time
