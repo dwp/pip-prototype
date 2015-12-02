@@ -284,4 +284,25 @@ $(document).ready(function() {
 			return false;
 		});
 
+		$('#form-group-frequency input').click(function() {
+			var show = $(this).parent().data('show'),
+					hide = $(this).parent().data('hide');
+			if (hide) {
+				$('#' + hide).hide();
+				$('#form-group-frequency :checkbox:checked').each(function() {
+					if($(this).parent().data('show')) {
+						$(this).attr('checked', false).parent().removeClass('selected');
+						$('#other:visible').hide();
+					}
+				});
+			} else {
+				$('#' + show).show();
+					$('#form-group-frequency :checkbox:checked').each(function() {
+						if($(this).parent().data('hide')) {
+							$(this).attr('checked', false).parent().removeClass('selected');
+						}
+					});
+			}
+		});
+
 });

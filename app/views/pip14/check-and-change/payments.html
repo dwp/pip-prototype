@@ -1,0 +1,22 @@
+<li>
+  <div class="form-group">
+    <p class="check-question column-third">Payments from abroad and working abroad</p>
+    <p class="column-two-thirds">
+      <a href="#" class="show-answer" aria-label="Hide my answers for Payments from abroad and working abroad" data-open-text="Show my answers" data-close-text="Hide my answers">Hide my answers</a>
+    </p>
+  </div>
+  <div class="answered-question-cont">
+    <div class="answered-question  ">
+      <p class="question form-label-bold column-third">Have you, or anyone in your family, ever claimed benefits or been paid a pension from any country outside of England, Wales or Scotland?</p>
+      <p class="show-answer column-two-thirds">{{#paymentsFromAbroad.benefitsAbroadPayment}}{{paymentsFromAbroad.benefitsAbroadPayment}}{{/paymentsFromAbroad.benefitsAbroadPayment}}</p>
+    </div>
+    <div class="answered-question  ">
+      <p class="question form-label-bold column-third">Do you, or anyone in your family, work or pay insurance to any country outside of England, Wales or Scotland?</p>
+      <p class="show-answer column-two-thirds">{{#paymentsFromAbroad.payInsuranceAbroad}}{{paymentsFromAbroad.payInsuranceAbroad}}{{/paymentsFromAbroad.payInsuranceAbroad}}</p>
+    </div>
+    <div class="column-two-thirds">
+      <a href="/pip12/paymentsFromAbroad?edit=true" class="button change-my-answer" aria-label="Change my answers for Payments from abroad and working abroad">
+Change my answers									</a>
+    </div>
+  </div>
+</li>

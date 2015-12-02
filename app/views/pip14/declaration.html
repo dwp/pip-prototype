@@ -1,0 +1,63 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="declaration" method="post" class="form checkMyAnswers" data-question="declaration">
+       <h1 class="form-title heading-large">{{>includes/pages/progress}}
+        				Declaration
+        				</h1>
+
+        				<p>By sending this application you agree:</p>
+        				<ul class="list-bullet">
+        					<li>the information in this application is complete and correct as far as you know</li>
+        					<li>to <a href="https://www.gov.uk/pip/what-youll-get">report any changes to your circumstances </a> </li>
+        				</ul>
+
+        				<div class="panel-indent">
+        					<p>You could be prosecuted or have to pay a fine if you deliberately give false or incomplete information, or don’t report changes. Your Personal Independence Payment may also be stopped or reduced.
+        					</p>
+        				</div>
+
+
+        				<p id="get-started" class="get-started-group">
+
+                  <input type="submit" class="button" name="continue" value="I agree - send my application" >
+                  <label class="form-checkbox" for="checkbox-telephone-number">
+                    <input id="checkbox-telephone-number" name="keep-a-copy" type="checkbox" value="true">
+                    I want to keep a copy of my answers
+                  </label>
+
+        				</p>
+
+			</form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

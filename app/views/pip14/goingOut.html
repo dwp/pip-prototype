@@ -1,0 +1,173 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+      <form action="goingOut{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="goingOut">
+
+       <h1 class="form-title heading-large">{{>includes/pages/progress}}
+         Getting out and walking about </h1>
+
+          <div class="form-group" id="form-group-frequency">
+            <fieldset class="form-group">
+              <legend class="form-label">Does your condition affect you:</legend>
+              <label class="block-label" for="waste-type-1" data-show="details">
+                <input id="waste-type-1" name="difficulty" type="checkbox" value="being motivated to go out" >being motivated to go out
+
+              </label>
+              <label class="block-label" for="waste-type-2" data-show="details">
+                <input id="waste-type-2" name="difficulty" type="checkbox" value="walking any distance" >walking any distance
+
+              </label>
+              <label class="block-label" for="waste-type-3" data-show="details">
+                <input id="waste-type-3" name="difficulty" type="checkbox" value="walking to your car" >walking to your car
+
+              </label>
+              <label class="block-label" for="waste-type-4" data-show="details">
+                <input id="waste-type-4" name="difficulty" type="checkbox" value="walking to the end of your street" >walking to the end of your street
+
+              </label>
+              <label class="block-label" for="waste-type-5" data-show="details">
+                <input id="waste-type-5" name="difficulty" type="checkbox" value="walking to the local shop" >walking to the local shop
+
+              </label>
+              <label class="block-label" for="waste-type-6" data-show="details">
+                <input id="waste-type-6" name="difficulty" type="checkbox" value="walking around the supermarket" >walking around the supermarket
+
+              </label>
+              <label class="block-label" for="waste-type-7" data-show="details">
+                <input id="waste-type-7" name="difficulty" type="checkbox" value="walking around town" >walking around town
+
+              </label>
+              <label class="block-label" for="waste-type-9" data-show="details" data-target="other">
+                <input id="waste-type-9" name="difficulty" type="checkbox" value="Other">
+                in another way
+              </label>
+              <div class="panel-indent js-hidden" id="other">
+                <input class="form-control" type="text" id="manageMedications-other-country" name="other-difficulty">
+              </div>
+            <p class="form-block">or</p>
+              <label class="block-label" for="waste-type-10" data-hide="details">
+                <input id="waste-type-10" name="difficulty" type="checkbox" value="Your condition does not affect you getting out or walking about">Your condition does not affect you getting out or walking about
+
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="panel-indent js-hidden" id="details">
+            <div class="form-group">
+              <legend class="form-label" id="frequency" for="frequency">
+                <span class="frequency-question">How often does your condition affect you getting out and walking about?
+                </span>  </legend>
+              <label class="block-label" for="pip.radio.allthetime.id">
+                <input id="pip.radio.allthetime.id" type="radio" name="frequency" value="Every time you need to go out" > Every time you need to go out
+              </label>
+              <label class="block-label" for="pip.radio.morethanhalf.id">
+                <input id="pip.radio.morethanhalf.id" type="radio" name="frequency" value="More than half the time" > More than half the time
+              </label>
+              <label class="block-label" for="pip.radio.lessthanhalf.id">
+                <input id="pip.radio.lessthanhalf.id" type="radio" name="frequency" value="Less than half the time" > Less than half the time
+              </label>
+              <label class="block-label" for="pip.radio.own-words.id">
+                <input id="pip.radio.own-words.id" type="radio" name="frequency" value="Tell us how often in your own words" {{#frequency.frequencyTell us how often in your own words}}checked=checked{{/frequency.frequencyTell us how often in your own words}} >
+                Explain how often in your own words
+              </label>
+
+              <div  id="how-often" class="form-group js-hidden">
+                <br />
+                <label class="form-label" for="ownWords">If you can, tell us roughly how many days out of a week or month you’re affected.</label>
+                <input type="text" class="form-control" id="ownWords" value="{{#frequency.ownWords}}{{frequency.ownWords}}{{/frequency.ownWords}}" name="ownWords" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <fieldset>
+
+                <legend class="">How do you get out and about?</legend>
+
+                <label class="block-label" for="how-manage-type-1">
+                  <input id="how-manage-type-1" name="how-manage-types" type="checkbox" value="Someone needs to encourage to go out">Someone needs to encourage to go out
+
+                </label>
+                <label class="block-label" for="how-manage-type-2">
+                  <input id="how-manage-type-2" name="how-manage-types" type="checkbox" value="Someone needs to help you walk around">Someone needs to help you walk around
+
+                </label>
+                <label class="block-label" for="how-manage-type-3">
+                  <input id="how-manage-type-3" name="how-manage-types" type="checkbox" value="You use a wheelchair">You use a wheelchair
+
+                </label>
+                <label class="block-label" for="how-manage-type-4">
+                  <input id="how-manage-type-4" name="how-manage-types" type="checkbox" value="You rely on an assistance dog, walking stick or something else to help">You rely on an assistance dog, walking stick or something else to help
+
+                </label>
+                <label class="block-label" for="how-manage-type-6">
+                  <input id="how-manage-type-6" name="how-manage-types" type="checkbox" value="You manage on your own, but with difficulty">You manage on your own, but with difficulty
+
+                </label>
+                <label class="block-label" for="how-manage-type-5" data-target="anotherWay">
+                  <input id="how-manage-type-5" name="how-manage-types" type="checkbox" value="In another way">
+                  In another way
+                </label>
+                <div class="panel-indent js-hidden" id="anotherWay">
+                  <input class="form-control" type="text" id="manageAnotherWay" name="manageAnotherWay">
+                </div>
+              </fieldset>
+            </div>
+
+
+            <div class="form-group">
+              <label class="form-label" for="detailsWhy">Explain how your condition affects you getting out or walking about. </label>
+                <p>
+                    Include:
+                  </p>
+                  <ul class="list-bullet" style="margin-top:-15px;margin-left:10px;">
+                    <li>it takes a long time</li>
+                    <li>what you’re able to do depends on the type of day you’re having</li>
+                    <li>you risk having an accident or hurting yourself</li>
+                    <li>getting out or walking about has an effect on your condition</li>
+                  </ul>
+                  <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+              <textarea class="form-control-3-4" maxlength="1500" id="detailsWhy" name="detailsWhy"></textarea>
+            </div>
+          </div>
+
+
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+          <input type="submit" value="Save and come back later" name="saveAndExit" class="exit-link">
+          <a href="#" class="example-back-link">Back</a>
+        </div>
+
+      </form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

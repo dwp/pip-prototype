@@ -1,0 +1,72 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+      <form action="sideEffects{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="conditionDetails">
+
+       <h1 class="form-title heading-large">{{>includes/pages/progress}}
+         Side effects</h1>
+
+         <div class="form-group" id="form-group-anySideeffects">
+           <fieldset>
+            <legend class="form-label-bold" id="anySideeffects" for="anySideeffects">
+              <span class="frequency-question">Do you get any side effects from your medication, treatments or therapy?</span>
+            </legend>
+
+            <div class="inline">
+              <label class="block-label" for="pip.radio.yes.id" data-target="details">
+                <input id="pip.radio.yes.id" type="radio" name="anySideeffects" value="Yes" aria-controls="details"> Yes
+              </label>
+              <label class="block-label" for="pip.radio.no.id">
+                <input id="pip.radio.no.id" type="radio" name="anySideeffects" value="No" > No
+              </label>
+            </div>
+            </fieldset>
+        </div>
+
+        <div class="panel-indent js-hidden" id="details">
+          <div class="form-group">
+    				<label class="form-label-bold" for="details">Describe any side effects you get.</label>
+            <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+    				<textarea class="form-control-3-4  " maxlength="1500" id="details" name="details"></textarea>
+  		    </div>
+				</div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+          <input type="submit" value="Save and come back later" name="saveAndExit" class="exit-link">
+          <a href="#" class="example-back-link">Back</a>
+        </div>
+
+      </form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

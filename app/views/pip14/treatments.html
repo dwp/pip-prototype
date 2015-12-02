@@ -1,0 +1,355 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+      <form action="treatments{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="conditionDetails">
+
+
+
+
+
+       <h1 class="form-title heading-large">{{>includes/pages/progress}}
+         Your treatment and therapy</h1>
+
+<p class="lede">Treatments and therapies can include chemotherapy, physiotherapy, medical massages or dialysis.</p>
+         <div class="form-group" id="form-group-plannedtreatment">
+          <fieldset class="inline">
+            <legend class="form-label-bold" id="plannedtreatment" for="plannedtreatment">
+              <span class="frequency-question">Are you having, or do you have planned, any treatment or therapy?</span>
+            </legend>
+            <label class="block-label" for="plannedtreatment-Yes" data-target="treatment">
+              <input id="plannedtreatment-Yes" type="radio" name="plannedtreatment" value="Yes" aria-controls="treatment"> Yes
+            </label>
+            <label class="block-label" for="plannedtreatment-No">
+              <input id="plannedtreatment-No" type="radio" name="plannedtreatment" value="No"> No
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="js-hidden" id="treatment" aria-hidden="false" >
+
+          <table class="condition">
+            <tbody>
+              <tr>
+                <th>Name of treatment or therapy </th>
+                <th>When or how often</th>
+              </tr>
+
+
+
+              <tr id="treatment-row-0" class="treatment-row ">
+                <td>
+                  <div class="form-group" id="form-group-treatmentList0.name">
+                    <label class="form-label" for="treatmentList0.name">
+
+
+                      <span class="visuallyhidden">List the treatment or therapy </span>
+
+                    </label>
+                    <input type="text" class="form-control" id="treatmentList0.name" name="treatmentList0.name" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-treatmentList0.frequency">
+                    <label class="form-label" for="treatmentList0.frequency">
+
+
+                      <span class="visuallyhidden">When or how often</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="treatmentList0.frequency" name="treatmentList0.frequency" value="">
+                  </div>
+                </td>
+
+
+
+              </tr>
+
+
+              <tr id="treatment-row-1" class="treatment-row">
+                <td>
+                  <div class="form-group" id="form-group-treatmentList1.name">
+                    <label class="form-label" for="treatmentList1.name">
+
+
+                      <span class="visuallyhidden">Name of treatment or therapy </span>
+
+                    </label>
+                    <input type="text" class="form-control" id="treatmentList1.name" name="treatmentList1.name" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-treatmentList1.frequency">
+                    <label class="form-label" for="treatmentList1.frequency">
+
+
+                      <span class="visuallyhidden">When or how often</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="treatmentList1.frequency" name="treatmentList1.frequency" value="">
+                  </div>
+                </td>
+
+              </tr>
+              <tr id="treatment-row-2" class="treatment-row">
+                <td>
+                  <div class="form-group" id="form-group-treatmentList2.name">
+                    <label class="form-label" for="treatmentList2.name">
+
+
+                      <span class="visuallyhidden">Name of treatment or therapy </span>
+
+                    </label>
+                    <input type="text" class="form-control" id="treatmentList2.name" name="treatmentList2.name" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-treatmentList2.frequency">
+                    <label class="form-label" for="treatmentList2.frequency">
+
+
+                      <span class="visuallyhidden">When or how often</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="treatmentList2.frequency" name="treatmentList2.frequency" value="">
+                  </div>
+                </td>
+
+              </tr>
+              <tr id="treatment-row-3" class="treatment-row  ">
+                <td>
+                  <div class="form-group" id="form-group-treatmentList3.name">
+                    <label class="form-label" for="treatmentList3.name">
+
+
+                      <span class="visuallyhidden">Name of treatment or therapy </span>
+
+                    </label>
+                    <input type="text" class="form-control" id="treatmentList3.name" name="treatmentList3.name" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-treatmentList3.frequency">
+                    <label class="form-label" for="treatmentList3.frequency">
+
+
+                      <span class="visuallyhidden">When or how often</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="treatmentList3.frequency" name="treatmentList3.frequency" value="">
+                  </div>
+                </td>
+              </tr>
+              <tr id="treatment-row-4" class="treatment-row  ">
+                <td>
+                  <div class="form-group" id="form-group-treatmentList4.name">
+                    <label class="form-label" for="treatmentList4.name">
+
+
+                      <span class="visuallyhidden">Name of treatment or therapy </span>
+
+                    </label>
+                    <input type="text" class="form-control" id="treatmentList4.name" name="treatmentList4.name" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-treatmentList4.frequency">
+                    <label class="form-label" for="treatmentList4.frequency">
+
+
+                      <span class="visuallyhidden">When or how often</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="treatmentList4.frequency" name="treatmentList4.frequency" value="">
+                  </div>
+                </td>
+              </tr>
+              <tr id="treatment-row-5" class="treatment-row  ">
+                <td>
+                  <div class="form-group" id="form-group-treatmentList5.name">
+                    <label class="form-label" for="treatmentList5.name">
+
+
+                      <span class="visuallyhidden">Name of treatment or therapy </span>
+
+                    </label>
+                    <input type="text" class="form-control" id="treatmentList5.name" name="treatmentList5.name" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-treatmentList5.frequency">
+                    <label class="form-label" for="treatmentList5.frequency">
+
+
+                      <span class="visuallyhidden">When or how often</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="treatmentList5.frequency" name="treatmentList5.frequency" value="">
+                  </div>
+                </td>
+              </tr>
+              <tr id="treatment-row-6" class="treatment-row  ">
+                <td>
+                  <div class="form-group" id="form-group-treatmentList6.name">
+                    <label class="form-label" for="treatmentList6.name">
+
+
+                      <span class="visuallyhidden">Name of treatment or therapy </span>
+
+                    </label>
+                    <input type="text" class="form-control" id="treatmentList6.name" name="treatmentList6.name" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-treatmentList6.frequency">
+                    <label class="form-label" for="treatmentList6.frequency">
+
+
+                      <span class="visuallyhidden">When or how often</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="treatmentList6.frequency" name="treatmentList6.frequency" value="">
+                  </div>
+                </td>
+
+              </tr>
+              <tr id="treatment-row-7" class="treatment-row  ">
+                <td>
+                  <div class="form-group" id="form-group-treatmentList7.name">
+                    <label class="form-label" for="treatmentList7.name">
+
+
+                      <span class="visuallyhidden">Name of treatment or therapy </span>
+
+                    </label>
+                    <input type="text" class="form-control" id="treatmentList7.name" name="treatmentList7.name" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-treatmentList7.frequency">
+                    <label class="form-label" for="treatmentList7.frequency">
+
+
+                      <span class="visuallyhidden">When or how often</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="treatmentList7.frequency" name="treatmentList7.frequency" value="">
+                  </div>
+                </td>
+
+              </tr>
+              <tr id="treatment-row-8" class="treatment-row  ">
+                <td>
+                  <div class="form-group" id="form-group-treatmentList8.name">
+                    <label class="form-label" for="treatmentList8.name">
+
+
+                      <span class="visuallyhidden">Name of treatment or therapy </span>
+
+                    </label>
+                    <input type="text" class="form-control" id="treatmentList8.name" name="treatmentList8.name" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-treatmentList8.frequency">
+                    <label class="form-label" for="treatmentList8.frequency">
+
+
+                      <span class="visuallyhidden">When or how often</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="treatmentList8.frequency" name="treatmentList8.frequency" value="">
+                  </div>
+                </td>
+
+              </tr>
+              <tr id="treatment-row-9" class="treatment-row  ">
+                <td>
+                  <div class="form-group" id="form-group-treatmentList9.name">
+                    <label class="form-label" for="treatmentList9.name">
+
+
+                      <span class="visuallyhidden">Name of treatment or therapy </span>
+
+                    </label>
+                    <input type="text" class="form-control" id="treatmentList9.name" name="treatmentList9.name" value="">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group" id="form-group-treatmentList9.frequency">
+                    <label class="form-label" for="treatmentList9.frequency">
+
+
+                      <span class="visuallyhidden">When or how often</span>
+
+                    </label>
+                    <input type="text" class="form-control" id="treatmentList9.frequency" name="treatmentList9.frequency" value="">
+                  </div>
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <div class="form-group" id="form-group-atHome">
+                <fieldset class="inline">
+                  <legend class="form-label-bold" id="atHome" for="atHome">
+                  <span class="frequency-question">Do you have any treatment or therapy in your home?</span>
+
+
+
+                  </legend>
+
+
+                            		<label class="block-label" for="atHome-Yes">
+                							<input id="atHome-Yes" type="radio" name="atHome" value="Yes">
+                							Yes
+                					</label>
+                            		<label class="block-label" for="atHome-No">
+                							<input id="atHome-No" type="radio" name="atHome" value="No">
+                							No
+                					</label>
+
+                </fieldset>
+                </div>
+
+        </div>
+<br />
+        <div class="form-group">
+          <input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+          <input type="submit" value="Save and come back later" name="saveAndExit" class="exit-link">
+          <a href="#" class="example-back-link">Back</a>
+        </div>
+
+      </form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
