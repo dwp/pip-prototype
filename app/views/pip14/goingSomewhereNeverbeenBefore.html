@@ -20,89 +20,99 @@
 
       <form action="goingSomewhereNeverbeenBefore{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="goingSomewhereNeverbeenBefore">
         <h1 class="form-title heading-large">{{>includes/pages/progress}} Going somewhere you have never been </h1>
-        <p class="intro-text form-group">This question is about your ability to follow a route to somewhere you have never been and deal with any unexpected changes to the journey. It could apply if you have a mental health, sensory or cognitive condition.</p>
-        <ul>
-          <li>
+        <p class="lede">This question is about your ability to follow a route to somewhere you have never been and deal with any unexpected changes to the journey. It could apply if you have a mental health, sensory or cognitive condition.</p>
 
-            <div class="form-group" id="form-group-frequency">
-              <fieldset>
-                <legend class="form-label-bold" id="frequency" for="frequency">
-                  <span class="frequency-question">Would you need help to go somewhere you have not been before?</span>
+        <div class="form-group" id="form-group-frequency">
+          <fieldset class="form-group">
+            <legend class="form-label">Does your condition affect you:</legend>
+            <label class="block-label" for="waste-type-1" data-show="details">
+              <input id="waste-type-1" name="difficulty" type="checkbox" value="knowing where to go" >knowing where to go
 
+            </label>
+            <label class="block-label" for="waste-type-2" data-show="details">
+              <input id="waste-type-2" name="difficulty" type="checkbox" value="using public transport" >using public transport
 
-                </legend>
+            </label>
+            <label class="block-label" for="waste-type-3" data-show="details">
+              <input id="waste-type-3" name="difficulty" type="checkbox" value="asking for help" >asking for help
 
-                <label class="block-label" for="pip.radio.allthetime.id" data-target="details">
-                  <input id="pip.radio.allthetime.id" type="radio" name="frequency" {{#frequency.frequencyAll the time}}checked=checked{{/frequency.frequencyAll the time}} value="Every time you go somewhere you have never been" aria-controls="details"> Every time you go somewhere you have never been
-                </label>
-                <label class="block-label" for="pip.radio.morethanhalf.id" data-target="details">
-                  <input id="pip.radio.morethanhalf.id" type="radio" name="frequency" value="More than half the time" {{#frequency.frequencyMore than half the time}}checked=checked{{/frequency.frequencyMore than half the time}} aria-controls="details"> More than half the time
-                </label>
-                <label class="block-label" for="pip.radio.lessthanhalf.id" data-target="details">
-                  <input id="pip.radio.lessthanhalf.id" type="radio" name="frequency" value="Less than half the time" {{#frequency.frequencyLess than half the time}}checked=checked{{/frequency.frequencyLess than half the time}} aria-controls="details"> Less than half the time
-                </label>
-                <label class="block-label" for="pip.radio.noneofthetime.id">
-                  <input id="pip.radio.noneofthetime.id" type="radio" name="frequency" value="None of the time" {{#frequency.frequencyNone of the time}}checked=checked{{/frequency.frequencyNone of the time}}> None of the time
-                </label>
+            </label>
+            <label class="block-label" for="waste-type-4" data-show="details">
+              <input id="waste-type-4" name="difficulty" type="checkbox" value="recovering from getting lost" >recovering from getting lost
 
-                <label class="block-label" for="pip.radio.own-words.id" data-target="details">
-                  <input id="pip.radio.own-words.id" type="radio" name="frequency" value="Tell us how often in your own words" {{#frequency.frequencyTell us how often in your own words}}checked=checked{{/frequency.frequencyTell us how often in your own words}} aria-controls="own-words"> Tell us how often in your own words
-                </label>
+            </label>
+            <label class="block-label" for="waste-type-5" data-show="details">
+              <input id="waste-type-5" name="difficulty" type="checkbox" value="following directions on a map or sat nav" >following directions on a map or sat nav
 
+            </label>
 
-              </fieldset>
+            <label class="block-label" for="waste-type-9" data-show="details" data-target="other">
+              <input id="waste-type-9" name="difficulty" type="checkbox" value="Other">
+              in another way
+            </label>
+            <div class="panel-indent js-hidden" id="other">
+              <input class="form-control" type="text" id="manageMedications-other-country" name="other-difficulty">
             </div>
-            <div class="panel-indent js-hidden" id="details">
-              <div id="how-often" class="form-group js-hidden">
-                <label class="form-label-bold" for="ownWords">How often.
-                </label>
-                <input type="text" class="form-control" id="ownWords" name="ownWords" value="{{#frequency.ownWords}}{{frequency.ownWords}}{{/frequency.ownWords}}" />
+          <p class="form-block">or</p>
+            <label class="block-label" for="waste-type-10" data-hide="details">
+              <input id="waste-type-10" name="difficulty" type="checkbox" value=" Your condition would not affect you getting somewhere you have never been"> Your condition would not affect you getting somewhere you have never been
+
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="panel-indent js-hidden" id="details">
+
+
+          <div class="form-group">
+            <fieldset>
+
+              <legend class="">How would you get to somewhere you have never been?</legend>
+
+              <label class="block-label" for="how-manage-type-1">
+                <input id="how-manage-type-1" name="how-manage-types" type="checkbox" value="You rely on someone to guide you">You rely on someone to guide you
+
+              </label>
+              <label class="block-label" for="how-manage-type-2">
+                <input id="how-manage-type-2" name="how-manage-types" type="checkbox" value="You rely on an assistance dog or something else to help you find your way">You rely on an assistance dog or something else to help you find your way
+
+              </label>
+              <label class="block-label" for="how-manage-type-3">
+                <input id="how-manage-type-3" name="how-manage-types" type="checkbox" value="You manage on your own, but with difficulty">You manage on your own, but with difficulty
+
+              </label>
+              <label class="block-label" for="how-manage-type-4">
+                <input id="how-manage-type-4" name="how-manage-types" type="checkbox" value="You would not go to somewhere you have never been">You would not go to somewhere you have never been
+
+              </label>
+              <label class="block-label" for="how-manage-type-5" data-target="anotherWay">
+                <input id="how-manage-type-5" name="how-manage-types" type="checkbox" value="In another way">
+                In another way
+              </label>
+              <div class="panel-indent js-hidden" id="anotherWay">
+                <input class="form-control" type="text" id="manageAnotherWay" name="manageAnotherWay">
               </div>
+            </fieldset>
+          </div>
 
-              <fieldset class="form-group">
-                <legend class="form-label-bold">What do you have difficulty with?</legend>
-                <p>Select as many as you need.</p>
-                <label class="block-label" for="waste-type-1">
-                  <input id="waste-type-1" name="unknow-journey-difficulty" type="checkbox" value="Leaving your home"> Leaving your home
-                </label>
-                <label class="block-label" for="waste-type-2">
-                  <input id="waste-type-2" name="unknow-journey-difficulty" type="checkbox" value="Knowing where to go">Knowing where to go
-                </label>
-                <label class="block-label" for="waste-type-4">
-                  <input id="waste-type-4" name="unknow-journey-difficulty" type="checkbox" value="Asking for help"> Asking for help
-                </label>
-                <label class="block-label" for="waste-type-3">
-                  <input id="waste-type-3" name="unknow-journey-difficulty" type="checkbox" value="Recovering from getting lost"> Recovering from getting lost
-                </label>
-                <label class="block-label" for="waste-type-5">
-                  <input id="waste-type-5" name="unknow-journey-difficulty" type="checkbox" value="Following instructions on a map or sat nav">Following instructions on a map or sat nav
-                </label>
-                <label class="block-label" for="waste-type-7" data-target="other">
-                  <input id="waste-type-7" name="unknow-journey-difficulty" type="checkbox" value="Other"> Something else
-                </label>
-                <div class="panel-indent js-hidden" id="other">
-                  <input class="form-control" type="text" id="nationalities-other-country" name="other-difficulty">
-                </div>
-              </fieldset>
 
-              <div class="form-group">
-                <label class="form-label-bold" for="detailsWhy">
-
-                  Why do you need help?
-                </label>
+          <div class="form-group">
+            <label class="form-label" for="detailsWhy">Explain how your condition would affect you getting to somewhere you have never been. </label>
+              <p>
+                  Include:
+                </p>
+                <ul class="list-bullet" style="margin-top:-15px;margin-left:10px;">
+                  <li>what you’re able to do depends on the type of day you’re having</li>
+                  <li>you risk having an accident or hurting yourself</li>
+                  <li>it your condition would affect how long it takes you to get somewhere</li>
+                  <li>getting somewhere you have never been would have an effect on your condition</li>
+                </ul>
                 <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
-                <textarea class="form-control-3-4  " maxlength="1500" id="detailsWhy" name="detailsWhy"></textarea>
-              </div>
-              <div class="form-group">
-                <label class="form-label-bold" for="detailsHow">
-                  How would you go somewhere you have not been before?
-                </label>
-                <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
-                <textarea class="form-control-3-4  " maxlength="1500" id="detailsHow" name="detailsHow"></textarea>
-              </div>
-            </div>
-          </li>
-        </ul>
+            <textarea class="form-control-3-4" maxlength="1500" id="detailsWhy" name="detailsWhy"></textarea>
+          </div>
+        </div>
+
+
         <div class="form-group">
           <input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
           <input type="submit" value="Save and come back later" name="saveAndExit" class="exit-link">

@@ -21,58 +21,91 @@
 			<form action="understanding-q{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="understanding-q">
 
        <h1 class="form-title heading-large">{{>includes/pages/progress}}
-Understanding written information</h1>
-<p class="intro-text form-group">This question is about understanding written sentences, signs and dates. It could apply if you have a mental health or cognitive condition.</p>
-        <ul>
-					<li>
+        Understanding written information</h1>
+        <p class="lede">This question is about understanding written sentences, signs and dates. It could apply if you have a mental health or cognitive condition.</p>
 
-    <div class="form-group" id="form-group-frequency">
-      <fieldset>
-        <legend class="form-label-bold" id="frequency" for="frequency">
-        <span class="frequency-question">Which part of understanding written information do you find difficult, or need help with?</span>
-        <p class="form-hint">Select as many as you need.</p>
-        </legend>
 
-          <label class="block-label" for="waste-type-1">
-            <input id="waste-type-1" name="money-difficulty" type="checkbox" value="Words or simple sentences">Words or simple sentences
-          </label>
-          <label class="block-label" for="waste-type-2">
-            <input id="waste-type-2" name="money-difficulty" type="checkbox" value="More than once sentence">More than once sentence
-          </label>
-          <label class="block-label" for="waste-type-3">
-            <input id="waste-type-3" name="money-difficulty" type="checkbox" value="Symbols such as '&','£' or '?'">Symbols such as '&','£' or '?'
-          </label>
-          <label class="block-label" for="waste-type-4">
-            <input id="waste-type-4" name="money-difficulty" type="checkbox" value="Dates">Dates
-          </label>
-          <label class="block-label" for="waste-type-5">
-            <input id="waste-type-5" name="money-difficulty" type="checkbox" value="Signs such as safety signs">Signs such as safety signs
-          </label><label class="block-label" for="waste-type-7" data-target="other">
-            <input id="waste-type-7" name="money-difficulty" type="checkbox" value="Other">
-            Something else
-          </label>
-          <div class="panel-indent js-hidden" id="other">
-            <input class="form-control" type="text" id="nationalities-other-country" name="other-difficulty">
+        <div class="form-group" id="form-group-frequency">
+          <fieldset class="form-group">
+            <legend class="form-label">Does your condition affect you:</legend>
+            <label class="block-label" for="waste-type-1" data-show="details">
+              <input id="waste-type-1" name="difficulty" type="checkbox" value="words or simple sentences" >words or simple sentences
+
+            </label>
+            <label class="block-label" for="waste-type-2" data-show="details">
+              <input id="waste-type-2" name="difficulty" type="checkbox" value="long or complicated sentences" >long or complicated sentences
+
+            </label>
+            <label class="block-label" for="waste-type-3" data-show="details">
+              <input id="waste-type-3" name="difficulty" type="checkbox" value="symbols, such as pound signs or exclamation marks" >symbols, such as pound signs or exclamation marks
+
+            </label>
+            <label class="block-label" for="waste-type-4" data-show="details">
+              <input id="waste-type-4" name="difficulty" type="checkbox" value="dates" >dates
+
+            </label>
+            <label class="block-label" for="waste-type-5" data-show="details">
+              <input id="waste-type-5" name="difficulty" type="checkbox" value="signs such as safety signs" >signs such as safety signs
+
+            </label>
+            <label class="block-label" for="waste-type-9" data-show="details" data-target="other">
+              <input id="waste-type-9" name="difficulty" type="checkbox" value="Other">
+              something else
+            </label>
+            <div class="panel-indent js-hidden" id="other">
+              <input class="form-control" type="text" id="manageMedications-other-country" name="other-difficulty">
+            </div>
+          <p class="form-block">or</p>
+            <label class="block-label" for="waste-type-10" data-hide="details">
+              <input id="waste-type-10" name="difficulty" type="checkbox" value="Your condition does not affect your understanding of written information">Your condition does not affect your understanding of written information
+
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="panel-indent js-hidden" id="details">
+          <div class="form-group">
+            <fieldset>
+
+              <legend class="">How do you work out what they mean?</legend>
+
+              <label class="block-label" for="how-manage-type-1">
+                <input id="how-manage-type-1" name="how-manage-types" type="checkbox" value="You rely on someone to explain things to you">You rely on someone to explain things to you
+
+              </label>
+              <label class="block-label" for="how-manage-type-2">
+                <input id="how-manage-type-2" name="how-manage-types" type="checkbox" value="You rely on someone to remind you what things mean">You rely on someone to remind you what things mean
+
+              </label>
+              <label class="block-label" for="how-manage-type-3">
+                <input id="how-manage-type-3" name="how-manage-types" type="checkbox" value="You manage on your own, but with difficulty">You manage on your own, but with difficulty
+
+              </label>
+              <label class="block-label" for="how-manage-type-5" data-target="anotherWay">
+                <input id="how-manage-type-5" name="how-manage-types" type="checkbox" value="In another way">
+                In another way
+              </label>
+              <div class="panel-indent js-hidden" id="anotherWay">
+                <input class="form-control" type="text" id="manageAnotherWay" name="manageAnotherWay">
+              </div>
+            </fieldset>
           </div>
 
-          <br />
-          <label class="block-label" for="waste-type-6">
-            <input id="waste-type-6" name="money-difficulty" type="checkbox" value="I don't have difficulty understanding written information">I don't have difficulty understanding written information
-          </label>
 
-      </fieldset>
-      </div>
-						<div class="j form-group">
-    						<label class="form-label-bold" for="detailsHow">
-
-    How do you figure out what they mean at the moment?
-    <p class="form-hint">This includes if you rely on someone to help you or explain things to you.</p>
-    						</label>
+          <div class="form-group">
+            <label class="form-label" for="detailsWhy">Explain how your condition affects you understanding written information. </label>
+              <p>
+                  Include:
+                </p>
+                <ul class="list-bullet" style="margin-top:-15px;margin-left:10px;">
+                  <li>it can take you a long time to work out what things mean</li>
+                  <li>not understanding things could put up at risk</li>
+                </ul>
                 <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
-    						<textarea class="form-control-3-4  " maxlength="1500" id="detailsHow" name="detailsHow"></textarea>
-    		</div>
-					</li>
-        </ul>
+            <textarea class="form-control-3-4" maxlength="1500" id="detailsWhy" name="detailsWhy"></textarea>
+          </div>
+        </div>
+
         <div class="form-group">
 					<input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
 					<input type="submit" value="Save and come back later" name="saveAndExit" class="exit-link">

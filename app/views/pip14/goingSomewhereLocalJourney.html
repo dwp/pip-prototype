@@ -23,13 +23,13 @@
        <h1 class="form-title heading-large">{{>includes/pages/progress}}
          Planning a local journey				</h1>
 
-         <p class="intro-text form-group">This question is about planning a route, not making the actual journey. It could apply if you have a mental health, sensory or cognitive condition.</p>
+         <p class="lede">This question is about planning a route, not making the actual journey. It could apply if you have a mental health, sensory or cognitive condition.</p>
 				<ul>
 					<li>
 
             <div class="form-group" id="form-group-going-local">
               <fieldset class="inline">
-                <legend class="form-label-bold" id="going-local" for="going-local">
+                <legend class="form-label" id="going-local" for="going-local">
                   <span class="frequency-question">Would your condition affect you planning a local journey to somewhere new?</span>
 
                 </legend>
@@ -42,25 +42,51 @@
 
               </fieldset>
             </div>
-						<div class="panel-indent js-hidden" id="details">
 
-        <div class="form-group">
-						<label class="form-label-bold" for="whats-difficult">
 
-              What would you find difficult?
-						</label>
-            <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
-						<textarea class="form-control-3-4  " maxlength="1500" id="whats-difficult" name="whats-difficult"></textarea>
-		</div>
-        <div class="form-group">
-						<label class="form-label-bold" for="how-you-plan">
+            <div class="panel-indent js-hidden" id="details">
 
-              How would you plan the journey?
-						</label>
-            <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
-						<textarea class="form-control-3-4  " maxlength="1500" id="how-you-plan" name="how-you-plan"></textarea>
-		</div>
-						</div>
+
+              <div class="form-group">
+                <fieldset>
+
+                  <legend class="">How would you plan a local journey?</legend>
+
+                  <label class="block-label" for="how-manage-type-1">
+                    <input id="how-manage-type-1" name="how-manage-types" type="checkbox" value="You would rely on someone else to plan the journey">You would rely on someone else to plan the journey
+
+                  </label>
+                  <label class="block-label" for="how-manage-type-2">
+                    <input id="how-manage-type-2" name="how-manage-types" type="checkbox" value="You would need help to understand maps or bus timetables ">You would need help to understand maps or bus timetables
+
+                  </label>
+                  <label class="block-label" for="how-manage-type-3">
+                    <input id="how-manage-type-3" name="how-manage-types" type="checkbox" value="You would manage on your own, but with difficulty">You would manage on your own, but with difficulty
+
+                  </label>
+                  <label class="block-label" for="how-manage-type-5" data-target="anotherWay">
+                    <input id="how-manage-type-5" name="how-manage-types" type="checkbox" value="In another way">
+                    In another way
+                  </label>
+                  <div class="panel-indent js-hidden" id="anotherWay">
+                    <input class="form-control" type="text" id="manageAnotherWay" name="manageAnotherWay">
+                  </div>
+                </fieldset>
+              </div>
+
+
+              <div class="form-group">
+                <label class="form-label" for="detailsWhy">Explain how your condition would affect you planning a local journey.</label>
+                  <p>
+                    Include if it would take you a long time to plan a local journey.
+
+                    </p>
+                    <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+                <textarea class="form-control-3-4" maxlength="1500" id="detailsWhy" name="detailsWhy"></textarea>
+              </div>
+            </div>
+
+
 					</li>
 				</ul>
 
