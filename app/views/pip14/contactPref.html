@@ -1,0 +1,162 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+      <form action="/pip14/contactPref" method="post" class="form">
+
+<header>
+  <h1 class="form-title heading-xlarge">
+    {{>includes/pages/progress}}
+    Contact preferences</h1>
+</header>
+<p class="lede">We will need to contact you as part of the claim process so let us know if you have any particular preferences in terms of how we get in touch.</p>
+
+
+
+
+<fieldset class="form-group inline">
+  <legend id="smsContact" for="smsContact">
+    <span class="frequency-question">Would you like us to send SMS messages to your phone with claim updates?</span>
+
+  </legend>
+  <div class="form-group">
+
+      <label class="block-label" for="smsContact-Yes" data-target="helperDetails">
+
+      <input id="smsContact-Yes" type="radio" name="smsContact" value="Yes" aria-controls="helperDetails">Yes
+      </label>
+
+      <label class="block-label" for="smsContact-No">
+
+      <input id="smsContact-No" type="radio" name="smsContact" value="No" aria-controls="">No
+      </label>
+
+  </div>
+</fieldset>
+
+
+					<div class="form-group panel-indent js-hidden" id="helperDetails">
+
+<div class="form-group" id="form-group-mobile">
+  <label class="form-label" for="mobile">Mobile number
+
+  </label>
+  <input type="text" class="form-control " id="mobile" name="mobile" value="">
+</div>
+
+          </div>
+
+
+
+<fieldset class="form-group inline">
+  <legend id="callContact" for="callContact">
+    <span class="frequency-question">Would you be happy for us to call you if we needed to?</span>
+
+  </legend>
+  <div class="form-group">
+
+      <label class="block-label" for="callContact-Yes">
+
+      <input id="callContact-Yes" type="radio" name="callContact" value="Yes" aria-controls="">Yes
+      </label>
+
+      <label class="block-label" for="callContact-No">
+
+      <input id="callContact-No" type="radio" name="callContact" value="No" aria-controls="">No
+      </label>
+
+  </div>
+</fieldset>
+
+
+
+
+<fieldset class="form-group">
+  <legend>Do you have any other communication preferences due to your condition or disability that you’d like to tell us about?</legend>
+
+
+
+    <label class="block-label" for="checkbox-1">
+      <input id="checkbox-1" name="communcationPref" type="checkbox" value="large print paperwork">
+      I’d like large print paperwork
+    </label>
+
+
+    <label class="block-label" for="checkbox-2">
+      <input id="checkbox-2" name="communcationPref" type="checkbox" value="braille paperwork">
+      I require braille paperwork
+    </label>
+
+
+    <label class="block-label" for="checkbox-3">
+      <input id="checkbox-3" name="communcationPref" type="checkbox" value="auido cd">
+      I require an audio CD
+    </label>
+
+
+    <label class="block-label" for="checkbox-4" data-target="target2">
+      <input id="checkbox-4" name="communcationPref" type="checkbox" value="anything else" aria-controls="target2" aria-expanded="false">
+      Anything else
+    </label>
+
+      <fieldset id="target2" class="js-hidden panel-indent form-group-related" aria-hidden="true">
+
+
+
+
+<div class="form-group">
+  <label class="form-label" for="textreadId2">
+    Tell us the details
+  </label>
+  <span class="font-xsmall form-control-3-4 character-count"><span class="char-count">1500</span> characters left</span>
+  <textarea maxlength="1500" class="form-control form-control-3-4" id="textreadId2" name="textreadId2"></textarea>
+</div>
+
+      </fieldset>
+
+
+</fieldset>
+
+
+
+<div class="form-group">
+    <input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+    <input type="submit" value="Save and come back later" name="saveAndExit" class="exit-link">
+
+      <a href="/pip14/contactDetails" class="link-back">Back</a>
+
+</div>
+
+
+        </form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

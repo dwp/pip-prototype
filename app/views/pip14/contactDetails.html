@@ -1,0 +1,151 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+      <form action="/pip14/contactDetails" method="post" class="form">
+
+<header>
+  <h1 class="form-title heading-xlarge">
+    {{>includes/pages/progress}}
+    Your contact details</h1>
+</header>
+<p class="lede">Let us know your contact details so we can get in touch about your claim whilst it’s in progress.</p>
+
+
+					<fieldset class="form-group">
+						<legend class="form-label">Your address</legend>
+
+<div class="form-group" id="form-group-address1">
+  <input type="text" class="form-control " id="address1" name="address1" value="">
+</div>
+
+
+<div class="form-group" id="form-group-address2">
+  <input type="text" class="form-control " id="address2" name="address2" value="">
+</div>
+
+
+<div class="form-group" id="form-group-address3">
+  <input type="text" class="form-control " id="address3" name="address3" value="">
+</div>
+
+
+
+<div class="form-group" id="form-group-postcode">
+  <label class="form-label" for="postcode">Postcode
+
+  </label>
+  <input type="text" class="form-control form-control-1-4" id="postcode" name="postcode" value="">
+</div>
+
+					</fieldset>
+
+					<fieldset class="form-group">
+
+						<label class="block-label" for="radio-1" data-target="correspondenceAddress">
+			        <input id="radio-1" type="checkbox" name="radio-correspondence" value="Add a correspondence address" aria-controls="correspondenceAddress" aria-expanded="false">
+							Post any letters to a different address
+			      </label>
+						<div class="panel-indent js-hidden" id="correspondenceAddress" aria-hidden="true">
+							<legend class="form-label">Correspondence address</legend>
+
+<div class="form-group" id="form-group-correspondenceAddress1">
+  <input type="text" class="form-control " id="correspondenceAddress1" name="correspondenceAddress1" value="">
+</div>
+
+
+<div class="form-group" id="form-group-correspondenceAddress2">
+  <input type="text" class="form-control " id="correspondenceAddress2" name="correspondenceAddress2" value="">
+</div>
+
+
+<div class="form-group" id="form-group-correspondenceAddress3">
+  <input type="text" class="form-control " id="correspondenceAddress3" name="correspondenceAddress3" value="">
+</div>
+
+
+
+<div class="form-group" id="form-group-correspondencePostcode">
+  <label class="form-label" for="correspondencePostcode">Postcode
+
+  </label>
+  <input type="text" class="form-control form-control-1-4" id="correspondencePostcode" name="correspondencePostcode" value="">
+</div>
+
+						</div>
+					</fieldset>
+
+
+<div class="form-group" id="form-group-phone">
+  <label class="form-label" for="phone">Your phone number
+
+  </label>
+  <input type="text" class="form-control " id="phone" name="phone" value="">
+
+  <label class="form-checkbox" for="checkbox-telephone-number">
+    <input id="checkbox-telephone-number" name="contact-by-text-phone" type="checkbox" value="true">
+    I need to be contacted using a text phone
+  </label>
+</div>
+
+
+
+
+<div class="form-group" id="form-group-altPhone">
+  <label class="form-label" for="altPhone">Alternative phone number (optional)
+
+  </label>
+  <input type="text" class="form-control " id="altPhone" name="altPhone" value="">
+</div>
+
+
+<div class="form-group" id="form-group-email">
+  <label class="form-label" for="email">Email address
+
+  </label>
+  <input type="text" class="form-control " id="email" name="email" value="">
+</div>
+
+
+
+<div class="form-group">
+    <input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+    <input type="submit" value="Save and come back later" name="saveAndExit" class="exit-link">
+
+      <a href="/pip14/aboutYou" class="link-back">Back</a>
+
+</div>
+
+
+        </form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
