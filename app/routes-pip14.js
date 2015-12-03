@@ -24,6 +24,63 @@ module.exports = function(app){
      if (req.param('edit')) {
        res.redirect('pip14/check-and-change');
      } else {
+       res.redirect('pip14/aboutYou');
+     }
+   });
+
+   /*******************
+   aboutYou
+   *******************/
+   app.get('/pip14/aboutYou', function (req, res) {
+       res.render('pip14/aboutYou', {
+         page   : '2',
+         helper : req.session['pip14-aboutYou'],
+         'edit' : req.param('edit')
+       });
+   });
+
+   app.post('/pip14/aboutYou', function (req, res) {
+     if (req.param('edit')) {
+       res.redirect('pip14/check-and-change');
+     } else {
+       res.redirect('pip14/contactDetails');
+     }
+   });
+
+   /*******************
+   contactDetails
+   *******************/
+   app.get('/pip14/contactDetails', function (req, res) {
+       res.render('pip14/contactDetails', {
+         page   : '3',
+         helper : req.session['pip14-contactDetails'],
+         'edit' : req.param('edit')
+       });
+   });
+
+   app.post('/pip14/contactDetails', function (req, res) {
+     if (req.param('edit')) {
+       res.redirect('pip14/check-and-change');
+     } else {
+       res.redirect('pip14/contactPref');
+     }
+   });
+
+   /*******************
+   contactPref
+   *******************/
+   app.get('/pip14/contactPref', function (req, res) {
+       res.render('pip14/contactPref', {
+         page   : '4',
+         helper : req.session['pip14-contactPref'],
+         'edit' : req.param('edit')
+       });
+   });
+
+   app.post('/pip14/contactPref', function (req, res) {
+     if (req.param('edit')) {
+       res.redirect('pip14/check-and-change');
+     } else {
        res.redirect('pip14/nationality');
      }
    });
@@ -33,7 +90,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip14/nationality', function (req, res) {
        res.render('pip14/nationality', {
-         page        : '2',
+         page        : '5',
          nationality : req.session['pip14-nationality'],
          'edit'      : req.param('edit')
        });
@@ -57,7 +114,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip14/paymentsFromAbroad', function (req, res) {
        res.render('pip14/paymentsFromAbroad', {
-         page               : '3',
+         page               : '6',
          paymentsFromAbroad : req.session['pip14-paymentsFromAbroad'],
          'edit'             : req.param('edit')
        });
@@ -79,7 +136,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip14/conditionDetails', function (req, res) {
        res.render('pip14/conditionDetails', {
-         page             : '4',
+         page             : '7',
          conditionDetails : req.session['pip14-conditionDetails'],
          'edit'           : req.param('edit')
        });
@@ -98,7 +155,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip14/medications', function (req, res) {
        res.render('pip14/medications', {
-         page        : '5',
+         page        : '8',
          medications : req.session['pip14-medications'],
          'edit'      : req.param('edit')
        });
@@ -124,7 +181,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip14/manageMedications', function (req, res) {
        res.render('pip14/manageMedications', {
-         page               : '6',
+         page               : '9',
          medications   : req.session['pip14-manageMedications'],
          'edit'             : req.param('edit')
        });
@@ -147,7 +204,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip14/treatments', function (req, res) {
        res.render('pip14/treatments', {
-         page               : '7',
+         page               : '10',
          medications   : req.session['pip14-treatments'],
          'edit'             : req.param('edit')
        });
@@ -173,7 +230,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip14/manageTreatments', function (req, res) {
        res.render('pip14/manageTreatments', {
-         page               : '8',
+         page               : '11',
          medications   : req.session['pip14-treatments'],
          'edit'             : req.param('edit')
        });
@@ -196,7 +253,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip14/sideEffects', function (req, res) {
        res.render('pip14/sideEffects', {
-         page               : '9',
+         page               : '12',
          medications   : req.session['pip14-treatments'],
          'edit'             : req.param('edit')
        });
@@ -220,7 +277,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip14/conditionAffects', function (req, res) {
        res.render('pip14/conditionAffects', {
-         page               : '10',
+         page               : '13',
          conditioneffects : req.session['pip14-conditioneffects'],
          'edit'           : req.param('edit')
        });
@@ -242,7 +299,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip14/hcp-condition', function (req, res) {
        res.render('pip14/hcp-condition', {
-         page               : '11',
+         page               : '14',
          hcpcondition : req.session['pip14-hcp-condition'],
          'edit'       : req.param('edit')
        });
@@ -269,7 +326,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip14/hcp-condition-2', function (req, res) {
        res.render('pip14/hcp-condition-2', {
-         page               : '12',
+         page               : '15',
          hcpcondition2 : req.session['pip14-hcp-condition-2'],
          'edit'        : req.param('edit')
        });
@@ -291,7 +348,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip14/healthcareprofessional', function (req, res) {
        res.render('pip14/healthcareprofessional', {
-         page               : '13',
+         page               : '16',
          healthcareprofessional : req.session['pip14-healthcareprofessional'],
          'edit'                 : req.param('edit')
        });
@@ -312,7 +369,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip14/submitEvidence', function (req, res) {
        res.render('pip14/submitEvidence', {
-         page               : '14',
+         page               : '17',
          submitEvidence : req.session['pip14-submitEvidence'],
          'edit'         : req.param('edit')
        });
@@ -333,7 +390,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip14/specialAids', function (req, res) {
        res.render('pip14/specialAids', {
-         page               : '15',
+         page               : '18',
          specialAids : req.session['pip14-specialAids'],
          'edit'      : req.param('edit')
        });
@@ -354,7 +411,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip14/seeing', function (req, res) {
        res.render('pip14/seeing', {
-         page               : '16',
+         page               : '19',
          frequency : req.session['pip14-seeing'],
          'edit'    : req.param('edit')
        });
@@ -376,7 +433,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip14/speaking', function (req, res) {
        res.render('pip14/speaking', {
-         page               : '17',
+         page               : '20',
          frequency : req.session['pip14-speaking'],
          'edit'    : req.param('edit')
        });
@@ -398,7 +455,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip14/hearing', function (req, res) {
         res.render('pip14/hearing', {
-          page               : '18',
+          page               : '21',
           frequency : req.session['pip14-hearing'],
           'edit'    : req.param('edit')
         });
@@ -421,7 +478,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip14/gettingUp', function (req, res) {
         res.render('pip14/gettingUp', {
-          page               : '19',
+          page               : '22',
           frequency : req.session['pip14-gettingUp'],
           'edit'    : req.param('edit')
         });
@@ -443,7 +500,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip14/toilet', function (req, res) {
         res.render('pip14/toilet', {
-          page               : '20',
+          page               : '23',
           frequency : req.session['pip14-toilet'],
           'edit'    : req.param('edit')
         });
@@ -465,7 +522,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip14/washing', function (req, res) {
         res.render('pip14/washing', {
-          page               : '21',
+          page               : '24',
           frequency : req.session['pip14-washing'],
           'edit'    : req.param('edit')
         });
@@ -487,7 +544,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip14/gettingDressed', function (req, res) {
         res.render('pip14/gettingDressed', {
-          page               : '22',
+          page               : '25',
           frequency : req.session['pip14-gettingDressed'],
           'edit'    : req.param('edit')
         });
@@ -509,7 +566,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip14/preparingandcookingfood', function (req, res) {
         res.render('pip14/preparingandcookingfood', {
-          page               : '23',
+          page               : '26',
           frequency : req.session['pip14-preparingandcookingfood'],
           'edit'    : req.param('edit')
         });
@@ -531,7 +588,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip14/eatinganddrinking', function (req, res) {
         res.render('pip14/eatinganddrinking', {
-          page               : '24',
+          page               : '27',
           frequency : req.session['pip14-eatinganddrinking'],
           'edit'    : req.param('edit')
         });
@@ -553,7 +610,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip14/goingOut', function (req, res) {
         res.render('pip14/goingOut', {
-          page               : '25',
+          page               : '28',
           frequency : req.session['pip14-goingOut'],
           'edit'    : req.param('edit')
         });
@@ -575,7 +632,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip14/gettingOn', function (req, res) {
         res.render('pip14/gettingOn', {
-          page               : '26',
+          page               : '29',
           frequency : req.session['pip14-gettingOn'],
           'edit'    : req.param('edit')
         });
@@ -597,7 +654,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip14/goingSomewhereLocalJourney', function (req, res) {
         res.render('pip14/goingSomewhereLocalJourney', {
-          page               : '27',
+          page               : '30',
           frequency : req.session['pip14-goingSomewhereLocalJourney'],
           'edit'    : req.param('edit')
         });
@@ -619,7 +676,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip14/goingSomewhereNeverbeenBefore', function (req, res) {
         res.render('pip14/goingSomewhereNeverbeenBefore', {
-          page               : '28',
+          page               : '31',
           frequency : req.session['pip14-goingSomewhereNeverbeenBefore'],
           'edit'    : req.param('edit')
         });
@@ -647,7 +704,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip14/goingSomewherebeenBefore', function (req, res) {
         res.render('pip14/goingSomewherebeenBefore', {
-          page               : '29',
+          page               : '32',
           frequency : req.session['pip14-goingSomewherebeenBefore'],
           'edit'    : req.param('edit')
         });
@@ -669,7 +726,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip14/understanding-q', function (req, res) {
         res.render('pip14/understanding-q', {
-          page               : '30',
+          page               : '33',
           frequency : req.session['pip14-understanding-q'],
           'edit'    : req.param('edit')
         });
@@ -691,7 +748,7 @@ module.exports = function(app){
     *******************/
     app.get('/pip14/money', function (req, res) {
         res.render('pip14/money', {
-          page               : '31',
+          page               : '34',
           frequency : req.session['pip14-money'],
           'edit'    : req.param('edit')
         });
@@ -710,7 +767,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip14/check-and-change', function (req, res) {
      res.render('pip14/check-and-change', {
-       page                          : '32',
+       page                          : '35',
        helper                        : req.session['pip14-helper'],
        nationality                   : req.session['pip14-nationality'],
        paymentsFromAbroad            : req.session['pip14-paymentsFromAbroad'],
@@ -756,7 +813,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip14/additionalInfo', function (req, res) {
        res.render('pip14/additionalInfo', {
-         page               : '33',
+         page               : '36',
          frequency : req.session['pip14-additionalInfo'],
          'edit'    : req.param('edit')
        });
@@ -775,7 +832,7 @@ module.exports = function(app){
    *******************/
    app.get('/pip14/declaration', function (req, res) {
        res.render('pip14/declaration', {
-         page               : '34'
+         page               : '37'
        });
    });
 

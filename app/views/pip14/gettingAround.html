@@ -32,7 +32,7 @@
 
             <div class="form-group" id="form-group-frequency">
               <fieldset>
-                <legend class="form-label-bold" id="frequency" for="frequency">
+                <legend class="form-label" id="frequency" for="frequency">
                 <span class="frequency-question">Does your condition affect you getting around your home?</span>
 
                  <p class="form-hint">This includes if any part of getting up, out of bed and around your home is difficult or if you rely on someone to help.</p>
@@ -45,11 +45,11 @@
               </div>
         			<div class="panel-indent {{^frequency.frequency}}js-hidden{{/frequency.frequency}} {{#frequency.frequencyNone of the time}}js-hidden{{/frequency.frequencyNone of the time}}" id="details">
                 <div id="how-often" class="form-group js-hidden">
-                  <label class="form-label-bold" for="ownWords">How often.</label>
+                  <label class="form-label" for="ownWords">How often.</label>
                   <input type="text" class="form-control" id="ownWords" name="ownWords" value="{{#frequency.ownWords}}{{frequency.ownWords}}{{/frequency.ownWords}}" />
                 </div>
                 <div class="form-group">
-        						<label class="form-label-bold" for="detailsWhy">
+        						<label class="form-label" for="detailsWhy">
 
         Why your condition affects you getting around your home.
         						</label>
@@ -57,7 +57,7 @@
         						<textarea class="form-control-3-4  " maxlength="1500" id="detailsWhy" name="detailsWhy">{{#frequency.detailsWhy}}{{frequency.detailsWhy}}{{/frequency.detailsWhy}}</textarea>
         		</div>
                 <div class="form-group">
-        						<label class="form-label-bold" for="detailsHow">
+        						<label class="form-label" for="detailsHow">
 
         How you get around your home at the moment.
         						</label>
