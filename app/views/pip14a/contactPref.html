@@ -1,0 +1,147 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+      <form action="/pip14a/contactPref" method="post" class="form">
+
+<header>
+  <h1 class="form-title heading-xlarge">
+    {{>includes/pages/progress}}
+    Contact preferences</h1>
+</header>
+
+
+
+
+<fieldset class="form-group inline">
+  <legend id="smsContact" for="smsContact">
+    <span class="frequency-question">Do you want to get SMS text messages about where your claim is up to?</span>
+
+  </legend>
+  <div class="form-group">
+
+      <label class="block-label" for="smsContact-Yes" data-target="helperDetails">
+
+      <input id="smsContact-Yes" type="radio" name="smsContact" value="Yes" aria-controls="helperDetails">Yes
+      </label>
+
+      <label class="block-label" for="smsContact-No">
+
+      <input id="smsContact-No" type="radio" name="smsContact" value="No" aria-controls="">No
+      </label>
+
+  </div>
+</fieldset>
+
+
+					<div class="form-group panel-indent js-hidden" id="helperDetails">
+
+<div class="form-group" id="form-group-mobile">
+  <label class="form-label" for="mobile">Mobile number
+
+  </label>
+  <input type="text" class="form-control " id="mobile" name="mobile" value="">
+</div>
+
+          </div>
+
+
+
+
+
+<fieldset class="form-group inline">
+  <legend>You will get your decision letter in the post. Do you need this in a different format eg braille, large print or audio CD?</legend>
+
+  <label class="block-label" for="paperwork-Yes" data-target="paperwork">
+    <input id="paperwork-Yes" type="radio" name="paperwork"  value="Yes" aria-controls="paperwork"> Yes
+  </label>
+  <label class="block-label" for="paperwork-no" >
+    <input id="paperwork-no" type="radio" name="paperwork"  value="no" aria-controls="paperwork"> no
+  </label>
+</fieldset>
+<div class="panel-indent form-group js-hidden" id="paperwork">
+  <fieldset class="form-group">
+
+    <label class="block-label" for="checkbox-1">
+      <input id="checkbox-1" name="communcationPref" type="checkbox" value="large print ">
+      Large print
+    </label>
+
+
+    <label class="block-label" for="checkbox-2">
+      <input id="checkbox-2" name="communcationPref" type="checkbox" value="braille">
+      Braille
+    </label>
+
+    <label class="block-label" for="checkbox-3">
+      <input id="checkbox-3" name="communcationPref" type="checkbox" value="Audio cd">
+      Audio CD
+    </label>
+
+
+    <label class="block-label" for="checkbox-4" data-target="target2">
+      <input id="checkbox-4" name="communcationPref" type="checkbox" value="anything else" aria-controls="target2" aria-expanded="false">
+      Other
+    </label>
+</fieldset>
+      <fieldset id="target2" class="js-hidden panel-indent form-group-related" aria-hidden="true">
+
+
+
+
+<div class="form-group">
+  <label class="form-label" for="textreadId2">What format do you need?
+    <span class="form-hint">We can only provide this if it’s necessary because of your condition or disability.</span>
+  </label>
+  <span class="font-xsmall form-control-3-4 character-count"><span class="char-count">1500</span> characters left</span>
+  <textarea maxlength="1500" class="form-control form-control-3-4" id="textreadId2" name="textreadId2"></textarea>
+</div>
+
+      </fieldset>
+</div>
+
+
+
+
+
+<div class="form-group">
+    <input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+    <input type="submit" value="Save and come back later" name="saveAndExit" class="exit-link">
+
+      <a href="/pip14a/contactDetails" class="link-back">Back</a>
+
+</div>
+
+
+        </form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

@@ -123,6 +123,7 @@ module.exports = {
     require('./routes-pip12')(app);
     require('./routes-pip13')(app);
     require('./routes-pip14')(app);
+    require('./routes-pip14a')(app);
 
   }
 };

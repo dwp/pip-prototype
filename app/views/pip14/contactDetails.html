@@ -25,7 +25,6 @@
     {{>includes/pages/progress}}
     Your contact details</h1>
 </header>
-<p class="lede">Let us know your contact details so we can get in touch about your claim whilst it’s in progress.</p>
 
 
 					<fieldset class="">
@@ -63,7 +62,7 @@
 							Post any letters to a different address
 			      </label>
 						<div class="panel-indent js-hidden" id="correspondenceAddress" aria-hidden="true">
-							
+              <legend class="form-label">Send letters to:</legend>
 
 <div class="form-group" id="form-group-correspondenceAddress1">
   <input type="text" class="form-control " id="correspondenceAddress1" name="correspondenceAddress1" value="">
@@ -94,13 +93,13 @@
 
 <div class="form-group" id="form-group-phone">
   <label class="form-label" for="phone">Your phone number
-
+<span class="form-hint">We'll only use this if we need to contact you about your claim.</span>
   </label>
   <input type="text" class="form-control " id="phone" name="phone" value="">
 
   <label class="form-checkbox" for="checkbox-telephone-number">
     <input id="checkbox-telephone-number" name="contact-by-text-phone" type="checkbox" value="true">
-    I need to be contacted using a text phone
+    You need to be contacted using a text phone
   </label>
 </div>
 
@@ -108,7 +107,7 @@
 
 
 <div class="form-group" id="form-group-altPhone">
-  <label class="form-label" for="altPhone">Alternative phone number (optional)
+  <label class="form-label" for="altPhone">Alternative phone number
 
   </label>
   <input type="text" class="form-control " id="altPhone" name="altPhone" value="">

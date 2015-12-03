@@ -1,0 +1,78 @@
+{{<govuk_template}}
+
+{{$head}}
+{{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+{{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+{{>includes/phase_banner}}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <form action="conditionAffects{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="conditionAffects">
+
+
+     <h1 class="form-title heading-large">{{>includes/pages/progress}}Changes in your condition</h1>
+
+      <div class="form-group">
+        <fieldset class="inline">
+          <legend>
+            <span class="form-label">Do the effects of your condition change or vary?</span>
+            <p class="form-hint">This includes if some days, weeks or months are worse than others.</p>
+          </legend>
+          <div class="form-group form-group-compound">
+            <label class="block-label" data-target="example-ni-no" for="radio-indent-1">
+              <input id="radio-indent-1" type="radio" name="conditioneffects" {{#conditioneffects.conditioneffectsYes}}checked=checked{{/conditioneffects.conditioneffectsYes}} value="Yes">
+              Yes
+            </label>
+            <label class="block-label" for="radio-indent-2">
+              <input id="radio-indent-2" type="radio" name="conditioneffects" {{#conditioneffects.conditioneffectsNo}}checked=checked{{/conditioneffects.conditioneffectsNo}} value="No">
+              No
+            </label>
+          </div>
+          <div class="panel-indent {{^conditioneffects.conditioneffectsYes}}js-hidden{{/conditioneffects.conditioneffectsYes}}" id="example-ni-no">
+            <div class="form-group">
+              <label class="form-label" for="condition-effects-often">Describe roughly how often the effects of your condition change or vary.</label>
+              <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+              <textarea class="form-control-3-4 " maxlength="1500" name="condition-effects-often" type="text" id="condition-effects-often">{{#conditioneffects.conditioneffectsYes}}{{conditioneffects.condition-effects-often}}{{/conditioneffects.conditioneffectsYes}}</textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="condition-effects-how">How the effects of your condition change or vary.</label>
+              <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+              <textarea class="form-control-3-4 " maxlength="1500" name="condition-effects-how" type="text" id="condition-effects-how">{{#conditioneffects.conditioneffectsYes}}{{conditioneffects.condition-effects-how}}{{/conditioneffects.conditioneffectsYes}}</textarea>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+        <input type="submit" value="Save and come back later" name="saveAndExit" class="exit-link">
+        <a href="#" class="example-back-link">Back</a>
+      </div>
+
+    </form>
+
+  </div>
+  <div class="column-third">
+
+  </div>
+</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

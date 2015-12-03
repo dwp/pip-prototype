@@ -1,0 +1,117 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}<main id="content" role="main">
+
+  {{>includes/phase_banner}}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="medications{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="conditionDetails">
+
+
+
+
+
+        <h1 class="form-title heading-large">{{>includes/pages/progress}} Your medication</h1>
+
+        <div class="form-group" id="form-group-currentMedications">
+          <fieldset class="inline">
+            <legend class="form-label" id="currentMedications" for="currentMedications">
+              <span class="frequency-question">Are you currently taking any medication?</span>
+
+
+
+            </legend>
+
+
+            <label class="block-label" for="currentMedications-Yes" data-target="medications">
+              <input id="currentMedications-Yes" type="radio" name="currentMedications" value="Yes" aria-controls="medications"> Yes
+            </label>
+            <label class="block-label" for="currentMedications-No">
+              <input id="currentMedications-No" type="radio" name="currentMedications" value="No"> No
+            </label>
+
+          </fieldset>
+        </div>
+        <div class="panel-indent js-hidden" id="medications" aria-hidden="false">
+          <div id="medication-row-1" class="medication-row">
+            <legend class="form-label" id="currentMedications" for="currentMedications">
+              Medication 1
+            </legend>
+            <br />
+            <div class="form-group">
+              <div class="form-group">
+                <label class="form-label" for="medication-name1">Name of medication</label>
+                <input class="form-control" name="medication-name1" type="text" id="medication-name1" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="medication-dosage1">The dosage</label>
+                <input class="form-control" name="medication-dosage1" type="text" id="medication-dosage1" />
+              </div>
+              <div class="form-group repeat-border">
+                <label class="form-label" for="medication-often1">How often you take it</label>
+                <input class="form-control" name="medication-often1" type="text" id="medication-often1" />
+              </div>
+            </div>
+          </div>
+          <div id="medication-row-x" class="clone-row medication-row js-hidden">
+            <legend class="form-label" id="currentMedications" for="currentMedications">
+              Medication <span class="med-count"></span>
+              <a href="#" class="remove-med" style="float: right;">Remove this</a>
+            </legend>
+            <br />
+            <div class="form-group">
+              <div class="form-group">
+                <label class="form-label" for="medication-name-x">Name of medication</label>
+                <input class="form-control" name="medication-name-x" data-name="medication-name" type="text" id="medication-name-x" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="medication-dosage-x">The dosage</label>
+                <input class="form-control" name="medication-dosage-x" data-name="medication-dosage" type="text" id="medication-dosage-x" />
+              </div>
+              <div class="form-group repeat-border">
+                <label class="form-label" for="medication-often-x">How often you take it</label>
+                <input class="form-control" name="medication-often-x" data-name="medication-often" type="text" id="medication-often-x" />
+              </div>
+            </div>
+          </div>
+          <a href="add-another" class="button  add-another" data-target="medication-row" data-count="1" >Add another</a>
+
+
+
+        </div>
+<br />
+        <div class="form-group">
+          <input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+          <input type="submit" value="Save and come back later" name="saveAndExit" class="exit-link">
+          <a href="#" class="example-back-link">Back</a>
+        </div>
+
+      </form>
+
+    </div>
+    <div class="column-third">
+
+    </div>
+  </div>
+
+</main>
+<!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

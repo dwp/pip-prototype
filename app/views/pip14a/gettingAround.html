@@ -1,0 +1,92 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<form action="gettingAround{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="gettingAround">
+
+
+
+
+
+                 <h1 class="form-title heading-large">{{>includes/pages/progress}}
+        Getting around          </h1>
+
+                  <ul>
+        						<li>
+
+            <div class="form-group" id="form-group-frequency">
+              <fieldset>
+                <legend class="form-label" id="frequency" for="frequency">
+                <span class="frequency-question">Does your condition affect you getting around your home?</span>
+
+                 <p class="form-hint">This includes if any part of getting up, out of bed and around your home is difficult or if you rely on someone to help.</p>
+
+                </legend>
+
+                {{>includes/pages/variability}}
+
+              </fieldset>
+              </div>
+        			<div class="panel-indent {{^frequency.frequency}}js-hidden{{/frequency.frequency}} {{#frequency.frequencyNone of the time}}js-hidden{{/frequency.frequencyNone of the time}}" id="details">
+                <div id="how-often" class="form-group js-hidden">
+                  <label class="form-label" for="ownWords">How often.</label>
+                  <input type="text" class="form-control" id="ownWords" name="ownWords" value="{{#frequency.ownWords}}{{frequency.ownWords}}{{/frequency.ownWords}}" />
+                </div>
+                <div class="form-group">
+        						<label class="form-label" for="detailsWhy">
+
+        Why your condition affects you getting around your home.
+        						</label>
+                    <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+        						<textarea class="form-control-3-4  " maxlength="1500" id="detailsWhy" name="detailsWhy">{{#frequency.detailsWhy}}{{frequency.detailsWhy}}{{/frequency.detailsWhy}}</textarea>
+        		</div>
+                <div class="form-group">
+        						<label class="form-label" for="detailsHow">
+
+        How you get around your home at the moment.
+        						</label>
+                    <span class="font-xsmall form-control-3-4 character-count">1500 characters left</span>
+        						<textarea class="form-control-3-4  " maxlength="1500" id="detailsHow" name="detailsHow">{{#frequency.detailsHow}}{{frequency.detailsHow}}{{/frequency.detailsHow}}</textarea>
+        		</div>
+        							</div>
+        						</li>
+        					</ul>
+
+                <div class="form-group">
+        					<input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+        					<input type="submit" value="Save and come back later" name="saveAndExit" class="exit-link">
+                  <a href="#" class="example-back-link">Back</a>
+        				</div>
+
+			</form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

@@ -32,7 +32,7 @@
 
 <fieldset class="form-group inline">
   <legend id="smsContact" for="smsContact">
-    <span class="frequency-question">Would you like us to send SMS messages to your phone with claim updates?</span>
+    <span class="frequency-question">Do you want to get SMS text messages about where your claim is up to?</span>
 
   </legend>
   <div class="form-group">
@@ -64,74 +64,60 @@
 
 
 
+
+
 <fieldset class="form-group inline">
-  <legend id="callContact" for="callContact">
-    <span class="frequency-question">Would you be happy for us to call you if we needed to?</span>
+  <legend>You will get your decision letter in the post. Do you need this in a different format eg braille, large print or audio CD?</legend>
 
-  </legend>
-  <div class="form-group">
-
-      <label class="block-label" for="callContact-Yes">
-
-      <input id="callContact-Yes" type="radio" name="callContact" value="Yes" aria-controls="">Yes
-      </label>
-
-      <label class="block-label" for="callContact-No">
-
-      <input id="callContact-No" type="radio" name="callContact" value="No" aria-controls="">No
-      </label>
-
-  </div>
+  <label class="block-label" for="paperwork-Yes" data-target="paperwork">
+    <input id="paperwork-Yes" type="radio" name="paperwork"  value="Yes" aria-controls="paperwork"> Yes
+  </label>
+  <label class="block-label" for="paperwork-no" >
+    <input id="paperwork-no" type="radio" name="paperwork"  value="no" aria-controls="paperwork"> no
+  </label>
 </fieldset>
-
-
-
-
-<fieldset class="form-group">
-  <legend>Do you have any other communication preferences due to your condition or disability that you’d like to tell us about?</legend>
-
-
+<div class="panel-indent form-group js-hidden" id="paperwork">
+  <fieldset class="form-group">
 
     <label class="block-label" for="checkbox-1">
-      <input id="checkbox-1" name="communcationPref" type="checkbox" value="large print paperwork">
-      I’d like large print paperwork
+      <input id="checkbox-1" name="communcationPref" type="checkbox" value="large print ">
+      Large print
     </label>
 
 
     <label class="block-label" for="checkbox-2">
-      <input id="checkbox-2" name="communcationPref" type="checkbox" value="braille paperwork">
-      I require braille paperwork
+      <input id="checkbox-2" name="communcationPref" type="checkbox" value="braille">
+      Braille
     </label>
 
-
     <label class="block-label" for="checkbox-3">
-      <input id="checkbox-3" name="communcationPref" type="checkbox" value="auido cd">
-      I require an audio CD
+      <input id="checkbox-3" name="communcationPref" type="checkbox" value="Audio cd">
+      Audio CD
     </label>
 
 
     <label class="block-label" for="checkbox-4" data-target="target2">
       <input id="checkbox-4" name="communcationPref" type="checkbox" value="anything else" aria-controls="target2" aria-expanded="false">
-      Anything else
+      Other
     </label>
-
+</fieldset>
       <fieldset id="target2" class="js-hidden panel-indent form-group-related" aria-hidden="true">
 
 
 
 
 <div class="form-group">
-  <label class="form-label" for="textreadId2">
-    Tell us the details
+  <label class="form-label" for="textreadId2">What format do you need?
+    <span class="form-hint">We can only provide this if it’s necessary because of your condition or disability.</span>
   </label>
   <span class="font-xsmall form-control-3-4 character-count"><span class="char-count">1500</span> characters left</span>
   <textarea maxlength="1500" class="form-control form-control-3-4" id="textreadId2" name="textreadId2"></textarea>
 </div>
 
       </fieldset>
+</div>
 
 
-</fieldset>
 
 
 

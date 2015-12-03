@@ -1,0 +1,118 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+	{{>includes/phase_banner}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+      <form action="manageTreatments{{#edit}}?edit=true{{/edit}}" method="post" class="form checkMyAnswers" data-question="conditionDetails">
+
+
+
+
+
+       <h1 class="form-title heading-large">{{>includes/pages/progress}}
+         Managing your treatments </h1>
+
+
+         <ul>
+				<li>
+
+    <div class="form-group" id="form-group-frequency">
+      <fieldset class="inline">
+        <legend class="form-label" id="frequency" for="frequency">
+        <span class="frequency-question">Do you rely on someone to help you manage your treatment or therapy at home?</span>
+
+         <p class="form-hint">This includes if you rely on them to supervise you or remind you.</p>
+
+        </legend>
+
+
+                  		<label class="block-label" for="help-Yes" data-target="helpTreatments">
+      							<input id="help-Yes" type="radio" name="frequency" value="Yes" aria-controls="helpTreatments">
+      							Yes
+      					</label>
+                  		<label class="block-label" for="help-No">
+      							<input id="help-No" type="radio" name="frequency" value="No">
+      							No
+      					</label>
+
+      </fieldset>
+      </div>
+
+						<div class="panel-indent js-hidden" id="helpTreatments">
+
+								<div class="form-group">
+									<legend class="form-label">How many hours a week they help you</legend>
+    <div class="form-group" id="form-group-helpTreatments">
+
+
+
+
+
+
+
+
+
+        <input type="text" class="form-control " id="helpTreatments" name="helpTreatments" value="">
+      </div>
+        <div class="form-group">
+						<label class="form-label" for="detailsWhy">
+
+Why do you rely on someone to help you manage your treatment or therapy at home?
+						</label>
+						<span class="font-xsmall js-hidden form-control-3-4 form-hint character-count"><span class="char-count">1500</span> characters left</span>
+						<textarea maxlength="1500" class="form-control-3-4  " id="detailsWhy" name="detailsWhy"></textarea>
+		</div>
+        <div class="form-group">
+						<label class="form-label" for="detailsHow">
+
+How does someone help you manage your treatment or therapy at home, at the moment?
+						</label>
+						<span class="font-xsmall js-hidden form-control-3-4 form-hint character-count"><span class="char-count">1500</span> characters left</span>
+						<textarea maxlength="1500" class="form-control-3-4  " id="detailsHow" name="detailsHow"></textarea>
+		</div>
+
+								</div>
+
+						</div>
+
+					</li>
+      </ul>
+
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Save and continue" name="saveAndcontinue">
+          <input type="submit" value="Save and come back later" name="saveAndExit" class="exit-link">
+          <a href="#" class="example-back-link">Back</a>
+        </div>
+
+      </form>
+
+		</div>
+		<div class="column-third">
+
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+{{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
