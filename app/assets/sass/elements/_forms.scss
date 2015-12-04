@@ -92,7 +92,7 @@ fieldset {
   @include box-sizing(border-box);
   padding: 4px;
   background-color: $white;
-  border: 1px solid $border-colour;
+  border: 2px solid $grey-1;
 
   // Disable webkit appearance and remove rounded corners
   -webkit-appearance: none;
